@@ -1,8 +1,6 @@
 package ru.netherdon.netheragriculture.registries;
 
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -16,7 +14,7 @@ public final class NAItems
     public static final DeferredItem<Item> CRIMSON_BERRY = REGISTER.register("crimson_berry", () -> new FoodItem(new Item.Properties().food(NAFoods.CRIMSON_BERRY)));
     public static final DeferredItem<Item> WARPED_BERRIES = REGISTER.register("warped_berries", () -> new FoodItem(new Item.Properties().food(NAFoods.WARPED_BERRIES)));
     public static final DeferredItem<Item> LOTHUN = REGISTER.register("lothun", () -> new FoodItem(new Item.Properties().food(NAFoods.LOTHUN)));
-    public static final DeferredItem<Item> MORTOFRUCT = REGISTER.register("mortofruct", () -> new FoodItem(new Item.Properties().food(NAFoods.MORTOFRUCT)));
+    public static final DeferredItem<Item> MORTOFRUCT_HALF = REGISTER.register("mortofruct_half", () -> new FoodItem(new Item.Properties().food(NAFoods.MORTOFRUCT)));
     public static final DeferredItem<Item> AZURE_MELON = REGISTER.register("azure_melon", () -> new FoodItem(new Item.Properties().food(NAFoods.AZURE_MELON)));
     public static final DeferredItem<Item> EXTINGUISHED_BLAZE_FRUIT = REGISTER.register("extinguished_blaze_fruit", () -> new ExtinguishedItem(
         NAItems.BLAZE_FRUIT,
@@ -48,4 +46,7 @@ public final class NAItems
     public static final DeferredItem<Item> AZURE_MELON_SORBET = REGISTER.register("azure_melon_sorbet", () -> new FoodItem(
         new Item.Properties().stacksTo(16).food(NAFoods.AZURE_MELON_SORBET)
     ));
+
+    public static final DeferredItem<BlockItem> DEAD_VINES = REGISTER.registerSimpleBlockItem(NABlocks.DEAD_VINES);
+    public static final DeferredItem<BlockItem> MORTOFRUCT = REGISTER.registerSimpleBlockItem(NABlocks.MORTOFRUCT);
 }

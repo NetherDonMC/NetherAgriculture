@@ -1,0 +1,16 @@
+{
+	"variants": {
+		"attached=false,shoots=false": {
+			"model": "netheragriculture:block/dead_vines/crown"
+		},
+		"attached=true,shoots=false": {
+			"model": "netheragriculture:block/dead_vines/trunk"
+		},
+		"attached=false,shoots=true": {
+			"model": "netheragriculture:block/dead_vines/shoots"
+		},
+		"attached=true,shoots=true": {
+			"model": "netheragriculture:block/dead_vines/attached_shoots"
+		}
+	}
+}

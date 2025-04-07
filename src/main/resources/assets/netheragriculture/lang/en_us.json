@@ -1,3 +1,8 @@
 {
-  "itemGroup.netheragriculture.common": "Nether Agriculture"
+  "itemGroup.netheragriculture.common": "Nether Agriculture",
+
+  "item.netheragriculture.mortofruct_half": "Mortofruct Half",
+
+  "block.netheragriculture.mortofruct": "Mortofruct",
+  "block.netheragriculture.dead_vines": "Dead Vines"
 }

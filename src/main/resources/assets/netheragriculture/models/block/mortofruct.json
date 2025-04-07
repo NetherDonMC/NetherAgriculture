@@ -1,0 +1,7 @@
+{
+	"parent": "minecraft:block/cube_column",
+	"textures": {
+		"end": "netheragriculture:block/mortofruct_top",
+		"side": "netheragriculture:block/mortofruct_side"
+	}
+}

@@ -3,7 +3,6 @@ package ru.netherdon.netheragriculture.registries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Items;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import ru.netherdon.netheragriculture.NetherAgriculture;
@@ -17,10 +16,13 @@ public final class NACreativeTabs
         .icon(NAItems.CRIMSON_BERRY::toStack)
         .displayItems((params, output) ->
         {
+            output.accept(NAItems.DEAD_VINES);
+            output.accept(NAItems.MORTOFRUCT);
+
             output.accept(NAItems.CRIMSON_BERRY);
             output.accept(NAItems.WARPED_BERRIES);
             output.accept(NAItems.LOTHUN);
-            output.accept(NAItems.MORTOFRUCT);
+            output.accept(NAItems.MORTOFRUCT_HALF);
             output.accept(NAItems.AZURE_MELON);
             output.accept(NAItems.BLAZE_FRUIT);
             output.accept(NAItems.EXTINGUISHED_BLAZE_FRUIT);
