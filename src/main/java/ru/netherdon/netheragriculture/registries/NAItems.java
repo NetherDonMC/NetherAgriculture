@@ -47,6 +47,8 @@ public final class NAItems
         new Item.Properties().stacksTo(16).food(NAFoods.AZURE_MELON_SORBET)
     ));
 
+    public static final DeferredItem<BlockItem> CRIMSON_FARMLAND = REGISTER.registerSimpleBlockItem(NABlocks.CRIMSON_FARMLAND);
+    public static final DeferredItem<BlockItem> WARPED_FARMLAND = REGISTER.registerSimpleBlockItem(NABlocks.WARPED_FARMLAND);
     public static final DeferredItem<BlockItem> DEAD_VINES = REGISTER.registerSimpleBlockItem(NABlocks.DEAD_VINES);
     public static final DeferredItem<BlockItem> MORTOFRUCT = REGISTER.registerSimpleBlockItem(NABlocks.MORTOFRUCT);
 }

@@ -16,6 +16,8 @@ public final class NACreativeTabs
         .icon(NAItems.CRIMSON_BERRY::toStack)
         .displayItems((params, output) ->
         {
+            output.accept(NAItems.CRIMSON_FARMLAND);
+            output.accept(NAItems.WARPED_FARMLAND);
             output.accept(NAItems.DEAD_VINES);
             output.accept(NAItems.MORTOFRUCT);
 

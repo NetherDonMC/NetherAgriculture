@@ -1,0 +1,9 @@
+{
+  "parent": "netheragriculture:block/farmland",
+  "textures": {
+    "particle": "netheragriculture:block/warped_farmland",
+    "side": "minecraft:block/warped_nylium_side",
+    "up": "netheragriculture:block/warped_farmland",
+    "down": "minecraft:block/netherrack"
+  }
+}
