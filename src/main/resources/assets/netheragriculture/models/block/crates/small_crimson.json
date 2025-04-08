@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "netheragriculture:block/crimson_crate",
+    "top": "netheragriculture:block/crimson_crate",
+    "side": "netheragriculture:block/small_crimson_crate"
+  }
+}

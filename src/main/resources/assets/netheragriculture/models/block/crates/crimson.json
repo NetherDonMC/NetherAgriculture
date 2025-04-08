@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "netheragriculture:block/crimson_crate"
+  }
+}

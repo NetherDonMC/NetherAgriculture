@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "netheragriculture:block/crates/small_crimson"
+    },
+    "type=double": {
+      "model": "netheragriculture:block/crates/small_crimson_double"
+    },
+    "type=top": {
+      "model": "netheragriculture:block/crates/small_crimson_top"
+    }
+  }
+}

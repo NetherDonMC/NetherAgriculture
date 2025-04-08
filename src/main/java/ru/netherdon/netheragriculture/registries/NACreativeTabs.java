@@ -20,6 +20,10 @@ public final class NACreativeTabs
             output.accept(NAItems.WARPED_FARMLAND);
             output.accept(NAItems.DEAD_VINES);
             output.accept(NAItems.MORTOFRUCT);
+            output.accept(NAItems.CRIMSON_CRATE);
+            output.accept(NAItems.SMALL_CRIMSON_CRATE);
+            output.accept(NAItems.WARPED_CRATE);
+            output.accept(NAItems.SMALL_WARPED_CRATE);
 
             output.accept(NAItems.CRIMSON_BERRY);
             output.accept(NAItems.WARPED_BERRIES);

@@ -1,6 +1,10 @@
 {
   "replace": false,
   "values": [
-    "netheragriculture:mortofruct"
+    "netheragriculture:mortofruct",
+    "netheragriculture:crimson_crate",
+    "netheragriculture:small_crimson_crate",
+    "netheragriculture:warped_crate",
+    "netheragriculture:small_warped_crate"
   ]
 }

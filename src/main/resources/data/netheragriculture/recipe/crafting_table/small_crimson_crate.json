@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+		"###"
+    ],
+    "key": {
+		"#": {
+			"item": "netheragriculture:crimson_crate"
+		}
+    },
+    "result": {
+		"id": "netheragriculture:small_crimson_crate",
+		"count": 6
+    }
+}

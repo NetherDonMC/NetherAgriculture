@@ -1,6 +1,8 @@
 package ru.netherdon.netheragriculture.registries;
 
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
@@ -51,5 +53,37 @@ public final class NABlocks
             .randomTicks()
             .sound(SoundType.TWISTING_VINES)
             .pushReaction(PushReaction.DESTROY)
+    );
+
+    public static final DeferredBlock<Block> CRIMSON_CRATE = REGISTER.registerSimpleBlock("crimson_crate",
+        BlockBehaviour.Properties.of()
+            .strength(1.5f, 3f)
+            .instrument(NoteBlockInstrument.BASS)
+            .mapColor(MapColor.CRIMSON_STEM)
+            .sound(SoundType.NETHER_WOOD)
+    );
+
+    public static final DeferredBlock<SlabBlock> SMALL_CRIMSON_CRATE = REGISTER.registerBlock("small_crimson_crate", SlabBlock::new,
+        BlockBehaviour.Properties.of()
+            .strength(1.5f, 3f)
+            .instrument(NoteBlockInstrument.BASS)
+            .mapColor(MapColor.CRIMSON_STEM)
+            .sound(SoundType.NETHER_WOOD)
+    );
+
+    public static final DeferredBlock<Block> WARPED_CRATE = REGISTER.registerSimpleBlock("warped_crate",
+        BlockBehaviour.Properties.of()
+            .strength(1.5f, 3f)
+            .instrument(NoteBlockInstrument.BASS)
+            .mapColor(MapColor.WARPED_STEM)
+            .sound(SoundType.NETHER_WOOD)
+    );
+
+    public static final DeferredBlock<SlabBlock> SMALL_WARPED_CRATE = REGISTER.registerBlock("small_warped_crate", SlabBlock::new,
+        BlockBehaviour.Properties.of()
+            .strength(1.5f, 3f)
+            .instrument(NoteBlockInstrument.BASS)
+            .mapColor(MapColor.WARPED_STEM)
+            .sound(SoundType.NETHER_WOOD)
     );
 }

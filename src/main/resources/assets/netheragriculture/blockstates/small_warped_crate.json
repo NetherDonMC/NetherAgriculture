@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "netheragriculture:block/crates/small_warped"
+    },
+    "type=double": {
+      "model": "netheragriculture:block/crates/small_warped_double"
+    },
+    "type=top": {
+      "model": "netheragriculture:block/crates/small_warped_top"
+    }
+  }
+}

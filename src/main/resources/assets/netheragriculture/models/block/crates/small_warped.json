@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "netheragriculture:block/warped_crate",
+    "top": "netheragriculture:block/warped_crate",
+    "side": "netheragriculture:block/small_warped_crate"
+  }
+}

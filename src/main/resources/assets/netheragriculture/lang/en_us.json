@@ -6,5 +6,9 @@
   "block.netheragriculture.mortofruct": "Mortofruct",
   "block.netheragriculture.dead_vines": "Dead Vines",
   "block.netheragriculture.crimson_farmland": "Crimson Farmland",
-  "block.netheragriculture.warped_farmland": "Warped Farmland"
+  "block.netheragriculture.warped_farmland": "Warped Farmland",
+  "block.netheragriculture.crimson_crate": "Crimson Crate",
+  "block.netheragriculture.small_crimson_crate": "Small Crimson Crate",
+  "block.netheragriculture.warped_crate": "Warped Crate",
+  "block.netheragriculture.small_warped_crate": "Small Warped Crate"
 }
