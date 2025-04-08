@@ -7,10 +7,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import ru.netherdon.netheragriculture.registries.NABlocks;
-import ru.netherdon.netheragriculture.registries.NACreativeTabs;
-import ru.netherdon.netheragriculture.registries.NAItems;
-import ru.netherdon.netheragriculture.registries.NAMobEffects;
+import ru.netherdon.netheragriculture.registries.*;
 
 @Mod(NetherAgriculture.ID)
 public class NetherAgriculture
@@ -23,6 +20,7 @@ public class NetherAgriculture
         NAItems.REGISTER.register(modEventBus);
         NACreativeTabs.REGISTRY.register(modEventBus);
         NAMobEffects.REGISTER.register(modEventBus);
+        NARecipeSerializers.REGISTER.register(modEventBus);
     }
 
     public static ResourceLocation location(String name)

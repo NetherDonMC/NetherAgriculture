@@ -1,6 +1,6 @@
 {
   "variants": { "": [
-	  { "model": "netheragriculture:block/crates/warped" }
+	  { "model": "netheragriculture:block/crates/warped/common" }
 	]
   }
 }

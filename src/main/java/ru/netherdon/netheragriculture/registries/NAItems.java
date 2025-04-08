@@ -55,4 +55,8 @@ public final class NAItems
     public static final DeferredItem<BlockItem> SMALL_CRIMSON_CRATE = REGISTER.registerSimpleBlockItem(NABlocks.SMALL_CRIMSON_CRATE);
     public static final DeferredItem<BlockItem> WARPED_CRATE = REGISTER.registerSimpleBlockItem(NABlocks.WARPED_CRATE);
     public static final DeferredItem<BlockItem> SMALL_WARPED_CRATE = REGISTER.registerSimpleBlockItem(NABlocks.SMALL_WARPED_CRATE);
+    public static final DeferredItem<BlockItem> CRIMSON_CRATE_OF_CRIMSON_BERRIES = REGISTER.registerSimpleBlockItem(NABlocks.CRIMSON_CRATE_OF_CRIMSON_BERRIES);
+    public static final DeferredItem<BlockItem> SMALL_CRIMSON_CRATE_OF_CRIMSON_BERRIES = REGISTER.registerSimpleBlockItem(NABlocks.SMALL_CRIMSON_CRATE_OF_CRIMSON_BERRIES);
+    public static final DeferredItem<BlockItem> WARPED_CRATE_OF_CRIMSON_BERRIES = REGISTER.registerSimpleBlockItem(NABlocks.WARPED_CRATE_OF_CRIMSON_BERRIES);
+    public static final DeferredItem<BlockItem> SMALL_WARPED_CRATE_OF_CRIMSON_BERRIES = REGISTER.registerSimpleBlockItem(NABlocks.SMALL_WARPED_CRATE_OF_CRIMSON_BERRIES);
 }

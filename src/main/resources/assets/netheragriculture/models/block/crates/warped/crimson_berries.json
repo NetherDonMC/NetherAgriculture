@@ -1,0 +1,6 @@
+{
+  "parent": "netheragriculture:block/base/warped_crate",
+  "textures": {
+    "top": "netheragriculture:block/warped_crate_of_crimson_berries"
+  }
+}

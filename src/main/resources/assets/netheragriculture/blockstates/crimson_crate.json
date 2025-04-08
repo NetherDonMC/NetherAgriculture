@@ -1,6 +1,6 @@
 {
   "variants": { "": [
-	  { "model": "netheragriculture:block/crates/crimson" }
+	  { "model": "netheragriculture:block/crates/crimson/common" }
 	]
   }
 }

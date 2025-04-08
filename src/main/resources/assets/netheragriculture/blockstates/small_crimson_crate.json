@@ -1,13 +1,13 @@
 {
   "variants": {
     "type=bottom": {
-      "model": "netheragriculture:block/crates/small_crimson"
+      "model": "netheragriculture:block/crates/crimson/small/common/bottom"
     },
     "type=double": {
-      "model": "netheragriculture:block/crates/small_crimson_double"
+      "model": "netheragriculture:block/crates/crimson/small/common/double"
     },
     "type=top": {
-      "model": "netheragriculture:block/crates/small_crimson_top"
+      "model": "netheragriculture:block/crates/crimson/small/common/top"
     }
   }
 }

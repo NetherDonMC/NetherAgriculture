@@ -1,7 +1,6 @@
 package ru.netherdon.netheragriculture.registries;
 
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -55,35 +54,13 @@ public final class NABlocks
             .pushReaction(PushReaction.DESTROY)
     );
 
-    public static final DeferredBlock<Block> CRIMSON_CRATE = REGISTER.registerSimpleBlock("crimson_crate",
-        BlockBehaviour.Properties.of()
-            .strength(1.5f, 3f)
-            .instrument(NoteBlockInstrument.BASS)
-            .mapColor(MapColor.CRIMSON_STEM)
-            .sound(SoundType.NETHER_WOOD)
-    );
+    public static final DeferredBlock<Block> CRIMSON_CRATE = REGISTER.registerSimpleBlock("crimson_crate", NABlockProperties.CRIMSON_CRATE);
+    public static final DeferredBlock<SlabBlock> SMALL_CRIMSON_CRATE = REGISTER.registerBlock("small_crimson_crate", SlabBlock::new, NABlockProperties.CRIMSON_CRATE);
+    public static final DeferredBlock<Block> WARPED_CRATE = REGISTER.registerSimpleBlock("warped_crate", NABlockProperties.WARPED_CRATE);
+    public static final DeferredBlock<SlabBlock> SMALL_WARPED_CRATE = REGISTER.registerBlock("small_warped_crate", SlabBlock::new, NABlockProperties.WARPED_CRATE);
 
-    public static final DeferredBlock<SlabBlock> SMALL_CRIMSON_CRATE = REGISTER.registerBlock("small_crimson_crate", SlabBlock::new,
-        BlockBehaviour.Properties.of()
-            .strength(1.5f, 3f)
-            .instrument(NoteBlockInstrument.BASS)
-            .mapColor(MapColor.CRIMSON_STEM)
-            .sound(SoundType.NETHER_WOOD)
-    );
-
-    public static final DeferredBlock<Block> WARPED_CRATE = REGISTER.registerSimpleBlock("warped_crate",
-        BlockBehaviour.Properties.of()
-            .strength(1.5f, 3f)
-            .instrument(NoteBlockInstrument.BASS)
-            .mapColor(MapColor.WARPED_STEM)
-            .sound(SoundType.NETHER_WOOD)
-    );
-
-    public static final DeferredBlock<SlabBlock> SMALL_WARPED_CRATE = REGISTER.registerBlock("small_warped_crate", SlabBlock::new,
-        BlockBehaviour.Properties.of()
-            .strength(1.5f, 3f)
-            .instrument(NoteBlockInstrument.BASS)
-            .mapColor(MapColor.WARPED_STEM)
-            .sound(SoundType.NETHER_WOOD)
-    );
+    public static final DeferredBlock<Block> CRIMSON_CRATE_OF_CRIMSON_BERRIES = REGISTER.registerSimpleBlock("crimson_crate_of_crimson_berries", NABlockProperties.CRIMSON_CRATE);
+    public static final DeferredBlock<SlabBlock> SMALL_CRIMSON_CRATE_OF_CRIMSON_BERRIES = REGISTER.registerBlock("small_crimson_crate_of_crimson_berries", SlabBlock::new, NABlockProperties.CRIMSON_CRATE);
+    public static final DeferredBlock<Block> WARPED_CRATE_OF_CRIMSON_BERRIES = REGISTER.registerSimpleBlock("warped_crate_of_crimson_berries", NABlockProperties.WARPED_CRATE);
+    public static final DeferredBlock<SlabBlock> SMALL_WARPED_CRATE_OF_CRIMSON_BERRIES = REGISTER.registerBlock("small_warped_crate_of_crimson_berries", SlabBlock::new, NABlockProperties.WARPED_CRATE);
 }
