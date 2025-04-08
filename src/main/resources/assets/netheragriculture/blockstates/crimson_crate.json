@@ -1,6 +1,10 @@
 {
-  "variants": { "": [
-	  { "model": "netheragriculture:block/crates/crimson/common" }
-	]
+  "variants": {
+    "open=true": {
+      "model": "netheragriculture:block/crates/crimson/opened"
+    },
+    "open=false": {
+      "model": "netheragriculture:block/crates/crimson/closed"
+    }
   }
 }

@@ -3,7 +3,9 @@
   "input": {
     "item": "netheragriculture:warped_crate_of_crimson_berries"
   },
-  "storage": "netheragriculture:warped_crate",
+  "storage": {
+    "id": "netheragriculture:warped_crate"
+  },
   "result": {
     "id": "netheragriculture:crimson_berry",
     "count": 8

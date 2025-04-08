@@ -1,13 +1,22 @@
 {
   "variants": {
-    "type=bottom": {
-      "model": "netheragriculture:block/crates/crimson/small/common/bottom"
+    "type=bottom,open=true": {
+      "model": "netheragriculture:block/crates/crimson/small/opened/bottom"
     },
-    "type=double": {
-      "model": "netheragriculture:block/crates/crimson/small/common/double"
+    "type=double,open=true": {
+      "model": "netheragriculture:block/crates/crimson/small/opened/double"
     },
-    "type=top": {
-      "model": "netheragriculture:block/crates/crimson/small/common/top"
+    "type=top,open=true": {
+      "model": "netheragriculture:block/crates/crimson/small/opened/top"
+    },
+    "type=bottom,open=false": {
+      "model": "netheragriculture:block/crates/crimson/small/closed/bottom"
+    },
+    "type=double,open=false": {
+      "model": "netheragriculture:block/crates/crimson/small/closed/double"
+    },
+    "type=top,open=false": {
+      "model": "netheragriculture:block/crates/crimson/small/closed/top"
     }
   }
 }

@@ -1,0 +1,6 @@
+{
+  "parent": "netheragriculture:block/base/warped_crate",
+  "textures": {
+    "top": "netheragriculture:block/opened_warped_crate"
+  }
+}

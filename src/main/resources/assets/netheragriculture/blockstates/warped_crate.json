@@ -1,6 +1,10 @@
 {
-  "variants": { "": [
-	  { "model": "netheragriculture:block/crates/warped/common" }
-	]
+  "variants": {
+    "open=true": {
+      "model": "netheragriculture:block/crates/warped/opened"
+    },
+    "open=false": {
+      "model": "netheragriculture:block/crates/warped/closed"
+    }
   }
 }

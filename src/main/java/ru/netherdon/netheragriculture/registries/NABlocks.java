@@ -10,9 +10,7 @@ import net.minecraft.world.level.material.PushReaction;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import ru.netherdon.netheragriculture.NetherAgriculture;
-import ru.netherdon.netheragriculture.blocks.DeadVinesBlock;
-import ru.netherdon.netheragriculture.blocks.MortofructBlock;
-import ru.netherdon.netheragriculture.blocks.NetherFarmlandBlock;
+import ru.netherdon.netheragriculture.blocks.*;
 
 public final class NABlocks
 {
@@ -54,10 +52,10 @@ public final class NABlocks
             .pushReaction(PushReaction.DESTROY)
     );
 
-    public static final DeferredBlock<Block> CRIMSON_CRATE = REGISTER.registerSimpleBlock("crimson_crate", NABlockProperties.CRIMSON_CRATE);
-    public static final DeferredBlock<SlabBlock> SMALL_CRIMSON_CRATE = REGISTER.registerBlock("small_crimson_crate", SlabBlock::new, NABlockProperties.CRIMSON_CRATE);
-    public static final DeferredBlock<Block> WARPED_CRATE = REGISTER.registerSimpleBlock("warped_crate", NABlockProperties.WARPED_CRATE);
-    public static final DeferredBlock<SlabBlock> SMALL_WARPED_CRATE = REGISTER.registerBlock("small_warped_crate", SlabBlock::new, NABlockProperties.WARPED_CRATE);
+    public static final DeferredBlock<Block> CRIMSON_CRATE = REGISTER.registerBlock("crimson_crate", CrateBlock::new, NABlockProperties.CRIMSON_CRATE);
+    public static final DeferredBlock<SlabBlock> SMALL_CRIMSON_CRATE = REGISTER.registerBlock("small_crimson_crate", SmallCrateBlock::new, NABlockProperties.CRIMSON_CRATE);
+    public static final DeferredBlock<Block> WARPED_CRATE = REGISTER.registerBlock("warped_crate", CrateBlock::new, NABlockProperties.WARPED_CRATE);
+    public static final DeferredBlock<SlabBlock> SMALL_WARPED_CRATE = REGISTER.registerBlock("small_warped_crate", SmallCrateBlock::new, NABlockProperties.WARPED_CRATE);
 
     public static final DeferredBlock<Block> CRIMSON_CRATE_OF_CRIMSON_BERRIES = REGISTER.registerSimpleBlock("crimson_crate_of_crimson_berries", NABlockProperties.CRIMSON_CRATE);
     public static final DeferredBlock<SlabBlock> SMALL_CRIMSON_CRATE_OF_CRIMSON_BERRIES = REGISTER.registerBlock("small_crimson_crate_of_crimson_berries", SlabBlock::new, NABlockProperties.CRIMSON_CRATE);

@@ -1,13 +1,22 @@
 {
   "variants": {
-    "type=bottom": {
-      "model": "netheragriculture:block/crates/warped/small/common/bottom"
+    "type=bottom,open=true": {
+      "model": "netheragriculture:block/crates/warped/small/opened/bottom"
     },
-    "type=double": {
-      "model": "netheragriculture:block/crates/warped/small/common/double"
+    "type=double,open=true": {
+      "model": "netheragriculture:block/crates/warped/small/opened/double"
     },
-    "type=top": {
-      "model": "netheragriculture:block/crates/warped/small/common/top"
+    "type=top,open=true": {
+      "model": "netheragriculture:block/crates/warped/small/opened/top"
+    },
+    "type=bottom,open=false": {
+      "model": "netheragriculture:block/crates/warped/small/closed/bottom"
+    },
+    "type=double,open=false": {
+      "model": "netheragriculture:block/crates/warped/small/closed/double"
+    },
+    "type=top,open=false": {
+      "model": "netheragriculture:block/crates/warped/small/closed/top"
     }
   }
 }
