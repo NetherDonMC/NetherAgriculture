@@ -1,9 +1,6 @@
 package ru.netherdon.netheragriculture.registries;
 
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.SlabBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
@@ -54,7 +51,23 @@ public final class NABlocks
     );
 
     public static final DeferredBlock<NetherCropBlock> CRIMSON_BERRY_ROOTS = REGISTER.registerBlock("crimson_berry_roots", CrimsonBerryRootsBlock::new,
-        BlockBehaviour.Properties.ofFullCopy(Blocks.WEEPING_VINES)
+        BlockBehaviour.Properties.of()
+            .mapColor(MapColor.NETHER)
+            .noCollission()
+            .instabreak()
+            .sound(SoundType.ROOTS)
+            .pushReaction(PushReaction.DESTROY)
+    );
+
+    public static final DeferredBlock<RootsBlock> WILD_CRIMSON_BERRY_ROOTS = REGISTER.registerBlock("wild_crimson_berry_roots", RootsBlock::new,
+        BlockBehaviour.Properties.of()
+            .mapColor(MapColor.NETHER)
+            .replaceable()
+            .noCollission()
+            .instabreak()
+            .sound(SoundType.ROOTS)
+            .offsetType(BlockBehaviour.OffsetType.XZ)
+            .pushReaction(PushReaction.DESTROY)
     );
 
     public static final DeferredBlock<Block> CRIMSON_CRATE = REGISTER.registerBlock("crimson_crate", CrateBlock::new, NABlockProperties.CRIMSON_CRATE);

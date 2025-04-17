@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:block/crop",
+  "parent": "netheragriculture:block/base/crop_cross",
   "render_type": "cutout",
   "textures": {
     "crop": "netheragriculture:block/crimson_berry_roots_stage0"
