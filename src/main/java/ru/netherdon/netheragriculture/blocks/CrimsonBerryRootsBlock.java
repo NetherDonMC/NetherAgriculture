@@ -6,15 +6,28 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
 import ru.netherdon.netheragriculture.registries.NABlocks;
 import ru.netherdon.netheragriculture.registries.NAItems;
 
 public class CrimsonBerryRootsBlock extends NetherCropBlock
 {
+    private static final VoxelShape SHAPE0 = box(0f, 0f, 0f, 16f, 2f,16f);
+    private static final VoxelShape SHAPE1 = box(0f, 0f, 0f, 16f, 5f,16f);
+    private static final VoxelShape SHAPE2 = box(0f, 0f, 0f, 16f, 9f,16f);
+    private static final VoxelShape SHAPE3 = box(0f, 0f, 0f, 16f, 12f,16f);
+
+    private static final VoxelShape[] SHAPE_BY_AGE = new VoxelShape[]
+    {
+        SHAPE0, SHAPE0, SHAPE1, SHAPE1, SHAPE2, SHAPE2, SHAPE2, SHAPE3,
+    };
+
     public CrimsonBerryRootsBlock(Properties properties)
     {
         super(properties);
@@ -44,5 +57,12 @@ public class CrimsonBerryRootsBlock extends NetherCropBlock
     public boolean isValidFarmland(BlockState state)
     {
         return state.is(NABlocks.CRIMSON_FARMLAND);
+    }
+
+    @Override
+    protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context)
+    {
+        int age = this.getAge(state);
+        return SHAPE_BY_AGE[age];
     }
 }
