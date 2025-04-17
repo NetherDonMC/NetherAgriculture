@@ -9,8 +9,7 @@ import net.neoforged.neoforge.common.util.Lazy;
 public final class NAFoods
 {
     public static final FoodProperties CRIMSON_BERRY = new FoodProperties.Builder()
-        .nutrition(3).saturationModifier(0.2f).fast()
-        .effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 200), 0.05f)
+        .nutrition(2).saturationModifier(0.2f).fast()
         .build();
 
     public static final FoodProperties WARPED_BERRIES = new FoodProperties.Builder()

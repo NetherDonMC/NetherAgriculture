@@ -77,7 +77,7 @@ public class NetherFarmlandBlock extends Block
     @Override
     public void fallOn(Level level, BlockState state, BlockPos pos, Entity entity, float fallDistance)
     {
-        if (!level.isClientSide)
+        if (!level.isClientSide && entity.canTrample(state, pos, fallDistance))
         {
             turnToNetherrack(entity, state, level, pos);
         }

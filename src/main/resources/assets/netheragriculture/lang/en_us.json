@@ -2,8 +2,11 @@
   "itemGroup.netheragriculture.common": "Nether Agriculture",
 
   "item.netheragriculture.mortofruct_half": "Mortofruct Half",
+  "item.netheragriculture.crimson_berry": "Crimson Berry",
+  "item.netheragriculture.crimson_berry_seeds": "Crimson Berry Seeds",
 
   "block.netheragriculture.mortofruct": "Mortofruct",
+  "block.netheragriculture.crimson_berry_roots": "Crimson Berry Roots",
   "block.netheragriculture.dead_vines": "Dead Vines",
   "block.netheragriculture.crimson_farmland": "Crimson Farmland",
   "block.netheragriculture.warped_farmland": "Warped Farmland",

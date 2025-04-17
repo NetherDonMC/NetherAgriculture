@@ -1,6 +1,7 @@
 package ru.netherdon.netheragriculture.registries;
 
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -50,6 +51,10 @@ public final class NABlocks
             .randomTicks()
             .sound(SoundType.TWISTING_VINES)
             .pushReaction(PushReaction.DESTROY)
+    );
+
+    public static final DeferredBlock<NetherCropBlock> CRIMSON_BERRY_ROOTS = REGISTER.registerBlock("crimson_berry_roots", CrimsonBerryRootsBlock::new,
+        BlockBehaviour.Properties.ofFullCopy(Blocks.WEEPING_VINES)
     );
 
     public static final DeferredBlock<Block> CRIMSON_CRATE = REGISTER.registerBlock("crimson_crate", CrateBlock::new, NABlockProperties.CRIMSON_CRATE);

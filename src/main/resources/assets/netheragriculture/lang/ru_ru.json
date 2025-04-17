@@ -2,8 +2,11 @@
   "itemGroup.netheragriculture.common": "Nether Agriculture",
 
   "item.netheragriculture.mortofruct_half": "Половинка мортофрукта",
+  "item.netheragriculture.crimson_berry": "Багровая ягода",
+  "item.netheragriculture.crimson_berry_seeds": "Семена багровой ягоды",
 
   "block.netheragriculture.mortofruct": "Мортофрукт",
+  "block.netheragriculture.crimson_berry_roots": "Корни багровых ягод",
   "block.netheragriculture.dead_vines": "Мертвая лоза",
   "block.netheragriculture.crimson_farmland": "Багровая пашня",
   "block.netheragriculture.warped_farmland": "Искаженная пашня",

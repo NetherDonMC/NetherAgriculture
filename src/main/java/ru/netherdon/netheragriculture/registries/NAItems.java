@@ -2,6 +2,7 @@ package ru.netherdon.netheragriculture.registries;
 
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemNameBlockItem;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import ru.netherdon.netheragriculture.NetherAgriculture;
@@ -11,7 +12,7 @@ public final class NAItems
 {
     public static final DeferredRegister.Items REGISTER = DeferredRegister.createItems(NetherAgriculture.ID);
 
-    public static final DeferredItem<Item> CRIMSON_BERRY = REGISTER.register("crimson_berry", () -> new FoodItem(new Item.Properties().food(NAFoods.CRIMSON_BERRY)));
+    public static final DeferredItem<Item> CRIMSON_BERRY = REGISTER.registerSimpleItem("crimson_berry", new Item.Properties().food(NAFoods.CRIMSON_BERRY));
     public static final DeferredItem<Item> WARPED_BERRIES = REGISTER.register("warped_berries", () -> new FoodItem(new Item.Properties().food(NAFoods.WARPED_BERRIES)));
     public static final DeferredItem<Item> LOTHUN = REGISTER.register("lothun", () -> new FoodItem(new Item.Properties().food(NAFoods.LOTHUN)));
     public static final DeferredItem<Item> MORTOFRUCT_HALF = REGISTER.register("mortofruct_half", () -> new FoodItem(new Item.Properties().food(NAFoods.MORTOFRUCT)));
@@ -51,6 +52,9 @@ public final class NAItems
     public static final DeferredItem<BlockItem> WARPED_FARMLAND = REGISTER.registerSimpleBlockItem(NABlocks.WARPED_FARMLAND);
     public static final DeferredItem<BlockItem> DEAD_VINES = REGISTER.registerSimpleBlockItem(NABlocks.DEAD_VINES);
     public static final DeferredItem<BlockItem> MORTOFRUCT = REGISTER.registerSimpleBlockItem(NABlocks.MORTOFRUCT);
+
+    public static final DeferredItem<BlockItem> CRIMSON_BERRY_SEEDS = REGISTER.register("crimson_berry_seeds", () -> new ItemNameBlockItem(NABlocks.CRIMSON_BERRY_ROOTS.get(), new Item.Properties()));
+
     public static final DeferredItem<BlockItem> CRIMSON_CRATE = REGISTER.registerSimpleBlockItem(NABlocks.CRIMSON_CRATE);
     public static final DeferredItem<BlockItem> SMALL_CRIMSON_CRATE = REGISTER.registerSimpleBlockItem(NABlocks.SMALL_CRIMSON_CRATE);
     public static final DeferredItem<BlockItem> WARPED_CRATE = REGISTER.registerSimpleBlockItem(NABlocks.WARPED_CRATE);

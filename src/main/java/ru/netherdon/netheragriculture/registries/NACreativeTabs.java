@@ -20,6 +20,7 @@ public final class NACreativeTabs
             output.accept(NAItems.WARPED_FARMLAND);
             output.accept(NAItems.DEAD_VINES);
             output.accept(NAItems.MORTOFRUCT);
+
             output.accept(NAItems.CRIMSON_CRATE);
             output.accept(NAItems.SMALL_CRIMSON_CRATE);
             output.accept(NAItems.CRIMSON_CRATE_OF_CRIMSON_BERRIES);
@@ -29,6 +30,7 @@ public final class NACreativeTabs
             output.accept(NAItems.WARPED_CRATE_OF_CRIMSON_BERRIES);
             output.accept(NAItems.SMALL_WARPED_CRATE_OF_CRIMSON_BERRIES);
 
+            output.accept(NAItems.CRIMSON_BERRY_SEEDS);
             output.accept(NAItems.CRIMSON_BERRY);
             output.accept(NAItems.WARPED_BERRIES);
             output.accept(NAItems.LOTHUN);
