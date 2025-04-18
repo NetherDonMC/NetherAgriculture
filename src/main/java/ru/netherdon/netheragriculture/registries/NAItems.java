@@ -14,7 +14,7 @@ public final class NAItems
 
     public static final DeferredItem<Item> CRIMSON_BERRY = REGISTER.registerSimpleItem("crimson_berry", new Item.Properties().food(NAFoods.CRIMSON_BERRY));
     public static final DeferredItem<Item> WARPED_BERRY = REGISTER.registerSimpleItem("warped_berry", new Item.Properties().food(NAFoods.WARPED_BERRY));
-    public static final DeferredItem<Item> LOTHUN = REGISTER.register("lothun", () -> new FoodItem(new Item.Properties().food(NAFoods.LOTHUN)));
+    public static final DeferredItem<Item> LOTHUN = REGISTER.register("lothun", () -> new ItemNameBlockItem(NABlocks.LOTHUNS.get(), new Item.Properties().food(NAFoods.LOTHUN)));
     public static final DeferredItem<Item> MORTOFRUCT_HALF = REGISTER.register("mortofruct_half", () -> new FoodItem(new Item.Properties().food(NAFoods.MORTOFRUCT)));
     public static final DeferredItem<Item> AZURE_MELON = REGISTER.register("azure_melon", () -> new FoodItem(new Item.Properties().food(NAFoods.AZURE_MELON)));
     public static final DeferredItem<Item> EXTINGUISHED_BLAZE_FRUIT = REGISTER.register("extinguished_blaze_fruit", () -> new ExtinguishedItem(
@@ -54,6 +54,7 @@ public final class NAItems
     public static final DeferredItem<BlockItem> MORTOFRUCT = REGISTER.registerSimpleBlockItem(NABlocks.MORTOFRUCT);
     public static final DeferredItem<BlockItem> WILD_CRIMSON_BERRY_ROOTS = REGISTER.registerSimpleBlockItem(NABlocks.WILD_CRIMSON_BERRY_ROOTS);
     public static final DeferredItem<BlockItem> WILD_WARPED_BERRY_ROOTS = REGISTER.registerSimpleBlockItem(NABlocks.WILD_WARPED_BERRY_ROOTS);
+    public static final DeferredItem<BlockItem> WILD_LOTHUN = REGISTER.registerSimpleBlockItem(NABlocks.WILD_LOTHUN);
 
     public static final DeferredItem<BlockItem> CRIMSON_BERRY_SEEDS = REGISTER.register("crimson_berry_seeds", () -> new ItemNameBlockItem(NABlocks.CRIMSON_BERRY_ROOTS.get(), new Item.Properties()));
     public static final DeferredItem<BlockItem> WARPED_BERRY_SEEDS = REGISTER.register("warped_berry_seeds", () -> new ItemNameBlockItem(NABlocks.WARPED_BERRY_ROOTS.get(), new Item.Properties()));
