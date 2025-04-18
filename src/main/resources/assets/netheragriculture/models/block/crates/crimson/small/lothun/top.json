@@ -1,0 +1,6 @@
+{
+  "parent": "netheragriculture:block/base/small_crimson_crate/top",
+  "textures": {
+    "top": "netheragriculture:block/crimson_crate_of_lothun"
+  }
+}

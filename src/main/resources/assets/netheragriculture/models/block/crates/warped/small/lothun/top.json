@@ -1,0 +1,6 @@
+{
+  "parent": "netheragriculture:block/base/small_warped_crate/top",
+  "textures": {
+    "top": "netheragriculture:block/warped_crate_of_lothun"
+  }
+}

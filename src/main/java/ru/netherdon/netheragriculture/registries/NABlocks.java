@@ -121,4 +121,9 @@ public final class NABlocks
     public static final DeferredBlock<SlabBlock> SMALL_CRIMSON_CRATE_OF_WARPED_BERRIES = REGISTER.registerBlock("small_crimson_crate_of_warped_berries", SlabBlock::new, NABlockProperties.CRIMSON_CRATE);
     public static final DeferredBlock<Block> WARPED_CRATE_OF_WARPED_BERRIES = REGISTER.registerSimpleBlock("warped_crate_of_warped_berries", NABlockProperties.WARPED_CRATE);
     public static final DeferredBlock<SlabBlock> SMALL_WARPED_CRATE_OF_WARPED_BERRIES = REGISTER.registerBlock("small_warped_crate_of_warped_berries", SlabBlock::new, NABlockProperties.WARPED_CRATE);
+
+    public static final DeferredBlock<Block> CRIMSON_CRATE_OF_LOTHUN = REGISTER.registerSimpleBlock("crimson_crate_of_lothun", NABlockProperties.CRIMSON_CRATE);
+    public static final DeferredBlock<SlabBlock> SMALL_CRIMSON_CRATE_OF_LOTHUN = REGISTER.registerBlock("small_crimson_crate_of_lothun", SlabBlock::new, NABlockProperties.CRIMSON_CRATE);
+    public static final DeferredBlock<Block> WARPED_CRATE_OF_LOTHUN = REGISTER.registerSimpleBlock("warped_crate_of_lothun", NABlockProperties.WARPED_CRATE);
+    public static final DeferredBlock<SlabBlock> SMALL_WARPED_CRATE_OF_LOTHUN = REGISTER.registerBlock("small_warped_crate_of_lothun", SlabBlock::new, NABlockProperties.WARPED_CRATE);
 }

@@ -30,6 +30,10 @@
   "block.netheragriculture.small_crimson_crate_of_warped_berries": "Малый багровый ящик с искаженными ягодами",
   "block.netheragriculture.warped_crate_of_warped_berries": "Искаженный ящик с искаженными ягодами",
   "block.netheragriculture.small_warped_crate_of_warped_berries": "Малый искаженный ящик с искаженными ягодами",
+  "block.netheragriculture.crimson_crate_of_lothun": "Багровый ящик лотуна",
+  "block.netheragriculture.small_crimson_crate_of_lothun": "Малый багровый ящик лотуна",
+  "block.netheragriculture.warped_crate_of_lothun": "Искаженный ящик лотуна",
+  "block.netheragriculture.small_warped_crate_of_lothun": "Малый искаженный ящик лотуна",
 
   "effect.netheragriculture.warp": "Искажение"
 }

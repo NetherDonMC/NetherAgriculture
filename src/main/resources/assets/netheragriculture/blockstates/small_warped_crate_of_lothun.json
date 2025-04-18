@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "netheragriculture:block/crates/warped/small/lothun/bottom"
+    },
+    "type=double": {
+      "model": "netheragriculture:block/crates/warped/small/lothun/double"
+    },
+    "type=top": {
+      "model": "netheragriculture:block/crates/warped/small/lothun/top"
+    }
+  }
+}

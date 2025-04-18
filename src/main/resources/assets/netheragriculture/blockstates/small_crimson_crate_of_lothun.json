@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "netheragriculture:block/crates/crimson/small/lothun/bottom"
+    },
+    "type=double": {
+      "model": "netheragriculture:block/crates/crimson/small/lothun/double"
+    },
+    "type=top": {
+      "model": "netheragriculture:block/crates/crimson/small/lothun/top"
+    }
+  }
+}

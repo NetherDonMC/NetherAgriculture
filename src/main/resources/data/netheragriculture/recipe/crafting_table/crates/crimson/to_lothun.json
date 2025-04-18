@@ -1,0 +1,13 @@
+{
+  "type": "netheragriculture:emptying_storage",
+  "input": {
+    "item": "netheragriculture:crimson_crate_of_lothun"
+  },
+  "storage": {
+    "id": "netheragriculture:crimson_crate"
+  },
+  "result": {
+    "id": "netheragriculture:lothun",
+    "count": 8
+  }
+}

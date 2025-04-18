@@ -30,12 +30,16 @@ public final class NACreativeTabs
             output.accept(NAItems.SMALL_CRIMSON_CRATE_OF_CRIMSON_BERRIES);
             output.accept(NAItems.CRIMSON_CRATE_OF_WARPED_BERRIES);
             output.accept(NAItems.SMALL_CRIMSON_CRATE_OF_WARPED_BERRIES);
+            output.accept(NAItems.CRIMSON_CRATE_OF_LOTHUN);
+            output.accept(NAItems.SMALL_CRIMSON_CRATE_OF_LOTHUN);
             output.accept(NAItems.WARPED_CRATE);
             output.accept(NAItems.SMALL_WARPED_CRATE);
             output.accept(NAItems.WARPED_CRATE_OF_CRIMSON_BERRIES);
             output.accept(NAItems.SMALL_WARPED_CRATE_OF_CRIMSON_BERRIES);
             output.accept(NAItems.WARPED_CRATE_OF_WARPED_BERRIES);
             output.accept(NAItems.SMALL_WARPED_CRATE_OF_WARPED_BERRIES);
+            output.accept(NAItems.WARPED_CRATE_OF_LOTHUN);
+            output.accept(NAItems.SMALL_WARPED_CRATE_OF_LOTHUN);
 
             output.accept(NAItems.CRIMSON_BERRY_SEEDS);
             output.accept(NAItems.CRIMSON_BERRY);
