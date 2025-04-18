@@ -23,6 +23,10 @@
   "block.netheragriculture.small_crimson_crate_of_crimson_berries": "Small Crimson Crate of Crimson Berries",
   "block.netheragriculture.warped_crate_of_crimson_berries": "Warped Crate of Crimson Berries",
   "block.netheragriculture.small_warped_crate_of_crimson_berries": "Small Warped Crate of Crimson Berries",
+  "block.netheragriculture.crimson_crate_of_warped_berries": "Crimson Crate of Warped Berries",
+  "block.netheragriculture.small_crimson_crate_of_warped_berries": "Small Crimson Crate of Warped Berries",
+  "block.netheragriculture.warped_crate_of_warped_berries": "Warped Crate of Warped Berries",
+  "block.netheragriculture.small_warped_crate_of_warped_berries": "Small Warped Crate of Warped Berries",
 
   "effect.netheragriculture.warp": "Warp"
 }

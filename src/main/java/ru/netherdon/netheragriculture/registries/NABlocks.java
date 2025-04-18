@@ -97,4 +97,9 @@ public final class NABlocks
     public static final DeferredBlock<SlabBlock> SMALL_CRIMSON_CRATE_OF_CRIMSON_BERRIES = REGISTER.registerBlock("small_crimson_crate_of_crimson_berries", SlabBlock::new, NABlockProperties.CRIMSON_CRATE);
     public static final DeferredBlock<Block> WARPED_CRATE_OF_CRIMSON_BERRIES = REGISTER.registerSimpleBlock("warped_crate_of_crimson_berries", NABlockProperties.WARPED_CRATE);
     public static final DeferredBlock<SlabBlock> SMALL_WARPED_CRATE_OF_CRIMSON_BERRIES = REGISTER.registerBlock("small_warped_crate_of_crimson_berries", SlabBlock::new, NABlockProperties.WARPED_CRATE);
+
+    public static final DeferredBlock<Block> CRIMSON_CRATE_OF_WARPED_BERRIES = REGISTER.registerSimpleBlock("crimson_crate_of_warped_berries", NABlockProperties.CRIMSON_CRATE);
+    public static final DeferredBlock<SlabBlock> SMALL_CRIMSON_CRATE_OF_WARPED_BERRIES = REGISTER.registerBlock("small_crimson_crate_of_warped_berries", SlabBlock::new, NABlockProperties.CRIMSON_CRATE);
+    public static final DeferredBlock<Block> WARPED_CRATE_OF_WARPED_BERRIES = REGISTER.registerSimpleBlock("warped_crate_of_warped_berries", NABlockProperties.WARPED_CRATE);
+    public static final DeferredBlock<SlabBlock> SMALL_WARPED_CRATE_OF_WARPED_BERRIES = REGISTER.registerBlock("small_warped_crate_of_warped_berries", SlabBlock::new, NABlockProperties.WARPED_CRATE);
 }

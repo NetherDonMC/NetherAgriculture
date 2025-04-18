@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "netheragriculture:block/crates/warped/small/warped_berries/bottom"
+    },
+    "type=double": {
+      "model": "netheragriculture:block/crates/warped/small/warped_berries/double"
+    },
+    "type=top": {
+      "model": "netheragriculture:block/crates/warped/small/warped_berries/top"
+    }
+  }
+}
