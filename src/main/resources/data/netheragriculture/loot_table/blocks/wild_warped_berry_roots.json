@@ -10,7 +10,7 @@
       "type": "minecraft:alternatives",
       "children": [{
         "type": "minecraft:item",
-        "name": "netheragriculture:wild_crimson_berry_roots",
+        "name": "netheragriculture:wild_warped_berry_roots",
         "conditions": [{
           "condition": "minecraft:any_of",
           "terms": [{
@@ -29,7 +29,7 @@
         }]
       }, {
         "type": "minecraft:item",
-        "name": "netheragriculture:crimson_berry",
+        "name": "netheragriculture:warped_berry",
         "functions": [{
           "function": "minecraft:set_count",
           "count": {

@@ -62,7 +62,6 @@ public final class NABlocks
     public static final DeferredBlock<RootsBlock> WILD_CRIMSON_BERRY_ROOTS = REGISTER.registerBlock("wild_crimson_berry_roots", RootsBlock::new,
         BlockBehaviour.Properties.of()
             .mapColor(MapColor.NETHER)
-            .replaceable()
             .noCollission()
             .instabreak()
             .sound(SoundType.ROOTS)
@@ -72,10 +71,20 @@ public final class NABlocks
 
     public static final DeferredBlock<NetherCropBlock> WARPED_BERRY_ROOTS = REGISTER.registerBlock("warped_berry_roots", WarpedBerryRootsBlock::new,
         BlockBehaviour.Properties.of()
-            .mapColor(MapColor.NETHER)
+            .mapColor(MapColor.COLOR_CYAN)
             .noCollission()
             .instabreak()
             .sound(SoundType.ROOTS)
+            .pushReaction(PushReaction.DESTROY)
+    );
+
+    public static final DeferredBlock<RootsBlock> WILD_WARPED_BERRY_ROOTS = REGISTER.registerBlock("wild_warped_berry_roots", RootsBlock::new,
+        BlockBehaviour.Properties.of()
+            .mapColor(MapColor.COLOR_CYAN)
+            .noCollission()
+            .instabreak()
+            .sound(SoundType.ROOTS)
+            .offsetType(BlockBehaviour.OffsetType.XZ)
             .pushReaction(PushReaction.DESTROY)
     );
 

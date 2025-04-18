@@ -21,6 +21,7 @@ public final class NACreativeTabs
             output.accept(NAItems.DEAD_VINES);
             output.accept(NAItems.MORTOFRUCT);
             output.accept(NAItems.WILD_CRIMSON_BERRY_ROOTS);
+            output.accept(NAItems.WILD_WARPED_BERRY_ROOTS);
 
             output.accept(NAItems.CRIMSON_CRATE);
             output.accept(NAItems.SMALL_CRIMSON_CRATE);
