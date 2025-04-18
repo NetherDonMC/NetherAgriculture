@@ -70,6 +70,15 @@ public final class NABlocks
             .pushReaction(PushReaction.DESTROY)
     );
 
+    public static final DeferredBlock<NetherCropBlock> WARPED_BERRY_ROOTS = REGISTER.registerBlock("warped_berry_roots", WarpedBerryRootsBlock::new,
+        BlockBehaviour.Properties.of()
+            .mapColor(MapColor.NETHER)
+            .noCollission()
+            .instabreak()
+            .sound(SoundType.ROOTS)
+            .pushReaction(PushReaction.DESTROY)
+    );
+
     public static final DeferredBlock<Block> CRIMSON_CRATE = REGISTER.registerBlock("crimson_crate", CrateBlock::new, NABlockProperties.CRIMSON_CRATE);
     public static final DeferredBlock<SlabBlock> SMALL_CRIMSON_CRATE = REGISTER.registerBlock("small_crimson_crate", SmallCrateBlock::new, NABlockProperties.CRIMSON_CRATE);
     public static final DeferredBlock<Block> WARPED_CRATE = REGISTER.registerBlock("warped_crate", CrateBlock::new, NABlockProperties.WARPED_CRATE);

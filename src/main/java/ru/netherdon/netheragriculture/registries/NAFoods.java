@@ -4,7 +4,6 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Items;
-import net.neoforged.neoforge.common.util.Lazy;
 
 public final class NAFoods
 {
@@ -12,9 +11,9 @@ public final class NAFoods
         .nutrition(2).saturationModifier(0.2f).fast()
         .build();
 
-    public static final FoodProperties WARPED_BERRIES = new FoodProperties.Builder()
+    public static final FoodProperties WARPED_BERRY = new FoodProperties.Builder()
         .nutrition(3).saturationModifier(0.2f).fast()
-        .effect(() -> new MobEffectInstance(NAMobEffects.WARP, 400), 0.25f)
+        .effect(() -> new MobEffectInstance(NAMobEffects.WARP, 400), 0.15f)
         .build();
 
     public static final FoodProperties LOTHUN = new FoodProperties.Builder()

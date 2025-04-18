@@ -33,7 +33,8 @@ public final class NACreativeTabs
 
             output.accept(NAItems.CRIMSON_BERRY_SEEDS);
             output.accept(NAItems.CRIMSON_BERRY);
-            output.accept(NAItems.WARPED_BERRIES);
+            output.accept(NAItems.WARPED_BERRY_SEEDS);
+            output.accept(NAItems.WARPED_BERRY);
             output.accept(NAItems.LOTHUN);
             output.accept(NAItems.MORTOFRUCT_HALF);
             output.accept(NAItems.AZURE_MELON);

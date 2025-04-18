@@ -23,7 +23,7 @@ public class WarpMobEffect extends MobEffect
         if (!level.isClientSide)
         {
             RandomSource rand = RandomSource.create();
-            if (rand.nextInt(2) == 0)
+            if (rand.nextInt(10) == 0)
             {
                 Endermite endermite = new Endermite(EntityType.ENDERMITE, level);
                 endermite.setPos(livingEntity.position());

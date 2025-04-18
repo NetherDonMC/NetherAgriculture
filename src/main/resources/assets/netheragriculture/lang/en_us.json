@@ -4,10 +4,13 @@
   "item.netheragriculture.mortofruct_half": "Mortofruct Half",
   "item.netheragriculture.crimson_berry": "Crimson Berry",
   "item.netheragriculture.crimson_berry_seeds": "Crimson Berry Seeds",
+  "item.netheragriculture.warped_berry": "Warped Berry",
+  "item.netheragriculture.warped_berry_seeds": "Warped Berry Seeds",
 
   "block.netheragriculture.mortofruct": "Mortofruct",
   "block.netheragriculture.crimson_berry_roots": "Crimson Berry Roots",
   "block.netheragriculture.wild_crimson_berry_roots": "Wild Crimson Berry Roots",
+  "block.netheragriculture.warped_berry_roots": "Warped Berry Roots",
   "block.netheragriculture.dead_vines": "Dead Vines",
   "block.netheragriculture.crimson_farmland": "Crimson Farmland",
   "block.netheragriculture.warped_farmland": "Warped Farmland",
@@ -18,5 +21,7 @@
   "block.netheragriculture.crimson_crate_of_crimson_berries": "Crimson Crate of Crimson Berries",
   "block.netheragriculture.small_crimson_crate_of_crimson_berries": "Small Crimson Crate of Crimson Berries",
   "block.netheragriculture.warped_crate_of_crimson_berries": "Warped Crate of Crimson Berries",
-  "block.netheragriculture.small_warped_crate_of_crimson_berries": "Small Warped Crate of Crimson Berries"
+  "block.netheragriculture.small_warped_crate_of_crimson_berries": "Small Warped Crate of Crimson Berries",
+
+  "effect.netheragriculture.warp": "Warp"
 }

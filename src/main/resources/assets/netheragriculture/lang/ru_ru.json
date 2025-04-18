@@ -1,13 +1,16 @@
 {
-  "itemGroup.netheragriculture.common": "Nether Agriculture",
+  "itemGroup.netheragriculture.common": "Незерская агрокультура",
 
   "item.netheragriculture.mortofruct_half": "Половинка мортофрукта",
   "item.netheragriculture.crimson_berry": "Багровая ягода",
   "item.netheragriculture.crimson_berry_seeds": "Семена багровой ягоды",
+  "item.netheragriculture.warped_berry": "Искаженная ягода",
+  "item.netheragriculture.warped_berry_seeds": "Семена искаженной ягоды",
 
   "block.netheragriculture.mortofruct": "Мортофрукт",
   "block.netheragriculture.crimson_berry_roots": "Корни багровых ягод",
   "block.netheragriculture.wild_crimson_berry_roots": "Дикие корни багровых ягод",
+  "block.netheragriculture.warped_berry_roots": "Корни искаженных ягод",
   "block.netheragriculture.dead_vines": "Мертвая лоза",
   "block.netheragriculture.crimson_farmland": "Багровая пашня",
   "block.netheragriculture.warped_farmland": "Искаженная пашня",
@@ -18,5 +21,7 @@
   "block.netheragriculture.crimson_crate_of_crimson_berries": "Багровый ящик с багровыми ягодами",
   "block.netheragriculture.small_crimson_crate_of_crimson_berries": "Малый багровый ящик с багровыми ягодами",
   "block.netheragriculture.warped_crate_of_crimson_berries": "Искаженный ящик с багровыми ягодами",
-  "block.netheragriculture.small_warped_crate_of_crimson_berries": "Малый искаженный ящик с багровыми ягодами"
+  "block.netheragriculture.small_warped_crate_of_crimson_berries": "Малый искаженный ящик с багровыми ягодами",
+
+  "effect.netheragriculture.warp": "Искажение"
 }
