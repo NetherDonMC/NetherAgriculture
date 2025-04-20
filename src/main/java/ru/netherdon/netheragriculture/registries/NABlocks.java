@@ -59,7 +59,7 @@ public final class NABlocks
             .pushReaction(PushReaction.DESTROY)
     );
 
-    public static final DeferredBlock<RootsBlock> CRIMSON_BERRY_SPROUTS = REGISTER.registerBlock("crimson_berry_sprouts", CrimsonBerrySproutsBlock::new,
+    public static final DeferredBlock<RootsBlock> CRIMSON_BERRY_SPROUTS = REGISTER.registerBlock("crimson_berry_sprouts", NetherBerrySproutsBlock::new,
         BlockBehaviour.Properties.of()
             .mapColor(MapColor.NETHER)
             .noCollission()
@@ -78,7 +78,7 @@ public final class NABlocks
             .pushReaction(PushReaction.DESTROY)
     );
 
-    public static final DeferredBlock<RootsBlock> WILD_WARPED_BERRY_ROOTS = REGISTER.registerBlock("wild_warped_berry_roots", RootsBlock::new,
+    public static final DeferredBlock<RootsBlock> WARPED_BERRY_SPROUTS = REGISTER.registerBlock("warped_berry_sprouts", NetherBerrySproutsBlock::new,
         BlockBehaviour.Properties.of()
             .mapColor(MapColor.COLOR_CYAN)
             .noCollission()

@@ -8,11 +8,11 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class CrimsonBerrySproutsBlock extends RootsBlock
+public class NetherBerrySproutsBlock extends RootsBlock
 {
     protected static final VoxelShape SHAPE = Block.box(2, 0, 2, 14, 4, 14);
 
-    public CrimsonBerrySproutsBlock(Properties properties)
+    public NetherBerrySproutsBlock(Properties properties)
     {
         super(properties);
     }
