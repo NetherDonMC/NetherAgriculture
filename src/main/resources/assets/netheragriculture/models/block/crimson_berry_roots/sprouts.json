@@ -2,6 +2,6 @@
 	"parent": "minecraft:block/cross",
 	"render_type": "cutout",
 	"textures": {
-		"cross": "netheragriculture:block/crimson_berry_roots_stage3"
+		"cross": "netheragriculture:block/crimson_berry_sprouts"
 	}
 }

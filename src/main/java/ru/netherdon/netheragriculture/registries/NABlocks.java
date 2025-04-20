@@ -59,7 +59,7 @@ public final class NABlocks
             .pushReaction(PushReaction.DESTROY)
     );
 
-    public static final DeferredBlock<RootsBlock> WILD_CRIMSON_BERRY_ROOTS = REGISTER.registerBlock("wild_crimson_berry_roots", RootsBlock::new,
+    public static final DeferredBlock<RootsBlock> CRIMSON_BERRY_SPROUTS = REGISTER.registerBlock("crimson_berry_sprouts", CrimsonBerrySproutsBlock::new,
         BlockBehaviour.Properties.of()
             .mapColor(MapColor.NETHER)
             .noCollission()

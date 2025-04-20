@@ -48,7 +48,7 @@ public final class NAItems
     public static final DeferredItem<BlockItem> WARPED_FARMLAND = REGISTER.registerSimpleBlockItem(NABlocks.WARPED_FARMLAND);
     public static final DeferredItem<BlockItem> DEAD_VINES = REGISTER.registerSimpleBlockItem(NABlocks.DEAD_VINES);
     public static final DeferredItem<BlockItem> MORTOFRUCT = REGISTER.registerSimpleBlockItem(NABlocks.MORTOFRUCT);
-    public static final DeferredItem<BlockItem> WILD_CRIMSON_BERRY_ROOTS = REGISTER.registerSimpleBlockItem(NABlocks.WILD_CRIMSON_BERRY_ROOTS);
+    public static final DeferredItem<BlockItem> CRIMSON_BERRY_SPROUTS = REGISTER.registerSimpleBlockItem(NABlocks.CRIMSON_BERRY_SPROUTS);
     public static final DeferredItem<BlockItem> WILD_WARPED_BERRY_ROOTS = REGISTER.registerSimpleBlockItem(NABlocks.WILD_WARPED_BERRY_ROOTS);
     public static final DeferredItem<BlockItem> WILD_LOTHUN = REGISTER.registerSimpleBlockItem(NABlocks.WILD_LOTHUN);
 
