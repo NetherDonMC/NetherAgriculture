@@ -1,0 +1,13 @@
+{
+  "type": "netheragriculture:emptying_storage",
+  "input": {
+    "item": "netheragriculture:small_crimson_crate_of_blaze_fruit"
+  },
+  "storage": {
+    "id": "netheragriculture:small_crimson_crate"
+  },
+  "result": {
+    "id": "netheragriculture:blaze_fruit",
+    "count": 4
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "netheragriculture:block/crates/warped/small/blaze_fruit/bottom"
+    },
+    "type=double": {
+      "model": "netheragriculture:block/crates/warped/small/blaze_fruit/double"
+    },
+    "type=top": {
+      "model": "netheragriculture:block/crates/warped/small/blaze_fruit/top"
+    }
+  }
+}

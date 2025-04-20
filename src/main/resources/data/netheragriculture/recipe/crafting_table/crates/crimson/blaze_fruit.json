@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    { "item": "netheragriculture:blaze_fruit" },
+    { "item": "netheragriculture:blaze_fruit" },
+    { "item": "netheragriculture:blaze_fruit" },
+    { "item": "netheragriculture:blaze_fruit" },
+    { "item": "netheragriculture:crimson_crate" },
+    { "item": "netheragriculture:blaze_fruit" },
+    { "item": "netheragriculture:blaze_fruit" },
+    { "item": "netheragriculture:blaze_fruit" },
+    { "item": "netheragriculture:blaze_fruit" }
+  ],
+  "result": {
+    "id": "netheragriculture:crimson_crate_of_blaze_fruit",
+    "count": 1
+  }
+}
