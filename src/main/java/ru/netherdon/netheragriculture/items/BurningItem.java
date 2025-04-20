@@ -39,6 +39,8 @@ public class BurningItem extends Item
         return entity instanceof Player player
             && player.getAbilities().invulnerable
             || entity.fireImmune()
-            || entity.isInWater();
+            || entity.isInWaterRainOrBubble()
+            || entity.isInPowderSnow
+            || entity.isInFluidType((fluidType, height) -> entity.canFluidExtinguish(fluidType));
     }
 }

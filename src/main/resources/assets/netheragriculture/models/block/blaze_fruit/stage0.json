@@ -1,0 +1,50 @@
+{
+	"credit": "Made with Blockbench",
+	"render_type": "cutout",
+	"textures": {
+		"particle": "netheragriculture:block/blaze_fruit_bush0",
+		"bush": "netheragriculture:block/blaze_fruit_bush0"
+	},
+	"elements": [
+		{
+			"name": "bush",
+			"from": [-8, 0, 0],
+			"to": [8, 0, 16],
+			"rotation": {"angle": -22.5, "axis": "z", "origin": [8, 0, 8]},
+			"faces": {
+				"up": {"uv": [0, 0, 16, 16], "rotation": 270, "texture": "#bush"},
+				"down": {"uv": [0, 0, 16, 16], "rotation": 270, "texture": "#bush"}
+			}
+		},
+		{
+			"name": "bush",
+			"from": [8, 0, 0],
+			"to": [24, 0, 16],
+			"rotation": {"angle": 22.5, "axis": "z", "origin": [8, 0, 8]},
+			"faces": {
+				"up": {"uv": [0, 0, 16, 16], "rotation": 90, "texture": "#bush"},
+				"down": {"uv": [0, 0, 16, 16], "rotation": 90, "texture": "#bush"}
+			}
+		},
+		{
+			"name": "bush",
+			"from": [0, 0, -8],
+			"to": [16, 0, 8],
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [8, 0, 8]},
+			"faces": {
+				"up": {"uv": [0, 0, 16, 16], "texture": "#bush"},
+				"down": {"uv": [0, 0, 16, 16], "rotation": 180, "texture": "#bush"}
+			}
+		},
+		{
+			"name": "bush",
+			"from": [0, 0, 8],
+			"to": [16, 0, 24],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [8, 0, 8]},
+			"faces": {
+				"up": {"uv": [0, 0, 16, 16], "rotation": 180, "texture": "#bush"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#bush"}
+			}
+		}
+	]
+}

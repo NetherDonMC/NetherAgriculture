@@ -17,12 +17,8 @@ public final class NAItems
     public static final DeferredItem<Item> LOTHUN = REGISTER.register("lothun", () -> new ItemNameBlockItem(NABlocks.LOTHUNS.get(), new Item.Properties().food(NAFoods.LOTHUN)));
     public static final DeferredItem<Item> MORTOFRUCT_HALF = REGISTER.register("mortofruct_half", () -> new FoodItem(new Item.Properties().food(NAFoods.MORTOFRUCT)));
     public static final DeferredItem<Item> AZURE_MELON = REGISTER.register("azure_melon", () -> new FoodItem(new Item.Properties().food(NAFoods.AZURE_MELON)));
-    public static final DeferredItem<Item> EXTINGUISHED_BLAZE_FRUIT = REGISTER.register("extinguished_blaze_fruit", () -> new ExtinguishedItem(
-        NAItems.BLAZE_FRUIT,
-        new Item.Properties().food(NAFoods.BLAZE_FRUIT).fireResistant()
-    ));
+
     public static final DeferredItem<Item> BLAZE_FRUIT = REGISTER.register("blaze_fruit", () -> new BlazeFruitItem(
-        EXTINGUISHED_BLAZE_FRUIT,
         new Item.Properties().food(NAFoods.BLAZE_FRUIT).fireResistant()
     ));
 
@@ -58,6 +54,7 @@ public final class NAItems
 
     public static final DeferredItem<BlockItem> CRIMSON_BERRY_SEEDS = REGISTER.register("crimson_berry_seeds", () -> new ItemNameBlockItem(NABlocks.CRIMSON_BERRY_ROOTS.get(), new Item.Properties()));
     public static final DeferredItem<BlockItem> WARPED_BERRY_SEEDS = REGISTER.register("warped_berry_seeds", () -> new ItemNameBlockItem(NABlocks.WARPED_BERRY_ROOTS.get(), new Item.Properties()));
+    public static final DeferredItem<BlockItem> BLAZE_FRUIT_SEED = REGISTER.register("blaze_fruit_seed", () -> new ItemNameBlockItem(NABlocks.BLAZE_FRUIT.get(), new Item.Properties()));
 
     public static final DeferredItem<BlockItem> CRIMSON_CRATE = REGISTER.registerSimpleBlockItem(NABlocks.CRIMSON_CRATE);
     public static final DeferredItem<BlockItem> SMALL_CRIMSON_CRATE = REGISTER.registerSimpleBlockItem(NABlocks.SMALL_CRIMSON_CRATE);

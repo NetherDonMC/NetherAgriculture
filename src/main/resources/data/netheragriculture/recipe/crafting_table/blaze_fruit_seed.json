@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [{
+      "item": "netheragriculture:blaze_fruit"
+  }],
+  "result": {
+    "id": "netheragriculture:blaze_fruit_seed",
+    "count": 1
+  }
+}

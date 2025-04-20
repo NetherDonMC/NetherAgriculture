@@ -7,6 +7,8 @@
   "item.netheragriculture.warped_berry": "Искаженная ягода",
   "item.netheragriculture.warped_berry_seeds": "Семена искаженной ягоды",
   "item.netheragriculture.lothun": "Лотун",
+  "item.netheragriculture.blaze_fruit": "Огненный фрукт",
+  "item.netheragriculture.blaze_fruit_seed": "Семя огненного фрукта",
 
   "block.netheragriculture.mortofruct": "Мортофрукт",
   "block.netheragriculture.crimson_berry_roots": "Корни багровых ягод",
@@ -14,7 +16,8 @@
   "block.netheragriculture.warped_berry_roots": "Корни искаженных ягод",
   "block.netheragriculture.wild_warped_berry_roots": "Дикие корни искаженных ягод",
   "block.netheragriculture.lothuns": "Лотуны",
-  "block.netheragriculture.wild_lothun": "Дикие лотун",
+  "block.netheragriculture.wild_lothun": "Дикий лотун",
+  "block.netheragriculture.blaze_fruit": "Огненный фрукт",
   "block.netheragriculture.dead_vines": "Мертвая лоза",
   "block.netheragriculture.crimson_farmland": "Багровая пашня",
   "block.netheragriculture.warped_farmland": "Искаженная пашня",

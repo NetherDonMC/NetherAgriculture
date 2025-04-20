@@ -7,6 +7,8 @@
   "item.netheragriculture.warped_berry": "Warped Berry",
   "item.netheragriculture.warped_berry_seeds": "Warped Berry Seeds",
   "item.netheragriculture.lothun": "Lothun",
+  "item.netheragriculture.blaze_fruit": "Blaze Fruit",
+  "item.netheragriculture.blaze_fruit_seed": "Blaze Fruit Seed",
 
   "block.netheragriculture.mortofruct": "Mortofruct",
   "block.netheragriculture.crimson_berry_roots": "Crimson Berry Roots",
@@ -15,6 +17,7 @@
   "block.netheragriculture.wild_warped_berry_roots": "Wild Warped Berry Roots",
   "block.netheragriculture.lothuns": "Lothuns",
   "block.netheragriculture.wild_lothun": "Wild Lothun",
+  "block.netheragriculture.blaze_fruit": "Blaze Fruit",
   "block.netheragriculture.dead_vines": "Dead Vines",
   "block.netheragriculture.crimson_farmland": "Crimson Farmland",
   "block.netheragriculture.warped_farmland": "Warped Farmland",

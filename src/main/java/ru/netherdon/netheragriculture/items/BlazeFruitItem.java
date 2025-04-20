@@ -15,36 +15,16 @@ import org.jetbrains.annotations.Nullable;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
-public class BlazeFruitItem extends BurningFoodItem
+public class BlazeFruitItem extends BurningItem
 {
-    private final Supplier<Item> extinguishItem;
-
-    public BlazeFruitItem(Supplier<Item> extinguishItem, Properties properties)
+    public BlazeFruitItem(Properties properties)
     {
         super(60, properties);
-        this.extinguishItem = extinguishItem;
     }
 
     @Override
     public int getBurnTime(ItemStack itemStack, @Nullable RecipeType<?> recipeType)
     {
         return 2000;
-    }
-
-    @Override
-    public boolean onEntityItemUpdate(ItemStack stack, ItemEntity entity)
-    {
-        if (entity.isInWater())
-        {
-            ItemStack newStack = stack.transmuteCopy(this.extinguishItem.get());
-            entity.setItem(newStack);
-            entity.level().playSound(
-                null, entity.getOnPos(),
-                SoundEvents.FIRE_EXTINGUISH, SoundSource.HOSTILE,
-                0.7f, 1.0f
-            );
-        }
-
-        return super.onEntityItemUpdate(stack, entity);
     }
 }

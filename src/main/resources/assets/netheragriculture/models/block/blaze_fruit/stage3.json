@@ -1,0 +1,6 @@
+{
+	"parent": "netheragriculture:block/blaze_fruit/stage3_base",
+	"textures": {
+		"fire": "minecraft:block/campfire_fire"
+	}
+}

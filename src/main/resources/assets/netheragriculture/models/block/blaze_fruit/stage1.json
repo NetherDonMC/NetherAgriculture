@@ -1,0 +1,65 @@
+{
+	"credit": "Made with Blockbench",
+	"render_type": "cutout",
+	"textures": {
+		"crop": "netheragriculture:block/blaze_fruit_crop0",
+		"particle": "netheragriculture:block/blaze_fruit_bush0",
+		"bush": "netheragriculture:block/blaze_fruit_bush0"
+	},
+	"elements": [
+		{
+			"name": "crop",
+			"from": [6, 0, 6],
+			"to": [10, 1, 10],
+			"rotation": {"angle": 0, "axis": "y", "origin": [2, 0, 4]},
+			"faces": {
+				"north": {"uv": [0, 4, 4, 5], "texture": "#crop"},
+				"east": {"uv": [0, 4, 4, 5], "texture": "#crop"},
+				"south": {"uv": [0, 4, 4, 5], "texture": "#crop"},
+				"west": {"uv": [0, 4, 4, 5], "texture": "#crop"},
+				"up": {"uv": [0, 0, 4, 4], "texture": "#crop"},
+				"down": {"uv": [0, 0, 4, 4], "texture": "#crop"}
+			}
+		},
+		{
+			"name": "bush",
+			"from": [-10, 0, 0],
+			"to": [6, 0, 16],
+			"rotation": {"angle": -22.5, "axis": "z", "origin": [6, 0, 8]},
+			"faces": {
+				"up": {"uv": [0, 0, 16, 16], "rotation": 270, "texture": "#bush"},
+				"down": {"uv": [0, 0, 16, 16], "rotation": 270, "texture": "#bush"}
+			}
+		},
+		{
+			"name": "bush",
+			"from": [10, 0, 0],
+			"to": [26, 0, 16],
+			"rotation": {"angle": 22.5, "axis": "z", "origin": [10, 0, 8]},
+			"faces": {
+				"up": {"uv": [0, 0, 16, 16], "rotation": 90, "texture": "#bush"},
+				"down": {"uv": [0, 0, 16, 16], "rotation": 90, "texture": "#bush"}
+			}
+		},
+		{
+			"name": "bush",
+			"from": [0, 0, -10],
+			"to": [16, 0, 6],
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [8, 0, 6]},
+			"faces": {
+				"up": {"uv": [0, 0, 16, 16], "texture": "#bush"},
+				"down": {"uv": [0, 0, 16, 16], "rotation": 180, "texture": "#bush"}
+			}
+		},
+		{
+			"name": "bush",
+			"from": [0, 0, 10],
+			"to": [16, 0, 26],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [8, 0, 10]},
+			"faces": {
+				"up": {"uv": [0, 0, 16, 16], "rotation": 180, "texture": "#bush"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#bush"}
+			}
+		}
+	]
+}

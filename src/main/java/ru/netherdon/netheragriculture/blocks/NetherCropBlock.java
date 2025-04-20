@@ -4,7 +4,6 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.ItemLike;
@@ -12,6 +11,7 @@ import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
 import net.neoforged.neoforge.common.CommonHooks;
 import net.neoforged.neoforge.common.util.TriState;
 
@@ -36,10 +36,15 @@ public class NetherCropBlock extends CropBlock implements INetherCrop
             float growthSpeed = getNetherGrowthSpeed(state, level, pos);
             if (CommonHooks.canCropGrow(level, pos, state, random.nextInt((int)(20f / growthSpeed) + 1) == 0))
             {
-                level.setBlock(pos, this.getStateForAge(age + 1), 2);
+                level.setBlock(pos, this.withAge(state, age + 1), 2);
                 CommonHooks.fireCropGrowPost(level, pos, state);
             }
         }
+    }
+
+    protected BlockState withAge(BlockState state, int age)
+    {
+        return state.setValue(this.getAgeProperty(), age);
     }
 
     public boolean isValidFarmland(BlockState state)
@@ -77,6 +82,12 @@ public class NetherCropBlock extends CropBlock implements INetherCrop
         }
 
         return super.getBaseSeedId();
+    }
+
+    @Override
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder)
+    {
+        builder.add(this.getAgeProperty());
     }
 
     protected static float getNetherGrowthSpeed(BlockState blockState, BlockGetter level, BlockPos pos)
