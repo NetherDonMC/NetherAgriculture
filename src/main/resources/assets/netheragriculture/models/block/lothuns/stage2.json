@@ -1,5 +1,5 @@
 {
-  "parent": "netheragriculture:block/base/crop_cross",
+  "parent": "minecraft:block/crop",
   "render_type": "cutout",
   "textures": {
     "crop": "netheragriculture:block/lothun_stage2"
