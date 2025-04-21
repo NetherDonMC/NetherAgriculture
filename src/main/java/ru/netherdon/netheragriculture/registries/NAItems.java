@@ -16,7 +16,8 @@ public final class NAItems
     public static final DeferredItem<Item> WARPED_BERRY = REGISTER.registerSimpleItem("warped_berry", new Item.Properties().food(NAFoods.WARPED_BERRY));
     public static final DeferredItem<Item> LOTHUN = REGISTER.register("lothun", () -> new ItemNameBlockItem(NABlocks.LOTHUNS.get(), new Item.Properties().food(NAFoods.LOTHUN)));
     public static final DeferredItem<Item> MORTOFRUCT_HALF = REGISTER.register("mortofruct_half", () -> new FoodItem(new Item.Properties().food(NAFoods.MORTOFRUCT)));
-    public static final DeferredItem<Item> AZURE_MELON = REGISTER.register("azure_melon", () -> new FoodItem(new Item.Properties().food(NAFoods.AZURE_MELON)));
+    public static final DeferredItem<BlockItem> AZURE_MELON = REGISTER.registerSimpleBlockItem(NABlocks.AZURE_MELON);
+    public static final DeferredItem<Item> AZURE_MELON_SLICE = REGISTER.registerSimpleItem("azure_melon_slice", new Item.Properties().food(NAFoods.AZURE_MELON_SLICE));
 
     public static final DeferredItem<Item> BLAZE_FRUIT = REGISTER.register("blaze_fruit", () -> new BlazeFruitItem(
         new Item.Properties().food(NAFoods.BLAZE_FRUIT).fireResistant()

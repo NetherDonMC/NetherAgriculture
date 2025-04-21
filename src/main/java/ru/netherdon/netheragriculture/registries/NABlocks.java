@@ -116,6 +116,14 @@ public final class NABlocks
             .pushReaction(PushReaction.DESTROY)
     );
 
+    public static final DeferredBlock<AzureMelonBlock> AZURE_MELON = REGISTER.registerBlock("azure_melon", AzureMelonBlock::new,
+        BlockBehaviour.Properties.of()
+            .mapColor(MapColor.COLOR_CYAN)
+            .strength(0.5f)
+            .sound(SoundType.ROOTS)
+            .pushReaction(PushReaction.DESTROY)
+    );
+
     public static final DeferredBlock<Block> CRIMSON_CRATE = REGISTER.registerBlock("crimson_crate", CrateBlock::new, NABlockProperties.CRIMSON_CRATE);
     public static final DeferredBlock<SlabBlock> SMALL_CRIMSON_CRATE = REGISTER.registerBlock("small_crimson_crate", SmallCrateBlock::new, NABlockProperties.CRIMSON_CRATE);
     public static final DeferredBlock<Block> WARPED_CRATE = REGISTER.registerBlock("warped_crate", CrateBlock::new, NABlockProperties.WARPED_CRATE);

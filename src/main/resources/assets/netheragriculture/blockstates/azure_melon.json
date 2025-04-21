@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "melons=1": {
+      "model": "netheragriculture:block/azure_melon/single"
+    },
+    "melons=2": {
+		"model": "netheragriculture:block/azure_melon/double"
+	},
+    "melons=3": {
+		"model": "netheragriculture:block/azure_melon/triple"
+    },
+    "melons=4": {
+      "model": "netheragriculture:block/azure_melon/quadruple"
+    }
+  }
+}

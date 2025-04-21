@@ -24,8 +24,8 @@ public final class NAFoods
     public static final FoodProperties MORTOFRUCT = new FoodProperties.Builder()
         .nutrition(3).saturationModifier(0.5f).build();
 
-    public static final FoodProperties AZURE_MELON = new FoodProperties.Builder()
-        .nutrition(7).saturationModifier(0.8f).build();
+    public static final FoodProperties AZURE_MELON_SLICE = new FoodProperties.Builder()
+        .nutrition(3).saturationModifier(0.2f).build();
 
     public static final FoodProperties BLAZE_FRUIT = new FoodProperties.Builder()
         .nutrition(1).saturationModifier(0.05f).build();
