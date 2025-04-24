@@ -51,6 +51,7 @@ public final class NACreativeTabs
             output.accept(NAItems.WARPED_BERRY);
             output.accept(NAItems.LOTHUN);
             output.accept(NAItems.MORTOFRUCT_HALF);
+            output.accept(NAItems.AZURE_MELON_SEEDS);
             output.accept(NAItems.AZURE_MELON);
             output.accept(NAItems.AZURE_MELON_SLICE);
             output.accept(NAItems.BLAZE_FRUIT_SEED);

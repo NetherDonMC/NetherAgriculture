@@ -30,16 +30,26 @@ public class NetherCropBlock extends CropBlock implements INetherCrop
             return;
         }
 
-        int age = this.getAge(state);
-        if (age < this.getMaxAge())
+        if (this.canGrow(state, level, pos))
         {
             float growthSpeed = getNetherGrowthSpeed(state, level, pos);
             if (CommonHooks.canCropGrow(level, pos, state, random.nextInt((int)(20f / growthSpeed) + 1) == 0))
             {
-                level.setBlock(pos, this.withAge(state, age + 1), 2);
+                this.grow(state, level, pos, random);
                 CommonHooks.fireCropGrowPost(level, pos, state);
             }
         }
+    }
+
+    protected boolean canGrow(BlockState state, ServerLevel level, BlockPos pos)
+    {
+        return !this.isMaxAge(state);
+    }
+
+    protected void grow(BlockState state, ServerLevel level, BlockPos pos, RandomSource random)
+    {
+        int age = this.getAge(state);
+        level.setBlock(pos, this.withAge(state, age + 1), 2);
     }
 
     protected BlockState withAge(BlockState state, int age)

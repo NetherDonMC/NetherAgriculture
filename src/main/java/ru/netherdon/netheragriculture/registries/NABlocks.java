@@ -116,13 +116,10 @@ public final class NABlocks
             .pushReaction(PushReaction.DESTROY)
     );
 
-    public static final DeferredBlock<AzureMelonBlock> AZURE_MELON = REGISTER.registerBlock("azure_melon", AzureMelonBlock::new,
-        BlockBehaviour.Properties.of()
-            .mapColor(MapColor.COLOR_CYAN)
-            .strength(0.5f)
-            .sound(SoundType.ROOTS)
-            .pushReaction(PushReaction.DESTROY)
-    );
+    public static final DeferredBlock<AzureMelonBlock> AZURE_MELON = REGISTER.registerBlock("azure_melon", AzureMelonBlock::new, NABlockProperties.AZURE_MELON);
+    public static final DeferredBlock<AzureMelonCropBlock> AZURE_MELON_CROP = REGISTER.registerBlock("azure_melon_crop", AzureMelonCropBlock::new, NABlockProperties.AZURE_MELON);
+    public static final DeferredBlock<AzureMelonStemBlock> AZURE_MELON_STEM = REGISTER.registerBlock("azure_melon_stem", AzureMelonStemBlock::new, NABlockProperties.AZURE_MELON_STEM);
+    public static final DeferredBlock<AttachedAzureMelonStemBlock> ATTACHED_AZURE_MELON_STEM = REGISTER.registerBlock("attached_azure_melon_stem", AttachedAzureMelonStemBlock::new, NABlockProperties.AZURE_MELON_STEM);
 
     public static final DeferredBlock<Block> CRIMSON_CRATE = REGISTER.registerBlock("crimson_crate", CrateBlock::new, NABlockProperties.CRIMSON_CRATE);
     public static final DeferredBlock<SlabBlock> SMALL_CRIMSON_CRATE = REGISTER.registerBlock("small_crimson_crate", SmallCrateBlock::new, NABlockProperties.CRIMSON_CRATE);

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "netheragriculture:block/azure_melon/stem/attached"
+    },
+    "facing=east": {
+      "model": "netheragriculture:block/azure_melon/stem/attached",
+	  "y": 90
+    },
+    "facing=south": {
+      "model": "netheragriculture:block/azure_melon/stem/attached",
+	  "y": 180
+    },
+    "facing=west": {
+      "model": "netheragriculture:block/azure_melon/stem/attached",
+	  "y": 270
+    }
+  }
+}

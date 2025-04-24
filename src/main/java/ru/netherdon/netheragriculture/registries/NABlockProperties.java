@@ -5,6 +5,7 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
 
 public final class NABlockProperties
 {
@@ -19,4 +20,17 @@ public final class NABlockProperties
         .instrument(NoteBlockInstrument.BASS)
         .mapColor(MapColor.CRIMSON_STEM)
         .sound(SoundType.NETHER_WOOD);
+
+    public static final Properties AZURE_MELON = BlockBehaviour.Properties.of()
+        .mapColor(MapColor.COLOR_CYAN)
+        .strength(0.5f)
+        .sound(SoundType.ROOTS)
+        .pushReaction(PushReaction.DESTROY);
+
+    public static final Properties AZURE_MELON_STEM = BlockBehaviour.Properties.of()
+        .mapColor(MapColor.COLOR_CYAN)
+        .noCollission()
+        .instabreak()
+        .sound(SoundType.ROOTS)
+        .pushReaction(PushReaction.DESTROY);
 }

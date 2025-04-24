@@ -1,0 +1,36 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "minecraft:block/block",
+	"render_type": "cutout",
+	"textures": {
+		"particle": "netheragriculture:block/azure_melon",
+		"texture": "netheragriculture:block/azure_melon"
+	},
+	"elements": [
+		{
+			"name": "crop",
+			"from": [5, 0, 0],
+			"to": [11, 9, 6],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, 0, -5]},
+			"faces": {
+				"north": {"uv": [0, 7, 6, 16], "texture": "#texture"},
+				"east": {"uv": [0, 7, 6, 16], "texture": "#texture"},
+				"south": {"uv": [0, 7, 6, 16], "texture": "#texture"},
+				"west": {"uv": [0, 7, 6, 16], "texture": "#texture"},
+				"up": {"uv": [10, 10, 16, 16], "texture": "#texture"},
+				"down": {"uv": [10, 4, 16, 10], "texture": "#texture"}
+			}
+		},
+		{
+			"name": "stem",
+			"from": [8, 9, 0],
+			"to": [8, 16, 6],
+			"shade": false,
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 10.5, 3]},
+			"faces": {
+				"east": {"uv": [6, 0, 0, 7], "texture": "#texture"},
+				"west": {"uv": [0, 0, 6, 7], "texture": "#texture"}
+			}
+		}
+	]
+}
