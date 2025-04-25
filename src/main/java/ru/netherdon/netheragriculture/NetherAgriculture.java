@@ -21,6 +21,9 @@ public class NetherAgriculture
         NACreativeTabs.REGISTRY.register(modEventBus);
         NAMobEffects.REGISTER.register(modEventBus);
         NARecipeSerializers.REGISTER.register(modEventBus);
+        NABlockEntityTypes.REGISTER.register(modEventBus);
+        NAMenuTypes.REGISTER.register(modEventBus);
+        NARecipeTypes.REGISTER.register(modEventBus);
     }
 
     public static ResourceLocation location(String name)

@@ -32,6 +32,15 @@ public final class NABlocks
             .sound(SoundType.NYLIUM)
     );
 
+    public static final DeferredBlock<BlackFurnaceBlock> BLACK_FURNACE = REGISTER.registerBlock("black_furnace", BlackFurnaceBlock::new,
+        BlockBehaviour.Properties.of()
+            .mapColor(MapColor.COLOR_BLACK)
+            .instrument(NoteBlockInstrument.BASEDRUM)
+            .requiresCorrectToolForDrops()
+            .strength(3.5F)
+            .lightLevel(Blocks.litBlockEmission(13))
+    );
+
     public static final DeferredBlock<MortofructBlock> MORTOFRUCT = REGISTER.registerBlock("mortofruct", MortofructBlock::new,
         BlockBehaviour.Properties.of()
             .mapColor(MapColor.COLOR_RED)

@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "top": "netheragriculture:block/black_furnace_top",
+    "front": "netheragriculture:block/black_furnace_front",
+    "side": "netheragriculture:block/black_furnace_side",
+	"bottom": "netheragriculture:block/black_furnace_bottom"
+  }
+}
