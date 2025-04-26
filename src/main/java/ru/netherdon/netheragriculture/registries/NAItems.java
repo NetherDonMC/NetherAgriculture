@@ -59,6 +59,10 @@ public final class NAItems
     public static final DeferredItem<BlockItem> BLAZE_FRUIT_SEED = REGISTER.register("blaze_fruit_seed", () -> new ItemNameBlockItem(NABlocks.BLAZE_FRUIT.get(), new Item.Properties()));
     public static final DeferredItem<BlockItem> AZURE_MELON_SEEDS = REGISTER.register("azure_melon_seeds", () -> new ItemNameBlockItem(NABlocks.AZURE_MELON_STEM.get(), new Item.Properties()));
 
+    public static final DeferredItem<BlockItem> NETHER_ROOTS = REGISTER.registerSimpleBlockItem(NABlocks.NETHER_ROOTS);
+    public static final DeferredItem<BlockItem> TALL_CRIMSON_ROOTS = REGISTER.registerSimpleBlockItem(NABlocks.TALL_CRIMSON_ROOTS);
+    public static final DeferredItem<BlockItem> TALL_WARPED_ROOTS = REGISTER.registerSimpleBlockItem(NABlocks.TALL_WARPED_ROOTS);
+
     public static final DeferredItem<BlockItem> CRIMSON_CRATE = REGISTER.registerSimpleBlockItem(NABlocks.CRIMSON_CRATE);
     public static final DeferredItem<BlockItem> SMALL_CRIMSON_CRATE = REGISTER.registerSimpleBlockItem(NABlocks.SMALL_CRIMSON_CRATE);
     public static final DeferredItem<BlockItem> WARPED_CRATE = REGISTER.registerSimpleBlockItem(NABlocks.WARPED_CRATE);

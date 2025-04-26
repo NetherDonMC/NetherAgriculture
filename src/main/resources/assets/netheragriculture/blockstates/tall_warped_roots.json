@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=upper": {
+      "model": "netheragriculture:block/tall_warped_roots/top"
+    },
+    "half=lower": {
+		"model": "netheragriculture:block/tall_warped_roots/bottom"
+	}
+  }
+}

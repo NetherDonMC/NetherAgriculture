@@ -18,9 +18,6 @@ public final class NACreativeTabs
         {
             output.accept(NAItems.BLACK_FURNACE);
 
-            output.accept(NAItems.CRIMSON_FARMLAND);
-            output.accept(NAItems.WARPED_FARMLAND);
-
             output.accept(NAItems.CRIMSON_CRATE);
             output.accept(NAItems.SMALL_CRIMSON_CRATE);
             output.accept(NAItems.CRIMSON_CRATE_OF_CRIMSON_BERRIES);
@@ -41,6 +38,12 @@ public final class NACreativeTabs
             output.accept(NAItems.SMALL_WARPED_CRATE_OF_LOTHUN);
             output.accept(NAItems.WARPED_CRATE_OF_BLAZE_FRUIT);
             output.accept(NAItems.SMALL_WARPED_CRATE_OF_BLAZE_FRUIT);
+
+            output.accept(NAItems.CRIMSON_FARMLAND);
+            output.accept(NAItems.WARPED_FARMLAND);
+            output.accept(NAItems.NETHER_ROOTS);
+            output.accept(NAItems.TALL_CRIMSON_ROOTS);
+            output.accept(NAItems.TALL_WARPED_ROOTS);
 
             output.accept(NAItems.CRIMSON_BERRY_SEEDS);
             output.accept(NAItems.CRIMSON_BERRY_SPROUTS);

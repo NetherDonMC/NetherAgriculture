@@ -125,6 +125,38 @@ public final class NABlocks
             .pushReaction(PushReaction.DESTROY)
     );
 
+    public static final DeferredBlock<NetherRootsBlock> NETHER_ROOTS = REGISTER.registerBlock("nether_roots", NetherRootsBlock::new,
+        BlockBehaviour.Properties.of()
+            .mapColor(MapColor.NETHER)
+            .instabreak()
+            .noCollission()
+            .sound(SoundType.ROOTS)
+            .offsetType(BlockBehaviour.OffsetType.XZ)
+            .pushReaction(PushReaction.DESTROY)
+    );
+
+    public static final DeferredBlock<TallRootsBlock> TALL_CRIMSON_ROOTS = REGISTER.registerBlock("tall_crimson_roots", TallRootsBlock::new,
+        BlockBehaviour.Properties.of()
+            .mapColor(MapColor.NETHER)
+            .instabreak()
+            .noCollission()
+            .replaceable()
+            .sound(SoundType.ROOTS)
+            .offsetType(BlockBehaviour.OffsetType.XZ)
+            .pushReaction(PushReaction.DESTROY)
+    );
+
+    public static final DeferredBlock<TallRootsBlock> TALL_WARPED_ROOTS = REGISTER.registerBlock("tall_warped_roots", TallRootsBlock::new,
+        BlockBehaviour.Properties.of()
+            .mapColor(MapColor.NETHER)
+            .instabreak()
+            .noCollission()
+            .replaceable()
+            .sound(SoundType.ROOTS)
+            .offsetType(BlockBehaviour.OffsetType.XZ)
+            .pushReaction(PushReaction.DESTROY)
+    );
+
     public static final DeferredBlock<AzureMelonBlock> AZURE_MELON = REGISTER.registerBlock("azure_melon", AzureMelonBlock::new, NABlockProperties.AZURE_MELON);
     public static final DeferredBlock<AzureMelonCropBlock> AZURE_MELON_CROP = REGISTER.registerBlock("azure_melon_crop", AzureMelonCropBlock::new, NABlockProperties.AZURE_MELON);
     public static final DeferredBlock<AzureMelonStemBlock> AZURE_MELON_STEM = REGISTER.registerBlock("azure_melon_stem", AzureMelonStemBlock::new, NABlockProperties.AZURE_MELON_STEM);

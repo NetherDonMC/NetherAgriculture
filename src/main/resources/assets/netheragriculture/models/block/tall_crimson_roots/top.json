@@ -1,0 +1,7 @@
+{
+	"parent": "minecraft:block/cross",
+	"render_type": "cutout",
+	"textures": {
+		"cross": "netheragriculture:block/tall_crimson_roots_top"
+	}
+}
