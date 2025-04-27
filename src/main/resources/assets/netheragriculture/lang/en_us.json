@@ -16,6 +16,7 @@
   "item.netheragriculture.crushed_nether_roots": "Crushed Nether Roots",
   "item.netheragriculture.crushed_crimson_roots": "Crushed Crimson Roots",
   "item.netheragriculture.crushed_warped_roots": "Crushed Warped Roots",
+  "item.netheragriculture.blaze_cream_soup": "Blaze Cream Soup",
 
   "block.netheragriculture.mortofruct": "Mortofruct",
   "block.netheragriculture.crimson_berry_roots": "Crimson Berry Roots",
@@ -57,5 +58,6 @@
   "block.netheragriculture.warped_crate_of_blaze_fruit": "Warped Crate of Blaze Fruit",
   "block.netheragriculture.small_warped_crate_of_blaze_fruit": "Small Warped Crate of Blaze Fruit",
 
-  "effect.netheragriculture.warp": "Warp"
+  "effect.netheragriculture.warp": "Warp",
+  "effect.netheragriculture.blaze_flight": "Blaze Flight"
 }

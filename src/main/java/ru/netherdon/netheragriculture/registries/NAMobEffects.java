@@ -1,6 +1,5 @@
 package ru.netherdon.netheragriculture.registries;
 
-import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
@@ -15,11 +14,11 @@ public final class NAMobEffects
 {
     public static final DeferredRegister<MobEffect> REGISTER = NetherAgriculture.registry(Registries.MOB_EFFECT);
 
-    public static final DeferredHolder<MobEffect, MobEffect> FLIGHT =
-        REGISTER.register("flight", () -> new MobEffect(MobEffectCategory.BENEFICIAL, 0xE65F00) {}
+    public static final DeferredHolder<MobEffect, MobEffect> BLAZE_FLIGHT =
+        REGISTER.register("blaze_flight", () -> new MobEffect(MobEffectCategory.BENEFICIAL, 0xE65F00) {}
             .addAttributeModifier(
                 NeoForgeMod.CREATIVE_FLIGHT,
-                NetherAgriculture.location("flight_mob_effect"),
+                NetherAgriculture.location("blaze_flight_mob_effect"),
                 1,
                 AttributeModifier.Operation.ADD_VALUE
             )

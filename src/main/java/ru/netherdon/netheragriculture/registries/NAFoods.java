@@ -43,8 +43,8 @@ public final class NAFoods
         .nutrition(7).saturationModifier(0.6f).build();
 
     public static final FoodProperties BLAZE_CREAM_SOUP = new FoodProperties.Builder()
-        .nutrition(8).saturationModifier(0.6f).usingConvertsTo(Items.BOWL).alwaysEdible()
-        .effect(() -> new MobEffectInstance(NAMobEffects.FLIGHT, 200), 1f)
+        .nutrition(11).saturationModifier(0.7f).usingConvertsTo(Items.BOWL).alwaysEdible()
+        .effect(() -> new MobEffectInstance(NAMobEffects.BLAZE_FLIGHT, 200), 1f)
         .build();
 
     public static final FoodProperties GLAZED_HOGLIN_MEAT = new FoodProperties.Builder()

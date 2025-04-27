@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [{
+    "item": "minecraft:bowl"
+  }, {
+    "item": "netheragriculture:lothun"
+  }, {
+    "item": "minecraft:warped_fungus"
+  }, {
+    "item": "netheragriculture:blaze_fruit"
+  }, {
+    "item": "netheragriculture:crushed_warped_roots"
+  }],
+  "result": {
+    "id": "netheragriculture:blaze_cream_soup",
+    "count": 1
+  }
+}

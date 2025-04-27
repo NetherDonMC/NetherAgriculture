@@ -16,6 +16,7 @@
   "item.netheragriculture.crushed_nether_roots": "Толчённые незерские корни",
   "item.netheragriculture.crushed_crimson_roots": "Толчённые багровые корни",
   "item.netheragriculture.crushed_warped_roots": "Толчённые искажённые корни",
+  "item.netheragriculture.blaze_cream_soup": "Пылающий суп-пюре",
 
   "block.netheragriculture.mortofruct": "Мортофрукт",
   "block.netheragriculture.crimson_berry_roots": "Корни багровой ягоды",
@@ -57,5 +58,6 @@
   "block.netheragriculture.warped_crate_of_blaze_fruit": "Искажённый ящик с огненным фруктом",
   "block.netheragriculture.small_warped_crate_of_blaze_fruit": "Малый искажённый ящик с огненным фруктом",
 
-  "effect.netheragriculture.warp": "Искажение"
+  "effect.netheragriculture.warp": "Искажение",
+  "effect.netheragriculture.blaze_flight": "Полёт всполоха"
 }
