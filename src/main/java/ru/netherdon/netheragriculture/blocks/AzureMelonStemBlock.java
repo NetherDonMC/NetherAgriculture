@@ -1,10 +1,12 @@
 package ru.netherdon.netheragriculture.blocks;
 
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -12,6 +14,8 @@ import ru.netherdon.netheragriculture.registries.NABlocks;
 
 public class AzureMelonStemBlock extends NetherCropBlock
 {
+    public static final MapCodec<AzureMelonStemBlock> CODEC = simpleCodec(AzureMelonStemBlock::new);
+
     public static final VoxelShape SHAPE0 = box(5, 0, 5, 11, 2, 11);
     public static final VoxelShape SHAPE1 = box(5, 0, 5, 11, 5, 11);
     public static final VoxelShape SHAPE2 = box(5, 0, 5, 11, 10, 11);
@@ -81,5 +85,11 @@ public class AzureMelonStemBlock extends NetherCropBlock
     protected boolean isRandomlyTicking(BlockState state)
     {
         return true;
+    }
+
+    @Override
+    public MapCodec<? extends AzureMelonStemBlock> codec()
+    {
+        return CODEC;
     }
 }

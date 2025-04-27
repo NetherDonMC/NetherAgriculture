@@ -1,5 +1,6 @@
 package ru.netherdon.netheragriculture.blocks;
 
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
@@ -9,6 +10,8 @@ import net.minecraft.world.level.block.state.BlockState;
 
 public class BlazeFruitCrateBlock extends Block
 {
+    public static final MapCodec<BlazeFruitCrateBlock> CODEC = simpleCodec(BlazeFruitCrateBlock::new);
+
     public BlazeFruitCrateBlock(Properties properties)
     {
         super(properties);
@@ -23,5 +26,11 @@ public class BlazeFruitCrateBlock extends Block
         }
 
         super.stepOn(level, pos, state, entity);
+    }
+
+    @Override
+    protected MapCodec<? extends BlazeFruitCrateBlock> codec()
+    {
+        return CODEC;
     }
 }

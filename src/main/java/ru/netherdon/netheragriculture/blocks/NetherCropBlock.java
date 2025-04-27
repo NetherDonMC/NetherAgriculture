@@ -1,5 +1,6 @@
 package ru.netherdon.netheragriculture.blocks;
 
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -17,6 +18,8 @@ import net.neoforged.neoforge.common.util.TriState;
 
 public class NetherCropBlock extends CropBlock implements INetherCrop
 {
+    public static final MapCodec<NetherCropBlock> CODEC = Block.simpleCodec(NetherCropBlock::new);
+
     public NetherCropBlock(Properties properties)
     {
         super(properties);
@@ -92,6 +95,12 @@ public class NetherCropBlock extends CropBlock implements INetherCrop
         }
 
         return super.getBaseSeedId();
+    }
+
+    @Override
+    public MapCodec<? extends NetherCropBlock> codec()
+    {
+        return CODEC;
     }
 
     @Override

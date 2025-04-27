@@ -17,6 +17,7 @@ public class NetherAgriculture
     public NetherAgriculture(IEventBus modEventBus, ModContainer modContainer)
     {
         NABlocks.REGISTER.register(modEventBus);
+        NABlockTypes.REGISTER.register(modEventBus);
         NAItems.REGISTER.register(modEventBus);
         NACreativeTabs.REGISTRY.register(modEventBus);
         NAMobEffects.REGISTER.register(modEventBus);

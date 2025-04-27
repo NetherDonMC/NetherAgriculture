@@ -68,7 +68,7 @@ public final class NABlocks
             .pushReaction(PushReaction.DESTROY)
     );
 
-    public static final DeferredBlock<RootsBlock> CRIMSON_BERRY_SPROUTS = REGISTER.registerBlock("crimson_berry_sprouts", NetherBerrySproutsBlock::new,
+    public static final DeferredBlock<NetherBerrySproutsBlock> CRIMSON_BERRY_SPROUTS = REGISTER.registerBlock("crimson_berry_sprouts", NetherBerrySproutsBlock::new,
         BlockBehaviour.Properties.of()
             .mapColor(MapColor.NETHER)
             .noCollission()
@@ -87,7 +87,7 @@ public final class NABlocks
             .pushReaction(PushReaction.DESTROY)
     );
 
-    public static final DeferredBlock<RootsBlock> WARPED_BERRY_SPROUTS = REGISTER.registerBlock("warped_berry_sprouts", NetherBerrySproutsBlock::new,
+    public static final DeferredBlock<NetherBerrySproutsBlock> WARPED_BERRY_SPROUTS = REGISTER.registerBlock("warped_berry_sprouts", NetherBerrySproutsBlock::new,
         BlockBehaviour.Properties.of()
             .mapColor(MapColor.COLOR_CYAN)
             .noCollission()
@@ -106,7 +106,7 @@ public final class NABlocks
             .pushReaction(PushReaction.DESTROY)
     );
 
-    public static final DeferredBlock<RootsBlock> WILD_LOTHUN = REGISTER.registerBlock("wild_lothun", WildLothunBlock::new,
+    public static final DeferredBlock<WildLothunBlock> WILD_LOTHUN = REGISTER.registerBlock("wild_lothun", WildLothunBlock::new,
         BlockBehaviour.Properties.of()
             .mapColor(MapColor.COLOR_CYAN)
             .noCollission()
@@ -130,6 +130,7 @@ public final class NABlocks
             .mapColor(MapColor.NETHER)
             .instabreak()
             .noCollission()
+            .replaceable()
             .sound(SoundType.ROOTS)
             .offsetType(BlockBehaviour.OffsetType.XZ)
             .pushReaction(PushReaction.DESTROY)

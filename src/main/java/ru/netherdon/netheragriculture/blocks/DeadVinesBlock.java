@@ -1,5 +1,6 @@
 package ru.netherdon.netheragriculture.blocks;
 
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -26,6 +27,8 @@ import ru.netherdon.netheragriculture.registries.NABlocks;
 
 public class DeadVinesBlock extends Block implements BonemealableBlock
 {
+    public static final MapCodec<DeadVinesBlock> CODEC = simpleCodec(DeadVinesBlock::new);
+
     public static final BooleanProperty ATTACHED = BlockStateProperties.ATTACHED;
     public static final BooleanProperty SHOOTS = BooleanProperty.create("shoots");
     public static final IntegerProperty AGE = BlockStateProperties.AGE_3;
@@ -230,5 +233,11 @@ public class DeadVinesBlock extends Block implements BonemealableBlock
     public boolean isLadder(BlockState state, LevelReader level, BlockPos pos, LivingEntity entity)
     {
         return true;
+    }
+
+    @Override
+    protected MapCodec<? extends DeadVinesBlock> codec()
+    {
+        return CODEC;
     }
 }

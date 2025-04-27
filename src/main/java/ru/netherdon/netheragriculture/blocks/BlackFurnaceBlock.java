@@ -31,12 +31,6 @@ public class BlackFurnaceBlock extends AbstractFurnaceBlock
     }
 
     @Override
-    protected MapCodec<? extends AbstractFurnaceBlock> codec()
-    {
-        return CODEC;
-    }
-
-    @Override
     protected void openContainer(Level level, BlockPos pos, Player player)
     {
         BlockEntity blockEntity = level.getBlockEntity(pos);
@@ -89,5 +83,11 @@ public class BlackFurnaceBlock extends AbstractFurnaceBlock
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> blockEntityType)
     {
         return createFurnaceTicker(level, blockEntityType, NABlockEntityTypes.BLACK_FURNACE.get());
+    }
+
+    @Override
+    protected MapCodec<? extends BlackFurnaceBlock> codec()
+    {
+        return CODEC;
     }
 }

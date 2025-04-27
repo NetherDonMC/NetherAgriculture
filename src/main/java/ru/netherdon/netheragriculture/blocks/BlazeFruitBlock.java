@@ -1,5 +1,6 @@
 package ru.netherdon.netheragriculture.blocks;
 
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.entity.Entity;
@@ -7,6 +8,7 @@ import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
@@ -16,6 +18,8 @@ import org.jetbrains.annotations.Nullable;
 
 public class BlazeFruitBlock extends NetherCropBlock
 {
+    public static final MapCodec<BlazeFruitBlock> CODEC = simpleCodec(BlazeFruitBlock::new);
+
     public static final BooleanProperty SOUL = BooleanProperty.create("soul");
 
     private static final VoxelShape SHAPE0 = box(5f, 0f, 5f, 11f, 2f,11f);
@@ -93,5 +97,11 @@ public class BlazeFruitBlock extends NetherCropBlock
     {
         super.createBlockStateDefinition(builder);
         builder.add(SOUL);
+    }
+
+    @Override
+    public MapCodec<? extends BlazeFruitBlock> codec()
+    {
+        return CODEC;
     }
 }

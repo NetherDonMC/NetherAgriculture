@@ -72,15 +72,16 @@ public class MortofructBlock extends Block implements Fallable
         return this.defaultBlockState().setValue(WILD, true);
     }
 
-    protected MapCodec<? extends MortofructBlock> codec()
-    {
-        return CODEC;
-    }
-
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder)
     {
         super.createBlockStateDefinition(builder);
         builder.add(WILD);
+    }
+
+    @Override
+    protected MapCodec<? extends MortofructBlock> codec()
+    {
+        return CODEC;
     }
 }

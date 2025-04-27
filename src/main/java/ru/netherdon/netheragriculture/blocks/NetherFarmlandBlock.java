@@ -1,5 +1,6 @@
 package ru.netherdon.netheragriculture.blocks;
 
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -24,6 +25,8 @@ import java.util.function.Supplier;
 
 public class NetherFarmlandBlock extends Block
 {
+    public static final MapCodec<NetherFarmlandBlock> CODEC = Block.simpleCodec(NetherFarmlandBlock::new);
+
     public static final VoxelShape SHAPE = box(0, 0, 0, 16, 15, 16);
 
     public NetherFarmlandBlock(Properties properties)
@@ -89,6 +92,12 @@ public class NetherFarmlandBlock extends Block
     protected boolean useShapeForLightOcclusion(BlockState state)
     {
         return true;
+    }
+
+    @Override
+    protected MapCodec<? extends NetherFarmlandBlock> codec()
+    {
+        return CODEC;
     }
 
     public static void turnToNetherrack(@Nullable Entity entity, BlockState state, Level level, BlockPos pos)

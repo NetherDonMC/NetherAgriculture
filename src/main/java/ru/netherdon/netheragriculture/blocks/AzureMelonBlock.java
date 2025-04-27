@@ -1,11 +1,13 @@
 package ru.netherdon.netheragriculture.blocks;
 
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.BushBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
@@ -16,6 +18,8 @@ import org.jetbrains.annotations.Nullable;
 
 public class AzureMelonBlock extends Block
 {
+    public static final MapCodec<AzureMelonBlock> CODEC = simpleCodec(AzureMelonBlock::new);
+
     public static final VoxelShape SHAPE_1 = box(5, 0, 5, 11, 9, 11);
     private static final VoxelShape SHAPE_2 = Shapes.or(
         box(1, 0, 4, 7, 9, 10),
@@ -81,5 +85,11 @@ public class AzureMelonBlock extends Block
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder)
     {
         builder.add(MELONS);
+    }
+
+    @Override
+    protected MapCodec<? extends AzureMelonBlock> codec()
+    {
+        return CODEC;
     }
 }

@@ -98,7 +98,7 @@ public class AttachedAzureMelonStemBlock extends BushBlock
     }
 
     @Override
-    protected MapCodec<? extends BushBlock> codec()
+    protected MapCodec<? extends AttachedAzureMelonStemBlock> codec()
     {
         return CODEC;
     }

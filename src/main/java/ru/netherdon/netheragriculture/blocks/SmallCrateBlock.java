@@ -1,5 +1,6 @@
 package ru.netherdon.netheragriculture.blocks;
 
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
@@ -18,6 +19,8 @@ import net.minecraft.world.phys.BlockHitResult;
 
 public class SmallCrateBlock extends SlabBlock
 {
+    public static final MapCodec<SmallCrateBlock> CODEC = Block.simpleCodec(SmallCrateBlock::new);
+
     public static final BooleanProperty OPEN = BlockStateProperties.OPEN;
 
     public SmallCrateBlock(Properties properties)
@@ -41,5 +44,11 @@ public class SmallCrateBlock extends SlabBlock
     {
         super.createBlockStateDefinition(builder);
         builder.add(OPEN);
+    }
+
+    @Override
+    public MapCodec<? extends SmallCrateBlock> codec()
+    {
+        return CODEC;
     }
 }
