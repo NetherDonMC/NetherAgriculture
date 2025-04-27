@@ -44,6 +44,12 @@ public final class NAItems
     public static final DeferredItem<Item> AZURE_MELON_SORBET = REGISTER.register("azure_melon_sorbet", () -> new FoodItem(
         new Item.Properties().stacksTo(16).food(NAFoods.AZURE_MELON_SORBET)
     ));
+    public static final DeferredItem<Item> AZURE_MELON_JELLY = REGISTER.register("azure_melon_jelly", () -> new FoodItem(
+        new Item.Properties().stacksTo(16).food(NAFoods.AZURE_MELON_JELLY)
+    ));
+    public static final DeferredItem<Item> NETHER_BERRY_JELLY = REGISTER.register("nether_berry_jelly", () -> new FoodItem(
+        new Item.Properties().stacksTo(16).food(NAFoods.NETHER_BERRY_JELLY)
+    ));
 
     public static final DeferredItem<BlockItem> CRIMSON_FARMLAND = REGISTER.registerSimpleBlockItem(NABlocks.CRIMSON_FARMLAND);
     public static final DeferredItem<BlockItem> WARPED_FARMLAND = REGISTER.registerSimpleBlockItem(NABlocks.WARPED_FARMLAND);

@@ -64,4 +64,12 @@ public final class NAFoods
         .nutrition(9).saturationModifier(0.3f).usingConvertsTo(Items.BOWL).alwaysEdible()
         .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 100), 0.9f)
         .build();
+
+    public static final FoodProperties AZURE_MELON_JELLY = new FoodProperties.Builder()
+        .nutrition(8).saturationModifier(0.4f).usingConvertsTo(Items.BOWL).alwaysEdible()
+        .build();
+
+    public static final FoodProperties NETHER_BERRY_JELLY = new FoodProperties.Builder()
+        .nutrition(8).saturationModifier(0.3f).usingConvertsTo(Items.BOWL).alwaysEdible()
+        .build();
 }

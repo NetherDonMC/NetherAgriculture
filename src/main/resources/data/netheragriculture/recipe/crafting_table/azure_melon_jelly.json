@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [{
+    "item": "minecraft:bowl"
+  }, {
+    "item": "netheragriculture:azure_melon_slice"
+  }, {
+    "item": "netheragriculture:azure_melon_slice"
+  }, {
+    "tag": "c:bones"
+  }, {
+    "item": "minecraft:sugar"
+  }],
+  "result": {
+    "id": "netheragriculture:azure_melon_jelly",
+    "count": 1
+  }
+}

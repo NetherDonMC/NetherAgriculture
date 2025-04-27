@@ -71,6 +71,8 @@ public final class NACreativeTabs
             output.accept(NAItems.AZURE_MELON_SORBET);
             output.accept(NAItems.BLAZE_CREAM_SOUP);
             output.accept(NAItems.GLAZED_HOGLIN_MEAT);
+            output.accept(NAItems.AZURE_MELON_JELLY);
+            output.accept(NAItems.NETHER_BERRY_JELLY);
         })
         .build()
     );

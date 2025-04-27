@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [{
+    "item": "minecraft:bowl"
+  }, {
+    "item": "netheragriculture:crimson_berry"
+  }, {
+    "item": "netheragriculture:warped_berry"
+  }, {
+    "tag": "c:bones"
+  }, {
+    "item": "minecraft:sugar"
+  }],
+  "result": {
+    "id": "netheragriculture:nether_berry_jelly",
+    "count": 1
+  }
+}
