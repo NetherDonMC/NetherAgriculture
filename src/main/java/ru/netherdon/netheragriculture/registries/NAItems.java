@@ -12,6 +12,10 @@ public final class NAItems
 {
     public static final DeferredRegister.Items REGISTER = DeferredRegister.createItems(NetherAgriculture.ID);
 
+    public static final DeferredItem<Item> CRUSHED_NETHER_ROOTS = REGISTER.registerSimpleItem("crushed_nether_roots");
+    public static final DeferredItem<Item> CRUSHED_CRIMSON_ROOTS = REGISTER.registerSimpleItem("crushed_crimson_roots");
+    public static final DeferredItem<Item> CRUSHED_WARPED_ROOTS = REGISTER.registerSimpleItem("crushed_warped_roots");
+
     public static final DeferredItem<Item> CRIMSON_BERRY = REGISTER.registerSimpleItem("crimson_berry", new Item.Properties().food(NAFoods.CRIMSON_BERRY));
     public static final DeferredItem<Item> WARPED_BERRY = REGISTER.registerSimpleItem("warped_berry", new Item.Properties().food(NAFoods.WARPED_BERRY));
     public static final DeferredItem<Item> LOTHUN = REGISTER.register("lothun", () -> new ItemNameBlockItem(NABlocks.LOTHUNS.get(), new Item.Properties().food(NAFoods.LOTHUN)));

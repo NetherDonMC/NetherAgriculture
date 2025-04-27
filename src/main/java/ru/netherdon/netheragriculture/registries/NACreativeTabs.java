@@ -45,6 +45,10 @@ public final class NACreativeTabs
             output.accept(NAItems.TALL_CRIMSON_ROOTS);
             output.accept(NAItems.TALL_WARPED_ROOTS);
 
+            output.accept(NAItems.CRUSHED_NETHER_ROOTS);
+            output.accept(NAItems.CRUSHED_CRIMSON_ROOTS);
+            output.accept(NAItems.CRUSHED_WARPED_ROOTS);
+
             output.accept(NAItems.CRIMSON_BERRY_SEEDS);
             output.accept(NAItems.CRIMSON_BERRY_SPROUTS);
             output.accept(NAItems.CRIMSON_BERRY);
