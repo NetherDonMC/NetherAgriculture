@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [{
+    "item": "minecraft:bowl"
+  }, {
+    "item": "netheragriculture:cooked_hoglin_meat"
+  }, {
+    "item": "netheragriculture:crimson_berry_jam"
+  }, {
+    "item": "netheragriculture:lothun"
+  }, {
+    "item": "minecraft:crimson_fungus"
+  }, {
+    "item": "netheragriculture:crushed_crimson_roots"
+  }],
+  "result": {
+    "id": "netheragriculture:glazed_hoglin_meat",
+    "count": 1
+  }
+}

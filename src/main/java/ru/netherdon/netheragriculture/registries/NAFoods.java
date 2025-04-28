@@ -49,7 +49,7 @@ public final class NAFoods
 
     public static final FoodProperties GLAZED_HOGLIN_MEAT = new FoodProperties.Builder()
         .nutrition(12).saturationModifier(1.05f).usingConvertsTo(Items.BOWL).alwaysEdible()
-        .effect(() -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 200), 0.9f)
+        .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_BOOST, 300), 0.9f)
         .build();
 
     public static final FoodProperties AZURE_MELON_SORBET = new FoodProperties.Builder()
