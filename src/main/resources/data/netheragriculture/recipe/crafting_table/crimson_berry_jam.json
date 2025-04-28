@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [{
+    "item": "minecraft:glass_bottle"
+  }, {
+    "item": "netheragriculture:crimson_berry"
+  }, {
+    "item": "netheragriculture:crimson_berry"
+  }, {
+    "item": "minecraft:sugar"
+  }],
+  "result": {
+    "id": "netheragriculture:crimson_berry_jam",
+    "count": 1
+  }
+}

@@ -3,6 +3,7 @@ package ru.netherdon.netheragriculture.registries;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
+import net.minecraft.world.item.Items;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import ru.netherdon.netheragriculture.NetherAgriculture;
@@ -53,6 +54,13 @@ public final class NAItems
     ));
     public static final DeferredItem<Item> NETHER_BERRY_JELLY = REGISTER.register("nether_berry_jelly", () -> new FoodItem(
         new Item.Properties().stacksTo(16).food(NAFoods.NETHER_BERRY_JELLY)
+    ));
+
+    public static final DeferredItem<Item> CRIMSON_BERRY_JAM = REGISTER.register("crimson_berry_jam", () -> new JamItem(
+        new Item.Properties().stacksTo(16).food(NAFoods.CRIMSON_BERRY_JAM).craftRemainder(Items.GLASS_BOTTLE)
+    ));
+    public static final DeferredItem<Item> WARPED_BERRY_JAM = REGISTER.register("warped_berry_jam", () -> new JamItem(
+        new Item.Properties().stacksTo(16).food(NAFoods.WARPED_BERRY_JAM).craftRemainder(Items.GLASS_BOTTLE)
     ));
 
     public static final DeferredItem<BlockItem> CRIMSON_FARMLAND = REGISTER.registerSimpleBlockItem(NABlocks.CRIMSON_FARMLAND);

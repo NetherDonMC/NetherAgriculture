@@ -70,6 +70,9 @@ public final class NACreativeTabs
             output.accept(NAItems.STRIDER_LEG);
             output.accept(NAItems.COOKED_STRIDER_LEG);
 
+            output.accept(NAItems.CRIMSON_BERRY_JAM);
+            output.accept(NAItems.WARPED_BERRY_JAM);
+
             output.accept(NAItems.NETHER_MUSHROOM_STEW);
             output.accept(NAItems.NETHER_FRUIT_SALAD);
             output.accept(NAItems.AZURE_MELON_SORBET);

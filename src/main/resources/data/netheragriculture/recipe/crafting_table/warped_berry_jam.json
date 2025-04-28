@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [{
+    "item": "minecraft:glass_bottle"
+  }, {
+    "item": "netheragriculture:warped_berry"
+  }, {
+    "item": "netheragriculture:warped_berry"
+  }, {
+    "item": "minecraft:sugar"
+  }],
+  "result": {
+    "id": "netheragriculture:warped_berry_jam",
+    "count": 1
+  }
+}

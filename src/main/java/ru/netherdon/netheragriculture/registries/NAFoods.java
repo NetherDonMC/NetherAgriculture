@@ -72,4 +72,12 @@ public final class NAFoods
     public static final FoodProperties NETHER_BERRY_JELLY = new FoodProperties.Builder()
         .nutrition(8).saturationModifier(0.3f).usingConvertsTo(Items.BOWL).alwaysEdible()
         .build();
+
+    public static final FoodProperties CRIMSON_BERRY_JAM = new FoodProperties.Builder()
+        .nutrition(5).saturationModifier(0.5f).alwaysEdible()
+        .build();
+
+    public static final FoodProperties WARPED_BERRY_JAM = new FoodProperties.Builder()
+        .nutrition(8).saturationModifier(0.10f).alwaysEdible()
+        .build();
 }
