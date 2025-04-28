@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [{
+    "item": "minecraft:bowl"
+  }, {
+    "item": "netheragriculture:cooked_hoglin_meat"
+  }, {
+    "item": "netheragriculture:lothun"
+  }, {
+    "item": "netheragriculture:mortofruct_half"
+  }, {
+    "item": "netheragriculture:crushed_warped_roots"
+  }],
+  "result": {
+    "id": "netheragriculture:nether_pork_roast",
+    "count": 1
+  }
+}

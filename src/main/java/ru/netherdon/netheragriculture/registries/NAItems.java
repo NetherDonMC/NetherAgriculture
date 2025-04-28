@@ -46,6 +46,9 @@ public final class NAItems
     public static final DeferredItem<Item> GLAZED_HOGLIN_MEAT = REGISTER.register("glazed_hoglin_meat", () -> new FoodItem(
         new Item.Properties().stacksTo(16).food(NAFoods.GLAZED_HOGLIN_MEAT)
     ));
+    public static final DeferredItem<Item> NETHER_PORK_ROAST = REGISTER.register("nether_pork_roast", () -> new FoodItem(
+        new Item.Properties().stacksTo(16).food(NAFoods.NETHER_PORK_ROAST)
+    ));
     public static final DeferredItem<Item> AZURE_MELON_SORBET = REGISTER.register("azure_melon_sorbet", () -> new FoodItem(
         new Item.Properties().stacksTo(16).food(NAFoods.AZURE_MELON_SORBET)
     ));

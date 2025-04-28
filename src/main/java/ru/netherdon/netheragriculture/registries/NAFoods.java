@@ -80,4 +80,9 @@ public final class NAFoods
     public static final FoodProperties WARPED_BERRY_JAM = new FoodProperties.Builder()
         .nutrition(8).saturationModifier(0.10f).alwaysEdible()
         .build();
+
+    public static final FoodProperties NETHER_PORK_ROAST = new FoodProperties.Builder()
+        .nutrition(15).saturationModifier(0.7f).usingConvertsTo(Items.BOWL).alwaysEdible()
+        .effect(() -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 100), 0.7f)
+        .build();
 }
