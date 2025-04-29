@@ -1,0 +1,6 @@
+{
+  "parent": "netheragriculture:block/base/small_crimson_crate/bottom",
+  "textures": {
+    "top": "netheragriculture:block/crimson_crate_of_sinful_eyes"
+  }
+}

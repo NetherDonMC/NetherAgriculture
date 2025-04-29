@@ -20,6 +20,7 @@ public final class NAItems
     public static final DeferredItem<Item> CRIMSON_BERRY = REGISTER.registerSimpleItem("crimson_berry", new Item.Properties().food(NAFoods.CRIMSON_BERRY));
     public static final DeferredItem<Item> WARPED_BERRY = REGISTER.registerSimpleItem("warped_berry", new Item.Properties().food(NAFoods.WARPED_BERRY));
     public static final DeferredItem<Item> LOTHUN = REGISTER.register("lothun", () -> new ItemNameBlockItem(NABlocks.LOTHUNS.get(), new Item.Properties().food(NAFoods.LOTHUN)));
+    public static final DeferredItem<Item> SINFUL_EYES = REGISTER.register("sinful_eyes", () -> new Item(new Item.Properties().food(NAFoods.SINFUL_EYES)));
     public static final DeferredItem<Item> MORTOFRUCT_HALF = REGISTER.register("mortofruct_half", () -> new FoodItem(new Item.Properties().food(NAFoods.MORTOFRUCT)));
     public static final DeferredItem<BlockItem> AZURE_MELON = REGISTER.registerSimpleBlockItem(NABlocks.AZURE_MELON);
     public static final DeferredItem<Item> AZURE_MELON_SLICE = REGISTER.registerSimpleItem("azure_melon_slice", new Item.Properties().food(NAFoods.AZURE_MELON_SLICE));
@@ -104,4 +105,8 @@ public final class NAItems
     public static final DeferredItem<BlockItem> SMALL_CRIMSON_CRATE_OF_BLAZE_FRUIT = REGISTER.registerSimpleBlockItem(NABlocks.SMALL_CRIMSON_CRATE_OF_BLAZE_FRUIT);
     public static final DeferredItem<BlockItem> WARPED_CRATE_OF_BLAZE_FRUIT = REGISTER.registerSimpleBlockItem(NABlocks.WARPED_CRATE_OF_BLAZE_FRUIT);
     public static final DeferredItem<BlockItem> SMALL_WARPED_CRATE_OF_BLAZE_FRUIT = REGISTER.registerSimpleBlockItem(NABlocks.SMALL_WARPED_CRATE_OF_BLAZE_FRUIT);
+    public static final DeferredItem<BlockItem> CRIMSON_CRATE_OF_SINFUL_EYES = REGISTER.registerSimpleBlockItem(NABlocks.CRIMSON_CRATE_OF_SINFUL_EYES);
+    public static final DeferredItem<BlockItem> SMALL_CRIMSON_CRATE_OF_SINFUL_EYES = REGISTER.registerSimpleBlockItem(NABlocks.SMALL_CRIMSON_CRATE_OF_SINFUL_EYES);
+    public static final DeferredItem<BlockItem> WARPED_CRATE_OF_SINFUL_EYES = REGISTER.registerSimpleBlockItem(NABlocks.WARPED_CRATE_OF_SINFUL_EYES);
+    public static final DeferredItem<BlockItem> SMALL_WARPED_CRATE_OF_SINFUL_EYES = REGISTER.registerSimpleBlockItem(NABlocks.SMALL_WARPED_CRATE_OF_SINFUL_EYES);
 }

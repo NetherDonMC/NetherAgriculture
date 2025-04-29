@@ -7,6 +7,7 @@
   "item.netheragriculture.warped_berry": "Warped Berry",
   "item.netheragriculture.warped_berry_seeds": "Warped Berry Seeds",
   "item.netheragriculture.lothun": "Lothun",
+  "item.netheragriculture.sinful_eyes": "Sinful Eyes",
   "item.netheragriculture.blaze_fruit": "Blaze Fruit",
   "item.netheragriculture.blaze_fruit_seed": "Blaze Fruit Seed",
   "item.netheragriculture.azure_melon_slice": "Azure Melon Slice",
@@ -67,6 +68,10 @@
   "block.netheragriculture.small_crimson_crate_of_blaze_fruit": "Small Crimson Crate of Blaze Fruit",
   "block.netheragriculture.warped_crate_of_blaze_fruit": "Warped Crate of Blaze Fruit",
   "block.netheragriculture.small_warped_crate_of_blaze_fruit": "Small Warped Crate of Blaze Fruit",
+  "block.netheragriculture.crimson_crate_of_sinful_eyes": "Crimson Crate of Sinful Eyes",
+  "block.netheragriculture.small_crimson_crate_of_sinful_eyes": "Small Crimson Crate of Sinful Eyes",
+  "block.netheragriculture.warped_crate_of_sinful_eyes": "Warped Crate of Sinful Eyes",
+  "block.netheragriculture.small_warped_crate_of_sinful_eyes": "Small Warped Crate of Sinful Eyes",
 
   "effect.netheragriculture.warp": "Warp",
   "effect.netheragriculture.blaze_flight": "Blaze Flight"

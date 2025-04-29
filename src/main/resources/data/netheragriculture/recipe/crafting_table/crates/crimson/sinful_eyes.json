@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    { "item": "netheragriculture:sinful_eyes" },
+    { "item": "netheragriculture:sinful_eyes" },
+    { "item": "netheragriculture:sinful_eyes" },
+    { "item": "netheragriculture:sinful_eyes" },
+    { "item": "netheragriculture:crimson_crate" },
+    { "item": "netheragriculture:sinful_eyes" },
+    { "item": "netheragriculture:sinful_eyes" },
+    { "item": "netheragriculture:sinful_eyes" },
+    { "item": "netheragriculture:sinful_eyes" }
+  ],
+  "result": {
+    "id": "netheragriculture:crimson_crate_of_sinful_eyes",
+    "count": 1
+  }
+}

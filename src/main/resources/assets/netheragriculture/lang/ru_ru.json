@@ -7,6 +7,7 @@
   "item.netheragriculture.warped_berry": "Искажённая ягода",
   "item.netheragriculture.warped_berry_seeds": "Семена искажённой ягоды",
   "item.netheragriculture.lothun": "Лотун",
+  "item.netheragriculture.sinful_eyes": "Глаза грешников",
   "item.netheragriculture.blaze_fruit": "Огненный фрукт",
   "item.netheragriculture.blaze_fruit_seed": "Семя огненного фрукта",
   "item.netheragriculture.azure_melon_slice": "Ломтик лазурной дыни",
@@ -67,6 +68,10 @@
   "block.netheragriculture.small_crimson_crate_of_blaze_fruit": "Малый багровый ящик с огненным фруктом",
   "block.netheragriculture.warped_crate_of_blaze_fruit": "Искажённый ящик с огненным фруктом",
   "block.netheragriculture.small_warped_crate_of_blaze_fruit": "Малый искажённый ящик с огненным фруктом",
+  "block.netheragriculture.crimson_crate_of_sinful_eyes": "Багровый ящик с глазами грешников",
+  "block.netheragriculture.small_crimson_crate_of_sinful_eyes": "Малый багровый ящик с глазами грешников",
+  "block.netheragriculture.warped_crate_of_sinful_eyes": "Искажённый ящик с глазами грешников",
+  "block.netheragriculture.small_warped_crate_of_sinful_eyes": "Малый искажённый ящик с глазами грешников",
 
   "effect.netheragriculture.warp": "Искажение",
   "effect.netheragriculture.blaze_flight": "Полёт всполоха"

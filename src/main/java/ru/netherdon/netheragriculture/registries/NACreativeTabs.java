@@ -28,6 +28,8 @@ public final class NACreativeTabs
             output.accept(NAItems.SMALL_CRIMSON_CRATE_OF_LOTHUN);
             output.accept(NAItems.CRIMSON_CRATE_OF_BLAZE_FRUIT);
             output.accept(NAItems.SMALL_CRIMSON_CRATE_OF_BLAZE_FRUIT);
+            output.accept(NAItems.CRIMSON_CRATE_OF_SINFUL_EYES);
+            output.accept(NAItems.SMALL_CRIMSON_CRATE_OF_SINFUL_EYES);
             output.accept(NAItems.WARPED_CRATE);
             output.accept(NAItems.SMALL_WARPED_CRATE);
             output.accept(NAItems.WARPED_CRATE_OF_CRIMSON_BERRIES);
@@ -38,6 +40,8 @@ public final class NACreativeTabs
             output.accept(NAItems.SMALL_WARPED_CRATE_OF_LOTHUN);
             output.accept(NAItems.WARPED_CRATE_OF_BLAZE_FRUIT);
             output.accept(NAItems.SMALL_WARPED_CRATE_OF_BLAZE_FRUIT);
+            output.accept(NAItems.WARPED_CRATE_OF_SINFUL_EYES);
+            output.accept(NAItems.SMALL_WARPED_CRATE_OF_SINFUL_EYES);
 
             output.accept(NAItems.CRIMSON_FARMLAND);
             output.accept(NAItems.WARPED_FARMLAND);
@@ -57,6 +61,7 @@ public final class NACreativeTabs
             output.accept(NAItems.WARPED_BERRY);
             output.accept(NAItems.WILD_LOTHUN);
             output.accept(NAItems.LOTHUN);
+            output.accept(NAItems.SINFUL_EYES);
             output.accept(NAItems.DEAD_VINES);
             output.accept(NAItems.MORTOFRUCT);
             output.accept(NAItems.MORTOFRUCT_HALF);

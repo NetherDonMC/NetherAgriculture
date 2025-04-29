@@ -21,6 +21,10 @@ public final class NAFoods
         .effect(() -> new MobEffectInstance(MobEffects.CONFUSION, 300), 0.2f)
         .build();
 
+    public static final FoodProperties SINFUL_EYES = new FoodProperties.Builder()
+        .nutrition(2).saturationModifier(0.4F)
+        .build();
+
     public static final FoodProperties MORTOFRUCT = new FoodProperties.Builder()
         .nutrition(3).saturationModifier(0.5f).build();
 

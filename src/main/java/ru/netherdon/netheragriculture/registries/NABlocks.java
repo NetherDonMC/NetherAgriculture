@@ -187,4 +187,9 @@ public final class NABlocks
     public static final DeferredBlock<SlabBlock> SMALL_CRIMSON_CRATE_OF_BLAZE_FRUIT = REGISTER.registerBlock("small_crimson_crate_of_blaze_fruit", SmallBlazeFruitCrateBlock::new, NABlockProperties.CRIMSON_CRATE);
     public static final DeferredBlock<Block> WARPED_CRATE_OF_BLAZE_FRUIT = REGISTER.registerBlock("warped_crate_of_blaze_fruit", BlazeFruitCrateBlock::new, NABlockProperties.WARPED_CRATE);
     public static final DeferredBlock<SlabBlock> SMALL_WARPED_CRATE_OF_BLAZE_FRUIT = REGISTER.registerBlock("small_warped_crate_of_blaze_fruit", SmallBlazeFruitCrateBlock::new, NABlockProperties.WARPED_CRATE);
+
+    public static final DeferredBlock<Block> CRIMSON_CRATE_OF_SINFUL_EYES = REGISTER.registerSimpleBlock("crimson_crate_of_sinful_eyes", NABlockProperties.CRIMSON_CRATE);
+    public static final DeferredBlock<SlabBlock> SMALL_CRIMSON_CRATE_OF_SINFUL_EYES = REGISTER.registerBlock("small_crimson_crate_of_sinful_eyes", SlabBlock::new, NABlockProperties.CRIMSON_CRATE);
+    public static final DeferredBlock<Block> WARPED_CRATE_OF_SINFUL_EYES = REGISTER.registerSimpleBlock("warped_crate_of_sinful_eyes", NABlockProperties.WARPED_CRATE);
+    public static final DeferredBlock<SlabBlock> SMALL_WARPED_CRATE_OF_SINFUL_EYES = REGISTER.registerBlock("small_warped_crate_of_sinful_eyes", SlabBlock::new, NABlockProperties.WARPED_CRATE);
 }

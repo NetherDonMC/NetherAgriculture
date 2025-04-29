@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "netheragriculture:block/crates/crimson/small/sinful_eyes/bottom"
+    },
+    "type=double": {
+      "model": "netheragriculture:block/crates/crimson/small/sinful_eyes/double"
+    },
+    "type=top": {
+      "model": "netheragriculture:block/crates/crimson/small/sinful_eyes/top"
+    }
+  }
+}
