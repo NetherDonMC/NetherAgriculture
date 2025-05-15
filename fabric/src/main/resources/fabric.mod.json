@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "${id}",
+  "version": "${version}",
+  "name": "${name}",
+  "description": "${description}",
+  "authors": [
+    "${author}"
+  ],
+  "contact": {
+    "homepage": ""
+  },
+  "license": "${license}",
+  "icon": "assets/netheragriculture/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "ru.netherdon.netheragriculture.fabric.NetherAgricultureFabric"
+    ],
+    "client": [
+      "ru.netherdon.netheragriculture.fabric.client.NetherAgricultureFabricClient"
+    ]
+  },
+  "mixins": [
+    "netheragriculture.fabric.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.14",
+    "minecraft": "~1.21.1",
+    "java": ">=21",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
