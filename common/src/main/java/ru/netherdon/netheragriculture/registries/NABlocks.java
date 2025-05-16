@@ -133,6 +133,25 @@ public final class NABlocks
             .lightLevel((state) -> ((NetherCropBlock)state.getBlock()).isMaxAge(state) ? 10 : 0)
     );
 
+    public static final Holder<SinfulEyesBlock> SINFUL_EYES = registerBlock("sinful_eyes", SinfulEyesBlock::new,
+        BlockBehaviour.Properties.of()
+            .mapColor(MapColor.GOLD)
+            .noCollission()
+            .instabreak()
+            .sound(SoundType.ROOTS)
+            .pushReaction(PushReaction.DESTROY)
+    );
+
+    public static final Holder<WildSinfulEyesBlock> WILD_SINFUL_EYES = registerBlock("wild_sinful_eyes", WildSinfulEyesBlock::new,
+        BlockBehaviour.Properties.of()
+            .mapColor(MapColor.GOLD)
+            .noCollission()
+            .instabreak()
+            .sound(SoundType.ROOTS)
+            .offsetType(BlockBehaviour.OffsetType.XZ)
+            .pushReaction(PushReaction.DESTROY)
+    );
+
     public static final Holder<NetherRootsBlock> NETHER_ROOTS = registerBlock("nether_roots", NetherRootsBlock::new,
         BlockBehaviour.Properties.of()
             .mapColor(MapColor.NETHER)

@@ -1,0 +1,7 @@
+{
+  "parent": "netheragriculture:block/base/small_crop",
+  "render_type": "cutout",
+  "textures": {
+    "crop": "netheragriculture:block/sinful_eyes_stage0"
+  }
+}

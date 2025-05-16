@@ -26,7 +26,7 @@ public final class NAItems
     public static final Holder<Item> CRIMSON_BERRY = registerSimpleItem("crimson_berry", new Item.Properties().food(NAFoods.CRIMSON_BERRY));
     public static final Holder<Item> WARPED_BERRY = registerSimpleItem("warped_berry", new Item.Properties().food(NAFoods.WARPED_BERRY));
     public static final Holder<Item> LOTHUN = REGISTER.register("lothun", () -> new ItemNameBlockItem(NABlocks.LOTHUNS.value(), new Item.Properties().food(NAFoods.LOTHUN)));
-    public static final Holder<Item> SINFUL_EYES = REGISTER.register("sinful_eyes", () -> new Item(new Item.Properties().food(NAFoods.SINFUL_EYES)));
+    public static final Holder<Item> SINFUL_EYES = REGISTER.register("sinful_eyes", () -> new ItemNameBlockItem(NABlocks.SINFUL_EYES.value(), new Item.Properties().food(NAFoods.SINFUL_EYES)));
     public static final Holder<Item> MORTOFRUCT_HALF = REGISTER.register("mortofruct_half", () -> new FoodItem(new Item.Properties().food(NAFoods.MORTOFRUCT)));
     public static final Holder<BlockItem> AZURE_MELON = registerSimpleBlockItem(NABlocks.AZURE_MELON);
     public static final Holder<Item> AZURE_MELON_SLICE = registerSimpleItem("azure_melon_slice", new Item.Properties().food(NAFoods.AZURE_MELON_SLICE));
@@ -81,6 +81,7 @@ public final class NAItems
     public static final Holder<BlockItem> CRIMSON_BERRY_SPROUTS = registerSimpleBlockItem(NABlocks.CRIMSON_BERRY_SPROUTS);
     public static final Holder<BlockItem> WARPED_BERRY_SPROUTS = registerSimpleBlockItem(NABlocks.WARPED_BERRY_SPROUTS);
     public static final Holder<BlockItem> WILD_LOTHUN = registerSimpleBlockItem(NABlocks.WILD_LOTHUN);
+    public static final Holder<BlockItem> WILD_SINFUL_EYES = registerSimpleBlockItem(NABlocks.WILD_SINFUL_EYES);
 
     public static final Holder<BlockItem> CRIMSON_BERRY_SEEDS = REGISTER.register("crimson_berry_seeds", () -> new ItemNameBlockItem(NABlocks.CRIMSON_BERRY_ROOTS.value(), new Item.Properties()));
     public static final Holder<BlockItem> WARPED_BERRY_SEEDS = REGISTER.register("warped_berry_seeds", () -> new ItemNameBlockItem(NABlocks.WARPED_BERRY_ROOTS.value(), new Item.Properties()));

@@ -43,7 +43,9 @@ public final class NetherAgricultureFabric implements ModInitializer
             NABlocks.WARPED_BERRY_SPROUTS.value(),
             NABlocks.WILD_LOTHUN.value(),
             NABlocks.AZURE_MELON.value(),
-            NABlocks.AZURE_MELON_CROP.value()
+            NABlocks.AZURE_MELON_CROP.value(),
+            NABlocks.SINFUL_EYES.value(),
+            NABlocks.WILD_SINFUL_EYES.value()
         );
     }
 }

@@ -61,6 +61,7 @@ public final class NACreativeTabs
             output.accept(NAItems.WARPED_BERRY.value());
             output.accept(NAItems.WILD_LOTHUN.value());
             output.accept(NAItems.LOTHUN.value());
+            output.accept(NAItems.WILD_SINFUL_EYES.value());
             output.accept(NAItems.SINFUL_EYES.value());
             output.accept(NAItems.DEAD_VINES.value());
             output.accept(NAItems.MORTOFRUCT.value());
