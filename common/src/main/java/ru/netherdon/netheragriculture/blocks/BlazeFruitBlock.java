@@ -54,6 +54,17 @@ public class BlazeFruitBlock extends NetherCropBlock
     }
 
     @Override
+    public void growCrops(Level level, BlockPos pos, BlockState state)
+    {
+        int age = Math.min(
+            this.getAge(state) + this.getBonemealAgeIncrease(level),
+            this.getMaxAge()
+        );
+        BlockState newState = this.withAge(state, age);
+        level.setBlock(pos, newState, 2);
+    }
+
+    @Override
     protected void entityInside(BlockState state, Level level, BlockPos pos, Entity entity)
     {
         if (this.isMaxAge(state))
