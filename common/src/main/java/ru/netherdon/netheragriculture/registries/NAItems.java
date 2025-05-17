@@ -128,6 +128,10 @@ public final class NAItems
     public static final Holder<BlockItem> SMALL_CRIMSON_CRATE_OF_LOTHUN = registerSimpleBlockItem(NABlocks.SMALL_CRIMSON_CRATE_OF_LOTHUN);
     public static final Holder<BlockItem> WARPED_CRATE_OF_LOTHUN = registerSimpleBlockItem(NABlocks.WARPED_CRATE_OF_LOTHUN);
     public static final Holder<BlockItem> SMALL_WARPED_CRATE_OF_LOTHUN = registerSimpleBlockItem(NABlocks.SMALL_WARPED_CRATE_OF_LOTHUN);
+    public static final Holder<BlockItem> CRIMSON_CRATE_OF_BLAZING_GOLDEN_LOTHUN = registerSimpleBlockItem(NABlocks.CRIMSON_CRATE_OF_BLAZING_GOLDEN_LOTHUN);
+    public static final Holder<BlockItem> SMALL_CRIMSON_CRATE_OF_BLAZING_GOLDEN_LOTHUN = registerSimpleBlockItem(NABlocks.SMALL_CRIMSON_CRATE_OF_BLAZING_GOLDEN_LOTHUN);
+    public static final Holder<BlockItem> WARPED_CRATE_OF_BLAZING_GOLDEN_LOTHUN = registerSimpleBlockItem(NABlocks.WARPED_CRATE_OF_BLAZING_GOLDEN_LOTHUN);
+    public static final Holder<BlockItem> SMALL_WARPED_CRATE_OF_BLAZING_GOLDEN_LOTHUN = registerSimpleBlockItem(NABlocks.SMALL_WARPED_CRATE_OF_BLAZING_GOLDEN_LOTHUN);
     public static final Holder<BlockItem> CRIMSON_CRATE_OF_BLAZE_FRUIT = registerSimpleBlockItem(NABlocks.CRIMSON_CRATE_OF_BLAZE_FRUIT);
     public static final Holder<BlockItem> SMALL_CRIMSON_CRATE_OF_BLAZE_FRUIT = registerSimpleBlockItem(NABlocks.SMALL_CRIMSON_CRATE_OF_BLAZE_FRUIT);
     public static final Holder<BlockItem> WARPED_CRATE_OF_BLAZE_FRUIT = registerSimpleBlockItem(NABlocks.WARPED_CRATE_OF_BLAZE_FRUIT);

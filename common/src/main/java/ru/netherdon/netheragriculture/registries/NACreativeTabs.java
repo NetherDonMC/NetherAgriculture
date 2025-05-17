@@ -26,6 +26,8 @@ public final class NACreativeTabs
             output.accept(NAItems.SMALL_CRIMSON_CRATE_OF_WARPED_BERRIES.value());
             output.accept(NAItems.CRIMSON_CRATE_OF_LOTHUN.value());
             output.accept(NAItems.SMALL_CRIMSON_CRATE_OF_LOTHUN.value());
+            output.accept(NAItems.CRIMSON_CRATE_OF_BLAZING_GOLDEN_LOTHUN.value());
+            output.accept(NAItems.SMALL_CRIMSON_CRATE_OF_BLAZING_GOLDEN_LOTHUN.value());
             output.accept(NAItems.CRIMSON_CRATE_OF_BLAZE_FRUIT.value());
             output.accept(NAItems.SMALL_CRIMSON_CRATE_OF_BLAZE_FRUIT.value());
             output.accept(NAItems.CRIMSON_CRATE_OF_SINFUL_EYES.value());
@@ -38,6 +40,8 @@ public final class NACreativeTabs
             output.accept(NAItems.SMALL_WARPED_CRATE_OF_WARPED_BERRIES.value());
             output.accept(NAItems.WARPED_CRATE_OF_LOTHUN.value());
             output.accept(NAItems.SMALL_WARPED_CRATE_OF_LOTHUN.value());
+            output.accept(NAItems.WARPED_CRATE_OF_BLAZING_GOLDEN_LOTHUN.value());
+            output.accept(NAItems.SMALL_WARPED_CRATE_OF_BLAZING_GOLDEN_LOTHUN.value());
             output.accept(NAItems.WARPED_CRATE_OF_BLAZE_FRUIT.value());
             output.accept(NAItems.SMALL_WARPED_CRATE_OF_BLAZE_FRUIT.value());
             output.accept(NAItems.WARPED_CRATE_OF_SINFUL_EYES.value());

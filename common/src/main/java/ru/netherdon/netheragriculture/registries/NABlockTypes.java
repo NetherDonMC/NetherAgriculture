@@ -29,11 +29,11 @@ public final class NABlockTypes
     public static final Holder<MapCodec<BlazeFruitBlock>> BLAZE_FRUIT =
         REGISTER.register("blaze_fruit", () -> BlazeFruitBlock.CODEC);
 
-    public static final Holder<MapCodec<BlazeFruitCrateBlock>> BLAZE_FRUIT_CRATE =
-        REGISTER.register("blaze_fruit_crate", () -> BlazeFruitCrateBlock.CODEC);
+    public static final Holder<MapCodec<BurningCrateBlock>> BLAZE_FRUIT_CRATE =
+        REGISTER.register("blaze_fruit_crate", () -> BurningCrateBlock.CODEC);
 
-    public static final Holder<MapCodec<SmallBlazeFruitCrateBlock>> SMALL_BLAZE_FRUIT_CRATE =
-        REGISTER.register("small_blaze_fruit_crate", () -> SmallBlazeFruitCrateBlock.CODEC);
+    public static final Holder<MapCodec<SmallBurningCrateBlock>> SMALL_BLAZE_FRUIT_CRATE =
+        REGISTER.register("small_blaze_fruit_crate", () -> SmallBurningCrateBlock.CODEC);
 
     public static final Holder<MapCodec<CrateBlock>> CRATE =
         REGISTER.register("crate", () -> CrateBlock.CODEC);

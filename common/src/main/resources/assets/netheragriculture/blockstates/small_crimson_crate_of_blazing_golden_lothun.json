@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "netheragriculture:block/crates/crimson/small/blazing_golden_lothun/bottom"
+    },
+    "type=double": {
+      "model": "netheragriculture:block/crates/crimson/small/blazing_golden_lothun/double"
+    },
+    "type=top": {
+      "model": "netheragriculture:block/crates/crimson/small/blazing_golden_lothun/top"
+    }
+  }
+}

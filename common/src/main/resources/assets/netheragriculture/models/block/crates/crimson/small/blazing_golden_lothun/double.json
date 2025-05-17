@@ -1,0 +1,6 @@
+{
+  "parent": "netheragriculture:block/base/small_crimson_crate/double",
+  "textures": {
+    "top": "netheragriculture:block/crimson_crate_of_blazing_golden_lothun"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "netheragriculture:emptying_storage",
+  "input": {
+    "item": "netheragriculture:crimson_crate_of_blazing_golden_lothun"
+  },
+  "storage": {
+    "id": "netheragriculture:crimson_crate"
+  },
+  "result": {
+    "id": "netheragriculture:blazing_golden_lothun",
+    "count": 8
+  }
+}

@@ -210,10 +210,15 @@ public final class NABlocks
     public static final Holder<Block> WARPED_CRATE_OF_LOTHUN = registerSimpleBlock("warped_crate_of_lothun", NABlockProperties.WARPED_CRATE);
     public static final Holder<SlabBlock> SMALL_WARPED_CRATE_OF_LOTHUN = registerBlock("small_warped_crate_of_lothun", SlabBlock::new, NABlockProperties.WARPED_CRATE);
 
-    public static final Holder<Block> CRIMSON_CRATE_OF_BLAZE_FRUIT = registerBlock("crimson_crate_of_blaze_fruit", BlazeFruitCrateBlock::new, NABlockProperties.CRIMSON_CRATE);
-    public static final Holder<SlabBlock> SMALL_CRIMSON_CRATE_OF_BLAZE_FRUIT = registerBlock("small_crimson_crate_of_blaze_fruit", SmallBlazeFruitCrateBlock::new, NABlockProperties.CRIMSON_CRATE);
-    public static final Holder<Block> WARPED_CRATE_OF_BLAZE_FRUIT = registerBlock("warped_crate_of_blaze_fruit", BlazeFruitCrateBlock::new, NABlockProperties.WARPED_CRATE);
-    public static final Holder<SlabBlock> SMALL_WARPED_CRATE_OF_BLAZE_FRUIT = registerBlock("small_warped_crate_of_blaze_fruit", SmallBlazeFruitCrateBlock::new, NABlockProperties.WARPED_CRATE);
+    public static final Holder<Block> CRIMSON_CRATE_OF_BLAZING_GOLDEN_LOTHUN = registerBlock("crimson_crate_of_blazing_golden_lothun", BurningCrateBlock::new, NABlockProperties.CRIMSON_CRATE);
+    public static final Holder<SlabBlock> SMALL_CRIMSON_CRATE_OF_BLAZING_GOLDEN_LOTHUN = registerBlock("small_crimson_crate_of_blazing_golden_lothun", SmallBurningCrateBlock::new, NABlockProperties.CRIMSON_CRATE);
+    public static final Holder<Block> WARPED_CRATE_OF_BLAZING_GOLDEN_LOTHUN = registerBlock("warped_crate_of_blazing_golden_lothun", BurningCrateBlock::new, NABlockProperties.WARPED_CRATE);
+    public static final Holder<SlabBlock> SMALL_WARPED_CRATE_OF_BLAZING_GOLDEN_LOTHUN = registerBlock("small_warped_crate_of_blazing_golden_lothun", SmallBurningCrateBlock::new, NABlockProperties.WARPED_CRATE);
+
+    public static final Holder<Block> CRIMSON_CRATE_OF_BLAZE_FRUIT = registerBlock("crimson_crate_of_blaze_fruit", BurningCrateBlock::new, NABlockProperties.CRIMSON_CRATE);
+    public static final Holder<SlabBlock> SMALL_CRIMSON_CRATE_OF_BLAZE_FRUIT = registerBlock("small_crimson_crate_of_blaze_fruit", SmallBurningCrateBlock::new, NABlockProperties.CRIMSON_CRATE);
+    public static final Holder<Block> WARPED_CRATE_OF_BLAZE_FRUIT = registerBlock("warped_crate_of_blaze_fruit", BurningCrateBlock::new, NABlockProperties.WARPED_CRATE);
+    public static final Holder<SlabBlock> SMALL_WARPED_CRATE_OF_BLAZE_FRUIT = registerBlock("small_warped_crate_of_blaze_fruit", SmallBurningCrateBlock::new, NABlockProperties.WARPED_CRATE);
 
     public static final Holder<Block> CRIMSON_CRATE_OF_SINFUL_EYES = registerSimpleBlock("crimson_crate_of_sinful_eyes", NABlockProperties.CRIMSON_CRATE);
     public static final Holder<SlabBlock> SMALL_CRIMSON_CRATE_OF_SINFUL_EYES = registerBlock("small_crimson_crate_of_sinful_eyes", SlabBlock::new, NABlockProperties.CRIMSON_CRATE);

@@ -1,0 +1,41 @@
+package ru.netherdon.netheragriculture.blocks;
+
+import com.mojang.serialization.MapCodec;
+import net.minecraft.core.BlockPos;
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SlabBlock;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.SlabType;
+
+public class SmallBurningCrateBlock extends SlabBlock
+{
+    public static final MapCodec<SmallBurningCrateBlock> CODEC = Block.simpleCodec(SmallBurningCrateBlock::new);
+
+    public SmallBurningCrateBlock(Properties properties)
+    {
+        super(properties);
+    }
+
+    @Override
+    public void stepOn(Level level, BlockPos pos, BlockState state, Entity entity)
+    {
+        BurningCrateBlock.damageWhileWalking(level, entity);
+        super.stepOn(level, pos, state, entity);
+    }
+
+    @Override
+    public void animateTick(BlockState blockState, Level level, BlockPos blockPos, RandomSource randomSource)
+    {
+        super.animateTick(blockState, level, blockPos, randomSource);
+        BurningCrateBlock.spawnFlameParticle(level, blockPos, randomSource, blockState.getValue(TYPE) == SlabType.BOTTOM);
+    }
+
+    @Override
+    public MapCodec<? extends SmallBurningCrateBlock> codec()
+    {
+        return CODEC;
+    }
+}
