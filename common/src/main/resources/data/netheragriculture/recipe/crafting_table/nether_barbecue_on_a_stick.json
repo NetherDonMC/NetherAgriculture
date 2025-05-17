@@ -1,18 +1,16 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [{
-    "item": "minecraft:bowl"
-  }, {
     "item": "netheragriculture:cooked_hoglin_meat"
   }, {
-    "item": "netheragriculture:lothun"
-  }, {
-    "item": "netheragriculture:mortofruct_half"
+    "item": "netheragriculture:sinful_eyes"
   }, {
     "tag": "netheragriculture:nether_spices"
+  }, {
+    "tag": "c:rods/wooden"
   }],
   "result": {
-    "id": "netheragriculture:nether_pork_roast",
+    "id": "netheragriculture:nether_barbecue_on_a_stick",
     "count": 1
   }
 }

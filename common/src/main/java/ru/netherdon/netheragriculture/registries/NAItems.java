@@ -40,6 +40,10 @@ public final class NAItems
     public static final Holder<Item> STRIDER_LEG = registerItem("strider_leg", FoodItem::new, new Item.Properties().food(NAFoods.STRIDER_LEG).fireResistant());
     public static final Holder<Item> COOKED_STRIDER_LEG = registerItem("cooked_strider_leg", FoodItem::new, new Item.Properties().food(NAFoods.COOKED_STRIDER_LEG).fireResistant());
 
+    public static final Holder<Item> NETHER_BARBECUE_ON_A_STICK = REGISTER.register("nether_barbecue_on_a_stick", () -> new FoodItem(
+        new Item.Properties().stacksTo(16).food(NAFoods.NETHER_BARBECUE_ON_A_STICK)
+    ));
+
     public static final Holder<Item> BLAZE_CREAM_SOUP = REGISTER.register("blaze_cream_soup", () -> new BurningFoodItem(
         100,
         new Item.Properties().stacksTo(16).food(NAFoods.BLAZE_CREAM_SOUP).fireResistant()
@@ -56,8 +60,11 @@ public final class NAItems
     public static final Holder<Item> NETHER_PORK_ROAST = REGISTER.register("nether_pork_roast", () -> new FoodItem(
         new Item.Properties().stacksTo(16).food(NAFoods.NETHER_PORK_ROAST)
     ));
-    public static final Holder<Item> AZURE_MELON_SORBET = REGISTER.register("azure_melon_sorbet", () -> new FoodItem(
-        new Item.Properties().stacksTo(16).food(NAFoods.AZURE_MELON_SORBET)
+    public static final Holder<Item> STRIDER_WITH_VEGETABLES = REGISTER.register("strider_with_vegetables", () -> new FoodItem(
+        new Item.Properties().stacksTo(16).food(NAFoods.STRIDER_WITH_VEGETABLES)
+    ));
+    public static final Holder<Item> AZURE_MELON_PUREE = REGISTER.register("azure_melon_puree", () -> new FoodItem(
+        new Item.Properties().stacksTo(16).food(NAFoods.AZURE_MELON_PUREE)
     ));
     public static final Holder<Item> AZURE_MELON_JELLY = REGISTER.register("azure_melon_jelly", () -> new FoodItem(
         new Item.Properties().stacksTo(16).food(NAFoods.AZURE_MELON_JELLY)

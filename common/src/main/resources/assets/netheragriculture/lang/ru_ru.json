@@ -28,6 +28,9 @@
   "item.netheragriculture.warped_berry_jam": "Варенье из искажённых ягод",
   "item.netheragriculture.glazed_hoglin_meat": "Глазированное мясо хоглина",
   "item.netheragriculture.nether_pork_roast": "Жаркое из мяса хоглина",
+  "item.netheragriculture.strider_with_vegetables": "Лавомерка с овощами",
+  "item.netheragriculture.nether_barbecue_on_a_stick": "Незерский шашлык на палочке",
+  "item.netheragriculture.azure_melon_puree": "Пюре из лазурной дыни",
 
   "block.netheragriculture.mortofruct": "Мортофрукт",
   "block.netheragriculture.crimson_berry_roots": "Корни багровой ягоды",
@@ -76,5 +79,7 @@
   "block.netheragriculture.small_warped_crate_of_sinful_eyes": "Малый искажённый ящик с глазами грешников",
 
   "effect.netheragriculture.warp": "Искажение",
-  "effect.netheragriculture.blaze_flight": "Полёт всполоха"
+  "effect.netheragriculture.blaze_flight": "Полёт всполоха",
+
+  "tag.netheragriculture.nether_spices": "Незерские специи"
 }

@@ -79,11 +79,13 @@ public final class NACreativeTabs
             output.accept(NAItems.CRIMSON_BERRY_JAM.value());
             output.accept(NAItems.WARPED_BERRY_JAM.value());
 
+            output.accept(NAItems.NETHER_BARBECUE_ON_A_STICK.value());
             output.accept(NAItems.NETHER_MUSHROOM_STEW.value());
             output.accept(NAItems.NETHER_FRUIT_SALAD.value());
-            output.accept(NAItems.AZURE_MELON_SORBET.value());
+            output.accept(NAItems.AZURE_MELON_PUREE.value());
             output.accept(NAItems.BLAZE_CREAM_SOUP.value());
             output.accept(NAItems.NETHER_PORK_ROAST.value());
+            output.accept(NAItems.STRIDER_WITH_VEGETABLES.value());
             output.accept(NAItems.GLAZED_HOGLIN_MEAT.value());
             output.accept(NAItems.AZURE_MELON_JELLY.value());
             output.accept(NAItems.NETHER_BERRY_JELLY.value());

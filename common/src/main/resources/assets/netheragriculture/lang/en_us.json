@@ -28,6 +28,9 @@
   "item.netheragriculture.warped_berry_jam": "Warped Berry Jam",
   "item.netheragriculture.glazed_hoglin_meat": "Glazed Hoglin Meat",
   "item.netheragriculture.nether_pork_roast": "Nether Pork Roast",
+  "item.netheragriculture.strider_with_vegetables": "Strider with Vegetables",
+  "item.netheragriculture.nether_barbecue_on_a_stick": "Nether Barbecue on a Stick",
+  "item.netheragriculture.azure_melon_puree": "Azure Melon Puree",
 
   "block.netheragriculture.mortofruct": "Mortofruct",
   "block.netheragriculture.crimson_berry_roots": "Crimson Berry Roots",
@@ -76,5 +79,7 @@
   "block.netheragriculture.small_warped_crate_of_sinful_eyes": "Small Warped Crate of Sinful Eyes",
 
   "effect.netheragriculture.warp": "Warp",
-  "effect.netheragriculture.blaze_flight": "Blaze Flight"
+  "effect.netheragriculture.blaze_flight": "Blaze Flight",
+
+  "tag.netheragriculture.nether_spices": "Nether Spices"
 }

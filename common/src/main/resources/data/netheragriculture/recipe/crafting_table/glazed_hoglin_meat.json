@@ -11,7 +11,7 @@
   }, {
     "item": "minecraft:crimson_fungus"
   }, {
-    "item": "netheragriculture:crushed_crimson_roots"
+    "tag": "netheragriculture:nether_spices"
   }],
   "result": {
     "id": "netheragriculture:glazed_hoglin_meat",

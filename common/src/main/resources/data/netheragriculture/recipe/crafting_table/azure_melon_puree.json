@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [{
+    "item": "netheragriculture:mortofruct_half"
+  }, {
+    "item": "netheragriculture:azure_melon_slice"
+  }, {
+    "item": "netheragriculture:azure_melon_slice"
+  }, {
+    "item": "netheragriculture:warped_berry"
+  }],
+  "result": {
+    "id": "netheragriculture:azure_melon_puree",
+    "count": 1
+  }
+}

@@ -62,10 +62,10 @@ public final class NAFoods
         .nutrition(12).saturationModifier(1.05f).usingConvertsTo(Items.BOWL).alwaysEdible()
         .build();
 
-    public static final FoodProperties AZURE_MELON_SORBET = withEffect(new FoodProperties.Builder(),
+    public static final FoodProperties AZURE_MELON_PUREE = withEffect(new FoodProperties.Builder(),
             () -> new MobEffectInstance(MobEffects.LUCK, 200), 1f
         )
-        .nutrition(9).saturationModifier(0.7f).alwaysEdible()
+        .nutrition(9).saturationModifier(0.35f).alwaysEdible()
         .build();
 
     public static final FoodProperties NETHER_MUSHROOM_STEW = new FoodProperties.Builder()
@@ -97,5 +97,15 @@ public final class NAFoods
             () -> new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 100), 0.7f
         )
         .nutrition(15).saturationModifier(0.7f).usingConvertsTo(Items.BOWL).alwaysEdible()
+        .build();
+
+    public static final FoodProperties STRIDER_WITH_VEGETABLES = withEffect(new FoodProperties.Builder(),
+            () -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 300), 0.85f
+        )
+        .nutrition(10).saturationModifier(1f).usingConvertsTo(Items.BOWL).alwaysEdible()
+        .build();
+
+    public static final FoodProperties NETHER_BARBECUE_ON_A_STICK = new FoodProperties.Builder()
+        .nutrition(9).saturationModifier(0.9f).usingConvertsTo(Items.STICK)
         .build();
 }

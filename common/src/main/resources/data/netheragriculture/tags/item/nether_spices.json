@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "netheragriculture:crushed_nether_roots",
+    "netheragriculture:crushed_crimson_roots",
+    "netheragriculture:crushed_warped_roots"
+  ]
+}

@@ -3,16 +3,16 @@
   "ingredients": [{
     "item": "minecraft:bowl"
   }, {
+    "item": "netheragriculture:cooked_strider_leg"
+  }, {
     "item": "netheragriculture:lothun"
   }, {
-    "item": "minecraft:warped_fungus"
-  }, {
-    "item": "netheragriculture:blaze_fruit"
+    "item": "netheragriculture:sinful_eyes"
   }, {
     "tag": "netheragriculture:nether_spices"
   }],
   "result": {
-    "id": "netheragriculture:blaze_cream_soup",
+    "id": "netheragriculture:strider_with_vegetables",
     "count": 1
   }
 }
