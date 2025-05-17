@@ -53,6 +53,9 @@ public final class NACreativeTabs
             output.accept(NAItems.CRUSHED_CRIMSON_ROOTS.value());
             output.accept(NAItems.CRUSHED_WARPED_ROOTS.value());
 
+            output.accept(NAItems.BLAZING_GOLD_INGOT.value());
+            output.accept(NAItems.BLAZING_GOLD_NUGGET.value());
+
             output.accept(NAItems.CRIMSON_BERRY_SEEDS.value());
             output.accept(NAItems.CRIMSON_BERRY_SPROUTS.value());
             output.accept(NAItems.CRIMSON_BERRY.value());
@@ -61,6 +64,7 @@ public final class NACreativeTabs
             output.accept(NAItems.WARPED_BERRY.value());
             output.accept(NAItems.WILD_LOTHUN.value());
             output.accept(NAItems.LOTHUN.value());
+            output.accept(NAItems.BLAZING_GOLDEN_LOTHUN.value());
             output.accept(NAItems.WILD_SINFUL_EYES.value());
             output.accept(NAItems.SINFUL_EYES.value());
             output.accept(NAItems.DEAD_VINES.value());
@@ -78,6 +82,7 @@ public final class NACreativeTabs
 
             output.accept(NAItems.CRIMSON_BERRY_JAM.value());
             output.accept(NAItems.WARPED_BERRY_JAM.value());
+            output.accept(NAItems.BLAZING_BLEND.value());
 
             output.accept(NAItems.NETHER_BARBECUE_ON_A_STICK.value());
             output.accept(NAItems.NETHER_MUSHROOM_STEW.value());

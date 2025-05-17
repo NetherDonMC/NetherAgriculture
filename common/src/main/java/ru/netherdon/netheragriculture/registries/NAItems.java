@@ -23,6 +23,16 @@ public final class NAItems
     public static final Holder<Item> CRUSHED_CRIMSON_ROOTS = registerSimpleItem("crushed_crimson_roots");
     public static final Holder<Item> CRUSHED_WARPED_ROOTS = registerSimpleItem("crushed_warped_roots");
 
+    public static final Holder<Item> BLAZING_GOLD_INGOT = REGISTER.register("blazing_gold_ingot", () -> new BurningItem(
+        60, new Item.Properties()
+    ));
+    public static final Holder<Item> BLAZING_GOLD_NUGGET = REGISTER.register("blazing_gold_nugget", () -> new BurningItem(
+        20, new Item.Properties()
+    ));
+    public static final Holder<Item> BLAZING_GOLDEN_LOTHUN = REGISTER.register("blazing_golden_lothun", () -> new BurningFoodItem(
+        60, new Item.Properties().food(NAFoods.BLAZING_GOLDEN_LOTHUN)
+    ));
+
     public static final Holder<Item> CRIMSON_BERRY = registerSimpleItem("crimson_berry", new Item.Properties().food(NAFoods.CRIMSON_BERRY));
     public static final Holder<Item> WARPED_BERRY = registerSimpleItem("warped_berry", new Item.Properties().food(NAFoods.WARPED_BERRY));
     public static final Holder<Item> LOTHUN = REGISTER.register("lothun", () -> new ItemNameBlockItem(NABlocks.LOTHUNS.value(), new Item.Properties().food(NAFoods.LOTHUN)));
@@ -78,6 +88,9 @@ public final class NAItems
     ));
     public static final Holder<Item> WARPED_BERRY_JAM = REGISTER.register("warped_berry_jam", () -> new JamItem(
         new Item.Properties().stacksTo(16).food(NAFoods.WARPED_BERRY_JAM).craftRemainder(Items.GLASS_BOTTLE)
+    ));
+    public static final Holder<Item> BLAZING_BLEND = REGISTER.register("blazing_blend", () -> new JamItem(
+        new Item.Properties().stacksTo(16).food(NAFoods.BLAZING_BLEND).craftRemainder(Items.GLASS_BOTTLE)
     ));
 
     public static final Holder<BlockItem> CRIMSON_FARMLAND = registerSimpleBlockItem(NABlocks.CRIMSON_FARMLAND);
@@ -140,6 +153,11 @@ public final class NAItems
     {
         String name = block.unwrapKey().orElseThrow().location().getPath();
         return registerItem(name, (propertiesIn) -> new BlockItem(block.value(), propertiesIn), new Item.Properties());
+    }
+
+    public static <T extends Item> Holder<T> registerItem(String name, Function<Item.Properties, T> constructor)
+    {
+        return registerItem(name, constructor, new Item.Properties());
     }
 
     public static <T extends Item> Holder<T> registerItem(String name, Function<Item.Properties, T> constructor, Item.Properties properties)

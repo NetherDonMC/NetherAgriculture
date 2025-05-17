@@ -1,11 +1,13 @@
 package ru.netherdon.netheragriculture.registries;
 
+import com.mojang.datafixers.util.Pair;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Items;
 
 import static ru.netherdon.netheragriculture.services.ItemService.withEffect;
+import static ru.netherdon.netheragriculture.services.ItemService.withEffects;
 
 public final class NAFoods
 {
@@ -107,5 +109,16 @@ public final class NAFoods
 
     public static final FoodProperties NETHER_BARBECUE_ON_A_STICK = new FoodProperties.Builder()
         .nutrition(9).saturationModifier(0.9f).usingConvertsTo(Items.STICK)
+        .build();
+
+    public static final FoodProperties BLAZING_BLEND = new FoodProperties.Builder()
+        .nutrition(2).saturationModifier(0.2f).alwaysEdible()
+        .build();
+
+    public static final FoodProperties BLAZING_GOLDEN_LOTHUN = withEffects(new FoodProperties.Builder(),
+            () -> new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 600),
+            () -> new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 300)
+        )
+        .nutrition(7).saturationModifier(0.7f).alwaysEdible()
         .build();
 }

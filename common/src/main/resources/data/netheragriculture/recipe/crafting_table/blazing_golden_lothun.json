@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [{
+    "item": "netheragriculture:blazing_gold_nugget"
+  }, {
+    "item": "netheragriculture:blazing_gold_nugget"
+  }, {
+    "item": "netheragriculture:blazing_gold_nugget"
+  }, {
+    "item": "netheragriculture:blazing_gold_nugget"
+  }, {
+    "item": "netheragriculture:lothun"
+  }, {
+    "item": "netheragriculture:blazing_gold_nugget"
+  }, {
+    "item": "netheragriculture:blazing_gold_nugget"
+  }, {
+    "item": "netheragriculture:blazing_gold_nugget"
+  }, {
+    "item": "netheragriculture:blazing_gold_nugget"
+  }],
+  "result": {
+    "id": "netheragriculture:blazing_golden_lothun",
+    "count": 1
+  }
+}
