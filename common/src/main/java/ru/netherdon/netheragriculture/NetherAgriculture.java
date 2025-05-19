@@ -18,6 +18,7 @@ public class NetherAgriculture
         NABlockEntityTypes.initialize();
         NAMenuTypes.initialize();
         NARecipeTypes.initialize();
+        NAParticleTypes.initialize();
     }
 
     public static ResourceLocation location(String path)

@@ -2,6 +2,7 @@ package ru.netherdon.netheragriculture.items;
 
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -53,6 +54,16 @@ public class StriderTreatItem extends Item
             {
                 MobEffectInstance effectCopy = new MobEffectInstance(effect);
                 strider.addEffect(effectCopy);
+            }
+
+            strider.setInLove(player);
+            if (!strider.isSilent())
+            {
+                level.playSound((Player)null,
+                    strider.getX(), strider.getY(), strider.getZ(),
+                    SoundEvents.STRIDER_EAT, strider.getSoundSource(),
+                    1.0F, 1.0F + (level.random.nextFloat() - level.random.nextFloat()) * 0.2F
+                );
             }
         }
 
