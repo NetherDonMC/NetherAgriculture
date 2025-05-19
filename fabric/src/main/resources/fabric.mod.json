@@ -22,6 +22,7 @@
     ]
   },
   "mixins": [
+    "netheragriculture.mixins.json",
     "netheragriculture.fabric.mixins.json"
   ],
   "depends": {

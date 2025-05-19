@@ -2,18 +2,11 @@ package ru.netherdon.netheragriculture.fabric;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
-import net.fabricmc.fabric.api.event.player.UseBlockCallback;
+import net.fabricmc.fabric.api.event.player.UseEntityCallback;
 import net.minecraft.client.renderer.RenderType;
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.InteractionResult;
-import net.minecraft.world.ItemInteractionResult;
-import net.minecraft.world.item.BoneMealItem;
-import net.minecraft.world.item.HoeItem;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.level.block.state.BlockState;
 import ru.netherdon.netheragriculture.NetherAgriculture;
-import ru.netherdon.netheragriculture.events.BlockEventHandler;
+import ru.netherdon.netheragriculture.items.StriderTreatItem;
 import ru.netherdon.netheragriculture.registries.NABlocks;
 
 public final class NetherAgricultureFabric implements ModInitializer
@@ -23,6 +16,12 @@ public final class NetherAgricultureFabric implements ModInitializer
     {
         NetherAgriculture.initialize();
         initializeBlockRenderTypes();
+
+        UseEntityCallback.EVENT.register((player, level, hand, entity, hit) ->
+        {
+            ItemStack stack = player.getItemInHand(hand);
+            return StriderTreatItem.mobInteract(stack, level, entity, player);
+        });
     }
 
     private static void initializeBlockRenderTypes()

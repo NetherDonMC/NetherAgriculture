@@ -1,11 +1,12 @@
 {
   "required": true,
-  "package": "ru.netherdon.mixin",
+  "package": "ru.netherdon.netheragriculture.mixin",
   "compatibilityLevel": "JAVA_21",
   "minVersion": "0.8",
   "client": [
   ],
   "mixins": [
+    "StriderMixin"
   ],
   "injectors": {
     "defaultRequire": 1

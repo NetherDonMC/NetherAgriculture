@@ -7,10 +7,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
-import ru.netherdon.netheragriculture.items.BurningFoodItem;
-import ru.netherdon.netheragriculture.items.BurningItem;
-import ru.netherdon.netheragriculture.items.FoodItem;
-import ru.netherdon.netheragriculture.items.JamItem;
+import ru.netherdon.netheragriculture.items.*;
 import ru.netherdon.netheragriculture.services.RegistryManager;
 
 import java.util.function.Function;
@@ -91,6 +88,9 @@ public final class NAItems
     ));
     public static final Holder<Item> BLAZING_BLEND = REGISTER.register("blazing_blend", () -> new JamItem(
         new Item.Properties().stacksTo(16).food(NAFoods.BLAZING_BLEND).craftRemainder(Items.GLASS_BOTTLE)
+    ));
+    public static final Holder<StriderTreatItem> STRIDER_TREAT = REGISTER.register("strider_treat", () -> new StriderTreatItem(
+        new Item.Properties().stacksTo(16)
     ));
 
     public static final Holder<BlockItem> CRIMSON_FARMLAND = registerSimpleBlockItem(NABlocks.CRIMSON_FARMLAND);

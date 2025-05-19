@@ -35,6 +35,9 @@
   "item.netheragriculture.blazing_gold_ingot": "Blazing Gold Ingot",
   "item.netheragriculture.blazing_gold_nugget": "Blazing Gold Nugget",
   "item.netheragriculture.blazing_golden_lothun": "Blazing Golden Lothun",
+  "item.netheragriculture.strider_treat": "Strider Treat",
+
+  "item.netheragriculture.strider_treat.description": "When fed to strider:",
 
   "block.netheragriculture.mortofruct": "Mortofruct",
   "block.netheragriculture.crimson_berry_roots": "Crimson Berry Roots",
@@ -88,6 +91,7 @@
 
   "effect.netheragriculture.warp": "Warp",
   "effect.netheragriculture.blaze_flight": "Blaze Flight",
+  "effect.netheragriculture.internal_heat": "Internal Heat",
 
   "tag.netheragriculture.nether_spices": "Nether Spices"
 }

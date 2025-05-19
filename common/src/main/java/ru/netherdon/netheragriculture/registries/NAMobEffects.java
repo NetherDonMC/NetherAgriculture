@@ -4,6 +4,8 @@ import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.monster.Strider;
 import ru.netherdon.netheragriculture.effects.WarpMobEffect;
 import ru.netherdon.netheragriculture.services.RegistryManager;
 
@@ -13,6 +15,9 @@ public final class NAMobEffects
 
     public static final Holder<MobEffect> BLAZE_FLIGHT =
         REGISTER.register("blaze_flight", RegistryManager::createBlazeFlightEffect);
+
+    public static final Holder<MobEffect> INTERNAL_HEAT =
+        REGISTER.register("internal_heat", () -> new MobEffect(MobEffectCategory.BENEFICIAL, 0xFF3C00) {});
 
     public static final Holder<MobEffect> WARP =
         REGISTER.register("warp", () -> new WarpMobEffect(MobEffectCategory.HARMFUL, 0x25C4CB));

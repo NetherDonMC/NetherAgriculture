@@ -35,6 +35,9 @@
   "item.netheragriculture.blazing_gold_ingot": "Слиток пылающего золота",
   "item.netheragriculture.blazing_gold_nugget": "Самородок пылающего золота",
   "item.netheragriculture.blazing_golden_lothun": "Пылающий золотой лотун",
+  "item.netheragriculture.strider_treat": "Лакомство лавомерки",
+
+  "item.netheragriculture.strider_treat.description": "Если скормить лавомерке:",
 
   "block.netheragriculture.mortofruct": "Мортофрукт",
   "block.netheragriculture.crimson_berry_roots": "Корни багровой ягоды",
@@ -88,6 +91,7 @@
 
   "effect.netheragriculture.warp": "Искажение",
   "effect.netheragriculture.blaze_flight": "Полёт всполоха",
+  "effect.netheragriculture.internal_heat": "Внутреннее тепло",
 
   "tag.netheragriculture.nether_spices": "Незерские специи"
 }

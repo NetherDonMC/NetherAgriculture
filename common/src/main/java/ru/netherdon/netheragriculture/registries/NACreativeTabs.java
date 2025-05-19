@@ -98,6 +98,8 @@ public final class NACreativeTabs
             output.accept(NAItems.GLAZED_HOGLIN_MEAT.value());
             output.accept(NAItems.AZURE_MELON_JELLY.value());
             output.accept(NAItems.NETHER_BERRY_JELLY.value());
+
+            output.accept(NAItems.STRIDER_TREAT.value());
         })
         .build()
     );

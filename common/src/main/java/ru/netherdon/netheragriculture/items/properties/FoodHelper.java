@@ -28,39 +28,44 @@ public class FoodHelper
     {
         for (FoodProperties.PossibleEffect effect : food.effects())
         {
-            MutableComponent prefix = Component.empty();
-            if (effect.probability() != 1f)
-            {
-                prefix = Component.literal("*");
-            }
-
-            MobEffectInstance effectInstance = effect.effect();
-            ChatFormatting formatting = effectInstance.getEffect().value().getCategory().getTooltipFormatting();
-
-            MutableComponent name = Component.translatable(effectInstance.getDescriptionId());
-            if (effectInstance.getAmplifier() > 0)
-            {
-                name = Component.translatable(
-                    "potion.withAmplifier", name, Component.translatable("potion.potency." + effectInstance.getAmplifier())
-                );
-            }
-
-            if (!effectInstance.endsWithin(20))
-            {
-                name = Component.translatable(
-                    "potion.withDuration", name, MobEffectUtil.formatDuration(effectInstance, 1f, context.tickRate())
-                );
-            }
-
-            MutableComponent component = prefix.append(name).withStyle(formatting);
-            if (tooltipFlag.isAdvanced())
-            {
-                int i = Math.round(effect.probability() * 100);
-                MutableComponent probability = Component.literal(" [" + i + "%]").withStyle(ChatFormatting.DARK_GRAY);
-                component.append(probability);
-            }
-
-            tooltipComponents.add(component);
+            Component text = createEffectTooltip(effect.effect(), effect.probability(), context, tooltipFlag);
+            tooltipComponents.add(text);
         }
+    }
+
+    public static Component createEffectTooltip(MobEffectInstance effectInstance, float probability, Item.TooltipContext context, TooltipFlag tooltipFlag)
+    {
+        MutableComponent prefix = Component.empty();
+        if (probability != 1f)
+        {
+            prefix = Component.literal("*");
+        }
+
+        ChatFormatting formatting = effectInstance.getEffect().value().getCategory().getTooltipFormatting();
+
+        MutableComponent name = Component.translatable(effectInstance.getDescriptionId());
+        if (effectInstance.getAmplifier() > 0)
+        {
+            name = Component.translatable(
+                "potion.withAmplifier", name, Component.translatable("potion.potency." + effectInstance.getAmplifier())
+            );
+        }
+
+        if (!effectInstance.endsWithin(20))
+        {
+            name = Component.translatable(
+                "potion.withDuration", name, MobEffectUtil.formatDuration(effectInstance, 1f, context.tickRate())
+            );
+        }
+
+        MutableComponent component = prefix.append(name).withStyle(formatting);
+        if (tooltipFlag.isAdvanced())
+        {
+            int i = Math.round(probability * 100);
+            MutableComponent probabilityText = Component.literal(" [" + i + "%]").withStyle(ChatFormatting.DARK_GRAY);
+            component.append(probabilityText);
+        }
+
+        return component;
     }
 }
