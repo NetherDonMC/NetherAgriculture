@@ -2,7 +2,11 @@ package ru.netherdon.netheragriculture.blocks;
 
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.core.particles.ParticleOptions;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
@@ -65,6 +69,42 @@ public class BlazeFruitBlock extends NetherCropBlock
     }
 
     @Override
+    public void animateTick(BlockState state, Level level, BlockPos pos, RandomSource random)
+    {
+        super.animateTick(state, level, pos, random);
+        if (!this.isMaxAge(state))
+        {
+            return;
+        }
+
+        Direction[] faces = new Direction[] { Direction.UP, Direction.NORTH, Direction.SOUTH, Direction.EAST, Direction.WEST };
+        Direction face = faces[random.nextInt(faces.length)];
+        Direction.Axis axis = face.getAxis();
+        double xOffset = 0d, yOffset = 0d, zOffset = 0d;
+        switch (axis)
+        {
+            case X:
+                xOffset = 0.5d + 0.3d * face.getNormal().getX();
+                yOffset = 0.3625d * random.nextFloat();
+                zOffset = 0.2d + 0.6d * random.nextFloat();
+                break;
+            case Y:
+                xOffset = 0.2d + 0.6d * random.nextFloat();
+                yOffset = 0.3625d;
+                zOffset = 0.2d + 0.6d * random.nextFloat();
+                break;
+            case Z:
+                xOffset = 0.2d + 0.6d * random.nextFloat();
+                yOffset = 0.3625d * random.nextFloat();
+                zOffset = 0.5d + 0.3d * face.getNormal().getZ();
+                break;
+        }
+
+        ParticleOptions options = state.getValue(SOUL) ? ParticleTypes.SOUL_FIRE_FLAME : ParticleTypes.FLAME;
+        level.addParticle(options, pos.getX() + xOffset, pos.getY() + yOffset, pos.getZ() + zOffset, 0d, 0d, 0d);
+    }
+
+    @Override
     protected void entityInside(BlockState state, Level level, BlockPos pos, Entity entity)
     {
         if (this.isMaxAge(state))
@@ -74,7 +114,7 @@ public class BlazeFruitBlock extends NetherCropBlock
                 entity.setRemainingFireTicks(entity.getRemainingFireTicks() + 1);
                 if (entity.getRemainingFireTicks() == 0)
                 {
-                    entity.igniteForSeconds(3.0F);
+                    entity.igniteForSeconds(3.0f);
                 }
             }
 

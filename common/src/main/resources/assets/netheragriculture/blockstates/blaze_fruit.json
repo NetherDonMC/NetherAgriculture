@@ -21,11 +21,8 @@
     "age=6": {
       "model": "netheragriculture:block/blaze_fruit/stage2"
     },
-    "age=7,soul=false": {
+    "age=7": {
       "model": "netheragriculture:block/blaze_fruit/stage3"
-    },
-    "age=7,soul=true": {
-      "model": "netheragriculture:block/blaze_fruit/stage3_soul"
     }
   }
 }
