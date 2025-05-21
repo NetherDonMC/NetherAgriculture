@@ -69,6 +69,12 @@ public final class NetherAgricultureFabric implements ModInitializer
             GenerationStep.Decoration.VEGETAL_DECORATION,
             NAFeatureKeys.MORTOFRUCT
         );
+
+        BiomeModifications.addFeature(
+            BiomeSelectors.includeByKey(Biomes.NETHER_WASTES),
+            GenerationStep.Decoration.VEGETAL_DECORATION,
+            NAFeatureKeys.NETHER_ROOTS
+        );
     }
 
     private static void initializeBlockRenderTypes()

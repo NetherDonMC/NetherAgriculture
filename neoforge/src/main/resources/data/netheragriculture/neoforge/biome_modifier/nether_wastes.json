@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": ["minecraft:nether_wastes"],
+  "features": ["netheragriculture:nether_roots"],
+  "step": "vegetal_decoration"
+}
