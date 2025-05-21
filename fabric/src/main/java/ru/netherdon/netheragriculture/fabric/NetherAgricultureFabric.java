@@ -1,13 +1,18 @@
 package ru.netherdon.netheragriculture.fabric;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
+import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.event.player.UseEntityCallback;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.biome.Biomes;
+import net.minecraft.world.level.levelgen.GenerationStep;
 import ru.netherdon.netheragriculture.NetherAgriculture;
 import ru.netherdon.netheragriculture.items.StriderTreatItem;
 import ru.netherdon.netheragriculture.registries.NABlocks;
+import ru.netherdon.netheragriculture.registries.NAFeatureKeys;
 
 public final class NetherAgricultureFabric implements ModInitializer
 {
@@ -22,6 +27,24 @@ public final class NetherAgricultureFabric implements ModInitializer
             ItemStack stack = player.getItemInHand(hand);
             return StriderTreatItem.mobInteract(stack, level, entity, player);
         });
+
+        BiomeModifications.addFeature(
+            BiomeSelectors.includeByKey(Biomes.WARPED_FOREST),
+            GenerationStep.Decoration.VEGETAL_DECORATION,
+            NAFeatureKeys.WILD_LOTHUN
+        );
+
+        BiomeModifications.addFeature(
+            BiomeSelectors.includeByKey(Biomes.WARPED_FOREST),
+            GenerationStep.Decoration.VEGETAL_DECORATION,
+            NAFeatureKeys.WARPED_BERRY_SPROUTS
+        );
+
+        BiomeModifications.addFeature(
+            BiomeSelectors.includeByKey(Biomes.WARPED_FOREST),
+            GenerationStep.Decoration.VEGETAL_DECORATION,
+            NAFeatureKeys.TALL_WARPED_ROOTS
+        );
     }
 
     private static void initializeBlockRenderTypes()

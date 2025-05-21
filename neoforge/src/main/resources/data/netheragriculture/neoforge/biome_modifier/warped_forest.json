@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": ["minecraft:warped_forest"],
+  "features": [
+    "netheragriculture:tall_warped_roots",
+    "netheragriculture:wild_lothun",
+    "netheragriculture:warped_berry_sprouts"
+  ],
+  "step": "vegetal_decoration"
+}
