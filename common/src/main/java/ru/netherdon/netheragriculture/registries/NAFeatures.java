@@ -4,6 +4,8 @@ import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import ru.netherdon.netheragriculture.services.RegistryManager;
+import ru.netherdon.netheragriculture.world.MortofructFeature;
+import ru.netherdon.netheragriculture.world.MortofructFeatureConfiguration;
 import ru.netherdon.netheragriculture.world.TallNetherVegetationConfig;
 import ru.netherdon.netheragriculture.world.TallNetherVegetationFeature;
 
@@ -12,6 +14,7 @@ public final class NAFeatures
     private static final IRegistryProvider<Feature<?>> REGISTER = RegistryManager.getOrCreate(BuiltInRegistries.FEATURE);
 
     public static final Holder<TallNetherVegetationFeature> TALL_NETHER_VEGETATION = REGISTER.register("tall_nether_vegetation", () -> new TallNetherVegetationFeature(TallNetherVegetationConfig.CODEC));
+    public static final Holder<MortofructFeature> MORTOFRUCT = REGISTER.register("mortofruct", () -> new MortofructFeature(MortofructFeatureConfiguration.CODEC));
 
     public static void initialize() {}
 }

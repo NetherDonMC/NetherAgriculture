@@ -13,6 +13,7 @@ public final class NAFeatureKeys
     public static final ResourceKey<PlacedFeature> WILD_SINFUL_EYES = key("wild_sinful_eyes");
     public static final ResourceKey<PlacedFeature> CRIMSON_BERRY_SPROUTS = key("crimson_berry_sprouts");
     public static final ResourceKey<PlacedFeature> TALL_CRIMSON_ROOTS = key("tall_crimson_roots");
+    public static final ResourceKey<PlacedFeature> MORTOFRUCT = key("mortofruct");
 
     private static ResourceKey<PlacedFeature> key(String name)
     {

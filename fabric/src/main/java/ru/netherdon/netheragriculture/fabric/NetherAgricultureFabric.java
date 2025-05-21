@@ -63,6 +63,12 @@ public final class NetherAgricultureFabric implements ModInitializer
             GenerationStep.Decoration.VEGETAL_DECORATION,
             NAFeatureKeys.TALL_CRIMSON_ROOTS
         );
+
+        BiomeModifications.addFeature(
+            BiomeSelectors.includeByKey(Biomes.CRIMSON_FOREST),
+            GenerationStep.Decoration.VEGETAL_DECORATION,
+            NAFeatureKeys.MORTOFRUCT
+        );
     }
 
     private static void initializeBlockRenderTypes()
