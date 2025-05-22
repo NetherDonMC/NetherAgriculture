@@ -187,6 +187,7 @@ public final class NABlocks
 
     public static final Holder<AzureMelonBlock> AZURE_MELON = registerBlock("azure_melon", AzureMelonBlock::new, NABlockProperties.AZURE_MELON);
     public static final Holder<AzureMelonCropBlock> AZURE_MELON_CROP = registerBlock("azure_melon_crop", AzureMelonCropBlock::new, NABlockProperties.AZURE_MELON);
+    public static final Holder<WildAzureMelonBlock> WILD_AZURE_MELON = registerBlock("wild_azure_melon", WildAzureMelonBlock::new, NABlockProperties.WILD_AZURE_MELON);
     public static final Holder<AzureMelonStemBlock> AZURE_MELON_STEM = registerBlock("azure_melon_stem", AzureMelonStemBlock::new, NABlockProperties.AZURE_MELON_STEM);
     public static final Holder<AttachedAzureMelonStemBlock> ATTACHED_AZURE_MELON_STEM = registerBlock("attached_azure_melon_stem", AttachedAzureMelonStemBlock::new, NABlockProperties.AZURE_MELON_STEM);
 

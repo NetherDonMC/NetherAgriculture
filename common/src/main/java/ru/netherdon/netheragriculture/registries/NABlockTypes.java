@@ -23,6 +23,9 @@ public final class NABlockTypes
     public static final Holder<MapCodec<AzureMelonCropBlock>> AZURE_MELON_CROP =
         REGISTER.register("azure_melon_crop", () -> AzureMelonCropBlock.CODEC);
 
+    public static final Holder<MapCodec<WildAzureMelonBlock>> WILD_AZURE_MELON =
+        REGISTER.register("wild_azure_melon", () -> WildAzureMelonBlock.CODEC);
+
     public static final Holder<MapCodec<BlackFurnaceBlock>> BLACK_FURNACE =
         REGISTER.register("black_furnace", () -> BlackFurnaceBlock.CODEC);
 

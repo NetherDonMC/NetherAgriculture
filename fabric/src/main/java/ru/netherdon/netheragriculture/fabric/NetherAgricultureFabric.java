@@ -47,6 +47,12 @@ public final class NetherAgricultureFabric implements ModInitializer
         );
 
         BiomeModifications.addFeature(
+            BiomeSelectors.includeByKey(Biomes.WARPED_FOREST),
+            GenerationStep.Decoration.VEGETAL_DECORATION,
+            NAFeatureKeys.AZURE_MELON
+        );
+
+        BiomeModifications.addFeature(
             BiomeSelectors.includeByKey(Biomes.CRIMSON_FOREST),
             GenerationStep.Decoration.VEGETAL_DECORATION,
             NAFeatureKeys.WILD_SINFUL_EYES
@@ -97,7 +103,8 @@ public final class NetherAgricultureFabric implements ModInitializer
             NABlocks.AZURE_MELON.value(),
             NABlocks.AZURE_MELON_CROP.value(),
             NABlocks.SINFUL_EYES.value(),
-            NABlocks.WILD_SINFUL_EYES.value()
+            NABlocks.WILD_SINFUL_EYES.value(),
+            NABlocks.WILD_AZURE_MELON.value()
         );
     }
 }

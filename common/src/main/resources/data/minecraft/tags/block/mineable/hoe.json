@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "netheragriculture:azure_melon",
-    "netheragriculture:azure_melon_crop"
+    "netheragriculture:azure_melon_crop",
+    "netheragriculture:wild_azure_melon"
   ]
 }

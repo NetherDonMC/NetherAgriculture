@@ -15,6 +15,7 @@ public final class NAFeatureKeys
     public static final ResourceKey<PlacedFeature> TALL_CRIMSON_ROOTS = key("tall_crimson_roots");
     public static final ResourceKey<PlacedFeature> MORTOFRUCT = key("mortofruct");
     public static final ResourceKey<PlacedFeature> NETHER_ROOTS = key("nether_roots");
+    public static final ResourceKey<PlacedFeature> AZURE_MELON = key("azure_melon");
 
     private static ResourceKey<PlacedFeature> key(String name)
     {

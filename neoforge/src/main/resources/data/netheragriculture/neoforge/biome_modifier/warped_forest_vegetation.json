@@ -4,7 +4,8 @@
   "features": [
     "netheragriculture:tall_warped_roots",
     "netheragriculture:wild_lothun",
-    "netheragriculture:warped_berry_sprouts"
+    "netheragriculture:warped_berry_sprouts",
+    "netheragriculture:azure_melon"
   ],
   "step": "vegetal_decoration"
 }
