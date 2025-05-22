@@ -12,6 +12,7 @@ public class NetherAgriculture
         NABlocks.initialize();
         NABlockTypes.initialize();
         NAMobEffects.initialize();
+        NAPotions.initialize();
         NAItems.initialize();
         NACreativeTabs.initialize();
         NARecipeSerializers.initialize();

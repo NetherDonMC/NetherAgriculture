@@ -39,6 +39,11 @@
 
   "item.netheragriculture.strider_treat.description": "Если скормить лавомерке:",
 
+  "item.minecraft.potion.effect.blaze_flight": "Зелье полёта всполоха",
+  "item.minecraft.splash_potion.effect.blaze_flight": "Взрывное зелье полёта всполоха",
+  "item.minecraft.lingering_potion.effect.blaze_flight": "Туманное зелье полёта всполоха",
+  "item.minecraft.tipped_arrow.effect.blaze_flight": "Стрела полёта всполоха",
+
   "block.netheragriculture.mortofruct": "Мортофрукт",
   "block.netheragriculture.crimson_berry_roots": "Корни багровой ягоды",
   "block.netheragriculture.crimson_berry_sprouts": "Ростки багровой ягоды",

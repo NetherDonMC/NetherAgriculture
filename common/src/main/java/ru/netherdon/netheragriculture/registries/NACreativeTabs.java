@@ -1,11 +1,21 @@
 package ru.netherdon.netheragriculture.registries;
 
+import com.google.common.collect.Maps;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.alchemy.Potion;
+import net.minecraft.world.item.alchemy.PotionContents;
+import org.apache.commons.compress.utils.Lists;
 import ru.netherdon.netheragriculture.NetherAgriculture;
 import ru.netherdon.netheragriculture.services.RegistryManager;
+
+import java.util.List;
+import java.util.Map;
 
 public final class NACreativeTabs
 {
@@ -100,9 +110,33 @@ public final class NACreativeTabs
             output.accept(NAItems.NETHER_BERRY_JELLY.value());
 
             output.accept(NAItems.STRIDER_TREAT.value());
+
+            acceptPotionStacks(output, NAPotions.BLAZE_FLIGHT);
         })
         .build()
     );
+
+    @SafeVarargs
+    private static void acceptPotionStacks(CreativeModeTab.Output output, Holder<Potion>... potions)
+    {
+        Map<Item, List<ItemStack>> potionStacks = Maps.newLinkedHashMap();
+        potionStacks.put(Items.POTION, Lists.newArrayList());
+        potionStacks.put(Items.SPLASH_POTION, Lists.newArrayList());
+        potionStacks.put(Items.LINGERING_POTION, Lists.newArrayList());
+        potionStacks.put(Items.TIPPED_ARROW, Lists.newArrayList());
+
+        for (Holder<Potion> potion : potions)
+        {
+            for (var entry : potionStacks.entrySet())
+            {
+                entry.getValue().add(
+                    PotionContents.createItemStack(entry.getKey(), potion)
+                );
+            }
+        }
+
+        potionStacks.values().forEach(output::acceptAll);
+    }
 
     public static void initialize() {}
 }
