@@ -23,7 +23,8 @@ public class BurningItem extends Item
     {
         if (
             (isSelected || slotId == Inventory.SLOT_OFFHAND)
-            && !isEntityImmuneToFire(entity) && entity.getRemainingFireTicks() <= 0
+            && !EntityService.isImmuneToFire(entity)
+            && entity.getRemainingFireTicks() <= 0
         )
         {
             entity.igniteForTicks(this.getFireTicks());
@@ -33,15 +34,5 @@ public class BurningItem extends Item
     public int getFireTicks()
     {
         return this.fireTicks;
-    }
-
-    private static boolean isEntityImmuneToFire(Entity entity)
-    {
-        return entity instanceof Player player
-            && player.getAbilities().invulnerable
-            || entity.fireImmune()
-            || entity.isInWaterRainOrBubble()
-            || entity.isInPowderSnow
-            || EntityService.isImmuneToFire(entity);
     }
 }

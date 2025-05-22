@@ -13,7 +13,9 @@ public final class NAPotions
 {
     private static final IRegistryProvider<Potion> REGISTER = RegistryManager.getOrCreate(BuiltInRegistries.POTION);
 
-    public static final Holder<Potion> BLAZE_FLIGHT = REGISTER.register("blaze_flight", () -> new Potion(new MobEffectInstance(NAMobEffects.BLAZE_FLIGHT, 1200)));
+    public static final Holder<Potion> BLAZE_FLIGHT = REGISTER.register("blaze_flight",
+        () -> new Potion(new MobEffectInstance(NAMobEffects.BLAZE_FLIGHT, 900))
+    );
 
     public static void registerRecipes(PotionBrewing.Builder builder)
     {

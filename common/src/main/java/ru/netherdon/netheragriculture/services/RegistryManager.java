@@ -2,7 +2,6 @@ package ru.netherdon.netheragriculture.services;
 
 import dev.architectury.injectables.annotations.ExpectPlatform;
 import net.minecraft.core.Registry;
-import net.minecraft.world.effect.MobEffect;
 import org.jetbrains.annotations.Contract;
 import ru.netherdon.netheragriculture.registries.IRegistryProvider;
 
@@ -29,13 +28,6 @@ public final class RegistryManager
     @ExpectPlatform
     @Contract(pure = true)
     private static <T> IRegistryProvider<T> createProvider(Registry<T> registry)
-    {
-        throw new UnsupportedOperationException();
-    }
-
-    @ExpectPlatform
-    @Contract(pure = true)
-    public static MobEffect createBlazeFlightEffect()
     {
         throw new UnsupportedOperationException();
     }

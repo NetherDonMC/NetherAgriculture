@@ -10,7 +10,7 @@ import net.minecraft.world.level.block.state.BlockState;
 
 public final class EntityServiceImpl
 {
-    public static boolean isImmuneToFire(Entity entity)
+    public static boolean isLocalImmuneToFire(Entity entity)
     {
         return false;
     }
