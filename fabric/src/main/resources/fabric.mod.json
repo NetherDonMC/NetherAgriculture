@@ -19,6 +19,12 @@
     ],
     "client": [
       "ru.netherdon.netheragriculture.fabric.client.NetherAgricultureFabricClient"
+    ],
+    "jei_mod_plugin": [
+      "ru.netherdon.netheragriculture.compat.jei.NAJeiPlugin"
+    ],
+    "emi": [
+      "ru.netherdon.netheragriculture.compat.emi.NAEmiPlugin"
     ]
   },
   "mixins": [
