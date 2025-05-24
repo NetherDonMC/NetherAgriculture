@@ -3,7 +3,7 @@
   "ingredients": [{
     "item": "minecraft:bowl"
   }, {
-    "item": "netheragriculture:cooked_hoglin_meat"
+    "tag": "c:foods/cooked_hoglin"
   }, {
     "item": "netheragriculture:lothun"
   }, {

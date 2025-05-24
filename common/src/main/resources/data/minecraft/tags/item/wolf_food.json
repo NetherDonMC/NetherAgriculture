@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "netheragriculture:hoglin_meat",
+    "netheragriculture:cooked_hoglin_meat",
+    "netheragriculture:strider_leg",
+    "netheragriculture:cooked_strider_leg"
+  ]
+}

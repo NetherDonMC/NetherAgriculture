@@ -3,9 +3,9 @@
   "ingredients": [{
     "item": "minecraft:bowl"
   }, {
-    "item": "netheragriculture:cooked_hoglin_meat"
+    "tag": "c:foods/cooked_hoglin"
   }, {
-    "item": "netheragriculture:crimson_berry_jam"
+    "tag": "c:drinks/crimson_berry_jam"
   }, {
     "item": "netheragriculture:lothun"
   }, {

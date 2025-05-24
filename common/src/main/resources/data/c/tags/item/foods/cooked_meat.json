@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "#c:foods/cooked_hoglin",
+    "#c:foods/cooked_strider_leg"
+  ]
+}

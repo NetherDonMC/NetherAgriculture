@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [{
-    "item": "netheragriculture:cooked_hoglin_meat"
+    "tag": "c:foods/cooked_hoglin"
   }, {
     "item": "netheragriculture:sinful_eyes"
   }, {

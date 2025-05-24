@@ -100,5 +100,17 @@
 
   "emi.category.netheragriculture.nether_cooking": "Незерская готовка",
 
-  "tag.netheragriculture.nether_spices": "Незерские специи"
+  "tag.item.netheragriculture.nether_spices": "Незерские специи",
+  "tag.item.c.ingots.blazing_gold": "Слитки пылающего золота",
+  "tag.item.c.nuggets.blazing_gold": "Самородки пылающего золота",
+  "tag.item.c.foods.raw_hoglin": "Сырое мясо хоглина",
+  "tag.item.c.foods.cooked_hoglin": "Жаренное мясо хоглина",
+  "tag.item.c.foods.raw_strider_leg": "Сырые ноги лавомерок",
+  "tag.item.c.foods.cooked_strider_leg": "Жаренные ноги лавомерок",
+  "tag.item.c.foods.blazing_golden": "Пылающая золотая еда",
+  "tag.item.c.drinks.blazing_blend": "Пылающие смеси",
+  "tag.item.c.drinks.crimson_berry_jam": "Варенья из багровых ягод",
+  "tag.item.c.drinks.warped_berry_jam": "Выренья из искажённых ягод",
+
+  "tag.block.netheragriculture.nether_crops": "Незерские посевы"
 }

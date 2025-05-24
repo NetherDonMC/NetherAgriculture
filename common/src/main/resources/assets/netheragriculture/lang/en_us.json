@@ -100,5 +100,17 @@
 
   "emi.category.netheragriculture.nether_cooking": "Nether Cooking",
 
-  "tag.netheragriculture.nether_spices": "Nether Spices"
+  "tag.item.netheragriculture.nether_spices": "Nether Spices",
+  "tag.item.c.ingots.blazing_gold": "Blazing Gold Ingots",
+  "tag.item.c.nuggets.blazing_gold": "Blazing Gold Nuggets",
+  "tag.item.c.foods.raw_hoglin": "Raw Hoglin Meats",
+  "tag.item.c.foods.cooked_hoglin": "Cooked Hoglin Meats",
+  "tag.item.c.foods.raw_strider_leg": "Raw Strider Legs",
+  "tag.item.c.foods.cooked_strider_leg": "Cooked Strider Legs",
+  "tag.item.c.foods.blazing_golden": "Blazing Golden Foods",
+  "tag.item.c.drinks.blazing_blend": "Blazing Blends",
+  "tag.item.c.drinks.crimson_berry_jam": "Crimson Berry Jams",
+  "tag.item.c.drinks.warped_berry_jam": "Warped Berry Jams",
+
+  "tag.block.netheragriculture.nether_crops": "Nether Crops"
 }

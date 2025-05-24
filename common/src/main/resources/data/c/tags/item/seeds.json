@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "netheragriculture:crimson_berry_seeds",
+    "netheragriculture:warped_berry_seeds",
+    "netheragriculture:blaze_fruit_seed",
+    "netheragriculture:azure_melon_seeds"
+  ]
+}

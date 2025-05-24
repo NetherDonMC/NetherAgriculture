@@ -5,13 +5,13 @@
   }, {
     "tag": "c:ingots/gold"
   }, {
-    "item": "netheragriculture:blazing_blend"
+    "tag": "c:drinks/blazing_blend"
   }, {
-    "item": "netheragriculture:blazing_blend"
+    "tag": "c:drinks/blazing_blend"
   }, {
-    "item": "netheragriculture:blazing_blend"
+    "tag": "c:drinks/blazing_blend"
   }, {
-    "item": "netheragriculture:blazing_blend"
+    "tag": "c:drinks/blazing_blend"
   }],
   "result": {
     "id": "netheragriculture:blazing_gold_ingot",

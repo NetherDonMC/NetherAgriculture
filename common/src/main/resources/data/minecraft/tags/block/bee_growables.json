@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+  ],
+  "remove": [
+    "#netheragriculture:nether_crops"
+  ]
+}
