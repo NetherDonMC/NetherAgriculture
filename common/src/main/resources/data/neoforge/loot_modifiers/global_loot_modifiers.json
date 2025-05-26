@@ -1,6 +1,8 @@
 {
   "replace": false,
   "entries": [
-    "netheragriculture:strider_leg"
+    "netheragriculture:add_strider_leg",
+    "netheragriculture:hoglin_meat_from_raw_porkchop",
+    "netheragriculture:hoglin_meat_from_cooked_porkchop"
   ]
 }

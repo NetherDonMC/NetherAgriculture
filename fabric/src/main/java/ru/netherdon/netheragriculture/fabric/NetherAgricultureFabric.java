@@ -7,6 +7,7 @@ import net.minecraft.world.item.ItemStack;
 import ru.netherdon.netheragriculture.NetherAgriculture;
 import ru.netherdon.netheragriculture.fabric.registries.NABiomeModifiers;
 import ru.netherdon.netheragriculture.fabric.registries.NABlockRenderTypes;
+import ru.netherdon.netheragriculture.fabric.registries.NALootModifiers;
 import ru.netherdon.netheragriculture.fabric.registries.NALootTableModifiers;
 import ru.netherdon.netheragriculture.items.StriderTreatItem;
 import ru.netherdon.netheragriculture.registries.NAPotions;
@@ -17,9 +18,10 @@ public final class NetherAgricultureFabric implements ModInitializer
     public void onInitialize()
     {
         NetherAgriculture.initialize();
+        NALootModifiers.initialize();
         NABlockRenderTypes.initialize();
         NABiomeModifiers.initialize();
-        NALootTableModifiers.initialize();
+        //NALootTableModifiers.initialize();
 
         FabricBrewingRecipeRegistryBuilder.BUILD.register(NAPotions::registerRecipes);
 

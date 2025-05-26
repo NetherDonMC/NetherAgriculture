@@ -1,0 +1,8 @@
+{
+  "type": "netheragriculture:add_table",
+  "conditions": [{
+    "condition": "porting_lib:loot_table_id",
+    "loot_table_id": "minecraft:entities/strider"
+  }],
+  "table": "netheragriculture:modifiers/strider_leg"
+}
