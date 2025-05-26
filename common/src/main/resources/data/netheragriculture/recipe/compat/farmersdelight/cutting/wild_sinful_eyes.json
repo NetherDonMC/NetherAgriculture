@@ -1,0 +1,20 @@
+{
+  "type": "farmersdelight:cutting",
+  "tool": {
+    "tag": "c:tools/knife"
+  },
+  "ingredients": [{
+    "item": "netheragriculture:wild_sinful_eyes"
+  }],
+  "result": [{
+    "item": {
+      "id": "netheragriculture:sinful_eyes",
+      "count": 1
+    }
+  },{
+    "item": {
+      "id": "minecraft:crimson_fungus",
+      "count": 1
+    }
+  }]
+}

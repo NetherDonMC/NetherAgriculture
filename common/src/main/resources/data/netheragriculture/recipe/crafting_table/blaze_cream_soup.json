@@ -14,5 +14,21 @@
   "result": {
     "id": "netheragriculture:blaze_cream_soup",
     "count": 1
-  }
+  },
+
+  "neoforge:conditions": [{
+    "type": "neoforge:not",
+    "value": {
+      "type": "neoforge:mod_loaded",
+      "modid": "farmersdelight"
+    }
+  }],
+  "fabric:load_conditions": [{
+    "condition": "fabric:not",
+    "value": {
+      "condition": "fabric:registry_contains",
+      "registry": "minecraft:recipe_serializer",
+      "values": ["farmersdelight:cooking"]
+    }
+  }]
 }

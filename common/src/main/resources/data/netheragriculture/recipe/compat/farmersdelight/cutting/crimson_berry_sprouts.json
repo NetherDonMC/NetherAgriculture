@@ -1,0 +1,21 @@
+{
+  "type": "farmersdelight:cutting",
+  "tool": {
+    "tag": "c:tools/knife"
+  },
+  "ingredients": [{
+    "item": "netheragriculture:crimson_berry_sprouts"
+  }],
+  "result": [{
+    "item": {
+      "id": "netheragriculture:crimson_berry_seeds",
+      "count": 1
+    }
+  }, {
+    "item": {
+      "id": "netheragriculture:crushed_crimson_roots",
+      "count": 1
+    },
+    "chance": 0.2
+  }]
+}

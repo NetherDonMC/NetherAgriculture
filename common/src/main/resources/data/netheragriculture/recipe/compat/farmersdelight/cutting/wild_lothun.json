@@ -1,0 +1,21 @@
+{
+  "type": "farmersdelight:cutting",
+  "tool": {
+    "tag": "c:tools/knife"
+  },
+  "ingredients": [{
+    "item": "netheragriculture:wild_lothun"
+  }],
+  "result": [{
+    "item": {
+      "id": "netheragriculture:lothun",
+      "count": 1
+    }
+  }, {
+    "item": {
+      "id": "netheragriculture:crushed_warped_roots",
+      "count": 1
+    },
+    "chance": 0.5
+  }]
+}

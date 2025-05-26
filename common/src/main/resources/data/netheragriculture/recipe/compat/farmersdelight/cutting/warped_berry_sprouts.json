@@ -1,0 +1,15 @@
+{
+  "type": "farmersdelight:cutting",
+  "tool": {
+    "tag": "c:tools/knife"
+  },
+  "ingredients": [{
+    "item": "netheragriculture:warped_berry_sprouts"
+  }],
+  "result": [{
+    "item": {
+      "id": "netheragriculture:warped_berry_seeds",
+      "count": 1
+    }
+  }]
+}

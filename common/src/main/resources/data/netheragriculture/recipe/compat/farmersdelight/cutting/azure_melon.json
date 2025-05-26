@@ -1,0 +1,15 @@
+{
+  "type": "farmersdelight:cutting",
+  "tool": {
+    "tag": "c:tools/knife"
+  },
+  "ingredients": [{
+    "item": "netheragriculture:azure_melon"
+  }],
+  "result": [{
+    "item": {
+      "id": "netheragriculture:azure_melon_slice",
+      "count": 4
+    }
+  }]
+}
