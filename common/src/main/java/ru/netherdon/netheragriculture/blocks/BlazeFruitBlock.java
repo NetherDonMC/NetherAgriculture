@@ -102,6 +102,7 @@ public class BlazeFruitBlock extends NetherCropBlock
 
         ParticleOptions options = state.getValue(SOUL) ? ParticleTypes.SOUL_FIRE_FLAME : ParticleTypes.FLAME;
         level.addParticle(options, pos.getX() + xOffset, pos.getY() + yOffset, pos.getZ() + zOffset, 0d, 0d, 0d);
+        level.addParticle(ParticleTypes.SMOKE, pos.getX() + xOffset, pos.getY() + yOffset, pos.getZ() + zOffset, 0d, 0d, 0d);
     }
 
     @Override

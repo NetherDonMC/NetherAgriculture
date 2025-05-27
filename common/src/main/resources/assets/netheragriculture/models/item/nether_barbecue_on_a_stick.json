@@ -1,5 +1,5 @@
 {
-	"parent": "item/generated",
+	"parent": "item/handheld",
 	"textures": {
 		"layer0": "netheragriculture:item/nether_barbecue_on_a_stick"
 	}

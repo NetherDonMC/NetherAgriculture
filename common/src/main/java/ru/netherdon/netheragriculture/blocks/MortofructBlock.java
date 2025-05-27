@@ -2,8 +2,11 @@ package ru.netherdon.netheragriculture.blocks;
 
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.item.FallingBlockEntity;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.level.Level;
@@ -14,6 +17,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.BlockHitResult;
+import ru.netherdon.netheragriculture.registries.NADamageSources;
 
 public class MortofructBlock extends Block implements Fallable
 {
@@ -42,6 +46,7 @@ public class MortofructBlock extends Block implements Fallable
         {
             FallingBlockEntity fallingblockentity = FallingBlockEntity.fall(level, pos, state);
             fallingblockentity.disableDrop();
+            fallingblockentity.setHurtsEntities(1f, 30);
         }
     }
 
@@ -51,6 +56,12 @@ public class MortofructBlock extends Block implements Fallable
         BlockState state = fallingBlock.getBlockState();
         level.levelEvent(2001, pos, Block.getId(state));
         Block.dropResources(state, level, pos);
+    }
+
+    @Override
+    public DamageSource getFallDamageSource(Entity entity)
+    {
+        return NADamageSources.mortofruct(entity);
     }
 
     public void onVineBroken(Level level, BlockPos pos, BlockState state)

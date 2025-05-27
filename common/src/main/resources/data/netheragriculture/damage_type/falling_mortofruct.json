@@ -1,0 +1,5 @@
+{
+    "message_id": "netheragriculture.falling_mortofruct",
+    "scaling": "when_caused_by_living_non_player",
+    "exhaustion": 0
+}
