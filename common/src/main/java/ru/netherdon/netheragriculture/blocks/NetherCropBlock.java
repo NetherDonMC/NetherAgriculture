@@ -126,7 +126,7 @@ public class NetherCropBlock extends CropBlock implements INetherCrop
 
         BlockState stateBelow = level.getBlockState(posBelow);
         Boolean soilDecision = CropService.canSustainPlant(stateBelow, level, posBelow, Direction.UP, blockState);
-        if (soilDecision == null ? stateBelow.getBlock() instanceof NetherCropBlock : soilDecision)
+        if (soilDecision == null || soilDecision)
         {
             if (blockState.getBlock() instanceof INetherCrop netherCropBlock && netherCropBlock.isFertileSoil(stateBelow))
             {
