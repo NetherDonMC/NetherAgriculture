@@ -14,6 +14,7 @@ import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 
 import java.util.Optional;
+import java.util.function.Consumer;
 
 public class AddTableLootModifier extends LootModifier
 {
@@ -34,11 +35,16 @@ public class AddTableLootModifier extends LootModifier
     @Override
     protected ObjectArrayList<ItemStack> doApply(ObjectArrayList<ItemStack> generatedLoot, LootContext context)
     {
-        LootContext contextCopy = new LootContext.Builder(context.params).create(Optional.empty());
-        contextCopy.setQueriedLootTableId(this.table.location());
         context.getResolver().get(Registries.LOOT_TABLE, this.table).ifPresent((extraTable) ->
-            extraTable.value().getRandomItemsRaw(contextCopy, LootTable.createStackSplitter(contextCopy.getLevel(), generatedLoot::add))
-        );
+        {
+            LootContext extraContext = new LootContext.Builder(context.params)
+                .withOptionalRandomSource(context.random)
+                .create(Optional.empty());
+
+            Consumer<ItemStack> consumer = LootTable.createStackSplitter(extraContext.getLevel(), generatedLoot::add);
+
+            extraTable.value().getRandomItemsRaw(extraContext, consumer);
+        });
         return generatedLoot;
     }
 

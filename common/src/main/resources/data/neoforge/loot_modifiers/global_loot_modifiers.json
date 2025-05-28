@@ -3,6 +3,9 @@
   "entries": [
     "netheragriculture:add_strider_leg",
     "netheragriculture:hoglin_meat_from_raw_porkchop",
-    "netheragriculture:hoglin_meat_from_cooked_porkchop"
+    "netheragriculture:hoglin_meat_from_cooked_porkchop",
+    "netheragriculture:chests/nether_bridge_extension",
+    "netheragriculture:chests/bastion_hoglin_stable/hoglin_meat_from_raw_porkchop",
+    "netheragriculture:chests/bastion_hoglin_stable/cooked_hoglin_meat_from_cooked_porkchop"
   ]
 }
