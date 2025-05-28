@@ -25,6 +25,9 @@
     ],
     "emi": [
       "ru.netherdon.netheragriculture.compat.emi.NAEmiPlugin"
+    ],
+    "mm:early_risers": [
+      "ru.netherdon.netheragriculture.fabric.NetherAgricultureASM"
     ]
   },
   "mixins": [
@@ -36,7 +39,8 @@
     "fabricloader": ">=0.16.14",
     "minecraft": "~1.21.1",
     "java": ">=21",
-    "fabric-api": "*"
+    "fabric-api": "*",
+    "mm": "*"
   },
   "suggests": {
     "another-mod": "*"
