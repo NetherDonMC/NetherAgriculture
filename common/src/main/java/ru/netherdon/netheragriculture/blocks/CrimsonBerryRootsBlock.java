@@ -16,6 +16,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import ru.netherdon.netheragriculture.registries.NABlocks;
 import ru.netherdon.netheragriculture.registries.NAItems;
+import ru.netherdon.netheragriculture.registries.NATags;
 
 public class CrimsonBerryRootsBlock extends NetherCropBlock
 {
@@ -33,7 +34,7 @@ public class CrimsonBerryRootsBlock extends NetherCropBlock
 
     public CrimsonBerryRootsBlock(Properties properties)
     {
-        super(properties);
+        super(NATags.Blocks.CRIMSON_BERRY_FERTILE_SOILS, properties);
     }
 
     @Override
@@ -54,12 +55,6 @@ public class CrimsonBerryRootsBlock extends NetherCropBlock
         }
 
         return super.useWithoutItem(state, level, pos, player, hitResult);
-    }
-
-    @Override
-    public boolean isValidFarmland(BlockState state)
-    {
-        return state.is(NABlocks.CRIMSON_FARMLAND.value());
     }
 
     @Override

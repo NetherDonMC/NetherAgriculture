@@ -7,6 +7,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import ru.netherdon.netheragriculture.registries.NABlocks;
+import ru.netherdon.netheragriculture.registries.NATags;
 
 public class LothunBlock extends NetherCropBlock
 {
@@ -26,13 +27,7 @@ public class LothunBlock extends NetherCropBlock
 
     public LothunBlock(Properties properties)
     {
-        super(properties);
-    }
-
-    @Override
-    public boolean isValidFarmland(BlockState state)
-    {
-        return state.is(NABlocks.WARPED_FARMLAND.value());
+        super(NATags.Blocks.LOTHUN_FERTILE_SOILS, properties);
     }
 
     @Override

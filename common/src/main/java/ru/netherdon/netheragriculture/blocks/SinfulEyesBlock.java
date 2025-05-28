@@ -6,7 +6,7 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import ru.netherdon.netheragriculture.registries.NABlocks;
+import ru.netherdon.netheragriculture.registries.NATags;
 
 public class SinfulEyesBlock extends NetherCropBlock
 {
@@ -26,13 +26,7 @@ public class SinfulEyesBlock extends NetherCropBlock
 
     public SinfulEyesBlock(Properties properties)
     {
-        super(properties);
-    }
-
-    @Override
-    public boolean isValidFarmland(BlockState state)
-    {
-        return state.is(NABlocks.CRIMSON_FARMLAND.value());
+        super(NATags.Blocks.SINFUL_EYES_FERTILE_SOILS, properties);
     }
 
     @Override

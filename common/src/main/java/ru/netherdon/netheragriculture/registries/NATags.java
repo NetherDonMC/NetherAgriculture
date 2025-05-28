@@ -3,19 +3,40 @@ package ru.netherdon.netheragriculture.registries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.level.block.Block;
+import ru.netherdon.netheragriculture.NetherAgriculture;
 
 public final class NATags
 {
     public static class Blocks
     {
         public static TagKey<Block> NETHERRACKS = c("netherracks");
+        public static TagKey<Block> SINFUL_EYES_FERTILE_SOILS = fertileSoils("sinful_eyes");
+        public static TagKey<Block> CRIMSON_BERRY_FERTILE_SOILS = fertileSoils("crimson_berry");
+        public static TagKey<Block> WARPED_BERRY_FERTILE_SOILS = fertileSoils("warped_berry");
+        public static TagKey<Block> AZURE_MELON_FERTILE_SOILS = fertileSoils("azure_melon");
+        public static TagKey<Block> BLAZE_FRUIT_FERTILE_SOILS = fertileSoils("blaze_fruit");
+        public static TagKey<Block> LOTHUN_FERTILE_SOILS = fertileSoils("lothun");
+
+        private static TagKey<Block> fertileSoils(String postfix)
+        {
+            return na("fertile_soils/" + postfix);
+        }
+
+        private static TagKey<Block> na(String id)
+        {
+            return tag(NetherAgriculture.location(id));
+        }
 
         private static TagKey<Block> c(String id)
         {
-            return TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath("c", id));
+            return tag(ResourceLocation.fromNamespaceAndPath("c", id));
+        }
+
+        private static TagKey<Block> tag(ResourceLocation name)
+        {
+            return TagKey.create(Registries.BLOCK, name);
         }
     }
 

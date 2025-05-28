@@ -4,5 +4,5 @@ import net.minecraft.world.level.block.state.BlockState;
 
 public interface INetherCrop
 {
-    public boolean isValidFarmland(BlockState state);
+    public boolean isFertileSoil(BlockState state);
 }

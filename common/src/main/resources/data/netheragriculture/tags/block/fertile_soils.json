@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "#netheragriculture:fertile_soils/sinful_eyes",
+    "#netheragriculture:fertile_soils/crimson_berry",
+    "#netheragriculture:fertile_soils/warped_berry",
+    "#netheragriculture:fertile_soils/azure_melon",
+    "#netheragriculture:fertile_soils/blaze_fruit",
+    "#netheragriculture:fertile_soils/lothun"
+  ]
+}

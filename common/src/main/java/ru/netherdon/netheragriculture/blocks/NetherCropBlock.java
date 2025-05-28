@@ -4,6 +4,7 @@ import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.tags.TagKey;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.BlockGetter;
@@ -13,6 +14,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
+import org.jetbrains.annotations.Nullable;
 import ru.netherdon.netheragriculture.services.CropService;
 
 import java.util.Objects;
@@ -21,9 +23,18 @@ public class NetherCropBlock extends CropBlock implements INetherCrop
 {
     public static final MapCodec<NetherCropBlock> CODEC = Block.simpleCodec(NetherCropBlock::new);
 
-    public NetherCropBlock(Properties properties)
+    @Nullable
+    private final TagKey<Block> fertileSoilsTag;
+
+    public NetherCropBlock(@Nullable TagKey<Block> fertileSoilsTag, Properties properties)
     {
         super(properties);
+        this.fertileSoilsTag = fertileSoilsTag;
+    }
+
+    public NetherCropBlock(Properties properties)
+    {
+        this(null, properties);
     }
 
     @Override
@@ -56,9 +67,15 @@ public class NetherCropBlock extends CropBlock implements INetherCrop
         return state.setValue(this.getAgeProperty(), age);
     }
 
-    public boolean isValidFarmland(BlockState state)
+    public boolean isFertileSoil(BlockState state)
     {
-        return false;
+        return this.fertileSoilsTag != null && state.is(this.getFertileSoilsTag());
+    }
+
+    @Nullable
+    protected TagKey<Block> getFertileSoilsTag()
+    {
+        return this.fertileSoilsTag;
     }
 
     @Override
@@ -111,7 +128,7 @@ public class NetherCropBlock extends CropBlock implements INetherCrop
         Boolean soilDecision = CropService.canSustainPlant(stateBelow, level, posBelow, Direction.UP, blockState);
         if (soilDecision == null ? stateBelow.getBlock() instanceof NetherCropBlock : soilDecision)
         {
-            if (blockState.getBlock() instanceof INetherCrop netherCropBlock && netherCropBlock.isValidFarmland(stateBelow))
+            if (blockState.getBlock() instanceof INetherCrop netherCropBlock && netherCropBlock.isFertileSoil(stateBelow))
             {
                 speed += 3f;
             }

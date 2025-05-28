@@ -114,5 +114,12 @@
   "tag.item.c.drinks.crimson_berry_jam": "Варенья из багровых ягод",
   "tag.item.c.drinks.warped_berry_jam": "Выренья из искажённых ягод",
 
-  "tag.block.netheragriculture.nether_crops": "Незерские посевы"
+  "tag.block.netheragriculture.nether_crops": "Незерские посевы",
+  "tag.block.netheragriculture.fertile_soils": "Незерские плодородные почвы",
+  "tag.block.netheragriculture.fertile_soils.azure_melon": "Плодородные почвы для лазурной дыни",
+  "tag.block.netheragriculture.fertile_soils.blaze_fruit": "Плодородные почвы для огненного фрукта",
+  "tag.block.netheragriculture.fertile_soils.crimson_berry": "Плодородные почвы для багровой ягоды",
+  "tag.block.netheragriculture.fertile_soils.warped_berry": "Плодородные почвы для искажённой ягоды",
+  "tag.block.netheragriculture.fertile_soils.sinful_eyes": "Плодородные почвы для глаз грешников",
+  "tag.block.netheragriculture.fertile_soils.lothun": "Плодородные почвы для лотуна"
 }

@@ -18,6 +18,7 @@ import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
+import ru.netherdon.netheragriculture.registries.NATags;
 
 public class BlazeFruitBlock extends NetherCropBlock
 {
@@ -37,7 +38,7 @@ public class BlazeFruitBlock extends NetherCropBlock
 
     public BlazeFruitBlock(Properties properties)
     {
-        super(properties);
+        super(NATags.Blocks.BLAZE_FRUIT_FERTILE_SOILS, properties);
         this.registerDefaultState(this.defaultBlockState().setValue(SOUL, false));
     }
 
@@ -54,7 +55,7 @@ public class BlazeFruitBlock extends NetherCropBlock
     @Override
     protected boolean mayPlaceOn(BlockState state, BlockGetter level, BlockPos pos)
     {
-        return state.is(BlockTags.SOUL_FIRE_BASE_BLOCKS) || super.mayPlaceOn(state, level, pos);
+        return this.isFertileSoil(state) || super.mayPlaceOn(state, level, pos);
     }
 
     @Override
@@ -122,12 +123,6 @@ public class BlazeFruitBlock extends NetherCropBlock
             entity.hurt(level.damageSources().inFire(), 1f);
         }
         super.entityInside(state, level, pos, entity);
-    }
-
-    @Override
-    public boolean isValidFarmland(BlockState state)
-    {
-        return state.is(BlockTags.SOUL_FIRE_BASE_BLOCKS);
     }
 
     @Override

@@ -114,5 +114,12 @@
   "tag.item.c.drinks.crimson_berry_jam": "Crimson Berry Jams",
   "tag.item.c.drinks.warped_berry_jam": "Warped Berry Jams",
 
-  "tag.block.netheragriculture.nether_crops": "Nether Crops"
+  "tag.block.netheragriculture.nether_crops": "Nether Crops",
+  "tag.block.netheragriculture.fertile_soils": "Nether Fertile Soils",
+  "tag.block.netheragriculture.fertile_soils.azure_melon": "Fertile Soils for Azure Melon",
+  "tag.block.netheragriculture.fertile_soils.blaze_fruit": "Fertile Soils for Blaze Fruit",
+  "tag.block.netheragriculture.fertile_soils.crimson_berry": "Fertile Soils for Crimson Berry",
+  "tag.block.netheragriculture.fertile_soils.warped_berry": "Fertile Soils for Warped Berry",
+  "tag.block.netheragriculture.fertile_soils.sinful_eyes": "Fertile Soils for Sinful Eyes",
+  "tag.block.netheragriculture.fertile_soils.lothun": "Fertile Soils for Lothun"
 }
