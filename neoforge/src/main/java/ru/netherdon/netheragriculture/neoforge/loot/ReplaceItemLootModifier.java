@@ -9,14 +9,14 @@ import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.neoforged.neoforge.common.loot.IGlobalLootModifier;
 import net.neoforged.neoforge.common.loot.LootModifier;
-import ru.netherdon.netheragriculture.loot.IReplaceItemLootModifier;
 
-public class ReplaceItemLootModifier extends LootModifier implements IReplaceItemLootModifier
+public class ReplaceItemLootModifier extends LootModifier
 {
     public static final MapCodec<ReplaceItemLootModifier> CODEC = RecordCodecBuilder.mapCodec((instance) ->
-        codecStart(instance)
-            .and(IReplaceItemLootModifier.codecEnd(instance))
-            .apply(instance, ReplaceItemLootModifier::new)
+        codecStart(instance).and(instance.group(
+            Ingredient.CODEC_NONEMPTY.fieldOf("from").forGetter(ReplaceItemLootModifier::getInput),
+            ItemStack.SINGLE_ITEM_CODEC.fieldOf("to").forGetter(ReplaceItemLootModifier::getReplacement))
+        ).apply(instance, ReplaceItemLootModifier::new)
     );
 
     private final Ingredient input;
@@ -32,16 +32,23 @@ public class ReplaceItemLootModifier extends LootModifier implements IReplaceIte
     @Override
     public ObjectArrayList<ItemStack> doApply(ObjectArrayList<ItemStack> generatedLoot, LootContext context)
     {
-        return IReplaceItemLootModifier.super.doApply(generatedLoot, context);
+        for (int i = 0; i < generatedLoot.size(); i++)
+        {
+            ItemStack stack = generatedLoot.get(i);
+            if (this.getInput().test(stack))
+            {
+                ItemStack newStack = this.getReplacement().copyWithCount(stack.getCount());
+                generatedLoot.set(i, newStack);
+            }
+        }
+        return generatedLoot;
     }
 
-    @Override
     public Ingredient getInput()
     {
         return this.input;
     }
 
-    @Override
     public ItemStack getReplacement()
     {
         return this.replacement;

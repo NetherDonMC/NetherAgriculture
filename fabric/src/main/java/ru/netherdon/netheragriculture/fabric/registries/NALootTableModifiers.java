@@ -1,29 +1,35 @@
 package ru.netherdon.netheragriculture.fabric.registries;
 
+import com.google.common.collect.ImmutableList;
 import net.fabricmc.fabric.api.loot.v3.LootTableEvents;
 import net.fabricmc.fabric.api.loot.v3.LootTableSource;
-import net.minecraft.advancements.critereon.*;
+import net.fabricmc.loader.api.FabricLoader;
+import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.storage.loot.LootContext;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
-import net.minecraft.world.level.storage.loot.entries.LootItem;
-import net.minecraft.world.level.storage.loot.entries.LootPoolEntries;
-import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
-import net.minecraft.world.level.storage.loot.predicates.LootItemEntityPropertyCondition;
-import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
-import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
+import net.minecraft.world.level.storage.loot.entries.*;
+import net.minecraft.world.level.storage.loot.functions.LootItemFunction;
+import net.minecraft.world.level.storage.loot.functions.SmeltItemFunction;
+import ru.netherdon.netheragriculture.NetherAgriculture;
+import ru.netherdon.netheragriculture.compat.OtherModNames;
 import ru.netherdon.netheragriculture.registries.NAItems;
-import ru.netherdon.netheragriculture.registries.NATags;
 
-import java.util.List;
+import java.util.Map;
 
 public final class NALootTableModifiers
 {
     private static final ResourceLocation STRIDER = ResourceLocation.withDefaultNamespace("entities/strider");
+    private static final ResourceLocation HOGLIN = ResourceLocation.withDefaultNamespace("entities/hoglin");
+
+    private static final ResourceLocation NETHER_BRIDGE = ResourceLocation.withDefaultNamespace("chests/nether_bridge");
+    private static final ResourceLocation BASTION_HOGLIN_STABLE = ResourceLocation.withDefaultNamespace("chests/bastion_hoglin_stable");
+
 
     public static void initialize()
     {
@@ -32,38 +38,110 @@ public final class NALootTableModifiers
 
     private static void modify(ResourceKey<LootTable> key, LootTable.Builder builder, LootTableSource source, HolderLookup.Provider registries)
     {
-        if (source.isBuiltin() && key.location().equals(STRIDER))
+        if (!source.isBuiltin())
         {
-            addStriderLegsDrop(builder, registries);
+            return;
+        }
+
+        ResourceLocation tableId = key.location();
+        if (tableId.equals(NETHER_BRIDGE))
+        {
+            builder.withPool(LootPool.lootPool().add(reference("modifiers/chests/nether_bridge")));
+        }
+        else if (tableId.equals(STRIDER))
+        {
+            builder.withPool(LootPool.lootPool().add(reference("modifiers/strider_leg")));
+        }
+        else if (!FabricLoader.getInstance().isModLoaded(OtherModNames.MY_NETHERS_DELIGHT))
+        {
+            if (tableId.equals(BASTION_HOGLIN_STABLE))
+            {
+                replaceItem(builder, Map.of(
+                    Items.PORKCHOP, toItem(NAItems.HOGLIN_MEAT),
+                    Items.COOKED_PORKCHOP, toItem(NAItems.COOKED_HOGLIN_MEAT)
+                ));
+            }
+            else if (tableId.equals(HOGLIN))
+            {
+                replaceItem(builder, Map.of(
+                    Items.PORKCHOP, all(toItem(NAItems.HOGLIN_MEAT), removeSmelting())
+                ));
+            }
         }
     }
 
-    private static void addStriderLegsDrop(LootTable.Builder builder, HolderLookup.Provider registries)
+    private static Modifier all(Modifier... modifiers)
     {
-        var enchantments = registries.lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(NATags.Enchantments.INCREASE_ENTITY_DROPS);
-        builder.pool(
-            LootPool.lootPool().add(
-                LootItem.lootTableItem(NAItems.STRIDER_LEG.value())
-                    .apply(
-                        SetItemCountFunction.setCount(UniformGenerator.between(1, 2))
-                    ).apply(
-                        SetItemCountFunction.setCount(ConstantValue.exactly(2))
-                            .when(
-                                LootItemEntityPropertyCondition.hasProperties(
-                                    LootContext.EntityTarget.DIRECT_ATTACKER,
-                                    new EntityPredicate.Builder()
-                                        .equipment(new EntityEquipmentPredicate.Builder().mainhand(
-                                            ItemPredicate.Builder.item().withSubPredicate(
-                                                ItemSubPredicates.ENCHANTMENTS,
-                                                ItemEnchantmentsPredicate.enchantments(List.of(
-                                                    new EnchantmentPredicate(enchantments, MinMaxBounds.Ints.ANY)
-                                                ))
-                                            )
-                                        ))
-                                )
-                            )
-                    )
-            ).build()
-        );
+        return (loot) ->
+        {
+            for (Modifier modifier : modifiers)
+            {
+                loot = modifier.modify(loot);
+            }
+            return loot;
+        };
+    }
+
+    private static Modifier toItem(Holder<Item> item)
+    {
+        return (loot) ->
+        {
+            loot.item = item;
+            return loot;
+        };
+    }
+
+    private static Modifier removeSmelting()
+    {
+        return (loot) ->
+        {
+            ImmutableList.Builder<LootItemFunction> newFunctions = ImmutableList.builder();
+            for (LootItemFunction function : loot.functions)
+            {
+                if (!(function instanceof SmeltItemFunction))
+                {
+                    newFunctions.add(function);
+                }
+            }
+            loot.functions = newFunctions.build();
+            return loot;
+        };
+    }
+
+    private static void replaceItem(LootTable.Builder tableBuilder, Map<Item, Modifier> modifiers)
+    {
+        tableBuilder.modifyPools((poolBuilder) ->
+        {
+            ImmutableList<LootPoolEntryContainer> oldEntries = poolBuilder.entries.build();
+            poolBuilder.entries = ImmutableList.builder();
+
+            for (LootPoolEntryContainer container : oldEntries)
+            {
+                poolBuilder.with(container);
+                if (container instanceof LootItem lootItem && modifiers.containsKey(lootItem.item.value()))
+                {
+                    poolBuilder.with(modifiers.get(lootItem.item.value()).modify(lootItem));
+                }
+                else
+                {
+                    poolBuilder.with(container);
+                }
+            }
+        });
+    }
+
+    private static ResourceKey<LootTable> key(String name)
+    {
+        return ResourceKey.create(Registries.LOOT_TABLE, NetherAgriculture.location(name));
+    }
+
+    private static LootPoolSingletonContainer.Builder<?> reference(String name)
+    {
+        return NestedLootTable.lootTableReference(key(name));
+    }
+
+    private interface Modifier
+    {
+        public LootItem modify(LootItem loot);
     }
 }
