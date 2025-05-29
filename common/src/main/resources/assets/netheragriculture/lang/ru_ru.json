@@ -102,6 +102,25 @@
 
   "emi.category.netheragriculture.nether_cooking": "Незерская готовка",
 
+  "config.netheragriculture.inworld_category_description": "Доступно только в загруженном мире",
+  "config.netheragriculture.online_mode_category_description": "Доступно только в одиночной игре",
+  "config.netheragriculture.overrides": "Совместимость",
+  "config.netheragriculture.entity": "Сущности",
+
+  "config.netheragriculture.overrides.removing_recipes": "Удаление рецептов",
+  "config.netheragriculture.overrides.removing_recipes.tooltip": "Удаляет некоторые рецепты. К примеру: mynethersdelight:hoglin_loin_cooking, mynethersdelight:hoglin_sausage_cooking и т. д.",
+  "config.netheragriculture.overrides.loot": "Модификаторы добычи",
+  "config.netheragriculture.overrides.loot.hoglin": "Хоглин",
+  "config.netheragriculture.overrides.loot.hoglin.tooltip": "Модифицирует таблицу добычи minecraft:entities/hoglin",
+  "config.netheragriculture.overrides.loot.strider": "Лавомерка",
+  "config.netheragriculture.overrides.loot.strider.tooltip": "Модифицирует таблицу добычи minecraft:entities/strider",
+  "config.netheragriculture.overrides.loot.nether_bridge": "Крепость незера",
+  "config.netheragriculture.overrides.loot.nether_bridge.tooltip": "Модифицирует таблицу добычи minecraft:chests/nether_bridge",
+  "config.netheragriculture.overrides.loot.bastion_hoglin_stable": "Бастионный загон хоглинов",
+  "config.netheragriculture.overrides.loot.bastion_hoglin_stable.tooltip": "Модифицирует таблицу добычи minecraft:chests/bastion_hoglin_stable",
+  "config.netheragriculture.entity.burning_from_items": "Горение от предметов",
+  "config.netheragriculture.entity.burning_from_blaze_flight": "Горение от полёта всполоха",
+
   "tag.item.netheragriculture.nether_spices": "Незерские специи",
   "tag.item.c.ingots.blazing_gold": "Слитки пылающего золота",
   "tag.item.c.nuggets.blazing_gold": "Самородки пылающего золота",

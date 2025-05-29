@@ -12,9 +12,9 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import ru.netherdon.netheragriculture.compat.OtherModNames;
+import ru.netherdon.netheragriculture.config.NACommonConfig;
 
 import java.util.Collection;
 import java.util.Map;
@@ -36,7 +36,10 @@ public abstract class RecipeManagerMixin
     )
     public void removeRecipes(Map<ResourceLocation, JsonElement> map, ResourceManager resourceManager, ProfilerFiller profilerFiller, CallbackInfo ci)
     {
-        na$removeRecipesFor(OtherModNames.MY_NETHERS_DELIGHT, map, NA$MYNETHERSDELIGHT_RECIPES);
+        if (NACommonConfig.get().overrides.isRemovingRecipeEnabled())
+        {
+            na$removeRecipesFor(OtherModNames.MY_NETHERS_DELIGHT, map, NA$MYNETHERSDELIGHT_RECIPES);
+        }
     }
     @Unique
     private static void na$removeRecipesFor(String modId, Map<ResourceLocation, JsonElement> map, Collection<String> recipeIds)

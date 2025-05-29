@@ -4,6 +4,7 @@ import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
+import ru.netherdon.netheragriculture.config.NAServerConfig;
 import ru.netherdon.netheragriculture.services.EntityService;
 import ru.netherdon.netheragriculture.services.MobEffectService;
 
@@ -24,6 +25,7 @@ public class BlazeFlightEffect extends MobEffect
             && player.getAbilities().flying
             && !EntityService.isImmuneToFire(player)
             && entity.getRemainingFireTicks() <= 0
+            && NAServerConfig.get().entity.isBurningFromBlazeFlightEnabled()
         )
         {
             player.igniteForTicks(20);

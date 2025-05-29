@@ -39,6 +39,12 @@ repositories {
     maven {
         url = "https://jitpack.io"
     }
+    maven {
+        url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/"
+    }
+    maven {
+        url = "https://maven.terraformersmc.com/"
+    }
 }
 
 dependencies {
@@ -52,6 +58,9 @@ dependencies {
     include(modImplementation("com.github.Chocohead:Fabric-ASM:${fabric_asm_version}")) {
         exclude (group: "net.fabricmc.fabric-api")
     }
+
+    modApi "com.terraformersmc:modmenu:${mod_menu_version}"
+    modApi "fuzs.forgeconfigapiport:forgeconfigapiport-fabric:${forge_config_api_version}"
 }
 
 processResources {

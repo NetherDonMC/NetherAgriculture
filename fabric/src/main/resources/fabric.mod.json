@@ -28,6 +28,9 @@
     ],
     "mm:early_risers": [
       "ru.netherdon.netheragriculture.fabric.NetherAgricultureASM"
+    ],
+    "modmenu": [
+      "ru.netherdon.netheragriculture.fabric.compat.modmenu.NAModMenuPlugin"
     ]
   },
   "mixins": [

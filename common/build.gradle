@@ -13,6 +13,9 @@ repositories {
     maven {
         url = "https://maven.terraformersmc.com/"
     }
+    maven {
+        url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/"
+    }
 }
 
 dependencies {
@@ -23,4 +26,7 @@ dependencies {
 
     modApi "mezz.jei:jei-${minecraft_version}-common-api:${jei_version}"
     modApi "mezz.jei:jei-${minecraft_version}-lib:${jei_version}"
+
+    modApi "fuzs.forgeconfigapiport:forgeconfigapiport-common-neoforgeapi:${forge_config_api_version}"
+    modApi "me.shedaniel.cloth:cloth-config:${cloth_config_api_version}"
 }

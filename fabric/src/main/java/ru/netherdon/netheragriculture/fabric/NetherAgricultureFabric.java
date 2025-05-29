@@ -1,10 +1,14 @@
 package ru.netherdon.netheragriculture.fabric;
 
+import fuzs.forgeconfigapiport.fabric.api.neoforge.v4.NeoForgeConfigRegistry;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.player.UseEntityCallback;
 import net.fabricmc.fabric.api.registry.FabricBrewingRecipeRegistryBuilder;
 import net.minecraft.world.item.ItemStack;
+import net.neoforged.fml.config.ModConfig;
 import ru.netherdon.netheragriculture.NetherAgriculture;
+import ru.netherdon.netheragriculture.config.NACommonConfig;
+import ru.netherdon.netheragriculture.config.NAServerConfig;
 import ru.netherdon.netheragriculture.fabric.registries.NABiomeModifiers;
 import ru.netherdon.netheragriculture.fabric.registries.NABlockRenderTypes;
 import ru.netherdon.netheragriculture.fabric.registries.NALootTableModifiers;
@@ -20,6 +24,9 @@ public final class NetherAgricultureFabric implements ModInitializer
         NABlockRenderTypes.initialize();
         NABiomeModifiers.initialize();
         NALootTableModifiers.initialize();
+
+        NeoForgeConfigRegistry.INSTANCE.register(NetherAgriculture.ID, ModConfig.Type.SERVER, NAServerConfig.getSpec(), NAServerConfig.FILE_NAME);
+        NeoForgeConfigRegistry.INSTANCE.register(NetherAgriculture.ID, ModConfig.Type.COMMON, NACommonConfig.getSpec(), NACommonConfig.FILE_NAME);
 
         FabricBrewingRecipeRegistryBuilder.BUILD.register(NAPotions::registerRecipes);
 

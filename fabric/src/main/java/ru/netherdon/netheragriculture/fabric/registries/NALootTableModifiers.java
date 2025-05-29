@@ -18,6 +18,7 @@ import net.minecraft.world.level.storage.loot.functions.LootItemFunction;
 import net.minecraft.world.level.storage.loot.functions.SmeltItemFunction;
 import ru.netherdon.netheragriculture.NetherAgriculture;
 import ru.netherdon.netheragriculture.compat.OtherModNames;
+import ru.netherdon.netheragriculture.config.NACommonConfig;
 import ru.netherdon.netheragriculture.registries.NAItems;
 
 import java.util.Map;
@@ -46,26 +47,38 @@ public final class NALootTableModifiers
         ResourceLocation tableId = key.location();
         if (tableId.equals(NETHER_BRIDGE))
         {
-            builder.withPool(LootPool.lootPool().add(reference("modifiers/chests/nether_bridge")));
+            if (config().isNetherBridgeEnabled())
+            {
+                builder.withPool(LootPool.lootPool().add(reference("modifiers/chests/nether_bridge")));
+            }
         }
         else if (tableId.equals(STRIDER))
         {
-            builder.withPool(LootPool.lootPool().add(reference("modifiers/strider_leg")));
+            if (config().isStriderEnabled())
+            {
+                builder.withPool(LootPool.lootPool().add(reference("modifiers/strider_leg")));
+            }
         }
         else if (!FabricLoader.getInstance().isModLoaded(OtherModNames.MY_NETHERS_DELIGHT))
         {
             if (tableId.equals(BASTION_HOGLIN_STABLE))
             {
-                replaceItem(builder, Map.of(
-                    Items.PORKCHOP, toItem(NAItems.HOGLIN_MEAT),
-                    Items.COOKED_PORKCHOP, toItem(NAItems.COOKED_HOGLIN_MEAT)
-                ));
+                if (config().isBastionHoglinStableEnabled())
+                {
+                    replaceItem(builder, Map.of(
+                        Items.PORKCHOP, toItem(NAItems.HOGLIN_MEAT),
+                        Items.COOKED_PORKCHOP, toItem(NAItems.COOKED_HOGLIN_MEAT)
+                    ));
+                }
             }
             else if (tableId.equals(HOGLIN))
             {
-                replaceItem(builder, Map.of(
-                    Items.PORKCHOP, all(toItem(NAItems.HOGLIN_MEAT), removeSmelting())
-                ));
+                if (config().isHoglinEnabled())
+                {
+                    replaceItem(builder, Map.of(
+                        Items.PORKCHOP, all(toItem(NAItems.HOGLIN_MEAT), removeSmelting())
+                    ));
+                }
             }
         }
     }
@@ -133,6 +146,11 @@ public final class NALootTableModifiers
     private static ResourceKey<LootTable> key(String name)
     {
         return ResourceKey.create(Registries.LOOT_TABLE, NetherAgriculture.location(name));
+    }
+
+    private static NACommonConfig.LootModifierSettings config()
+    {
+        return NACommonConfig.get().overrides.lootModifier();
     }
 
     private static LootPoolSingletonContainer.Builder<?> reference(String name)
