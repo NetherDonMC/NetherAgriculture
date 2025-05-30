@@ -21,13 +21,13 @@ public final class NAItems
     public static final Holder<Item> CRUSHED_WARPED_ROOTS = registerSimpleItem("crushed_warped_roots");
 
     public static final Holder<Item> BLAZING_GOLD_INGOT = REGISTER.register("blazing_gold_ingot", () -> new BurningItem(
-        60, new Item.Properties()
+        60, new Item.Properties().fireResistant()
     ));
     public static final Holder<Item> BLAZING_GOLD_NUGGET = REGISTER.register("blazing_gold_nugget", () -> new BurningItem(
-        20, new Item.Properties()
+        20, new Item.Properties().fireResistant()
     ));
     public static final Holder<Item> BLAZING_GOLDEN_LOTHUN = REGISTER.register("blazing_golden_lothun", () -> new BurningFoodItem(
-        60, new Item.Properties().food(NAFoods.BLAZING_GOLDEN_LOTHUN)
+        60, new Item.Properties().food(NAFoods.BLAZING_GOLDEN_LOTHUN).fireResistant()
     ));
 
     public static final Holder<Item> CRIMSON_BERRY = registerSimpleItem("crimson_berry", new Item.Properties().food(NAFoods.CRIMSON_BERRY));
@@ -105,7 +105,7 @@ public final class NAItems
 
     public static final Holder<BlockItem> CRIMSON_BERRY_SEEDS = REGISTER.register("crimson_berry_seeds", () -> new ItemNameBlockItem(NABlocks.CRIMSON_BERRY_ROOTS.value(), new Item.Properties()));
     public static final Holder<BlockItem> WARPED_BERRY_SEEDS = REGISTER.register("warped_berry_seeds", () -> new ItemNameBlockItem(NABlocks.WARPED_BERRY_ROOTS.value(), new Item.Properties()));
-    public static final Holder<BlockItem> BLAZE_FRUIT_SEED = REGISTER.register("blaze_fruit_seed", () -> new ItemNameBlockItem(NABlocks.BLAZE_FRUIT.value(), new Item.Properties()));
+    public static final Holder<BlockItem> BLAZE_FRUIT_SEED = REGISTER.register("blaze_fruit_seed", () -> new ItemNameBlockItem(NABlocks.BLAZE_FRUIT.value(), new Item.Properties().fireResistant()));
     public static final Holder<BlockItem> AZURE_MELON_SEEDS = REGISTER.register("azure_melon_seeds", () -> new ItemNameBlockItem(NABlocks.AZURE_MELON_STEM.value(), new Item.Properties()));
 
     public static final Holder<BlockItem> NETHER_ROOTS = registerSimpleBlockItem(NABlocks.NETHER_ROOTS);
@@ -128,14 +128,14 @@ public final class NAItems
     public static final Holder<BlockItem> SMALL_CRIMSON_CRATE_OF_LOTHUN = registerSimpleBlockItem(NABlocks.SMALL_CRIMSON_CRATE_OF_LOTHUN);
     public static final Holder<BlockItem> WARPED_CRATE_OF_LOTHUN = registerSimpleBlockItem(NABlocks.WARPED_CRATE_OF_LOTHUN);
     public static final Holder<BlockItem> SMALL_WARPED_CRATE_OF_LOTHUN = registerSimpleBlockItem(NABlocks.SMALL_WARPED_CRATE_OF_LOTHUN);
-    public static final Holder<BlockItem> CRIMSON_CRATE_OF_BLAZING_GOLDEN_LOTHUN = registerSimpleBlockItem(NABlocks.CRIMSON_CRATE_OF_BLAZING_GOLDEN_LOTHUN);
-    public static final Holder<BlockItem> SMALL_CRIMSON_CRATE_OF_BLAZING_GOLDEN_LOTHUN = registerSimpleBlockItem(NABlocks.SMALL_CRIMSON_CRATE_OF_BLAZING_GOLDEN_LOTHUN);
-    public static final Holder<BlockItem> WARPED_CRATE_OF_BLAZING_GOLDEN_LOTHUN = registerSimpleBlockItem(NABlocks.WARPED_CRATE_OF_BLAZING_GOLDEN_LOTHUN);
-    public static final Holder<BlockItem> SMALL_WARPED_CRATE_OF_BLAZING_GOLDEN_LOTHUN = registerSimpleBlockItem(NABlocks.SMALL_WARPED_CRATE_OF_BLAZING_GOLDEN_LOTHUN);
-    public static final Holder<BlockItem> CRIMSON_CRATE_OF_BLAZE_FRUIT = registerSimpleBlockItem(NABlocks.CRIMSON_CRATE_OF_BLAZE_FRUIT);
-    public static final Holder<BlockItem> SMALL_CRIMSON_CRATE_OF_BLAZE_FRUIT = registerSimpleBlockItem(NABlocks.SMALL_CRIMSON_CRATE_OF_BLAZE_FRUIT);
-    public static final Holder<BlockItem> WARPED_CRATE_OF_BLAZE_FRUIT = registerSimpleBlockItem(NABlocks.WARPED_CRATE_OF_BLAZE_FRUIT);
-    public static final Holder<BlockItem> SMALL_WARPED_CRATE_OF_BLAZE_FRUIT = registerSimpleBlockItem(NABlocks.SMALL_WARPED_CRATE_OF_BLAZE_FRUIT);
+    public static final Holder<BlockItem> CRIMSON_CRATE_OF_BLAZING_GOLDEN_LOTHUN = registerSimpleBlockItem(NABlocks.CRIMSON_CRATE_OF_BLAZING_GOLDEN_LOTHUN, new Item.Properties().fireResistant());
+    public static final Holder<BlockItem> SMALL_CRIMSON_CRATE_OF_BLAZING_GOLDEN_LOTHUN = registerSimpleBlockItem(NABlocks.SMALL_CRIMSON_CRATE_OF_BLAZING_GOLDEN_LOTHUN, new Item.Properties().fireResistant());
+    public static final Holder<BlockItem> WARPED_CRATE_OF_BLAZING_GOLDEN_LOTHUN = registerSimpleBlockItem(NABlocks.WARPED_CRATE_OF_BLAZING_GOLDEN_LOTHUN, new Item.Properties().fireResistant());
+    public static final Holder<BlockItem> SMALL_WARPED_CRATE_OF_BLAZING_GOLDEN_LOTHUN = registerSimpleBlockItem(NABlocks.SMALL_WARPED_CRATE_OF_BLAZING_GOLDEN_LOTHUN, new Item.Properties().fireResistant());
+    public static final Holder<BlockItem> CRIMSON_CRATE_OF_BLAZE_FRUIT = registerSimpleBlockItem(NABlocks.CRIMSON_CRATE_OF_BLAZE_FRUIT, new Item.Properties().fireResistant());
+    public static final Holder<BlockItem> SMALL_CRIMSON_CRATE_OF_BLAZE_FRUIT = registerSimpleBlockItem(NABlocks.SMALL_CRIMSON_CRATE_OF_BLAZE_FRUIT, new Item.Properties().fireResistant());
+    public static final Holder<BlockItem> WARPED_CRATE_OF_BLAZE_FRUIT = registerSimpleBlockItem(NABlocks.WARPED_CRATE_OF_BLAZE_FRUIT, new Item.Properties().fireResistant());
+    public static final Holder<BlockItem> SMALL_WARPED_CRATE_OF_BLAZE_FRUIT = registerSimpleBlockItem(NABlocks.SMALL_WARPED_CRATE_OF_BLAZE_FRUIT, new Item.Properties().fireResistant());
     public static final Holder<BlockItem> CRIMSON_CRATE_OF_SINFUL_EYES = registerSimpleBlockItem(NABlocks.CRIMSON_CRATE_OF_SINFUL_EYES);
     public static final Holder<BlockItem> SMALL_CRIMSON_CRATE_OF_SINFUL_EYES = registerSimpleBlockItem(NABlocks.SMALL_CRIMSON_CRATE_OF_SINFUL_EYES);
     public static final Holder<BlockItem> WARPED_CRATE_OF_SINFUL_EYES = registerSimpleBlockItem(NABlocks.WARPED_CRATE_OF_SINFUL_EYES);
@@ -155,8 +155,13 @@ public final class NAItems
 
     public static Holder<BlockItem> registerSimpleBlockItem(Holder<? extends Block> block)
     {
+        return registerSimpleBlockItem(block, new Item.Properties());
+    }
+
+    public static Holder<BlockItem> registerSimpleBlockItem(Holder<? extends Block> block, Item.Properties properties)
+    {
         String name = block.unwrapKey().orElseThrow().location().getPath();
-        return registerItem(name, (propertiesIn) -> new BlockItem(block.value(), propertiesIn), new Item.Properties());
+        return registerItem(name, (propertiesIn) -> new BlockItem(block.value(), propertiesIn), properties);
     }
 
     public static <T extends Item> Holder<T> registerItem(String name, Function<Item.Properties, T> constructor)

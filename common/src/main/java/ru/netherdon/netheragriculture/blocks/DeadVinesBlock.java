@@ -193,7 +193,7 @@ public class DeadVinesBlock extends Block implements BonemealableBlock
                 }
 
                 int age = state2.getValue(AGE);
-                if (age >= MAX_AGE)
+                if (age >= MAX_AGE || !level.getBlockState(mutablePos.below()).isAir())
                 {
                     level.setBlockAndUpdate(mutablePos, state2.setValue(SHOOTS, true));
                     return;

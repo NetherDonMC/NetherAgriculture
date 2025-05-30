@@ -28,6 +28,9 @@ public final class BlockEventHandlerImpl
     @SubscribeEvent
     private static void applyBoneMeal(BonemealEvent event)
     {
-        BlockEventHandler.applyBoneMeal(event.getState(), event.getLevel(), event.getPos(), event.getStack());
+        if (BlockEventHandler.applyBoneMeal(event.getState(), event.getLevel(), event.getPos(), event.getStack()))
+        {
+            event.setSuccessful(true);
+        }
     }
 }

@@ -57,8 +57,8 @@ public class MortofructFeature extends Feature<MortofructFeatureConfiguration>
                     headType = random.nextBoolean() ? HeadType.VINE : HeadType.SHOOTS;
                 }
 
-                float f = random.nextFloat();
-                int startAge = DeadVinesBlock.MAX_AGE - Math.round(DeadVinesBlock.MAX_AGE * f * f * f);
+                float r = random.nextFloat();
+                int startAge = Math.round(DeadVinesBlock.MAX_AGE * (1f - r * r));
                 if (this.placeMortofruct(level, pos2, startAge, headType))
                 {
                     placed++;
@@ -93,7 +93,7 @@ public class MortofructFeature extends Feature<MortofructFeatureConfiguration>
             BlockState state = NABlocks.DEAD_VINES.value().defaultBlockState()
                 .setValue(DeadVinesBlock.ATTACHED, true)
                 .setValue(DeadVinesBlock.SHOOTS, false)
-                .setValue(DeadVinesBlock.AGE, Math.max(DeadVinesBlock.MAX_AGE, startAge + i));
+                .setValue(DeadVinesBlock.AGE, Math.min(DeadVinesBlock.MAX_AGE, startAge + i));
             level.setBlock(pos.below(i), state, 2);
         }
 

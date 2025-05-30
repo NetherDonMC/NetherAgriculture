@@ -43,7 +43,8 @@
     "minecraft": "~1.21.1",
     "java": ">=21",
     "fabric-api": "*",
-    "mm": "*"
+    "mm": "*",
+    "forgeconfigapiport": "*"
   },
   "suggests": {
     "another-mod": "*"

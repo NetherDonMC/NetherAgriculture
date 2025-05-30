@@ -33,6 +33,10 @@ subprojects {
         archivesName = "${mod_name}".replaceAll("\\s", "") + "-$project.name-${minecraft_version}"
     }
 
+    jar {
+        exclude("${mod_id}.accesswidener")
+    }
+
     repositories {
 
     }

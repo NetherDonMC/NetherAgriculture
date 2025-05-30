@@ -21,7 +21,7 @@ import ru.netherdon.netheragriculture.compat.clothconfig.ConfigScreenLoader;
 import java.util.function.Function;
 
 @OnlyIn(Dist.CLIENT)
-@Mod(NetherAgriculture.ID)
+@Mod(value = NetherAgriculture.ID, dist = Dist.CLIENT)
 public class NetherAgricultureNeoForgeClient
 {
     public NetherAgricultureNeoForgeClient(IEventBus modEventBus, ModContainer modContainer)
