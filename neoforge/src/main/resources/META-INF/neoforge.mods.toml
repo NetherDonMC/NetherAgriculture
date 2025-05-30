@@ -9,7 +9,7 @@ version = "${version}"
 displayName = "${name}"
 authors = "${author}"
 description = '''${description}'''
-#logoFile = "logo.png"
+logoFile = "logo.png"
 
 enumExtensions="META-INF/enumextensions.json"
 

@@ -1,5 +1,7 @@
 {
   "itemGroup.netheragriculture.common": "Незерская агрокультура",
+  "fml.menu.mods.info.description.netheragriculture": "Мод, добавляющий новые культуры в незер.",
+  "modmenu.descriptionTranslation.netheragriculture": "Мод, добавляющий новые культуры в незер.",
 
   "item.netheragriculture.mortofruct_half": "Половинка мортофрукта",
   "item.netheragriculture.crimson_berry": "Багровая ягода",

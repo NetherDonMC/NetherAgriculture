@@ -1,5 +1,7 @@
 {
   "itemGroup.netheragriculture.common": "Nether Agriculture",
+  "fml.menu.mods.info.description.netheragriculture": "A mod that adds new crops to the Nether.",
+  "modmenu.descriptionTranslation.netheragriculture": "A mod that adds new crops to the Nether.",
 
   "item.netheragriculture.mortofruct_half": "Mortofruct Half",
   "item.netheragriculture.crimson_berry": "Crimson Berry",
