@@ -1,7 +1,5 @@
 package ru.netherdon.netheragriculture.mixin;
 
-import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.ImmutableSet;
 import com.google.gson.JsonElement;
 import net.minecraft.resources.ResourceLocation;

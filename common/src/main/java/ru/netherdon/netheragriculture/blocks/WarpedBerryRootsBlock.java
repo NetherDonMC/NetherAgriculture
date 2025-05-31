@@ -15,7 +15,6 @@ import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import ru.netherdon.netheragriculture.registries.NABlocks;
 import ru.netherdon.netheragriculture.registries.NAItems;
 import ru.netherdon.netheragriculture.registries.NATags;
 

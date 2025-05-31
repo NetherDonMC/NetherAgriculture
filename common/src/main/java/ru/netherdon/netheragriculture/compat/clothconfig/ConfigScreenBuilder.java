@@ -13,7 +13,7 @@ import ru.netherdon.netheragriculture.config.NAServerConfig;
 
 import java.util.List;
 
-import static ru.netherdon.netheragriculture.misc.TranslationHelper.*;
+import static ru.netherdon.netheragriculture.misc.TranslationHelper.text;
 
 @Environment(EnvType.CLIENT)
 public class ConfigScreenBuilder

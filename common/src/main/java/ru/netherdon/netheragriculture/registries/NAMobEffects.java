@@ -6,8 +6,6 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.monster.Strider;
 import ru.netherdon.netheragriculture.effects.BlazeFlightEffect;
 import ru.netherdon.netheragriculture.effects.WarpMobEffect;
 import ru.netherdon.netheragriculture.services.MobEffectService;

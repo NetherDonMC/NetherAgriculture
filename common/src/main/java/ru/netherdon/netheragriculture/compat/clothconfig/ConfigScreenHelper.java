@@ -1,7 +1,6 @@
 package ru.netherdon.netheragriculture.compat.clothconfig;
 
 import com.google.common.collect.Lists;
-import me.shedaniel.clothconfig2.api.ConfigCategory;
 import me.shedaniel.clothconfig2.api.ConfigEntryBuilder;
 import me.shedaniel.clothconfig2.impl.builders.AbstractFieldBuilder;
 import me.shedaniel.clothconfig2.impl.builders.BooleanToggleBuilder;
@@ -9,13 +8,11 @@ import me.shedaniel.clothconfig2.impl.builders.IntFieldBuilder;
 import me.shedaniel.clothconfig2.impl.builders.IntSliderBuilder;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.FormattedText;
 import net.neoforged.neoforge.common.ModConfigSpec;
 
 import java.util.List;
 import java.util.Optional;
 
-import static ru.netherdon.netheragriculture.misc.TranslationHelper.*;
 import static ru.netherdon.netheragriculture.misc.TranslationHelper.text;
 
 public final class ConfigScreenHelper

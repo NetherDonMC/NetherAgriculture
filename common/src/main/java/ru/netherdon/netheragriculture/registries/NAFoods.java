@@ -1,6 +1,5 @@
 package ru.netherdon.netheragriculture.registries;
 
-import com.mojang.datafixers.util.Pair;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;

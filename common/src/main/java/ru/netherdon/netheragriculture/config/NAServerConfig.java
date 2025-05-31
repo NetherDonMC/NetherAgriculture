@@ -5,7 +5,7 @@ import net.neoforged.neoforge.common.ModConfigSpec;
 import org.apache.commons.lang3.tuple.Pair;
 import ru.netherdon.netheragriculture.NetherAgriculture;
 
-import static ru.netherdon.netheragriculture.misc.TranslationHelper.*;
+import static ru.netherdon.netheragriculture.misc.TranslationHelper.key;
 
 public final class NAServerConfig
 {

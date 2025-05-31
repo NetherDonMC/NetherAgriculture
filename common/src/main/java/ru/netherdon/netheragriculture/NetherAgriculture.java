@@ -1,6 +1,5 @@
 package ru.netherdon.netheragriculture;
 
-import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import ru.netherdon.netheragriculture.registries.*;
 

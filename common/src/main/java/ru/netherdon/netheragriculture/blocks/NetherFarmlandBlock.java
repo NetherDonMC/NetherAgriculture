@@ -18,7 +18,6 @@ import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
-import ru.netherdon.netheragriculture.services.CropService;
 import ru.netherdon.netheragriculture.services.EntityService;
 
 public class NetherFarmlandBlock extends Block

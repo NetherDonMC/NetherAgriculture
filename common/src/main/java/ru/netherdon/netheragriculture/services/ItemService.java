@@ -1,6 +1,5 @@
 package ru.netherdon.netheragriculture.services;
 
-import com.mojang.datafixers.util.Pair;
 import dev.architectury.injectables.annotations.ExpectPlatform;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.food.FoodProperties;
