@@ -15,11 +15,25 @@ public final class NABlockProperties
         .mapColor(MapColor.CRIMSON_STEM)
         .sound(SoundType.NETHER_WOOD);
 
-    public static final Properties WARPED_CRATE = Properties.of()
+    public static final Properties GLOWING_CRIMSON_CRATE = Properties.of()
         .strength(1.5f, 3f)
         .instrument(NoteBlockInstrument.BASS)
         .mapColor(MapColor.CRIMSON_STEM)
+        .sound(SoundType.NETHER_WOOD)
+        .lightLevel((state) -> 12);
+
+    public static final Properties WARPED_CRATE = Properties.of()
+        .strength(1.5f, 3f)
+        .instrument(NoteBlockInstrument.BASS)
+        .mapColor(MapColor.WARPED_STEM)
         .sound(SoundType.NETHER_WOOD);
+
+    public static final Properties GLOWING_WARPED_CRATE = Properties.of()
+        .strength(1.5f, 3f)
+        .instrument(NoteBlockInstrument.BASS)
+        .mapColor(MapColor.WARPED_STEM)
+        .sound(SoundType.NETHER_WOOD)
+        .lightLevel((state) -> 12);;
 
     public static final Properties AZURE_MELON = BlockBehaviour.Properties.of()
         .mapColor(MapColor.COLOR_CYAN)
