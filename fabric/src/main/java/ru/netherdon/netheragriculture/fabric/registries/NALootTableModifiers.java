@@ -22,19 +22,16 @@ import net.minecraft.world.level.storage.loot.functions.SmeltItemFunction;
 import ru.netherdon.netheragriculture.NetherAgriculture;
 import ru.netherdon.netheragriculture.compat.OtherModNames;
 import ru.netherdon.netheragriculture.config.NACommonConfig;
+import ru.netherdon.netheragriculture.misc.LootTableHelper;
 import ru.netherdon.netheragriculture.registries.NAItems;
+import ru.netherdon.netheragriculture.registries.NAPiglinBartering;
 
 import java.util.Map;
 
+import static ru.netherdon.netheragriculture.registries.LootTableNames.*;
+
 public final class NALootTableModifiers
 {
-    private static final ResourceLocation STRIDER = ResourceLocation.withDefaultNamespace("entities/strider");
-    private static final ResourceLocation HOGLIN = ResourceLocation.withDefaultNamespace("entities/hoglin");
-
-    private static final ResourceLocation NETHER_BRIDGE = ResourceLocation.withDefaultNamespace("chests/nether_bridge");
-    private static final ResourceLocation BASTION_HOGLIN_STABLE = ResourceLocation.withDefaultNamespace("chests/bastion_hoglin_stable");
-
-
     public static void initialize()
     {
         LootTableEvents.MODIFY.register(NALootTableModifiers::modify);
@@ -61,6 +58,10 @@ public final class NALootTableModifiers
             {
                 builder.withPool(LootPool.lootPool().add(reference("modifiers/strider_leg")));
             }
+        }
+        else if (tableId.equals(PIGLIN_BARTERING))
+        {
+            LootTableHelper.extendLootPool(builder.pools.build().getFirst(), NAPiglinBartering.getAdditionalEntries());
         }
         else if (!FabricLoader.getInstance().isModLoaded(OtherModNames.MY_NETHERS_DELIGHT))
         {
