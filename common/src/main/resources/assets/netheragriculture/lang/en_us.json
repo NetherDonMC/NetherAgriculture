@@ -112,6 +112,8 @@
   "config.netheragriculture.overrides.removing_recipes": "Removing Recipes",
   "config.netheragriculture.overrides.removing_recipes.tooltip": "Removes some recipes, such as mynethersdelight:hoglin_loin_cooking, mynethersdelight:hoglin_sausage_cooking, etc.",
   "config.netheragriculture.overrides.loot": "Loot Modifiers",
+  "config.netheragriculture.overrides.loot.piglin_bartering": "Piglin Bartering",
+  "config.netheragriculture.overrides.loot.piglin_bartering.tooltip": "Modifies the loot table minecraft:gameplay/piglin_bartering",
   "config.netheragriculture.overrides.loot.hoglin": "Hoglin",
   "config.netheragriculture.overrides.loot.hoglin.tooltip": "Modifies the loot table minecraft:entities/hoglin",
   "config.netheragriculture.overrides.loot.strider": "Strider",

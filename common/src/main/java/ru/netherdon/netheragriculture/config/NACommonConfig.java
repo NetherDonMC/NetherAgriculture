@@ -35,34 +35,41 @@ public final class NACommonConfig
         builder.pop();
     }
 
-    @Nullable
     private static LootModifierSettings loadLoot(ModConfigSpec.Builder builder)
     {
-        if (ModLoaderService.getModLoaderType() != ModLoaderTypes.FABRIC)
+        FabricLootModifierSettings fabricModifiers = null;
+
+        if (ModLoaderService.getModLoaderType() == ModLoaderTypes.FABRIC)
         {
-            return null;
+            fabricModifiers = new FabricLootModifierSettings(
+                builder.push("Loot Modifiers")
+                    .worldRestart()
+                    .translation(key(CONFIG, OVERRIDES, LOOT, "strider"))
+                    .define("striderEnabled", ConfigConstants.IS_LOOT_MODIFIER_STRIDER_LEG_ENABLED),
+
+                builder
+                    .worldRestart()
+                    .translation(key(CONFIG, OVERRIDES, LOOT, "hoglin"))
+                    .define("hoglinEnabled", ConfigConstants.IS_LOOT_MODIFIER_HOGLIN_MEAT_ENABLED),
+
+                builder
+                    .worldRestart()
+                    .translation(key(CONFIG, OVERRIDES, LOOT, "nether_bridge"))
+                    .define("netherBridgeEnabled", ConfigConstants.IS_LOOT_MODIFIER_NETHER_BRIDGE_ENABLED),
+
+                builder
+                    .worldRestart()
+                    .translation(key(CONFIG, OVERRIDES, LOOT, "bastion_hoglin_stable"))
+                    .define("bastionHoglinStableEnabled", ConfigConstants.IS_LOOT_MODIFIER_BASTION_HOGLIN_STABLE_ENABLED)
+            );
         }
 
+        builder.push("Loot Modifiers");
         var result = new LootModifierSettings(
-            builder.push("Loot Modifiers")
-                .worldRestart()
-                .translation(key(CONFIG, OVERRIDES, LOOT, "strider"))
-                .define("striderEnabled", ConfigConstants.IS_LOOT_MODIFIER_STRIDER_LEG_ENABLED),
-
-            builder
-                .worldRestart()
-                .translation(key(CONFIG, OVERRIDES, LOOT, "hoglin"))
-                .define("hoglinEnabled", ConfigConstants.IS_LOOT_MODIFIER_HOGLIN_MEAT_ENABLED),
-
-            builder
-                .worldRestart()
-                .translation(key(CONFIG, OVERRIDES, LOOT, "nether_bridge"))
-                .define("netherBridgeEnabled", ConfigConstants.IS_LOOT_MODIFIER_NETHER_BRIDGE_ENABLED),
-
-            builder
-                .worldRestart()
-                .translation(key(CONFIG, OVERRIDES, LOOT, "bastion_hoglin_stable"))
-                .define("bastionHoglinStableEnabled", ConfigConstants.IS_LOOT_MODIFIER_BASTION_HOGLIN_STABLE_ENABLED)
+            builder.worldRestart()
+                .translation(key(CONFIG, OVERRIDES, LOOT, "piglin_bartering"))
+                .define("piglinBarteringEnabled", ConfigConstants.IS_LOOT_MODIFIER_PIGLIN_BARTERING_ENABLED),
+            fabricModifiers
         );
         builder.pop();
         return result;
@@ -80,13 +87,21 @@ public final class NACommonConfig
 
     public record OverrideSettings(
         ModConfigSpec.BooleanValue removingRecipeEnabled,
-        @Nullable LootModifierSettings lootModifier
+        LootModifierSettings lootModifier
     )
     {
         public boolean isRemovingRecipeEnabled() { return this.removingRecipeEnabled.getAsBoolean(); }
     }
 
     public record LootModifierSettings(
+        ModConfigSpec.BooleanValue piglinBarteringEnabled,
+        @Nullable FabricLootModifierSettings fabric
+    )
+    {
+        public boolean isPiglinBarteringEnabled() { return this.piglinBarteringEnabled.getAsBoolean(); }
+    }
+
+    public record FabricLootModifierSettings(
         ModConfigSpec.BooleanValue striderEnabled,
         ModConfigSpec.BooleanValue hoglinEnabled,
         ModConfigSpec.BooleanValue bastionHoglinStableEnabled,

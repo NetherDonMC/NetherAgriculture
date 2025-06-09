@@ -10,4 +10,5 @@ public final class ConfigConstants
     public static final boolean IS_LOOT_MODIFIER_HOGLIN_MEAT_ENABLED = true;
     public static final boolean IS_LOOT_MODIFIER_NETHER_BRIDGE_ENABLED = true;
     public static final boolean IS_LOOT_MODIFIER_BASTION_HOGLIN_STABLE_ENABLED = true;
+    public static final boolean IS_LOOT_MODIFIER_PIGLIN_BARTERING_ENABLED = true;
 }

@@ -47,27 +47,30 @@ public final class NALootTableModifiers
         ResourceLocation tableId = key.location();
         if (tableId.equals(NETHER_BRIDGE))
         {
-            if (config().isNetherBridgeEnabled())
+            if (config().fabric().isNetherBridgeEnabled())
             {
                 builder.withPool(LootPool.lootPool().add(reference("modifiers/chests/nether_bridge")));
             }
         }
         else if (tableId.equals(STRIDER))
         {
-            if (config().isStriderEnabled())
+            if (config().fabric().isStriderEnabled())
             {
                 builder.withPool(LootPool.lootPool().add(reference("modifiers/strider_leg")));
             }
         }
         else if (tableId.equals(PIGLIN_BARTERING))
         {
-            LootTableHelper.extendLootPool(builder.pools.build().getFirst(), NAPiglinBartering.getAdditionalEntries());
+            if (config().isPiglinBarteringEnabled())
+            {
+                LootTableHelper.extendLootPool(builder.pools.build().getFirst(), NAPiglinBartering.getAdditionalEntries());
+            }
         }
         else if (!FabricLoader.getInstance().isModLoaded(OtherModNames.MY_NETHERS_DELIGHT))
         {
             if (tableId.equals(BASTION_HOGLIN_STABLE))
             {
-                if (config().isBastionHoglinStableEnabled())
+                if (config().fabric().isBastionHoglinStableEnabled())
                 {
                     replaceItem(builder, Map.of(
                         Items.PORKCHOP, toItem(NAItems.HOGLIN_MEAT),
@@ -77,7 +80,7 @@ public final class NALootTableModifiers
             }
             else if (tableId.equals(HOGLIN))
             {
-                if (config().isHoglinEnabled())
+                if (config().fabric().isHoglinEnabled())
                 {
                     replaceItem(builder, Map.of(
                         Items.PORKCHOP, all(toItem(NAItems.HOGLIN_MEAT), removeSmelting())

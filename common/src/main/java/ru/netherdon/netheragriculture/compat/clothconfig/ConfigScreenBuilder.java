@@ -1,5 +1,7 @@
 package ru.netherdon.netheragriculture.compat.clothconfig;
 
+import com.google.common.collect.Lists;
+import me.shedaniel.clothconfig2.api.AbstractConfigListEntry;
 import me.shedaniel.clothconfig2.api.ConfigBuilder;
 import me.shedaniel.clothconfig2.api.ConfigCategory;
 import me.shedaniel.clothconfig2.api.ConfigEntryBuilder;
@@ -42,6 +44,7 @@ public class ConfigScreenBuilder
         return builder.build();
     }
 
+    @SuppressWarnings("rawtypes")
     private static void buildOverridesCategory(
         NACommonConfig.OverrideSettings overrides,
         ConfigBuilder builder,
@@ -55,22 +58,22 @@ public class ConfigScreenBuilder
             ConfigScreenHelper.booleanToggle(overrides.removingRecipeEnabled(), entryBuilder, permission).build()
         );
 
-        if (overrides.lootModifier() != null)
-        {
-            NACommonConfig.LootModifierSettings modifier = overrides.lootModifier();
+        NACommonConfig.LootModifierSettings modifier = overrides.lootModifier();
+        List<AbstractConfigListEntry> subEntries = Lists.newArrayList();
+        subEntries.add(ConfigScreenHelper.booleanToggle(modifier.piglinBarteringEnabled(), entryBuilder, permission).build());
 
-            category.addEntry(
-                entryBuilder.startSubCategory(
-                    text("config", "overrides", "loot"),
-                    List.of(
-                        ConfigScreenHelper.booleanToggle(modifier.hoglinEnabled(), entryBuilder, permission).build(),
-                        ConfigScreenHelper.booleanToggle(modifier.striderEnabled(), entryBuilder, permission).build(),
-                        ConfigScreenHelper.booleanToggle(modifier.netherBridgeEnabled(), entryBuilder, permission).build(),
-                        ConfigScreenHelper.booleanToggle(modifier.bastionHoglinStableEnabled(), entryBuilder, permission).build()
-                    )
-                ).build()
-            );
+        if (modifier.fabric() != null)
+        {
+            NACommonConfig.FabricLootModifierSettings fabricModifiers = modifier.fabric();
+            subEntries.add(ConfigScreenHelper.booleanToggle(fabricModifiers.hoglinEnabled(), entryBuilder, permission).build());
+            subEntries.add(ConfigScreenHelper.booleanToggle(fabricModifiers.striderEnabled(), entryBuilder, permission).build());
+            subEntries.add(ConfigScreenHelper.booleanToggle(fabricModifiers.netherBridgeEnabled(), entryBuilder, permission).build());
+            subEntries.add(ConfigScreenHelper.booleanToggle(fabricModifiers.bastionHoglinStableEnabled(), entryBuilder, permission).build());
         }
+
+        category.addEntry(
+            entryBuilder.startSubCategory(text("config", "overrides", "loot"), subEntries).build()
+        );
     }
 
     private static void buildEntityCategory(

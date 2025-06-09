@@ -112,6 +112,8 @@
   "config.netheragriculture.overrides.removing_recipes": "Удаление рецептов",
   "config.netheragriculture.overrides.removing_recipes.tooltip": "Удаляет некоторые рецепты. К примеру: mynethersdelight:hoglin_loin_cooking, mynethersdelight:hoglin_sausage_cooking и т. д.",
   "config.netheragriculture.overrides.loot": "Модификаторы добычи",
+  "config.netheragriculture.overrides.loot.piglin_bartering": "Обмен с пиглином",
+  "config.netheragriculture.overrides.loot.piglin_bartering.tooltip": "Модифицирует таблицу добычи minecraft:gameplay/piglin_bartering",
   "config.netheragriculture.overrides.loot.hoglin": "Хоглин",
   "config.netheragriculture.overrides.loot.hoglin.tooltip": "Модифицирует таблицу добычи minecraft:entities/hoglin",
   "config.netheragriculture.overrides.loot.strider": "Лавомерка",
