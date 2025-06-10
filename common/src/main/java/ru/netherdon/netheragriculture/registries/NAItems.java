@@ -2,14 +2,12 @@ package ru.netherdon.netheragriculture.registries;
 
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemNameBlockItem;
-import net.minecraft.world.item.Items;
+import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
 import ru.netherdon.netheragriculture.items.*;
 import ru.netherdon.netheragriculture.services.RegistryManager;
 
+import java.util.function.BiFunction;
 import java.util.function.Function;
 
 public final class NAItems
@@ -109,8 +107,8 @@ public final class NAItems
     public static final Holder<BlockItem> AZURE_MELON_SEEDS = REGISTER.register("azure_melon_seeds", () -> new ItemNameBlockItem(NABlocks.AZURE_MELON_STEM.value(), new Item.Properties()));
 
     public static final Holder<BlockItem> NETHER_ROOTS = registerSimpleBlockItem(NABlocks.NETHER_ROOTS);
-    public static final Holder<BlockItem> TALL_CRIMSON_ROOTS = registerSimpleBlockItem(NABlocks.TALL_CRIMSON_ROOTS);
-    public static final Holder<BlockItem> TALL_WARPED_ROOTS = registerSimpleBlockItem(NABlocks.TALL_WARPED_ROOTS);
+    public static final Holder<BlockItem> TALL_CRIMSON_ROOTS = registerBlockItem(NABlocks.TALL_CRIMSON_ROOTS, DoubleHighBlockItem::new);
+    public static final Holder<BlockItem> TALL_WARPED_ROOTS = registerBlockItem(NABlocks.TALL_WARPED_ROOTS, DoubleHighBlockItem::new);
 
     public static final Holder<BlockItem> CRIMSON_CRATE = registerSimpleBlockItem(NABlocks.CRIMSON_CRATE);
     public static final Holder<BlockItem> SMALL_CRIMSON_CRATE = registerSimpleBlockItem(NABlocks.SMALL_CRIMSON_CRATE);
@@ -160,8 +158,22 @@ public final class NAItems
 
     public static Holder<BlockItem> registerSimpleBlockItem(Holder<? extends Block> block, Item.Properties properties)
     {
-        String name = block.unwrapKey().orElseThrow().location().getPath();
-        return registerItem(name, (propertiesIn) -> new BlockItem(block.value(), propertiesIn), properties);
+        return registerBlockItem(block, BlockItem::new, properties);
+    }
+
+    public static <T extends BlockItem, B extends Block> Holder<T> registerBlockItem(Holder<B> block, BiFunction<B, Item.Properties, T> constructor)
+    {
+        return registerBlockItem(block, constructor, new Item.Properties());
+    }
+
+    public static <T extends BlockItem, B extends Block> Holder<T> registerBlockItem(Holder<B> block, BiFunction<B, Item.Properties, T> constructor, Item.Properties properties)
+    {
+        return registerItem(blockName(block), (propertiesIn) -> constructor.apply(block.value(), propertiesIn), properties);
+    }
+
+    public static String blockName(Holder<? extends Block> block)
+    {
+        return block.unwrapKey().orElseThrow().location().getPath();
     }
 
     public static <T extends Item> Holder<T> registerItem(String name, Function<Item.Properties, T> constructor)
