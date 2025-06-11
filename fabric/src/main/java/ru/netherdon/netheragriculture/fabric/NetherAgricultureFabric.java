@@ -10,7 +10,6 @@ import ru.netherdon.netheragriculture.NetherAgriculture;
 import ru.netherdon.netheragriculture.config.NACommonConfig;
 import ru.netherdon.netheragriculture.config.NAServerConfig;
 import ru.netherdon.netheragriculture.fabric.registries.NABiomeModifiers;
-import ru.netherdon.netheragriculture.fabric.registries.NABlockRenderTypes;
 import ru.netherdon.netheragriculture.fabric.registries.NACompostables;
 import ru.netherdon.netheragriculture.fabric.registries.NALootTableModifiers;
 import ru.netherdon.netheragriculture.items.StriderTreatItem;
@@ -22,7 +21,6 @@ public final class NetherAgricultureFabric implements ModInitializer
     public void onInitialize()
     {
         NetherAgriculture.initialize();
-        NABlockRenderTypes.initialize();
         NABiomeModifiers.initialize();
         NALootTableModifiers.initialize();
         NACompostables.initialize();

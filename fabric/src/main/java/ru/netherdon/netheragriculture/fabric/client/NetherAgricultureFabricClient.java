@@ -9,6 +9,7 @@ import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleType;
 import ru.netherdon.netheragriculture.client.NetherAgricultureClient;
 import ru.netherdon.netheragriculture.client.particles.IParticleProviderRegister;
+import ru.netherdon.netheragriculture.fabric.registries.NABlockRenderTypes;
 
 import java.util.function.Function;
 
@@ -27,6 +28,7 @@ public final class NetherAgricultureFabricClient implements ClientModInitializer
     public void onInitializeClient()
     {
         NetherAgricultureClient.initialize();
+        NABlockRenderTypes.initialize();
         NetherAgricultureClient.registerScreens(MenuScreens::register);
         NetherAgricultureClient.registerParticleProviders(PARTICLE_PROVIDER_REGISTER);
     }
