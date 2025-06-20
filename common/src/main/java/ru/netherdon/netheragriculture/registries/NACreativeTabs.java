@@ -111,7 +111,7 @@ public final class NACreativeTabs
 
             output.accept(NAItems.STRIDER_TREAT.value());
 
-            acceptPotionStacks(output, NAPotions.BLAZE_FLIGHT);
+            acceptPotionStacks(output, NAPotions.WARP, NAPotions.BLAZE_FLIGHT);
         })
         .build()
     );

@@ -45,6 +45,10 @@
   "item.minecraft.splash_potion.effect.blaze_flight": "Взрывное зелье полёта всполоха",
   "item.minecraft.lingering_potion.effect.blaze_flight": "Туманное зелье полёта всполоха",
   "item.minecraft.tipped_arrow.effect.blaze_flight": "Стрела полёта всполоха",
+  "item.minecraft.potion.effect.warp": "Зелье искажения",
+  "item.minecraft.splash_potion.effect.warp": "Взрывное зелье искажение",
+  "item.minecraft.lingering_potion.effect.warp": "Туманное зелье искажения",
+  "item.minecraft.tipped_arrow.effect.warp": "Стрела искажения",
 
   "block.netheragriculture.mortofruct": "Мортофрукт",
   "block.netheragriculture.crimson_berry_roots": "Корни багровой ягоды",

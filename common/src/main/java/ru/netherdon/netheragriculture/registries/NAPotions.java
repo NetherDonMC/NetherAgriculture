@@ -16,9 +16,14 @@ public final class NAPotions
         () -> new Potion(new MobEffectInstance(NAMobEffects.BLAZE_FLIGHT, 900))
     );
 
+    public static final Holder<Potion> WARP = REGISTER.register("warp",
+        () -> new Potion(new MobEffectInstance(NAMobEffects.WARP, 3600))
+    );
+
     public static void registerRecipes(PotionBrewing.Builder builder)
     {
         builder.addMix(Potions.SLOW_FALLING, NAItems.BLAZING_GOLDEN_LOTHUN.value(), BLAZE_FLIGHT);
+        builder.addMix(Potions.AWKWARD, NAItems.WARPED_BERRY.value(), WARP);
     }
 
     public static void initialize() {}

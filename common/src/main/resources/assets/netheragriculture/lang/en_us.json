@@ -45,6 +45,10 @@
   "item.minecraft.splash_potion.effect.blaze_flight": "Splash Potion of Blaze Flight",
   "item.minecraft.lingering_potion.effect.blaze_flight": "Lingering Potion of Blaze Flight",
   "item.minecraft.tipped_arrow.effect.blaze_flight": "Arrow of Blaze Flight",
+  "item.minecraft.potion.effect.warp": "Potion of Warp",
+  "item.minecraft.splash_potion.effect.warp": "Splash Potion of Warp",
+  "item.minecraft.lingering_potion.effect.warp": "Lingering Potion of Warp",
+  "item.minecraft.tipped_arrow.effect.warp": "Arrow of Warp",
 
   "block.netheragriculture.mortofruct": "Mortofruct",
   "block.netheragriculture.crimson_berry_roots": "Crimson Berry Roots",
