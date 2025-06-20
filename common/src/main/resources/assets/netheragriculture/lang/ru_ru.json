@@ -97,9 +97,13 @@
   "block.netheragriculture.small_warped_crate_of_sinful_eyes": "Малый искажённый ящик с глазами грешников",
 
   "effect.netheragriculture.warp": "Искажение",
+  "effect.netheragriculture.warp.description": "Даёт небольшой шанс спавна эндермита. Эндермены враждебны к носителю эффекта.",
   "effect.netheragriculture.blaze_flight": "Полёт всполоха",
+  "effect.netheragriculture.blaze_flight.description": "Даёт возможность летать и поджигает во время полёта.",
   "effect.netheragriculture.internal_heat": "Внутреннее тепло",
+  "effect.netheragriculture.internal_heat.description": "Лавомерка, пораженная этим эффектом, не задыхается вне источников тепла.",
   "effect.netheragriculture.long_legs": "Длинные ноги",
+  "effect.netheragriculture.long_legs.description": "Немного увеличивает высоту шага.",
 
   "death.attack.netheragriculture.falling_mortofruct": "%s оправдал название мортофрукта",
 
