@@ -102,8 +102,10 @@
 
   "effect.netheragriculture.warp": "Warp",
   "effect.netheragriculture.warp.description": "Gives a small chance to spawn an Endermite. Enderman become hostile toward the affected entity.",
+  "effect.netheragriculture.warp.desc": "Gives a small chance to spawn an Endermite.",
   "effect.netheragriculture.blaze_flight": "Blaze Flight",
-  "effect.netheragriculture.blaze_flight.description": "Gives you the ability to fly and sets you on fire while flying.",
+  "effect.netheragriculture.blaze_flight.description": "Gives player ability to fly and sets player on fire while flying.",
+  "effect.netheragriculture.blaze_flight.desc": "Gives ability to fly and causes ignition while flying.",
   "effect.netheragriculture.internal_heat": "Internal Heat",
   "effect.netheragriculture.internal_heat.description": "Strider affected by this effect does not suffocate outside heat sources.",
   "effect.netheragriculture.long_legs": "Long Legs",
