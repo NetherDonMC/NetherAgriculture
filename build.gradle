@@ -6,7 +6,12 @@ plugins {
 }
 
 def secret_props = new Properties()
-file("secret.properties").withReader("UTF-8") { secret_props.load(it) }
+def secret_props_file = file("secret.properties")
+if (secret_props_file.exists()) {
+    secret_props_file.withReader("UTF-8") {
+        secret_props.load(it)
+    }
+}
 
 ext {
     replace_properties = [
