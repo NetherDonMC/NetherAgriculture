@@ -2,6 +2,7 @@ plugins {
     id 'dev.architectury.loom' version '1.7-SNAPSHOT' apply false
     id 'architectury-plugin' version '3.4-SNAPSHOT'
     id 'com.gradleup.shadow' version '8.3.6' apply false
+    id "me.modmuss50.mod-publish-plugin" version "0.8.4"
 }
 
 ext {
@@ -22,6 +23,59 @@ architectury {
 allprojects {
     group = rootProject.maven_group
     version = rootProject.mod_version
+}
+
+publishMods {
+    version = "${mod_version}"
+    type = "${mod_version}".toLowerCase().contains("beta") ? BETA : STABLE;
+    changelog = file("LATEST_CHANGELOG.md").text
+
+    def displayNamePrefix = "${mod_name} - ${minecraft_version} - ${mod_version} - ";
+
+    def cfOpt = curseforgeOptions {
+        accessToken = providers.environmentVariable("CURSEFORGE_TOKEN")
+        projectId = "netheragriculture"
+        minecraftVersions.add("${minecraft_version}")
+        changelogType = "markdown"
+    }
+
+    def mrOpt = modrinthOptions {
+        accessToken = providers.environmentVariable("MODRINTH_TOKEN")
+        projectId = "netheragriculture"
+        minecraftVersions.add("${minecraft_version}")
+    }
+
+    def initNeoForge = { me.modmuss50.mpp.Platform platform ->
+        platform.file project(":neoforge")
+        platform.modLoaders.add("neoforge")
+        platform.displayName = displayNamePrefix + "NeoForge"
+    }
+
+    def initFabric = { me.modmuss50.mpp.Platform platform ->
+        platform.file project(":fabric")
+        platform.modLoaders.add("fabric")
+        platform.displayName = displayNamePrefix + "Fabric"
+    }
+
+    curseforge("cfNeo") {
+        from cfOpt
+        initNeoForge it
+    }
+
+    curseforge("cfFabric") {
+        from cfOpt
+        initFabric it
+    }
+
+    modrinth("mrNeo") {
+        from mrOpt
+        initNeoForge it
+    }
+
+    modrinth("mrFabric") {
+        from mrOpt
+        initFabric it
+    }
 }
 
 subprojects {

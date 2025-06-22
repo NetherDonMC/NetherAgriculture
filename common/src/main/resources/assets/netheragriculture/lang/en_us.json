@@ -101,7 +101,7 @@
   "block.netheragriculture.small_warped_crate_of_sinful_eyes": "Small Warped Crate of Sinful Eyes",
 
   "effect.netheragriculture.warp": "Warp",
-  "effect.netheragriculture.warp.description": "Grants a small chance to spawn an Endermite. Endermen become hostile toward the affected entity.",
+  "effect.netheragriculture.warp.description": "Gives a small chance to spawn an Endermite. Enderman become hostile toward the affected entity.",
   "effect.netheragriculture.blaze_flight": "Blaze Flight",
   "effect.netheragriculture.blaze_flight.description": "Gives you the ability to fly and sets you on fire while flying.",
   "effect.netheragriculture.internal_heat": "Internal Heat",
