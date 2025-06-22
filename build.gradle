@@ -5,6 +5,9 @@ plugins {
     id "me.modmuss50.mod-publish-plugin" version "0.8.4"
 }
 
+def secret_props = new Properties()
+file("secret.properties").withReader("UTF-8") { secret_props.load(it) }
+
 ext {
     replace_properties = [
         name        : rootProject.mod_name,
@@ -33,15 +36,17 @@ publishMods {
     def displayNamePrefix = "${mod_name} - ${minecraft_version} - ${mod_version} - ";
 
     def cfOpt = curseforgeOptions {
-        accessToken = providers.environmentVariable("CURSEFORGE_TOKEN")
-        projectId = "netheragriculture"
+        accessToken = secret_props['curseforge_token']
+        projectId = "504384"
         minecraftVersions.add("${minecraft_version}")
         changelogType = "markdown"
+        clientRequired = true
+        serverRequired = true
     }
 
     def mrOpt = modrinthOptions {
-        accessToken = providers.environmentVariable("MODRINTH_TOKEN")
-        projectId = "netheragriculture"
+        accessToken = secret_props['modrinth_token']
+        projectId = "8M5tPih9"
         minecraftVersions.add("${minecraft_version}")
     }
 
@@ -60,21 +65,27 @@ publishMods {
     curseforge("cfNeo") {
         from cfOpt
         initNeoForge it
+        optional("cloth-config")
     }
 
     curseforge("cfFabric") {
         from cfOpt
         initFabric it
+        optional("cloth-config")
+        requires("forge-config-api-port-fabric")
     }
 
     modrinth("mrNeo") {
         from mrOpt
         initNeoForge it
+        optional("cloth-config")
     }
 
     modrinth("mrFabric") {
         from mrOpt
         initFabric it
+        optional("cloth-config")
+        requires("forge-config-api-port")
     }
 }
 
