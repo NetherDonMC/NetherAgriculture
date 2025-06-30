@@ -17,18 +17,9 @@
   },
 
   "neoforge:conditions": [{
-    "type": "neoforge:not",
-    "value": {
-      "type": "neoforge:mod_loaded",
-      "modid": "farmersdelight"
-    }
+    "type": "netheragriculture:farmers_delight_integration"
   }],
   "fabric:load_conditions": [{
-    "condition": "fabric:not",
-    "value": {
-      "condition": "fabric:registry_contains",
-      "registry": "minecraft:recipe_serializer",
-      "values": ["farmersdelight:cooking"]
-    }
+    "condition": "netheragriculture:farmers_delight_integration"
   }]
 }

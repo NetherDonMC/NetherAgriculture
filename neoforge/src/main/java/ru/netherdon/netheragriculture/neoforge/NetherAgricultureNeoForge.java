@@ -7,6 +7,7 @@ import net.neoforged.fml.config.ModConfig;
 import ru.netherdon.netheragriculture.NetherAgriculture;
 import ru.netherdon.netheragriculture.config.NACommonConfig;
 import ru.netherdon.netheragriculture.config.NAServerConfig;
+import ru.netherdon.netheragriculture.neoforge.registries.NADataLoadConditions;
 import ru.netherdon.netheragriculture.neoforge.registries.NALootModifiers;
 import ru.netherdon.netheragriculture.services.neoforge.RegistryManagerImpl;
 
@@ -17,6 +18,7 @@ public class NetherAgricultureNeoForge
     {
         NetherAgriculture.initialize();
         NALootModifiers.initialize();
+        NADataLoadConditions.initialize();
         RegistryManagerImpl.registerDeferredRegistries(modEventBus);
 
         modContainer.registerConfig(ModConfig.Type.SERVER, NAServerConfig.getSpec(), NAServerConfig.FILE_NAME);

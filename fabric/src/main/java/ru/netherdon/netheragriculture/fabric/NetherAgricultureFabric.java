@@ -12,6 +12,7 @@ import ru.netherdon.netheragriculture.config.NAServerConfig;
 import ru.netherdon.netheragriculture.fabric.registries.NABiomeModifiers;
 import ru.netherdon.netheragriculture.fabric.registries.NACompostables;
 import ru.netherdon.netheragriculture.fabric.registries.NALootTableModifiers;
+import ru.netherdon.netheragriculture.fabric.registries.NAResourceConditions;
 import ru.netherdon.netheragriculture.items.StriderTreatItem;
 import ru.netherdon.netheragriculture.registries.NAPotions;
 
@@ -24,6 +25,7 @@ public final class NetherAgricultureFabric implements ModInitializer
         NABiomeModifiers.initialize();
         NALootTableModifiers.initialize();
         NACompostables.initialize();
+        NAResourceConditions.initialize();
 
         NeoForgeConfigRegistry.INSTANCE.register(NetherAgriculture.ID, ModConfig.Type.SERVER, NAServerConfig.getSpec(), NAServerConfig.FILE_NAME);
         NeoForgeConfigRegistry.INSTANCE.register(NetherAgriculture.ID, ModConfig.Type.COMMON, NACommonConfig.getSpec(), NACommonConfig.FILE_NAME);
