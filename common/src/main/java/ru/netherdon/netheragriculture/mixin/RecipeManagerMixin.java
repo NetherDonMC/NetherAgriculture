@@ -34,7 +34,7 @@ public abstract class RecipeManagerMixin
     )
     public void removeRecipes(Map<ResourceLocation, JsonElement> map, ResourceManager resourceManager, ProfilerFiller profilerFiller, CallbackInfo ci)
     {
-        if (NACommonConfig.get().overrides.isRemovingRecipeEnabled())
+        if (NACommonConfig.get().modCompatibility.nethersDelight().isOnlyBlackFurnaceUsed())
         {
             na$removeRecipesFor(OtherModNames.MY_NETHERS_DELIGHT, map, NA$MYNETHERSDELIGHT_RECIPES);
         }

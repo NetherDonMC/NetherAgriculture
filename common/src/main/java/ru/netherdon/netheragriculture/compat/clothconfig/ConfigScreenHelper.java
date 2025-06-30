@@ -2,12 +2,10 @@ package ru.netherdon.netheragriculture.compat.clothconfig;
 
 import com.google.common.collect.Lists;
 import me.shedaniel.clothconfig2.api.ConfigEntryBuilder;
-import me.shedaniel.clothconfig2.impl.builders.AbstractFieldBuilder;
-import me.shedaniel.clothconfig2.impl.builders.BooleanToggleBuilder;
-import me.shedaniel.clothconfig2.impl.builders.IntFieldBuilder;
-import me.shedaniel.clothconfig2.impl.builders.IntSliderBuilder;
+import me.shedaniel.clothconfig2.impl.builders.*;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
+import net.minecraft.util.StringRepresentable;
 import net.neoforged.neoforge.common.ModConfigSpec;
 
 import java.util.List;
@@ -20,6 +18,19 @@ public final class ConfigScreenHelper
     private static final Component INWORLD_CATEGORY_DESCRIPTION = text("config","inworld_category_description").withStyle(ChatFormatting.RED);
     private static final Component ONLINE_MODE_CATEGORY_DESCRIPTION = text("config","online_mode_category_description").withStyle(ChatFormatting.RED);
     private static final Component CHANGE_ALERT = text("config", "server_properties_change_alert").withStyle(ChatFormatting.YELLOW);
+
+    public static <T extends Enum<T>> EnumSelectorBuilder<T> enumSelector(ModConfigSpec.EnumValue<T> configValue, ConfigEntryBuilder builder, Class<T> enumClass, ConfigPermission permission)
+    {
+        return init(
+            builder.startEnumSelector(name(configValue), enumClass, value(configValue, permission))
+                .setEnumNameProvider((val) -> Component.literal(
+                    val instanceof StringRepresentable str
+                        ? str.getSerializedName()
+                        : val.name()
+                )),
+            configValue, permission
+        );
+    }
 
     public static BooleanToggleBuilder booleanToggle(ModConfigSpec.BooleanValue configValue, ConfigEntryBuilder builder, ConfigPermission permission)
     {

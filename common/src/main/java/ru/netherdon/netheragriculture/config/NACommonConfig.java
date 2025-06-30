@@ -5,74 +5,31 @@ import net.neoforged.neoforge.common.ModConfigSpec;
 import org.apache.commons.lang3.tuple.Pair;
 import org.jetbrains.annotations.Nullable;
 import ru.netherdon.netheragriculture.NetherAgriculture;
+import ru.netherdon.netheragriculture.config.settings.common.FabricLootModifierSettings;
+import ru.netherdon.netheragriculture.config.settings.common.LootModifierSettings;
+import ru.netherdon.netheragriculture.config.settings.common.ModCompatibilitySettings;
+import ru.netherdon.netheragriculture.config.settings.common.OverrideSettings;
 import ru.netherdon.netheragriculture.misc.ModLoaderTypes;
+import ru.netherdon.netheragriculture.misc.TranslationBuilder;
 import ru.netherdon.netheragriculture.services.ModLoaderService;
 
 import static ru.netherdon.netheragriculture.misc.TranslationHelper.key;
+import static net.neoforged.neoforge.common.ModConfigSpec.*;
 
 public final class NACommonConfig
 {
     public static final String FILE_NAME = NetherAgriculture.ID + "/common.toml";
-    private static final ModConfigSpec.Builder BUILDER = new ModConfigSpec.Builder();
+    private static final Builder BUILDER = new Builder();
     private static final Pair<NACommonConfig, ModConfigSpec> PAIR = BUILDER.configure(NACommonConfig::new);
 
-    private static final String CONFIG = "config";
-    private static final String OVERRIDES = "overrides";
-    private static final String LOOT = "loot";
-
     public final OverrideSettings overrides;
+    public final ModCompatibilitySettings modCompatibility;
 
-    private NACommonConfig(ModConfigSpec.Builder builder)
+    private NACommonConfig(Builder builder)
     {
-        this.overrides = new OverrideSettings(
-            builder.push("Overrides")
-                .worldRestart()
-                .translation(key(CONFIG, OVERRIDES, "removing_recipes"))
-                .define("removingRecipesEnabled", ConfigConstants.IS_REMOVING_RECIPES_ENABLED),
-
-            loadLoot(builder)
-        );
-        builder.pop();
-    }
-
-    private static LootModifierSettings loadLoot(ModConfigSpec.Builder builder)
-    {
-        FabricLootModifierSettings fabricModifiers = null;
-
-        if (ModLoaderService.getModLoaderType() == ModLoaderTypes.FABRIC)
-        {
-            fabricModifiers = new FabricLootModifierSettings(
-                builder.push("Loot Modifiers")
-                    .worldRestart()
-                    .translation(key(CONFIG, OVERRIDES, LOOT, "strider"))
-                    .define("striderEnabled", ConfigConstants.IS_LOOT_MODIFIER_STRIDER_LEG_ENABLED),
-
-                builder
-                    .worldRestart()
-                    .translation(key(CONFIG, OVERRIDES, LOOT, "hoglin"))
-                    .define("hoglinEnabled", ConfigConstants.IS_LOOT_MODIFIER_HOGLIN_MEAT_ENABLED),
-
-                builder
-                    .worldRestart()
-                    .translation(key(CONFIG, OVERRIDES, LOOT, "nether_bridge"))
-                    .define("netherBridgeEnabled", ConfigConstants.IS_LOOT_MODIFIER_NETHER_BRIDGE_ENABLED),
-
-                builder
-                    .worldRestart()
-                    .translation(key(CONFIG, OVERRIDES, LOOT, "bastion_hoglin_stable"))
-                    .define("bastionHoglinStableEnabled", ConfigConstants.IS_LOOT_MODIFIER_BASTION_HOGLIN_STABLE_ENABLED)
-            );
-        }
-
-        builder.push("Loot Modifiers");
-        var result = new LootModifierSettings(
-            builder.worldRestart()
-                .translation(key(CONFIG, OVERRIDES, LOOT, "piglin_bartering"))
-                .define("piglinBarteringEnabled", ConfigConstants.IS_LOOT_MODIFIER_PIGLIN_BARTERING_ENABLED),
-            fabricModifiers
-        );
-        builder.pop();
-        return result;
+        TranslationBuilder translation = new TranslationBuilder("config.common");
+        this.overrides = OverrideSettings.create(builder, translation);
+        this.modCompatibility = ModCompatibilitySettings.create(builder, translation);
     }
 
     public static NACommonConfig get()
@@ -83,34 +40,5 @@ public final class NACommonConfig
     public static IConfigSpec getSpec()
     {
         return PAIR.getRight();
-    }
-
-    public record OverrideSettings(
-        ModConfigSpec.BooleanValue removingRecipeEnabled,
-        LootModifierSettings lootModifier
-    )
-    {
-        public boolean isRemovingRecipeEnabled() { return this.removingRecipeEnabled.getAsBoolean(); }
-    }
-
-    public record LootModifierSettings(
-        ModConfigSpec.BooleanValue piglinBarteringEnabled,
-        @Nullable FabricLootModifierSettings fabric
-    )
-    {
-        public boolean isPiglinBarteringEnabled() { return this.piglinBarteringEnabled.getAsBoolean(); }
-    }
-
-    public record FabricLootModifierSettings(
-        ModConfigSpec.BooleanValue striderEnabled,
-        ModConfigSpec.BooleanValue hoglinEnabled,
-        ModConfigSpec.BooleanValue bastionHoglinStableEnabled,
-        ModConfigSpec.BooleanValue netherBridgeEnabled
-    )
-    {
-        public boolean isStriderEnabled() { return this.striderEnabled.getAsBoolean(); }
-        public boolean isHoglinEnabled() { return this.hoglinEnabled.getAsBoolean(); }
-        public boolean isBastionHoglinStableEnabled() { return this.bastionHoglinStableEnabled.getAsBoolean(); }
-        public boolean isNetherBridgeEnabled() { return this.netherBridgeEnabled.getAsBoolean(); }
     }
 }

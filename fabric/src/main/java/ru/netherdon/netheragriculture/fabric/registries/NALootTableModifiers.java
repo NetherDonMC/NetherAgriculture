@@ -22,6 +22,7 @@ import net.minecraft.world.level.storage.loot.functions.SmeltItemFunction;
 import ru.netherdon.netheragriculture.NetherAgriculture;
 import ru.netherdon.netheragriculture.compat.OtherModNames;
 import ru.netherdon.netheragriculture.config.NACommonConfig;
+import ru.netherdon.netheragriculture.config.settings.common.LootModifierSettings;
 import ru.netherdon.netheragriculture.misc.LootTableHelper;
 import ru.netherdon.netheragriculture.registries.NAItems;
 import ru.netherdon.netheragriculture.registries.NAPiglinBartering;
@@ -155,7 +156,7 @@ public final class NALootTableModifiers
         return ResourceKey.create(Registries.LOOT_TABLE, NetherAgriculture.location(name));
     }
 
-    private static NACommonConfig.LootModifierSettings config()
+    private static LootModifierSettings config()
     {
         return NACommonConfig.get().overrides.lootModifier();
     }
