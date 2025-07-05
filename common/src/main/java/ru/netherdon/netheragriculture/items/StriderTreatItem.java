@@ -23,7 +23,7 @@ public class StriderTreatItem extends Item
 {
     private static final Lazy<List<MobEffectInstance>> EFFECTS = Lazy.lazy(() -> List.of(
         new MobEffectInstance(NAMobEffects.INTERNAL_HEAT, 6000, 0),
-        new MobEffectInstance(NAMobEffects.LONG_LEGS, 6000, 2),
+        new MobEffectInstance(NAMobEffects.LONG_LEGS, 6000, 0),
         new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 6000, 0),
         new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 6000, 0)
     ));

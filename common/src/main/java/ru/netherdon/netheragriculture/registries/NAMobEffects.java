@@ -42,7 +42,7 @@ public final class NAMobEffects
                 .addAttributeModifier(
                     Attributes.STEP_HEIGHT,
                     NetherAgriculture.location("long_legs_mob_effect"),
-                    0.3f,
+                    0.9f,
                     AttributeModifier.Operation.ADD_VALUE
                 )
         );
