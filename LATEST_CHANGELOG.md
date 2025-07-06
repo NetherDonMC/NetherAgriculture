@@ -1,5 +1,15 @@
 ### Common
-- Added the **Long Legs** effect, which slightly increases step height.
-- Strider treat now applies **Long Legs III** to strider.
-- Added in-game effect descriptions.
-- Added potion of warp.
+- Added a chance for the following items to generate in Nether Fortress chests:
+  - Blaze Fruit,
+  - Crimson Berry Seeds,
+  - Crimson Berry,
+  - Warped Berry Seeds,
+  - Warped Berry,
+  - Azure Melon Seeds,
+  - Azure Melon Slice,
+  - Lothun,
+  - Sinful Eyes,
+  - Blazing Blend (Very low chance).
+- Config structure has been redesigned.
+- 'Long Legs' effect now increases step height more.
+- The level of the 'Long Legs' effect granted by the Strider Treat has been reduced from 3 to 1.

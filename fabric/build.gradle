@@ -9,6 +9,16 @@ architectury {
 
 loom {
     accessWidenerPath = file("src/main/resources/${mod_id}.fabric.accesswidener")
+    runs {
+        client {
+            runDir = "run/client"
+            client()
+        }
+        server {
+            runDir = "run/server"
+            server()
+        }
+    }
 }
 
 configurations {

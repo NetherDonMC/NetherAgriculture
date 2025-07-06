@@ -5,14 +5,6 @@ plugins {
     id "me.modmuss50.mod-publish-plugin" version "0.8.4"
 }
 
-def secret_props = new Properties()
-def secret_props_file = file("secret.properties")
-if (secret_props_file.exists()) {
-    secret_props_file.withReader("UTF-8") {
-        secret_props.load(it)
-    }
-}
-
 ext {
     replace_properties = [
         name        : rootProject.mod_name,
@@ -41,7 +33,7 @@ publishMods {
     def displayNamePrefix = "${mod_name} - ${minecraft_version} - ${mod_version} - ";
 
     def cfOpt = curseforgeOptions {
-        accessToken = secret_props['curseforge_token']
+        accessToken = providers.environmentVariable("CURSEFORGE_TOKEN")
         projectId = "504384"
         minecraftVersions.add("${minecraft_version}")
         changelogType = "markdown"
@@ -50,7 +42,7 @@ publishMods {
     }
 
     def mrOpt = modrinthOptions {
-        accessToken = secret_props['modrinth_token']
+        accessToken = providers.environmentVariable("MODRINTH_TOKEN")
         projectId = "8M5tPih9"
         minecraftVersions.add("${minecraft_version}")
     }
@@ -67,30 +59,38 @@ publishMods {
         platform.displayName = displayNamePrefix + "Fabric"
     }
 
-    curseforge("cfNeo") {
-        from cfOpt
-        initNeoForge it
-        optional("cloth-config")
+    def targetPlatform = providers.environmentVariable("PUBLISH_TARGET_PLATFORM") ?: "All";
+    def neoForgeAvailable = targetPlatform == "All" || targetPlatform == "NeoForge";
+    def fabricAvailable = targetPlatform == "All" || targetPlatform == "Fabric";
+
+    if (neoForgeAvailable) {
+        curseforge("cfNeo") {
+            from cfOpt
+            initNeoForge it
+            optional("cloth-config")
+        }
+
+        modrinth("mrNeo") {
+            from mrOpt
+            initNeoForge it
+            optional("cloth-config")
+        }
     }
 
-    curseforge("cfFabric") {
-        from cfOpt
-        initFabric it
-        optional("cloth-config")
-        requires("forge-config-api-port-fabric")
-    }
+    if (fabricAvailable) {
+        curseforge("cfFabric") {
+            from cfOpt
+            initFabric it
+            optional("cloth-config")
+            requires("forge-config-api-port-fabric")
+        }
 
-    modrinth("mrNeo") {
-        from mrOpt
-        initNeoForge it
-        optional("cloth-config")
-    }
-
-    modrinth("mrFabric") {
-        from mrOpt
-        initFabric it
-        optional("cloth-config")
-        requires("forge-config-api-port")
+        modrinth("mrFabric") {
+            from mrOpt
+            initFabric it
+            optional("cloth-config")
+            requires("forge-config-api-port")
+        }
     }
 }
 

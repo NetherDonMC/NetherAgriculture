@@ -1,0 +1,38 @@
+name: Publish Mod
+
+on:
+  workflow_dispatch:
+    inputs:
+      target-platform:
+        description: "Target Mod Loader"
+        type: choice
+        options:
+          - All
+          - NeoForge
+          - Fabric
+        default: All
+        required: true
+
+jobs:
+  publish:
+    name: Run publishMods
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: Publish with Gradle
+        uses: gradle/actions/setup-gradle@v3
+        with:
+          arguments: publishMods
+        env:
+          PUBLISH_TARGET_PLATFORM: ${{ inputs.target-platform }}
+          MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
+          CURSEFORGE_TOKEN: ${{ secrets.CURSEFORGE_TOKEN }}
