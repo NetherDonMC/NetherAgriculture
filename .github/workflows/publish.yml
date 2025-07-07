@@ -28,10 +28,11 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
 
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
+
       - name: Publish with Gradle
-        uses: gradle/actions/setup-gradle@v3
-        with:
-          arguments: publishMods
+        run: ./gradlew publishMods
         env:
           PUBLISH_TARGET_PLATFORM: ${{ inputs.target-platform }}
           MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
