@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    { "item": "netheragriculture:small_glowing_crate" },
+    { "item": "netheragriculture:blaze_fruit" },
+    { "item": "netheragriculture:blaze_fruit" },
+    { "item": "netheragriculture:blaze_fruit" },
+    { "item": "netheragriculture:blaze_fruit" }
+  ],
+  "result": {
+    "id": "netheragriculture:small_glowing_crate_of_blaze_fruit",
+    "count": 1
+  }
+}

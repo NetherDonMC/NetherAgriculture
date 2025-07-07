@@ -1,0 +1,6 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "netheragriculture:item/glowing_hanging_sign"
+	}
+}

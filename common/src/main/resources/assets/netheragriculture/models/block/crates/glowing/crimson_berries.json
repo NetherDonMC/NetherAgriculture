@@ -1,0 +1,6 @@
+{
+  "parent": "netheragriculture:block/base/glowing_crate",
+  "textures": {
+    "top": "netheragriculture:block/glowing_crate_of_crimson_berries"
+  }
+}

@@ -6,6 +6,15 @@
     "netheragriculture:small_crimson_crate",
     "netheragriculture:warped_crate",
     "netheragriculture:small_warped_crate",
+    "netheragriculture:glowing_stem",
+    "netheragriculture:stripped_glowing_stem",
+    "netheragriculture:glowing_hyphae",
+    "netheragriculture:stripped_glowing_hyphae",
+    "netheragriculture:glowing_planks",
+    "netheragriculture:glowing_stairs",
+    "netheragriculture:glowing_slab",
+    "netheragriculture:glowing_fence",
+    "netheragriculture:glowing_fence_gate",
     "netheragriculture:crimson_crate_of_crimson_berries",
     "netheragriculture:small_crimson_crate_of_crimson_berries",
     "netheragriculture:warped_crate_of_crimson_berries",
@@ -29,6 +38,21 @@
     "netheragriculture:crimson_crate_of_sinful_eyes",
     "netheragriculture:small_crimson_crate_of_sinful_eyes",
     "netheragriculture:warped_crate_of_sinful_eyes",
-    "netheragriculture:small_warped_crate_of_sinful_eyes"
+    "netheragriculture:small_warped_crate_of_sinful_eyes",
+
+    "netheragriculture:glowing_crate",
+    "netheragriculture:small_glowing_crate",
+    "netheragriculture:glowing_crate_of_crimson_berries",
+    "netheragriculture:small_glowing_crate_of_crimson_berries",
+    "netheragriculture:glowing_crate_of_warped_berries",
+    "netheragriculture:small_glowing_crate_of_warped_berries",
+    "netheragriculture:glowing_crate_of_lothun",
+    "netheragriculture:small_glowing_crate_of_lothun",
+    "netheragriculture:glowing_crate_of_blazing_golden_lothun",
+    "netheragriculture:small_glowing_crate_of_blazing_golden_lothun",
+    "netheragriculture:glowing_crate_of_blaze_fruit",
+    "netheragriculture:small_glowing_crate_of_blaze_fruit",
+    "netheragriculture:glowing_crate_of_sinful_eyes",
+    "netheragriculture:small_glowing_crate_of_sinful_eyes"
   ]
 }

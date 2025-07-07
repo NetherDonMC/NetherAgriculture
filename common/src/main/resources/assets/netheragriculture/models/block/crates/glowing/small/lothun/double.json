@@ -1,0 +1,6 @@
+{
+  "parent": "netheragriculture:block/base/small_glowing_crate/double",
+  "textures": {
+    "top": "netheragriculture:block/glowing_crate_of_lothun"
+  }
+}

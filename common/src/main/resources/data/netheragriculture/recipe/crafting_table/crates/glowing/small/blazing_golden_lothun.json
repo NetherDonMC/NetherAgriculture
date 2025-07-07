@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    { "item": "netheragriculture:small_glowing_crate" },
+    { "item": "netheragriculture:blazing_golden_lothun" },
+    { "item": "netheragriculture:blazing_golden_lothun" },
+    { "item": "netheragriculture:blazing_golden_lothun" },
+    { "item": "netheragriculture:blazing_golden_lothun" }
+  ],
+  "result": {
+    "id": "netheragriculture:small_glowing_crate_of_blazing_golden_lothun",
+    "count": 1
+  }
+}

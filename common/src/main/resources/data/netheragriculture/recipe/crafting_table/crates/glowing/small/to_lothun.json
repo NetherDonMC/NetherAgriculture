@@ -1,0 +1,13 @@
+{
+  "type": "netheragriculture:emptying_storage",
+  "input": {
+    "item": "netheragriculture:small_glowing_crate_of_lothun"
+  },
+  "storage": {
+    "id": "netheragriculture:small_glowing_crate"
+  },
+  "result": {
+    "id": "netheragriculture:lothun",
+    "count": 4
+  }
+}

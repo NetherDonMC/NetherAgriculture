@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "PPP",
+      "PPP"
+    ],
+    "key": {
+		"P": {
+			"item": "netheragriculture:glowing_planks"
+		}
+    },
+    "result": {
+		"id": "netheragriculture:glowing_trapdoor",
+		"count": 2
+    }
+}

@@ -21,6 +21,7 @@ public class NetherAgriculture
         NARecipeTypes.initialize();
         NAParticleTypes.initialize();
         NAFeatures.initialize();
+        NAWoodTypes.initialize();
     }
 
     public static ResourceLocation location(String path)

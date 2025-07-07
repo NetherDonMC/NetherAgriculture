@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "netheragriculture:block/glowing_slab/bottom"
+    },
+    "type=double": {
+      "model": "netheragriculture:block/glowing_planks"
+    },
+    "type=top": {
+      "model": "netheragriculture:block/glowing_slab/top"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "type=bottom,open=true": {
+      "model": "netheragriculture:block/crates/glowing/small/opened/bottom"
+    },
+    "type=double,open=true": {
+      "model": "netheragriculture:block/crates/glowing/small/opened/double"
+    },
+    "type=top,open=true": {
+      "model": "netheragriculture:block/crates/glowing/small/opened/top"
+    },
+    "type=bottom,open=false": {
+      "model": "netheragriculture:block/crates/glowing/small/closed/bottom"
+    },
+    "type=double,open=false": {
+      "model": "netheragriculture:block/crates/glowing/small/closed/double"
+    },
+    "type=top,open=false": {
+      "model": "netheragriculture:block/crates/glowing/small/closed/top"
+    }
+  }
+}

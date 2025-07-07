@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "netheragriculture:block/crates/glowing/small/crimson_berries/bottom"
+    },
+    "type=double": {
+      "model": "netheragriculture:block/crates/glowing/small/crimson_berries/double"
+    },
+    "type=top": {
+      "model": "netheragriculture:block/crates/glowing/small/crimson_berries/top"
+    }
+  }
+}

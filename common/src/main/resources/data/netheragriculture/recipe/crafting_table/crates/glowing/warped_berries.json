@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    { "item": "netheragriculture:warped_berry" },
+    { "item": "netheragriculture:warped_berry" },
+    { "item": "netheragriculture:warped_berry" },
+    { "item": "netheragriculture:warped_berry" },
+    { "item": "netheragriculture:glowing_crate" },
+    { "item": "netheragriculture:warped_berry" },
+    { "item": "netheragriculture:warped_berry" },
+    { "item": "netheragriculture:warped_berry" },
+    { "item": "netheragriculture:warped_berry" }
+  ],
+  "result": {
+    "id": "netheragriculture:glowing_crate_of_warped_berries",
+    "count": 1
+  }
+}

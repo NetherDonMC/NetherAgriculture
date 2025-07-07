@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+		"SS",
+		"SS"
+    ],
+    "key": {
+		"S": {
+			"item": "netheragriculture:stripped_glowing_stem"
+		}
+    },
+    "result": {
+		"id": "netheragriculture:stripped_glowing_hyphae",
+		"count": 3
+    }
+}

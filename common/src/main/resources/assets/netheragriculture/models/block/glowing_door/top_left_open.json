@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/door_top_left_open",
+  "render_type": "cutout",
+  "textures": {
+    "bottom": "netheragriculture:block/glowing_door_bottom",
+    "top": "netheragriculture:block/glowing_door_top"
+  }
+}

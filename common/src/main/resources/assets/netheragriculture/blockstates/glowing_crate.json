@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "open=true": {
+      "model": "netheragriculture:block/crates/glowing/opened"
+    },
+    "open=false": {
+      "model": "netheragriculture:block/crates/glowing/closed"
+    }
+  }
+}

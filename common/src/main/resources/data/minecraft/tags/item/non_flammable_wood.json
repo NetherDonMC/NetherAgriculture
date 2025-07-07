@@ -1,0 +1,20 @@
+{
+  "replace": false,
+  "values": [
+    "netheragriculture:glowing_stem",
+    "netheragriculture:stripped_glowing_stem",
+    "netheragriculture:glowing_hyphae",
+    "netheragriculture:stripped_glowing_hyphae",
+    "netheragriculture:glowing_planks",
+    "netheragriculture:glowing_stairs",
+    "netheragriculture:glowing_slab",
+    "netheragriculture:glowing_fence",
+    "netheragriculture:glowing_fence_gate",
+    "netheragriculture:glowing_door",
+    "netheragriculture:glowing_trapdoor",
+    "netheragriculture:glowing_pressure_plate",
+    "netheragriculture:glowing_button",
+    "netheragriculture:glowing_sign",
+    "netheragriculture:glowing_hanging_sign"
+  ]
+}

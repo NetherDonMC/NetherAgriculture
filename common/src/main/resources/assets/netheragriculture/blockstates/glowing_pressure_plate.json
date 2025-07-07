@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "netheragriculture:block/glowing_pressure_plate/up"
+    },
+    "powered=true": {
+      "model": "netheragriculture:block/glowing_pressure_plate/down"
+    }
+  }
+}

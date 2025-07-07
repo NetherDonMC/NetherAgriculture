@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+		"###"
+    ],
+    "key": {
+		"#": {
+			"item": "netheragriculture:glowing_crate"
+		}
+    },
+    "result": {
+		"id": "netheragriculture:small_glowing_crate",
+		"count": 6
+    }
+}

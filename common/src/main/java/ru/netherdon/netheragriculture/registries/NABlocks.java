@@ -1,8 +1,10 @@
 package ru.netherdon.netheragriculture.registries;
 
+import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.data.worldgen.features.TreeFeatures;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
@@ -14,6 +16,7 @@ import ru.netherdon.netheragriculture.blocks.*;
 import ru.netherdon.netheragriculture.services.RegistryManager;
 
 import java.util.function.Function;
+import java.util.function.Supplier;
 import java.util.function.ToIntFunction;
 
 public final class NABlocks
@@ -185,15 +188,164 @@ public final class NABlocks
     );
 
     public static final Holder<FungusBlock> GLOWING_FUNGUS = REGISTER.register("glowing_fungus", () -> new GlowingFungusBlock(
-        TreeFeatures.CRIMSON_FUNGUS,
+        NAFeatureKeys.GLOWING_FUNGUS,
         BlockBehaviour.Properties.of()
             .mapColor(MapColor.COLOR_YELLOW)
             .instabreak()
             .noCollission()
             .sound(SoundType.FUNGUS)
-            .lightLevel((state) -> 7)
+            .lightLevel(maxLight())
             .pushReaction(PushReaction.DESTROY)
     ) {});
+
+    public static final Holder<Block> GLOWING_WART_BLOCK = registerSimpleBlock("glowing_wart_block",
+        BlockBehaviour.Properties.of()
+            .mapColor(MapColor.COLOR_YELLOW)
+            .strength(1f)
+            .lightLevel(maxLight())
+            .sound(SoundType.WART_BLOCK)
+    );
+
+    public static final Holder<Block> GLOWING_STEM = registerBlock("glowing_stem", RotatedPillarBlock::new,
+        BlockBehaviour.Properties.of()
+            .mapColor(MapColor.COLOR_YELLOW)
+            .instrument(NoteBlockInstrument.BASS)
+            .strength(2f)
+            .lightLevel(maxLight())
+            .sound(SoundType.STEM)
+    );
+
+    public static final Holder<Block> GLOWING_HYPHAE = registerBlock("glowing_hyphae", RotatedPillarBlock::new,
+        BlockBehaviour.Properties.of()
+            .mapColor(MapColor.COLOR_YELLOW)
+            .instrument(NoteBlockInstrument.BASS)
+            .strength(2f)
+            .lightLevel(maxLight())
+            .sound(SoundType.STEM)
+    );
+
+    public static final Holder<Block> STRIPPED_GLOWING_STEM = registerBlock("stripped_glowing_stem", RotatedPillarBlock::new,
+        BlockBehaviour.Properties.of()
+            .mapColor(MapColor.COLOR_YELLOW)
+            .instrument(NoteBlockInstrument.BASS)
+            .strength(2f)
+            .lightLevel(maxLight())
+            .sound(SoundType.STEM)
+    );
+
+    public static final Holder<Block> STRIPPED_GLOWING_HYPHAE = registerBlock("stripped_glowing_hyphae", RotatedPillarBlock::new,
+        BlockBehaviour.Properties.of()
+            .mapColor(MapColor.COLOR_YELLOW)
+            .instrument(NoteBlockInstrument.BASS)
+            .strength(2f)
+            .lightLevel(maxLight())
+            .sound(SoundType.STEM)
+    );
+
+    public static final Holder<Block> GLOWING_PLANKS = registerSimpleBlock("glowing_planks",
+        BlockBehaviour.Properties.of()
+            .mapColor(MapColor.COLOR_YELLOW)
+            .instrument(NoteBlockInstrument.BASS)
+            .strength(2f, 3f)
+            .lightLevel(maxLight())
+            .sound(SoundType.NETHER_WOOD)
+    );
+
+    public static final Holder<StairBlock> GLOWING_STAIRS = REGISTER.register("glowing_stairs", () -> new StairBlock(
+        GLOWING_PLANKS.value().defaultBlockState(),
+        BlockBehaviour.Properties.ofFullCopy(GLOWING_PLANKS.value())
+    ) {});
+
+    public static final Holder<SlabBlock> GLOWING_SLAB = registerBlock("glowing_slab", SlabBlock::new,
+        () -> BlockBehaviour.Properties.ofFullCopy(GLOWING_PLANKS.value())
+    );
+
+    public static final Holder<FenceBlock> GLOWING_FENCE = registerBlock("glowing_fence", FenceBlock::new,
+        () -> BlockBehaviour.Properties.ofFullCopy(GLOWING_PLANKS.value())
+    );
+
+    public static final Holder<FenceGateBlock> GLOWING_FENCE_GATE = REGISTER.register("glowing_fence_gate", () -> new FenceGateBlock(
+        NAWoodTypes.GLOWING,
+        BlockBehaviour.Properties.ofFullCopy(GLOWING_PLANKS.value())
+    ));
+
+    public static final Holder<DoorBlock> GLOWING_DOOR = REGISTER.register("glowing_door", () -> new DoorBlock(
+        NAWoodTypes.GLOWING_BLOCK_SET,
+        BlockBehaviour.Properties.of()
+            .mapColor(GLOWING_PLANKS.value().defaultMapColor())
+            .instrument(NoteBlockInstrument.BASS)
+            .strength(3f)
+            .lightLevel(maxLight())
+            .noOcclusion()
+            .pushReaction(PushReaction.DESTROY)
+    ) {});
+
+    public static final Holder<TrapDoorBlock> GLOWING_TRAPDOOR = REGISTER.register("glowing_trapdoor", () -> new TrapDoorBlock(
+        NAWoodTypes.GLOWING_BLOCK_SET,
+        BlockBehaviour.Properties.of()
+            .mapColor(GLOWING_PLANKS.value().defaultMapColor())
+            .instrument(NoteBlockInstrument.BASS)
+            .strength(3f)
+            .lightLevel(maxLight())
+            .noOcclusion()
+            .isValidSpawn(NABlocks::never)
+    ) {});
+
+    public static final Holder<PressurePlateBlock> GLOWING_PRESSURE_PLATE = REGISTER.register("glowing_pressure_plate", () -> new PressurePlateBlock(
+        NAWoodTypes.GLOWING_BLOCK_SET,
+        BlockBehaviour.Properties.of()
+            .mapColor(GLOWING_PLANKS.value().defaultMapColor())
+            .forceSolidOn()
+            .instrument(NoteBlockInstrument.BASS)
+            .noCollission()
+            .strength(0.5f)
+            .lightLevel(maxLight())
+            .pushReaction(PushReaction.DESTROY)
+    ) {});
+
+    public static final Holder<ButtonBlock> GLOWING_BUTTON = REGISTER.register("glowing_button", () -> new ButtonBlock(
+        NAWoodTypes.GLOWING_BLOCK_SET,
+        30,
+        BlockBehaviour.Properties.of()
+            .noCollission()
+            .strength(0.5f)
+            .lightLevel(maxLight())
+            .pushReaction(PushReaction.DESTROY)
+    ) {});
+
+    public static final Holder<CustomStandingSignBlock> GLOWING_SIGN = REGISTER.register("glowing_sign", () -> new CustomStandingSignBlock(
+        NAWoodTypes.GLOWING,
+        BlockBehaviour.Properties.of()
+            .mapColor(GLOWING_PLANKS.value().defaultMapColor())
+            .instrument(NoteBlockInstrument.BASS)
+            .forceSolidOn()
+            .noCollission()
+            .strength(1f)
+            .lightLevel(maxLight())
+    ));
+
+    public static final Holder<CustomWallSignBlock> GLOWING_WALL_SIGN = REGISTER.register("glowing_wall_sign", () -> new CustomWallSignBlock(
+        NAWoodTypes.GLOWING,
+        BlockBehaviour.Properties.ofFullCopy(GLOWING_SIGN.value())
+            .dropsLike(GLOWING_SIGN.value())
+    ));
+
+    public static final Holder<CustomCeilingHangingSignBlock> GLOWING_HANGING_SIGN = REGISTER.register("glowing_hanging_sign", () -> new CustomCeilingHangingSignBlock(
+        NAWoodTypes.GLOWING,
+        BlockBehaviour.Properties.of()
+            .mapColor(GLOWING_PLANKS.value().defaultMapColor())
+            .forceSolidOn()
+            .instrument(NoteBlockInstrument.BASS)
+            .noCollission()
+            .strength(1f)
+            .lightLevel(maxLight())
+    ));
+
+    public static final Holder<CustomWallHangingSignBlock> GLOWING_WALL_HANGING_SIGN = REGISTER.register("glowing_wall_hanging_sign", () -> new CustomWallHangingSignBlock(
+        NAWoodTypes.GLOWING,
+        BlockBehaviour.Properties.ofFullCopy(GLOWING_HANGING_SIGN.value())
+            .dropsLike(GLOWING_HANGING_SIGN.value())
+    ));
 
     public static final Holder<AzureMelonBlock> AZURE_MELON = registerBlock("azure_melon", AzureMelonBlock::new, NABlockProperties.AZURE_MELON);
     public static final Holder<AzureMelonCropBlock> AZURE_MELON_CROP = registerBlock("azure_melon_crop", AzureMelonCropBlock::new, NABlockProperties.AZURE_MELON);
@@ -205,42 +357,70 @@ public final class NABlocks
     public static final Holder<SlabBlock> SMALL_CRIMSON_CRATE = registerBlock("small_crimson_crate", SmallCrateBlock::new, NABlockProperties.CRIMSON_CRATE);
     public static final Holder<Block> WARPED_CRATE = registerBlock("warped_crate", CrateBlock::new, NABlockProperties.WARPED_CRATE);
     public static final Holder<SlabBlock> SMALL_WARPED_CRATE = registerBlock("small_warped_crate", SmallCrateBlock::new, NABlockProperties.WARPED_CRATE);
+    public static final Holder<Block> GLOWING_CRATE = registerBlock("glowing_crate", CrateBlock::new, NABlockProperties.GLOWING_CRATE);
+    public static final Holder<SlabBlock> SMALL_GLOWING_CRATE = registerBlock("small_glowing_crate", SmallCrateBlock::new, NABlockProperties.GLOWING_CRATE);
 
     public static final Holder<Block> CRIMSON_CRATE_OF_CRIMSON_BERRIES = registerSimpleBlock("crimson_crate_of_crimson_berries", NABlockProperties.CRIMSON_CRATE);
     public static final Holder<SlabBlock> SMALL_CRIMSON_CRATE_OF_CRIMSON_BERRIES = registerBlock("small_crimson_crate_of_crimson_berries", SlabBlock::new, NABlockProperties.CRIMSON_CRATE);
     public static final Holder<Block> WARPED_CRATE_OF_CRIMSON_BERRIES = registerSimpleBlock("warped_crate_of_crimson_berries", NABlockProperties.WARPED_CRATE);
     public static final Holder<SlabBlock> SMALL_WARPED_CRATE_OF_CRIMSON_BERRIES = registerBlock("small_warped_crate_of_crimson_berries", SlabBlock::new, NABlockProperties.WARPED_CRATE);
+    public static final Holder<Block> GLOWING_CRATE_OF_CRIMSON_BERRIES = registerSimpleBlock("glowing_crate_of_crimson_berries", NABlockProperties.GLOWING_CRATE);
+    public static final Holder<SlabBlock> SMALL_GLOWING_CRATE_OF_CRIMSON_BERRIES = registerBlock("small_glowing_crate_of_crimson_berries", SlabBlock::new, NABlockProperties.GLOWING_CRATE);
 
     public static final Holder<Block> CRIMSON_CRATE_OF_WARPED_BERRIES = registerSimpleBlock("crimson_crate_of_warped_berries", NABlockProperties.CRIMSON_CRATE);
     public static final Holder<SlabBlock> SMALL_CRIMSON_CRATE_OF_WARPED_BERRIES = registerBlock("small_crimson_crate_of_warped_berries", SlabBlock::new, NABlockProperties.CRIMSON_CRATE);
     public static final Holder<Block> WARPED_CRATE_OF_WARPED_BERRIES = registerSimpleBlock("warped_crate_of_warped_berries", NABlockProperties.WARPED_CRATE);
     public static final Holder<SlabBlock> SMALL_WARPED_CRATE_OF_WARPED_BERRIES = registerBlock("small_warped_crate_of_warped_berries", SlabBlock::new, NABlockProperties.WARPED_CRATE);
+    public static final Holder<Block> GLOWING_CRATE_OF_WARPED_BERRIES = registerSimpleBlock("glowing_crate_of_warped_berries", NABlockProperties.GLOWING_CRATE);
+    public static final Holder<SlabBlock> SMALL_GLOWING_CRATE_OF_WARPED_BERRIES = registerBlock("small_glowing_crate_of_warped_berries", SlabBlock::new, NABlockProperties.GLOWING_CRATE);
 
     public static final Holder<Block> CRIMSON_CRATE_OF_LOTHUN = registerSimpleBlock("crimson_crate_of_lothun", NABlockProperties.CRIMSON_CRATE);
     public static final Holder<SlabBlock> SMALL_CRIMSON_CRATE_OF_LOTHUN = registerBlock("small_crimson_crate_of_lothun", SlabBlock::new, NABlockProperties.CRIMSON_CRATE);
     public static final Holder<Block> WARPED_CRATE_OF_LOTHUN = registerSimpleBlock("warped_crate_of_lothun", NABlockProperties.WARPED_CRATE);
     public static final Holder<SlabBlock> SMALL_WARPED_CRATE_OF_LOTHUN = registerBlock("small_warped_crate_of_lothun", SlabBlock::new, NABlockProperties.WARPED_CRATE);
+    public static final Holder<Block> GLOWING_CRATE_OF_LOTHUN = registerSimpleBlock("glowing_crate_of_lothun", NABlockProperties.GLOWING_CRATE);
+    public static final Holder<SlabBlock> SMALL_GLOWING_CRATE_OF_LOTHUN = registerBlock("small_glowing_crate_of_lothun", SlabBlock::new, NABlockProperties.GLOWING_CRATE);
 
     public static final Holder<Block> CRIMSON_CRATE_OF_BLAZING_GOLDEN_LOTHUN = registerBlock("crimson_crate_of_blazing_golden_lothun", BurningCrateBlock::new, NABlockProperties.GLOWING_CRIMSON_CRATE);
     public static final Holder<SlabBlock> SMALL_CRIMSON_CRATE_OF_BLAZING_GOLDEN_LOTHUN = registerBlock("small_crimson_crate_of_blazing_golden_lothun", SmallBurningCrateBlock::new, NABlockProperties.GLOWING_CRIMSON_CRATE);
     public static final Holder<Block> WARPED_CRATE_OF_BLAZING_GOLDEN_LOTHUN = registerBlock("warped_crate_of_blazing_golden_lothun", BurningCrateBlock::new, NABlockProperties.GLOWING_WARPED_CRATE);
     public static final Holder<SlabBlock> SMALL_WARPED_CRATE_OF_BLAZING_GOLDEN_LOTHUN = registerBlock("small_warped_crate_of_blazing_golden_lothun", SmallBurningCrateBlock::new, NABlockProperties.GLOWING_WARPED_CRATE);
+    public static final Holder<Block> GLOWING_CRATE_OF_BLAZING_GOLDEN_LOTHUN = registerBlock("glowing_crate_of_blazing_golden_lothun", BurningCrateBlock::new, NABlockProperties.GLOWING_CRATE);
+    public static final Holder<SlabBlock> SMALL_GLOWING_CRATE_OF_BLAZING_GOLDEN_LOTHUN = registerBlock("small_glowing_crate_of_blazing_golden_lothun", SmallBurningCrateBlock::new, NABlockProperties.GLOWING_CRATE);
 
     public static final Holder<Block> CRIMSON_CRATE_OF_BLAZE_FRUIT = registerBlock("crimson_crate_of_blaze_fruit", BurningCrateBlock::new, NABlockProperties.GLOWING_CRIMSON_CRATE);
     public static final Holder<SlabBlock> SMALL_CRIMSON_CRATE_OF_BLAZE_FRUIT = registerBlock("small_crimson_crate_of_blaze_fruit", SmallBurningCrateBlock::new, NABlockProperties.GLOWING_CRIMSON_CRATE);
     public static final Holder<Block> WARPED_CRATE_OF_BLAZE_FRUIT = registerBlock("warped_crate_of_blaze_fruit", BurningCrateBlock::new, NABlockProperties.GLOWING_WARPED_CRATE);
     public static final Holder<SlabBlock> SMALL_WARPED_CRATE_OF_BLAZE_FRUIT = registerBlock("small_warped_crate_of_blaze_fruit", SmallBurningCrateBlock::new, NABlockProperties.GLOWING_WARPED_CRATE);
+    public static final Holder<Block> GLOWING_CRATE_OF_BLAZE_FRUIT = registerBlock("glowing_crate_of_blaze_fruit", BurningCrateBlock::new, NABlockProperties.GLOWING_CRATE);
+    public static final Holder<SlabBlock> SMALL_GLOWING_CRATE_OF_BLAZE_FRUIT = registerBlock("small_glowing_crate_of_blaze_fruit", SmallBurningCrateBlock::new, NABlockProperties.GLOWING_CRATE);
 
     public static final Holder<Block> CRIMSON_CRATE_OF_SINFUL_EYES = registerSimpleBlock("crimson_crate_of_sinful_eyes", NABlockProperties.CRIMSON_CRATE);
     public static final Holder<SlabBlock> SMALL_CRIMSON_CRATE_OF_SINFUL_EYES = registerBlock("small_crimson_crate_of_sinful_eyes", SlabBlock::new, NABlockProperties.CRIMSON_CRATE);
     public static final Holder<Block> WARPED_CRATE_OF_SINFUL_EYES = registerSimpleBlock("warped_crate_of_sinful_eyes", NABlockProperties.WARPED_CRATE);
     public static final Holder<SlabBlock> SMALL_WARPED_CRATE_OF_SINFUL_EYES = registerBlock("small_warped_crate_of_sinful_eyes", SlabBlock::new, NABlockProperties.WARPED_CRATE);
+    public static final Holder<Block> GLOWING_CRATE_OF_SINFUL_EYES = registerSimpleBlock("glowing_crate_of_sinful_eyes", NABlockProperties.GLOWING_CRATE);
+    public static final Holder<SlabBlock> SMALL_GLOWING_CRATE_OF_SINFUL_EYES = registerBlock("small_glowing_crate_of_sinful_eyes", SlabBlock::new, NABlockProperties.GLOWING_CRATE);
 
 
+    private static ToIntFunction<BlockState> maxLight()
+    {
+        return light(15);
+    }
+
+    private static ToIntFunction<BlockState> light(int level)
+    {
+        return (state) -> level;
+    }
 
     private static ToIntFunction<BlockState> lit(int lightLevel)
     {
         return (state) -> state.getValue(BlockStateProperties.LIT) ? lightLevel : 0;
+    }
+
+    private static Boolean never(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos, EntityType<?> entityType)
+    {
+        return false;
     }
 
     private static Holder<Block> registerSimpleBlock(String name, BlockBehaviour.Properties properties)
@@ -250,7 +430,12 @@ public final class NABlocks
 
     private static <T extends Block> Holder<T> registerBlock(String name, Function<BlockBehaviour.Properties, T> constructor, BlockBehaviour.Properties properties)
     {
-        return REGISTER.register(name, () -> constructor.apply(properties));
+        return registerBlock(name, constructor, () -> properties);
+    }
+
+    private static <T extends Block> Holder<T> registerBlock(String name, Function<BlockBehaviour.Properties, T> constructor, Supplier<BlockBehaviour.Properties> properties)
+    {
+        return REGISTER.register(name, () -> constructor.apply(properties.get()));
     }
 
     public static void initialize() {}

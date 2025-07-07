@@ -1,0 +1,13 @@
+{
+  "type": "netheragriculture:emptying_storage",
+  "input": {
+    "item": "netheragriculture:glowing_crate_of_blaze_fruit"
+  },
+  "storage": {
+    "id": "netheragriculture:glowing_crate"
+  },
+  "result": {
+    "id": "netheragriculture:blaze_fruit",
+    "count": 8
+  }
+}

@@ -28,7 +28,9 @@ public final class NABlockRenderTypes
             NABlocks.SINFUL_EYES.value(),
             NABlocks.WILD_SINFUL_EYES.value(),
             NABlocks.WILD_AZURE_MELON.value(),
-            NABlocks.GLOWING_FUNGUS.value()
+            NABlocks.GLOWING_FUNGUS.value(),
+            NABlocks.GLOWING_DOOR.value(),
+            NABlocks.GLOWING_TRAPDOOR.value()
         );
     }
 }

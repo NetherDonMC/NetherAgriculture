@@ -1,0 +1,6 @@
+{
+  "parent": "netheragriculture:block/base/small_glowing_crate/bottom",
+  "textures": {
+    "top": "netheragriculture:block/opened_glowing_crate"
+  }
+}

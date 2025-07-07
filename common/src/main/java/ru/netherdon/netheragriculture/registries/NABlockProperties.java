@@ -35,6 +35,13 @@ public final class NABlockProperties
         .sound(SoundType.NETHER_WOOD)
         .lightLevel((state) -> 12);;
 
+    public static final Properties GLOWING_CRATE = Properties.of()
+        .strength(1.5f, 3f)
+        .instrument(NoteBlockInstrument.BASS)
+        .mapColor(MapColor.COLOR_YELLOW)
+        .sound(SoundType.NETHER_WOOD)
+        .lightLevel((state) -> 15);
+
     public static final Properties AZURE_MELON = BlockBehaviour.Properties.of()
         .mapColor(MapColor.COLOR_CYAN)
         .strength(0.5f)

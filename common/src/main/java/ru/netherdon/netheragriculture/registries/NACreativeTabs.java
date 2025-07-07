@@ -28,6 +28,12 @@ public final class NACreativeTabs
         {
             output.accept(NAItems.BLACK_FURNACE.value());
 
+            output.accept(NAItems.CRIMSON_FARMLAND.value());
+            output.accept(NAItems.WARPED_FARMLAND.value());
+            output.accept(NAItems.NETHER_ROOTS.value());
+            output.accept(NAItems.TALL_CRIMSON_ROOTS.value());
+            output.accept(NAItems.TALL_WARPED_ROOTS.value());
+
             output.accept(NAItems.CRIMSON_CRATE.value());
             output.accept(NAItems.SMALL_CRIMSON_CRATE.value());
             output.accept(NAItems.CRIMSON_CRATE_OF_CRIMSON_BERRIES.value());
@@ -42,6 +48,7 @@ public final class NACreativeTabs
             output.accept(NAItems.SMALL_CRIMSON_CRATE_OF_BLAZE_FRUIT.value());
             output.accept(NAItems.CRIMSON_CRATE_OF_SINFUL_EYES.value());
             output.accept(NAItems.SMALL_CRIMSON_CRATE_OF_SINFUL_EYES.value());
+
             output.accept(NAItems.WARPED_CRATE.value());
             output.accept(NAItems.SMALL_WARPED_CRATE.value());
             output.accept(NAItems.WARPED_CRATE_OF_CRIMSON_BERRIES.value());
@@ -57,12 +64,38 @@ public final class NACreativeTabs
             output.accept(NAItems.WARPED_CRATE_OF_SINFUL_EYES.value());
             output.accept(NAItems.SMALL_WARPED_CRATE_OF_SINFUL_EYES.value());
 
-            output.accept(NAItems.CRIMSON_FARMLAND.value());
-            output.accept(NAItems.WARPED_FARMLAND.value());
-            output.accept(NAItems.NETHER_ROOTS.value());
-            output.accept(NAItems.TALL_CRIMSON_ROOTS.value());
-            output.accept(NAItems.TALL_WARPED_ROOTS.value());
             output.accept(NAItems.GLOWING_FUNGUS.value());
+            output.accept(NAItems.GLOWING_WART_BLOCK.value());
+            output.accept(NAItems.GLOWING_STEM.value());
+            output.accept(NAItems.GLOWING_HYPHAE.value());
+            output.accept(NAItems.STRIPPED_GLOWING_STEM.value());
+            output.accept(NAItems.STRIPPED_GLOWING_HYPHAE.value());
+            output.accept(NAItems.GLOWING_PLANKS.value());
+            output.accept(NAItems.GLOWING_STAIRS.value());
+            output.accept(NAItems.GLOWING_SLAB.value());
+            output.accept(NAItems.GLOWING_FENCE.value());
+            output.accept(NAItems.GLOWING_FENCE_GATE.value());
+            output.accept(NAItems.GLOWING_DOOR.value());
+            output.accept(NAItems.GLOWING_TRAPDOOR.value());
+            output.accept(NAItems.GLOWING_PRESSURE_PLATE.value());
+            output.accept(NAItems.GLOWING_BUTTON.value());
+            output.accept(NAItems.GLOWING_SIGN.value());
+            output.accept(NAItems.GLOWING_HANGING_SIGN.value());
+
+            output.accept(NAItems.GLOWING_CRATE.value());
+            output.accept(NAItems.SMALL_GLOWING_CRATE.value());
+            output.accept(NAItems.GLOWING_CRATE_OF_CRIMSON_BERRIES.value());
+            output.accept(NAItems.SMALL_GLOWING_CRATE_OF_CRIMSON_BERRIES.value());
+            output.accept(NAItems.GLOWING_CRATE_OF_WARPED_BERRIES.value());
+            output.accept(NAItems.SMALL_GLOWING_CRATE_OF_WARPED_BERRIES.value());
+            output.accept(NAItems.GLOWING_CRATE_OF_LOTHUN.value());
+            output.accept(NAItems.SMALL_GLOWING_CRATE_OF_LOTHUN.value());
+            output.accept(NAItems.GLOWING_CRATE_OF_BLAZING_GOLDEN_LOTHUN.value());
+            output.accept(NAItems.SMALL_GLOWING_CRATE_OF_BLAZING_GOLDEN_LOTHUN.value());
+            output.accept(NAItems.GLOWING_CRATE_OF_BLAZE_FRUIT.value());
+            output.accept(NAItems.SMALL_GLOWING_CRATE_OF_BLAZE_FRUIT.value());
+            output.accept(NAItems.GLOWING_CRATE_OF_SINFUL_EYES.value());
+            output.accept(NAItems.SMALL_GLOWING_CRATE_OF_SINFUL_EYES.value());
 
             output.accept(NAItems.CRUSHED_NETHER_ROOTS.value());
             output.accept(NAItems.CRUSHED_CRIMSON_ROOTS.value());

@@ -111,35 +111,75 @@ public final class NAItems
     public static final Holder<BlockItem> TALL_WARPED_ROOTS = registerBlockItem(NABlocks.TALL_WARPED_ROOTS, DoubleHighBlockItem::new);
 
     public static final Holder<BlockItem> GLOWING_FUNGUS = registerSimpleBlockItem(NABlocks.GLOWING_FUNGUS);
+    public static final Holder<BlockItem> GLOWING_WART_BLOCK = registerSimpleBlockItem(NABlocks.GLOWING_WART_BLOCK);
+    public static final Holder<BlockItem> GLOWING_STEM = registerSimpleBlockItem(NABlocks.GLOWING_STEM);
+    public static final Holder<BlockItem> GLOWING_HYPHAE = registerSimpleBlockItem(NABlocks.GLOWING_HYPHAE);
+    public static final Holder<BlockItem> STRIPPED_GLOWING_STEM = registerSimpleBlockItem(NABlocks.STRIPPED_GLOWING_STEM);
+    public static final Holder<BlockItem> STRIPPED_GLOWING_HYPHAE = registerSimpleBlockItem(NABlocks.STRIPPED_GLOWING_HYPHAE);
+    public static final Holder<BlockItem> GLOWING_PLANKS = registerSimpleBlockItem(NABlocks.GLOWING_PLANKS);
+    public static final Holder<BlockItem> GLOWING_SLAB = registerSimpleBlockItem(NABlocks.GLOWING_SLAB);
+    public static final Holder<BlockItem> GLOWING_STAIRS = registerSimpleBlockItem(NABlocks.GLOWING_STAIRS);
+    public static final Holder<BlockItem> GLOWING_FENCE = registerSimpleBlockItem(NABlocks.GLOWING_FENCE);
+    public static final Holder<BlockItem> GLOWING_FENCE_GATE = registerSimpleBlockItem(NABlocks.GLOWING_FENCE_GATE);
+    public static final Holder<BlockItem> GLOWING_DOOR = registerSimpleBlockItem(NABlocks.GLOWING_DOOR);
+    public static final Holder<BlockItem> GLOWING_TRAPDOOR = registerBlockItem(NABlocks.GLOWING_TRAPDOOR, DoubleHighBlockItem::new);
+    public static final Holder<BlockItem> GLOWING_PRESSURE_PLATE = registerSimpleBlockItem(NABlocks.GLOWING_PRESSURE_PLATE);
+    public static final Holder<BlockItem> GLOWING_BUTTON = registerSimpleBlockItem(NABlocks.GLOWING_BUTTON);
+    public static final Holder<BlockItem> GLOWING_SIGN = registerItem("glowing_sign", (properties) ->
+        new SignItem(properties, NABlocks.GLOWING_SIGN.value(), NABlocks.GLOWING_WALL_SIGN.value())
+    );
+    public static final Holder<BlockItem> GLOWING_HANGING_SIGN = registerItem("glowing_hanging_sign", (properties) ->
+        new HangingSignItem(NABlocks.GLOWING_HANGING_SIGN.value(), NABlocks.GLOWING_WALL_HANGING_SIGN.value(), properties)
+    );
 
     public static final Holder<BlockItem> CRIMSON_CRATE = registerSimpleBlockItem(NABlocks.CRIMSON_CRATE);
     public static final Holder<BlockItem> SMALL_CRIMSON_CRATE = registerSimpleBlockItem(NABlocks.SMALL_CRIMSON_CRATE);
     public static final Holder<BlockItem> WARPED_CRATE = registerSimpleBlockItem(NABlocks.WARPED_CRATE);
     public static final Holder<BlockItem> SMALL_WARPED_CRATE = registerSimpleBlockItem(NABlocks.SMALL_WARPED_CRATE);
+    public static final Holder<BlockItem> GLOWING_CRATE = registerSimpleBlockItem(NABlocks.GLOWING_CRATE);
+    public static final Holder<BlockItem> SMALL_GLOWING_CRATE = registerSimpleBlockItem(NABlocks.SMALL_GLOWING_CRATE);
+
     public static final Holder<BlockItem> CRIMSON_CRATE_OF_CRIMSON_BERRIES = registerSimpleBlockItem(NABlocks.CRIMSON_CRATE_OF_CRIMSON_BERRIES);
     public static final Holder<BlockItem> SMALL_CRIMSON_CRATE_OF_CRIMSON_BERRIES = registerSimpleBlockItem(NABlocks.SMALL_CRIMSON_CRATE_OF_CRIMSON_BERRIES);
     public static final Holder<BlockItem> WARPED_CRATE_OF_CRIMSON_BERRIES = registerSimpleBlockItem(NABlocks.WARPED_CRATE_OF_CRIMSON_BERRIES);
     public static final Holder<BlockItem> SMALL_WARPED_CRATE_OF_CRIMSON_BERRIES = registerSimpleBlockItem(NABlocks.SMALL_WARPED_CRATE_OF_CRIMSON_BERRIES);
+    public static final Holder<BlockItem> GLOWING_CRATE_OF_CRIMSON_BERRIES = registerSimpleBlockItem(NABlocks.GLOWING_CRATE_OF_CRIMSON_BERRIES);
+    public static final Holder<BlockItem> SMALL_GLOWING_CRATE_OF_CRIMSON_BERRIES = registerSimpleBlockItem(NABlocks.SMALL_GLOWING_CRATE_OF_CRIMSON_BERRIES);
+
     public static final Holder<BlockItem> CRIMSON_CRATE_OF_WARPED_BERRIES = registerSimpleBlockItem(NABlocks.CRIMSON_CRATE_OF_WARPED_BERRIES);
     public static final Holder<BlockItem> SMALL_CRIMSON_CRATE_OF_WARPED_BERRIES = registerSimpleBlockItem(NABlocks.SMALL_CRIMSON_CRATE_OF_WARPED_BERRIES);
     public static final Holder<BlockItem> WARPED_CRATE_OF_WARPED_BERRIES = registerSimpleBlockItem(NABlocks.WARPED_CRATE_OF_WARPED_BERRIES);
     public static final Holder<BlockItem> SMALL_WARPED_CRATE_OF_WARPED_BERRIES = registerSimpleBlockItem(NABlocks.SMALL_WARPED_CRATE_OF_WARPED_BERRIES);
+    public static final Holder<BlockItem> GLOWING_CRATE_OF_WARPED_BERRIES = registerSimpleBlockItem(NABlocks.GLOWING_CRATE_OF_WARPED_BERRIES);
+    public static final Holder<BlockItem> SMALL_GLOWING_CRATE_OF_WARPED_BERRIES = registerSimpleBlockItem(NABlocks.SMALL_GLOWING_CRATE_OF_WARPED_BERRIES);
+
     public static final Holder<BlockItem> CRIMSON_CRATE_OF_LOTHUN = registerSimpleBlockItem(NABlocks.CRIMSON_CRATE_OF_LOTHUN);
     public static final Holder<BlockItem> SMALL_CRIMSON_CRATE_OF_LOTHUN = registerSimpleBlockItem(NABlocks.SMALL_CRIMSON_CRATE_OF_LOTHUN);
     public static final Holder<BlockItem> WARPED_CRATE_OF_LOTHUN = registerSimpleBlockItem(NABlocks.WARPED_CRATE_OF_LOTHUN);
     public static final Holder<BlockItem> SMALL_WARPED_CRATE_OF_LOTHUN = registerSimpleBlockItem(NABlocks.SMALL_WARPED_CRATE_OF_LOTHUN);
+    public static final Holder<BlockItem> GLOWING_CRATE_OF_LOTHUN = registerSimpleBlockItem(NABlocks.GLOWING_CRATE_OF_LOTHUN);
+    public static final Holder<BlockItem> SMALL_GLOWING_CRATE_OF_LOTHUN = registerSimpleBlockItem(NABlocks.SMALL_GLOWING_CRATE_OF_LOTHUN);
+
     public static final Holder<BlockItem> CRIMSON_CRATE_OF_BLAZING_GOLDEN_LOTHUN = registerSimpleBlockItem(NABlocks.CRIMSON_CRATE_OF_BLAZING_GOLDEN_LOTHUN, new Item.Properties().fireResistant());
     public static final Holder<BlockItem> SMALL_CRIMSON_CRATE_OF_BLAZING_GOLDEN_LOTHUN = registerSimpleBlockItem(NABlocks.SMALL_CRIMSON_CRATE_OF_BLAZING_GOLDEN_LOTHUN, new Item.Properties().fireResistant());
     public static final Holder<BlockItem> WARPED_CRATE_OF_BLAZING_GOLDEN_LOTHUN = registerSimpleBlockItem(NABlocks.WARPED_CRATE_OF_BLAZING_GOLDEN_LOTHUN, new Item.Properties().fireResistant());
     public static final Holder<BlockItem> SMALL_WARPED_CRATE_OF_BLAZING_GOLDEN_LOTHUN = registerSimpleBlockItem(NABlocks.SMALL_WARPED_CRATE_OF_BLAZING_GOLDEN_LOTHUN, new Item.Properties().fireResistant());
+    public static final Holder<BlockItem> GLOWING_CRATE_OF_BLAZING_GOLDEN_LOTHUN = registerSimpleBlockItem(NABlocks.GLOWING_CRATE_OF_BLAZING_GOLDEN_LOTHUN, new Item.Properties().fireResistant());
+    public static final Holder<BlockItem> SMALL_GLOWING_CRATE_OF_BLAZING_GOLDEN_LOTHUN = registerSimpleBlockItem(NABlocks.SMALL_GLOWING_CRATE_OF_BLAZING_GOLDEN_LOTHUN, new Item.Properties().fireResistant());
+
     public static final Holder<BlockItem> CRIMSON_CRATE_OF_BLAZE_FRUIT = registerSimpleBlockItem(NABlocks.CRIMSON_CRATE_OF_BLAZE_FRUIT, new Item.Properties().fireResistant());
     public static final Holder<BlockItem> SMALL_CRIMSON_CRATE_OF_BLAZE_FRUIT = registerSimpleBlockItem(NABlocks.SMALL_CRIMSON_CRATE_OF_BLAZE_FRUIT, new Item.Properties().fireResistant());
     public static final Holder<BlockItem> WARPED_CRATE_OF_BLAZE_FRUIT = registerSimpleBlockItem(NABlocks.WARPED_CRATE_OF_BLAZE_FRUIT, new Item.Properties().fireResistant());
     public static final Holder<BlockItem> SMALL_WARPED_CRATE_OF_BLAZE_FRUIT = registerSimpleBlockItem(NABlocks.SMALL_WARPED_CRATE_OF_BLAZE_FRUIT, new Item.Properties().fireResistant());
+    public static final Holder<BlockItem> GLOWING_CRATE_OF_BLAZE_FRUIT = registerSimpleBlockItem(NABlocks.GLOWING_CRATE_OF_BLAZE_FRUIT, new Item.Properties().fireResistant());
+    public static final Holder<BlockItem> SMALL_GLOWING_CRATE_OF_BLAZE_FRUIT = registerSimpleBlockItem(NABlocks.SMALL_GLOWING_CRATE_OF_BLAZE_FRUIT, new Item.Properties().fireResistant());
+
     public static final Holder<BlockItem> CRIMSON_CRATE_OF_SINFUL_EYES = registerSimpleBlockItem(NABlocks.CRIMSON_CRATE_OF_SINFUL_EYES);
     public static final Holder<BlockItem> SMALL_CRIMSON_CRATE_OF_SINFUL_EYES = registerSimpleBlockItem(NABlocks.SMALL_CRIMSON_CRATE_OF_SINFUL_EYES);
     public static final Holder<BlockItem> WARPED_CRATE_OF_SINFUL_EYES = registerSimpleBlockItem(NABlocks.WARPED_CRATE_OF_SINFUL_EYES);
     public static final Holder<BlockItem> SMALL_WARPED_CRATE_OF_SINFUL_EYES = registerSimpleBlockItem(NABlocks.SMALL_WARPED_CRATE_OF_SINFUL_EYES);
+    public static final Holder<BlockItem> GLOWING_CRATE_OF_SINFUL_EYES = registerSimpleBlockItem(NABlocks.GLOWING_CRATE_OF_SINFUL_EYES);
+    public static final Holder<BlockItem> SMALL_GLOWING_CRATE_OF_SINFUL_EYES = registerSimpleBlockItem(NABlocks.SMALL_GLOWING_CRATE_OF_SINFUL_EYES);
 
 
 
