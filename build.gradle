@@ -59,7 +59,7 @@ publishMods {
         platform.displayName = displayNamePrefix + "Fabric"
     }
 
-    def targetPlatform = providers.environmentVariable("PUBLISH_TARGET_PLATFORM") ?: "All";
+    def targetPlatform = providers.environmentVariable("PUBLISH_TARGET_PLATFORM").getOrElse("All");
     def neoForgeAvailable = targetPlatform == "All" || targetPlatform == "NeoForge";
     def fabricAvailable = targetPlatform == "All" || targetPlatform == "Fabric";
 
