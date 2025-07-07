@@ -27,7 +27,8 @@ public final class NABlockRenderTypes
             NABlocks.AZURE_MELON_CROP.value(),
             NABlocks.SINFUL_EYES.value(),
             NABlocks.WILD_SINFUL_EYES.value(),
-            NABlocks.WILD_AZURE_MELON.value()
+            NABlocks.WILD_AZURE_MELON.value(),
+            NABlocks.GLOWING_FUNGUS.value()
         );
     }
 }

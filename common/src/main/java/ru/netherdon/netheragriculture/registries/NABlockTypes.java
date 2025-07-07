@@ -71,6 +71,9 @@ public final class NABlockTypes
     public static final Holder<MapCodec<WildLothunBlock>> WILD_LOTHUN =
         REGISTER.register("wild_lothun", () -> WildLothunBlock.CODEC);
 
+    public static final Holder<MapCodec<GlowingFungusBlock>> GLOWING_FUNGUS =
+        REGISTER.register("glowing_fungus", () -> GlowingFungusBlock.CODEC);
+
 
 
     public static void initialize() {}

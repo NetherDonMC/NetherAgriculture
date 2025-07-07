@@ -2,9 +2,8 @@ package ru.netherdon.netheragriculture.registries;
 
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.SlabBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.data.worldgen.features.TreeFeatures;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -184,6 +183,17 @@ public final class NABlocks
             .offsetType(BlockBehaviour.OffsetType.XZ)
             .pushReaction(PushReaction.DESTROY)
     );
+
+    public static final Holder<FungusBlock> GLOWING_FUNGUS = REGISTER.register("glowing_fungus", () -> new GlowingFungusBlock(
+        TreeFeatures.CRIMSON_FUNGUS,
+        BlockBehaviour.Properties.of()
+            .mapColor(MapColor.COLOR_YELLOW)
+            .instabreak()
+            .noCollission()
+            .sound(SoundType.FUNGUS)
+            .lightLevel((state) -> 7)
+            .pushReaction(PushReaction.DESTROY)
+    ) {});
 
     public static final Holder<AzureMelonBlock> AZURE_MELON = registerBlock("azure_melon", AzureMelonBlock::new, NABlockProperties.AZURE_MELON);
     public static final Holder<AzureMelonCropBlock> AZURE_MELON_CROP = registerBlock("azure_melon_crop", AzureMelonCropBlock::new, NABlockProperties.AZURE_MELON);
