@@ -111,6 +111,7 @@ public final class NAItems
     public static final Holder<BlockItem> TALL_WARPED_ROOTS = registerBlockItem(NABlocks.TALL_WARPED_ROOTS, DoubleHighBlockItem::new);
 
     public static final Holder<BlockItem> GLOWING_FUNGUS = registerSimpleBlockItem(NABlocks.GLOWING_FUNGUS);
+    public static final Holder<BlockItem> GLOWING_WART_BLOCK = registerSimpleBlockItem(NABlocks.GLOWING_WART_BLOCK);
 
     public static final Holder<BlockItem> CRIMSON_CRATE = registerSimpleBlockItem(NABlocks.CRIMSON_CRATE);
     public static final Holder<BlockItem> SMALL_CRIMSON_CRATE = registerSimpleBlockItem(NABlocks.SMALL_CRIMSON_CRATE);

@@ -195,6 +195,14 @@ public final class NABlocks
             .pushReaction(PushReaction.DESTROY)
     ) {});
 
+    public static final Holder<Block> GLOWING_WART_BLOCK = registerSimpleBlock("glowing_wart_block",
+        BlockBehaviour.Properties.of()
+            .mapColor(MapColor.COLOR_YELLOW)
+            .strength(1f)
+            .lightLevel((state) -> 10)
+            .sound(SoundType.WART_BLOCK)
+    );
+
     public static final Holder<AzureMelonBlock> AZURE_MELON = registerBlock("azure_melon", AzureMelonBlock::new, NABlockProperties.AZURE_MELON);
     public static final Holder<AzureMelonCropBlock> AZURE_MELON_CROP = registerBlock("azure_melon_crop", AzureMelonCropBlock::new, NABlockProperties.AZURE_MELON);
     public static final Holder<WildAzureMelonBlock> WILD_AZURE_MELON = registerBlock("wild_azure_melon", WildAzureMelonBlock::new, NABlockProperties.WILD_AZURE_MELON);

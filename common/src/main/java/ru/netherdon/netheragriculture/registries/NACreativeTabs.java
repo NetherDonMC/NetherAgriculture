@@ -62,7 +62,9 @@ public final class NACreativeTabs
             output.accept(NAItems.NETHER_ROOTS.value());
             output.accept(NAItems.TALL_CRIMSON_ROOTS.value());
             output.accept(NAItems.TALL_WARPED_ROOTS.value());
+
             output.accept(NAItems.GLOWING_FUNGUS.value());
+            output.accept(NAItems.GLOWING_WART_BLOCK.value());
 
             output.accept(NAItems.CRUSHED_NETHER_ROOTS.value());
             output.accept(NAItems.CRUSHED_CRIMSON_ROOTS.value());
