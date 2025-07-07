@@ -65,6 +65,10 @@ public final class NACreativeTabs
 
             output.accept(NAItems.GLOWING_FUNGUS.value());
             output.accept(NAItems.GLOWING_WART_BLOCK.value());
+            output.accept(NAItems.GLOWING_STEM.value());
+            output.accept(NAItems.GLOWING_HYPHAE.value());
+            output.accept(NAItems.STRIPPED_GLOWING_STEM.value());
+            output.accept(NAItems.STRIPPED_GLOWING_HYPHAE.value());
 
             output.accept(NAItems.CRUSHED_NETHER_ROOTS.value());
             output.accept(NAItems.CRUSHED_CRIMSON_ROOTS.value());

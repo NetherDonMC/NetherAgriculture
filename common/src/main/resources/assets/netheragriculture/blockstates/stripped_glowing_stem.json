@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "netheragriculture:block/stripped_glowing_stem",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "netheragriculture:block/stripped_glowing_stem"
+    },
+    "axis=z": {
+      "model": "netheragriculture:block/stripped_glowing_stem",
+      "x": 90
+    }
+  }
+}

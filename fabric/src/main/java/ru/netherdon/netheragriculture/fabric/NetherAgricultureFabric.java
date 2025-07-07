@@ -4,6 +4,7 @@ import fuzs.forgeconfigapiport.fabric.api.neoforge.v4.NeoForgeConfigRegistry;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.player.UseEntityCallback;
 import net.fabricmc.fabric.api.registry.FabricBrewingRecipeRegistryBuilder;
+import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.fml.config.ModConfig;
 import ru.netherdon.netheragriculture.NetherAgriculture;
@@ -14,6 +15,7 @@ import ru.netherdon.netheragriculture.fabric.registries.NACompostables;
 import ru.netherdon.netheragriculture.fabric.registries.NALootTableModifiers;
 import ru.netherdon.netheragriculture.fabric.registries.NAResourceConditions;
 import ru.netherdon.netheragriculture.items.StriderTreatItem;
+import ru.netherdon.netheragriculture.registries.NABlocks;
 import ru.netherdon.netheragriculture.registries.NAPotions;
 
 public final class NetherAgricultureFabric implements ModInitializer
@@ -37,5 +39,8 @@ public final class NetherAgricultureFabric implements ModInitializer
             ItemStack stack = player.getItemInHand(hand);
             return StriderTreatItem.mobInteract(stack, level, entity, player);
         });
+
+        StrippableBlockRegistry.register(NABlocks.GLOWING_STEM.value(), NABlocks.STRIPPED_GLOWING_STEM.value());
+        StrippableBlockRegistry.register(NABlocks.GLOWING_HYPHAE.value(), NABlocks.STRIPPED_GLOWING_HYPHAE.value());
     }
 }

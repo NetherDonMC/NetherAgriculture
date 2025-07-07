@@ -203,6 +203,42 @@ public final class NABlocks
             .sound(SoundType.WART_BLOCK)
     );
 
+    public static final Holder<Block> GLOWING_STEM = registerBlock("glowing_stem", RotatedPillarBlock::new,
+        BlockBehaviour.Properties.of()
+            .mapColor(MapColor.COLOR_YELLOW)
+            .instrument(NoteBlockInstrument.BASS)
+            .strength(2f)
+            .lightLevel((state) -> 7)
+            .sound(SoundType.STEM)
+    );
+
+    public static final Holder<Block> GLOWING_HYPHAE = registerBlock("glowing_hyphae", RotatedPillarBlock::new,
+        BlockBehaviour.Properties.of()
+            .mapColor(MapColor.COLOR_YELLOW)
+            .instrument(NoteBlockInstrument.BASS)
+            .strength(2f)
+            .lightLevel((state) -> 7)
+            .sound(SoundType.STEM)
+    );
+
+    public static final Holder<Block> STRIPPED_GLOWING_STEM = registerBlock("stripped_glowing_stem", RotatedPillarBlock::new,
+        BlockBehaviour.Properties.of()
+            .mapColor(MapColor.COLOR_YELLOW)
+            .instrument(NoteBlockInstrument.BASS)
+            .strength(2f)
+            .lightLevel((state) -> 9)
+            .sound(SoundType.STEM)
+    );
+
+    public static final Holder<Block> STRIPPED_GLOWING_HYPHAE = registerBlock("stripped_glowing_hyphae", RotatedPillarBlock::new,
+        BlockBehaviour.Properties.of()
+            .mapColor(MapColor.COLOR_YELLOW)
+            .instrument(NoteBlockInstrument.BASS)
+            .strength(2f)
+            .lightLevel((state) -> 9)
+            .sound(SoundType.STEM)
+    );
+
     public static final Holder<AzureMelonBlock> AZURE_MELON = registerBlock("azure_melon", AzureMelonBlock::new, NABlockProperties.AZURE_MELON);
     public static final Holder<AzureMelonCropBlock> AZURE_MELON_CROP = registerBlock("azure_melon_crop", AzureMelonCropBlock::new, NABlockProperties.AZURE_MELON);
     public static final Holder<WildAzureMelonBlock> WILD_AZURE_MELON = registerBlock("wild_azure_melon", WildAzureMelonBlock::new, NABlockProperties.WILD_AZURE_MELON);

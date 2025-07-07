@@ -73,6 +73,10 @@
   "block.netheragriculture.tall_warped_roots": "Высокие искажённые корни",
   "block.netheragriculture.glowing_fungus": "Светящийся гриб",
   "block.netheragriculture.glowing_wart_block": "Блок светящегося нароста",
+  "block.netheragriculture.glowing_stem": "Светящийся стебель",
+  "block.netheragriculture.stripped_glowing_stem": "Очищенный светящийся стебель",
+  "block.netheragriculture.glowing_hyphae": "Светящиеся гифы",
+  "block.netheragriculture.stripped_glowing_hyphae": "Очищенные светящиеся гифы",
   "block.netheragriculture.crimson_crate": "Багровый ящик",
   "block.netheragriculture.small_crimson_crate": "Малый багровый ящик",
   "block.netheragriculture.warped_crate": "Искажённый ящик",
@@ -144,6 +148,7 @@
   "config.server.netheragriculture.entity.burning_from_blaze_flight": "Горение от полёта всполоха",
 
   "tag.item.netheragriculture.nether_spices": "Незерские специи",
+  "tag.item.netheragriculture.glowing_stems": "Светящиеся стебли",
   "tag.item.c.ingots.blazing_gold": "Слитки пылающего золота",
   "tag.item.c.nuggets.blazing_gold": "Самородки пылающего золота",
   "tag.item.c.foods.raw_hoglin": "Сырое мясо хоглина",
@@ -162,5 +167,6 @@
   "tag.block.netheragriculture.fertile_soils.crimson_berry": "Плодородные почвы для багровой ягоды",
   "tag.block.netheragriculture.fertile_soils.warped_berry": "Плодородные почвы для искажённой ягоды",
   "tag.block.netheragriculture.fertile_soils.sinful_eyes": "Плодородные почвы для глаз грешников",
-  "tag.block.netheragriculture.fertile_soils.lothun": "Плодородные почвы для лотуна"
+  "tag.block.netheragriculture.fertile_soils.lothun": "Плодородные почвы для лотуна",
+  "tag.block.netheragriculture.glowing_stems": "Светящиеся стебли"
 }

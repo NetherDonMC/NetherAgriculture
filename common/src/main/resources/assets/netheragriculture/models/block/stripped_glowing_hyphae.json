@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "netheragriculture:block/stripped_glowing_stem",
+    "side": "netheragriculture:block/stripped_glowing_stem"
+  }
+}
