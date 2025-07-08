@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_side",
+  "textures": {
+    "texture": "netheragriculture:block/glowing_planks"
+  }
+}
