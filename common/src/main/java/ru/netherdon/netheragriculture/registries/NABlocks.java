@@ -247,6 +247,15 @@ public final class NABlocks
             .sound(SoundType.NETHER_WOOD)
     );
 
+    public static final Holder<StairBlock> GLOWING_STAIRS = REGISTER.register("glowing_stairs", () -> new StairBlock(
+        GLOWING_PLANKS.value().defaultBlockState(),
+        BlockBehaviour.Properties.ofFullCopy(GLOWING_PLANKS.value())
+    ) {});
+
+    public static final Holder<SlabBlock> GLOWING_SLAB = registerBlock("glowing_slab", SlabBlock::new,
+        BlockBehaviour.Properties.ofFullCopy(GLOWING_PLANKS.value())
+    );
+
     public static final Holder<AzureMelonBlock> AZURE_MELON = registerBlock("azure_melon", AzureMelonBlock::new, NABlockProperties.AZURE_MELON);
     public static final Holder<AzureMelonCropBlock> AZURE_MELON_CROP = registerBlock("azure_melon_crop", AzureMelonCropBlock::new, NABlockProperties.AZURE_MELON);
     public static final Holder<WildAzureMelonBlock> WILD_AZURE_MELON = registerBlock("wild_azure_melon", WildAzureMelonBlock::new, NABlockProperties.WILD_AZURE_MELON);

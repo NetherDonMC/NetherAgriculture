@@ -117,6 +117,8 @@ public final class NAItems
     public static final Holder<BlockItem> STRIPPED_GLOWING_STEM = registerSimpleBlockItem(NABlocks.STRIPPED_GLOWING_STEM);
     public static final Holder<BlockItem> STRIPPED_GLOWING_HYPHAE = registerSimpleBlockItem(NABlocks.STRIPPED_GLOWING_HYPHAE);
     public static final Holder<BlockItem> GLOWING_PLANKS = registerSimpleBlockItem(NABlocks.GLOWING_PLANKS);
+    public static final Holder<BlockItem> GLOWING_SLAB = registerSimpleBlockItem(NABlocks.GLOWING_SLAB);
+    public static final Holder<BlockItem> GLOWING_STAIRS = registerSimpleBlockItem(NABlocks.GLOWING_STAIRS);
 
     public static final Holder<BlockItem> CRIMSON_CRATE = registerSimpleBlockItem(NABlocks.CRIMSON_CRATE);
     public static final Holder<BlockItem> SMALL_CRIMSON_CRATE = registerSimpleBlockItem(NABlocks.SMALL_CRIMSON_CRATE);
