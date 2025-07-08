@@ -238,6 +238,15 @@ public final class NABlocks
             .sound(SoundType.STEM)
     );
 
+    public static final Holder<Block> GLOWING_PLANKS = registerSimpleBlock("glowing_planks",
+        BlockBehaviour.Properties.of()
+            .mapColor(MapColor.COLOR_YELLOW)
+            .instrument(NoteBlockInstrument.BASS)
+            .strength(2f, 3f)
+            .lightLevel((state) -> 9)
+            .sound(SoundType.NETHER_WOOD)
+    );
+
     public static final Holder<AzureMelonBlock> AZURE_MELON = registerBlock("azure_melon", AzureMelonBlock::new, NABlockProperties.AZURE_MELON);
     public static final Holder<AzureMelonCropBlock> AZURE_MELON_CROP = registerBlock("azure_melon_crop", AzureMelonCropBlock::new, NABlockProperties.AZURE_MELON);
     public static final Holder<WildAzureMelonBlock> WILD_AZURE_MELON = registerBlock("wild_azure_melon", WildAzureMelonBlock::new, NABlockProperties.WILD_AZURE_MELON);
