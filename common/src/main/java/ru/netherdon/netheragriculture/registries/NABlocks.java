@@ -2,7 +2,6 @@ package ru.netherdon.netheragriculture.registries;
 
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.data.worldgen.features.TreeFeatures;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
@@ -185,7 +184,7 @@ public final class NABlocks
     );
 
     public static final Holder<FungusBlock> GLOWING_FUNGUS = REGISTER.register("glowing_fungus", () -> new GlowingFungusBlock(
-        TreeFeatures.CRIMSON_FUNGUS,
+        NAFeatureKeys.GLOWING_FUNGUS,
         BlockBehaviour.Properties.of()
             .mapColor(MapColor.COLOR_YELLOW)
             .instabreak()
