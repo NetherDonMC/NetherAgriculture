@@ -9,6 +9,8 @@
     "netheragriculture:glowing_stairs",
     "netheragriculture:glowing_slab",
     "netheragriculture:glowing_fence",
-    "netheragriculture:glowing_fence_gate"
+    "netheragriculture:glowing_fence_gate",
+    "netheragriculture:glowing_door",
+    "netheragriculture:glowing_trapdoor"
   ]
 }

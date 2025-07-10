@@ -1,7 +1,10 @@
 package ru.netherdon.netheragriculture.registries;
 
+import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
@@ -265,6 +268,28 @@ public final class NABlocks
         BlockBehaviour.Properties.ofFullCopy(GLOWING_PLANKS.value())
     ));
 
+    public static final Holder<DoorBlock> GLOWING_DOOR = REGISTER.register("glowing_door", () -> new DoorBlock(
+        NAWoodTypes.GLOWING_BLOCK_SET,
+        BlockBehaviour.Properties.of()
+            .mapColor(GLOWING_PLANKS.value().defaultMapColor())
+            .instrument(NoteBlockInstrument.BASS)
+            .strength(3f)
+            .lightLevel((state) -> 9)
+            .noOcclusion()
+            .pushReaction(PushReaction.DESTROY)
+    ) {});
+
+    public static final Holder<TrapDoorBlock> GLOWING_TRAPDOOR = REGISTER.register("glowing_trapdoor", () -> new TrapDoorBlock(
+        NAWoodTypes.GLOWING_BLOCK_SET,
+        BlockBehaviour.Properties.of()
+            .mapColor(GLOWING_PLANKS.value().defaultMapColor())
+            .instrument(NoteBlockInstrument.BASS)
+            .strength(3f)
+            .lightLevel((state) -> 9)
+            .noOcclusion()
+            .isValidSpawn(NABlocks::never)
+    ) {});
+
     public static final Holder<AzureMelonBlock> AZURE_MELON = registerBlock("azure_melon", AzureMelonBlock::new, NABlockProperties.AZURE_MELON);
     public static final Holder<AzureMelonCropBlock> AZURE_MELON_CROP = registerBlock("azure_melon_crop", AzureMelonCropBlock::new, NABlockProperties.AZURE_MELON);
     public static final Holder<WildAzureMelonBlock> WILD_AZURE_MELON = registerBlock("wild_azure_melon", WildAzureMelonBlock::new, NABlockProperties.WILD_AZURE_MELON);
@@ -311,6 +336,11 @@ public final class NABlocks
     private static ToIntFunction<BlockState> lit(int lightLevel)
     {
         return (state) -> state.getValue(BlockStateProperties.LIT) ? lightLevel : 0;
+    }
+
+    private static Boolean never(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos, EntityType<?> entityType)
+    {
+        return false;
     }
 
     private static Holder<Block> registerSimpleBlock(String name, BlockBehaviour.Properties properties)

@@ -121,6 +121,8 @@ public final class NAItems
     public static final Holder<BlockItem> GLOWING_STAIRS = registerSimpleBlockItem(NABlocks.GLOWING_STAIRS);
     public static final Holder<BlockItem> GLOWING_FENCE = registerSimpleBlockItem(NABlocks.GLOWING_FENCE);
     public static final Holder<BlockItem> GLOWING_FENCE_GATE = registerSimpleBlockItem(NABlocks.GLOWING_FENCE_GATE);
+    public static final Holder<BlockItem> GLOWING_DOOR = registerSimpleBlockItem(NABlocks.GLOWING_DOOR);
+    public static final Holder<BlockItem> GLOWING_TRAPDOOR = registerBlockItem(NABlocks.GLOWING_TRAPDOOR, DoubleHighBlockItem::new);
 
     public static final Holder<BlockItem> CRIMSON_CRATE = registerSimpleBlockItem(NABlocks.CRIMSON_CRATE);
     public static final Holder<BlockItem> SMALL_CRIMSON_CRATE = registerSimpleBlockItem(NABlocks.SMALL_CRIMSON_CRATE);

@@ -74,6 +74,8 @@ public final class NACreativeTabs
             output.accept(NAItems.GLOWING_SLAB.value());
             output.accept(NAItems.GLOWING_FENCE.value());
             output.accept(NAItems.GLOWING_FENCE_GATE.value());
+            output.accept(NAItems.GLOWING_DOOR.value());
+            output.accept(NAItems.GLOWING_TRAPDOOR.value());
 
             output.accept(NAItems.CRUSHED_NETHER_ROOTS.value());
             output.accept(NAItems.CRUSHED_CRIMSON_ROOTS.value());
