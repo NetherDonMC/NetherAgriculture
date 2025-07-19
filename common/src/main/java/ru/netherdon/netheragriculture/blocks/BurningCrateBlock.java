@@ -4,6 +4,7 @@ import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.tags.FluidTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
@@ -65,7 +66,7 @@ public class BurningCrateBlock extends Block
         {
             yOffset = FLAME_Y_OFFSET_BOTTOM;
         }
-        else if (level.getBlockState(pos.above()).isFaceSturdy(level, pos, Direction.DOWN))
+        else if (!canBurnAt(level, pos))
         {
             return;
         }
@@ -76,5 +77,12 @@ public class BurningCrateBlock extends Block
 
         level.addParticle(ParticleTypes.FLAME, x, y, z, 0d, 0d, 0d);
         level.addParticle(ParticleTypes.SMOKE, x, y, z, 0d, 0d, 0d);
+    }
+
+    private static boolean canBurnAt(Level level, BlockPos pos)
+    {
+        BlockState stateAbove = level.getBlockState(pos.above());
+        return !stateAbove.isFaceSturdy(level, pos, Direction.DOWN)
+            && stateAbove.getFluidState().isEmpty();
     }
 }
