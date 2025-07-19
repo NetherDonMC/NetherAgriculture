@@ -18,6 +18,7 @@ import ru.netherdon.netheragriculture.config.settings.server.EntitySettings;
 import java.util.List;
 
 import static ru.netherdon.netheragriculture.misc.TranslationHelper.text;
+import static ru.netherdon.netheragriculture.compat.clothconfig.ConfigScreenHelper.*;
 
 @Environment(EnvType.CLIENT)
 public class ConfigScreenBuilder
@@ -59,22 +60,33 @@ public class ConfigScreenBuilder
     {
         ConfigCategory category = builder.getOrCreateCategory(OVERRIDES_CATEGORY);
 
-        LootModifierSettings modifier = overrides.lootModifier();
+        LootModifierSettings lootModifier = overrides.lootModifier();
         List<AbstractConfigListEntry> subEntries = Lists.newArrayList();
-        subEntries.add(ConfigScreenHelper.booleanToggle(modifier.piglinBarteringEnabled(), entryBuilder, permission).build());
+        subEntries.add(booleanToggle(lootModifier.piglinBarteringEnabled(), entryBuilder, permission).build());
 
-        if (modifier.fabric() != null)
+        if (lootModifier.fabric() != null)
         {
-            FabricLootModifierSettings fabricModifiers = modifier.fabric();
-            subEntries.add(ConfigScreenHelper.booleanToggle(fabricModifiers.hoglinEnabled(), entryBuilder, permission).build());
-            subEntries.add(ConfigScreenHelper.booleanToggle(fabricModifiers.striderEnabled(), entryBuilder, permission).build());
-            subEntries.add(ConfigScreenHelper.booleanToggle(fabricModifiers.netherBridgeEnabled(), entryBuilder, permission).build());
-            subEntries.add(ConfigScreenHelper.booleanToggle(fabricModifiers.bastionHoglinStableEnabled(), entryBuilder, permission).build());
+            FabricLootModifierSettings fabricModifiers = lootModifier.fabric();
+            subEntries.add(booleanToggle(fabricModifiers.hoglinEnabled(), entryBuilder, permission).build());
+            subEntries.add(booleanToggle(fabricModifiers.striderEnabled(), entryBuilder, permission).build());
+            subEntries.add(booleanToggle(fabricModifiers.netherBridgeEnabled(), entryBuilder, permission).build());
+            subEntries.add(booleanToggle(fabricModifiers.bastionHoglinStableEnabled(), entryBuilder, permission).build());
         }
 
         category.addEntry(
             entryBuilder.startSubCategory(text(CATEGORY_NAMESPACE, "overrides", "loot"), subEntries)
-                .setExpanded(true)
+                .build()
+        );
+
+        ConfiguredFeatureSettings configuredFeature = overrides.configuredFeature();
+        List<AbstractConfigListEntry> cfEntries = Lists.newArrayList();
+        cfEntries.add(booleanToggle(configuredFeature.crimsonForestVegetationEnabled(), entryBuilder, permission).build());
+        cfEntries.add(booleanToggle(configuredFeature.crimsonNyliumBonemealEnabled(), entryBuilder, permission).build());
+        cfEntries.add(booleanToggle(configuredFeature.warpedForestVegetationEnabled(), entryBuilder, permission).build());
+        cfEntries.add(booleanToggle(configuredFeature.warpedNyliumBonemealEnabled(), entryBuilder, permission).build());
+
+        category.addEntry(
+            entryBuilder.startSubCategory(text(CATEGORY_NAMESPACE, "overrides", "configured_feature"), cfEntries)
                 .build()
         );
     }
@@ -89,11 +101,11 @@ public class ConfigScreenBuilder
         ConfigCategory category = builder.getOrCreateCategory(ENTITY_CATEGORY);
 
         category.addEntry(
-            ConfigScreenHelper.booleanToggle(worldSettings.burningFromItemEnabled(), entryBuilder, permission).build()
+            booleanToggle(worldSettings.burningFromItemEnabled(), entryBuilder, permission).build()
         );
 
         category.addEntry(
-            ConfigScreenHelper.booleanToggle(worldSettings.burningFromBlazeFlightEnabled(), entryBuilder, permission).build()
+            booleanToggle(worldSettings.burningFromBlazeFlightEnabled(), entryBuilder, permission).build()
         );
     }
 
@@ -111,7 +123,7 @@ public class ConfigScreenBuilder
             entryBuilder.startSubCategory(
                 text(CATEGORY_NAMESPACE, "mod_compatibility", "farmers_delight"),
                 List.of(
-                    ConfigScreenHelper.booleanToggle(farmersDelight.fullRecipeIntegrationEnabled(), entryBuilder, permission).build()
+                    booleanToggle(farmersDelight.fullRecipeIntegrationEnabled(), entryBuilder, permission).build()
                 )
             ).setExpanded(true)
                 .build()
@@ -122,7 +134,7 @@ public class ConfigScreenBuilder
             entryBuilder.startSubCategory(
                 text(CATEGORY_NAMESPACE, "mod_compatibility", "nethers_delight"),
                 List.of(
-                    ConfigScreenHelper.booleanToggle(
+                    booleanToggle(
                         nethersDelightSettings.useOnlyBlackFurnace(),
                         entryBuilder,
                         permission

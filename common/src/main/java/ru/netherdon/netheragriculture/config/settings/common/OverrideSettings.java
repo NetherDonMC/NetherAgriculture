@@ -4,7 +4,8 @@ import net.neoforged.neoforge.common.ModConfigSpec;
 import ru.netherdon.netheragriculture.misc.TranslationBuilder;
 
 public record OverrideSettings(
-    LootModifierSettings lootModifier
+    LootModifierSettings lootModifier,
+    ConfiguredFeatureSettings configuredFeature
 )
 {
     public static OverrideSettings create(ModConfigSpec.Builder builder, TranslationBuilder translation)
@@ -12,7 +13,8 @@ public record OverrideSettings(
         builder.push("Overrides");
         translation.push("overrides");
         var settings = new OverrideSettings(
-            LootModifierSettings.create(builder, translation)
+            LootModifierSettings.create(builder, translation),
+            ConfiguredFeatureSettings.create(builder, translation)
         );
         translation.pop();
         builder.pop();

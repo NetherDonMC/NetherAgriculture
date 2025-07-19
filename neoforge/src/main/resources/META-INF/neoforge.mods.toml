@@ -16,6 +16,9 @@ enumExtensions="META-INF/enumextensions.json"
 [[mixins]]
 config = "${id}.mixins.json"
 
+[[mixins]]
+config = "${id}.neoforge.mixins.json"
+
 [[accessTransformers]]
 file="META-INF/accesstransformer.cfg"
 

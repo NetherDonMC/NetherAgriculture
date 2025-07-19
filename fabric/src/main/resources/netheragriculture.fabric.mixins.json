@@ -12,6 +12,7 @@
     "HoeItemMixin",
     "PersistentEntitySectionManagerMixin",
     "RecipeBookSettingsMixin",
+    "RegistryDataLoaderMixin",
     "ServerPlayerMixin"
   ]
 }

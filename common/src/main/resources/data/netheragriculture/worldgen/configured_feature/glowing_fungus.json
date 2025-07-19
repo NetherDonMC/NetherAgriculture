@@ -17,7 +17,7 @@
       "predicate_type": "minecraft:tag_match",
       "tag": "minecraft:nylium"
     },
-    "planted": false,
+    "planted": true,
     "replaceable_blocks": {
       "type": "minecraft:matching_blocks",
       "blocks": [

@@ -17,7 +17,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.chunk.ChunkGenerator;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import ru.netherdon.netheragriculture.registries.NAConfiguredFeatureKeys;
+import ru.netherdon.netheragriculture.registries.NAConfiguredFeatures;
 import ru.netherdon.netheragriculture.registries.NATags;
 
 public class NetherRootsBlock extends BushBlock implements BonemealableBlock
@@ -83,7 +83,7 @@ public class NetherRootsBlock extends BushBlock implements BonemealableBlock
         ChunkGenerator chunkGenerator = serverLevel.getChunkSource().getGenerator();
         var registry = serverLevel.registryAccess().registryOrThrow(Registries.CONFIGURED_FEATURE);
 
-        registry.getHolder(NAConfiguredFeatureKeys.NETHER_ROOTS_BONEMEAL)
+        registry.getHolder(NAConfiguredFeatures.NETHER_ROOTS_BONEMEAL)
             .ifPresent((reference) -> reference.value().place(serverLevel, chunkGenerator, randomSource, blockPos));
     }
 }

@@ -11,6 +11,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
@@ -32,13 +33,20 @@ public class NetherAgricultureNeoForgeClient
         modEventBus.register(this);
         NetherAgricultureClient.initialize();
 
-        Sheets.addWoodType(NAWoodTypes.GLOWING);
-
         final var configScreenLoader = ConfigScreenLoader.get();
         if (configScreenLoader != null)
         {
             modContainer.registerExtensionPoint(IConfigScreenFactory.class, (mod, parent) -> configScreenLoader.apply(parent));
         }
+    }
+
+    @SubscribeEvent
+    public void setup(FMLClientSetupEvent event)
+    {
+        event.enqueueWork(() ->
+        {
+            Sheets.addWoodType(NAWoodTypes.GLOWING);
+        });
     }
 
     @SubscribeEvent

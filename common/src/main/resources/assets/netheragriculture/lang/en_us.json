@@ -155,6 +155,7 @@
   "config.category.netheragriculture.mod_compatibility": "Mod Compatibility",
 
   "config.category.netheragriculture.overrides.loot": "Loot Modifiers",
+  "config.category.netheragriculture.overrides.configured_feature": "Generation Modifiers",
   "config.category.netheragriculture.mod_compatibility.farmers_delight": "Farmer's Delight",
   "config.category.netheragriculture.mod_compatibility.nethers_delight": "My Nether's Delight",
 
@@ -172,6 +173,14 @@
   "config.common.netheragriculture.mod_compatibility.farmers_delight.full_recipe_integration.tooltip": "Disables loading of certain recipes when the Farmer's Delight is present.",
   "config.common.netheragriculture.mod_compatibility.nethers_delight.use_only_black_furnace": "Use Only Black Furnace",
   "config.common.netheragriculture.mod_compatibility.nethers_delight.use_only_black_furnace.tooltip": "Removes some recipes, such as mynethersdelight:hoglin_loin_cooking, mynethersdelight:hoglin_sausage_cooking, etc.",
+  "config.common.netheragriculture.overrides.configured_feature.crimson_forest_vegetation": "Crimson Forest Vegetation",
+  "config.common.netheragriculture.overrides.configured_feature.crimson_forest_vegetation.tooltip": "Modifies configured feature minecraft:crimson_forest_vegetation",
+  "config.common.netheragriculture.overrides.configured_feature.warped_forest_vegetation": "Warped Forest Vegetation",
+  "config.common.netheragriculture.overrides.configured_feature.warped_forest_vegetation.tooltip": "Modifies configured feature minecraft:warped_forest_vegetation",
+  "config.common.netheragriculture.overrides.configured_feature.crimson_nylium_bonemeal": "Bonemeal on Crimson Nylium",
+  "config.common.netheragriculture.overrides.configured_feature.crimson_nylium_bonemeal.tooltip": "Modifies configured feature minecraft:crimson_forest_vegetation_bonemeal",
+  "config.common.netheragriculture.overrides.configured_feature.warped_nylium_bonemeal": "Bonemeal on Warped Nylium",
+  "config.common.netheragriculture.overrides.configured_feature.warped_nylium_bonemeal.tooltip": "Modifies configured feature minecraft:warped_forest_vegetation_bonemeal",
 
   "config.server.netheragriculture.entity.burning_from_items": "Burning from Items",
   "config.server.netheragriculture.entity.burning_from_blaze_flight": "Burning from Blaze Flight",

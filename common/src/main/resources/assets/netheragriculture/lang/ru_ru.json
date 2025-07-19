@@ -155,6 +155,7 @@
   "config.category.netheragriculture.mod_compatibility": "Совместимость с модами",
 
   "config.category.netheragriculture.overrides.loot": "Модификаторы добычи",
+  "config.category.netheragriculture.overrides.configured_feature": "Модификаторы генерации",
 
   "config.common.netheragriculture.overrides.loot.piglin_bartering": "Обмен с пиглином",
   "config.common.netheragriculture.overrides.loot.piglin_bartering.tooltip": "Модифицирует таблицу добычи minecraft:gameplay/piglin_bartering",
@@ -170,6 +171,14 @@
   "config.common.netheragriculture.mod_compatibility.farmers_delight.full_recipe_integration.tooltip": "Отключает загрузку некоторых рецептов при наличии Farmer's Delight.",
   "config.common.netheragriculture.mod_compatibility.nethers_delight.use_only_black_furnace": "Использовать только черную печь",
   "config.common.netheragriculture.mod_compatibility.nethers_delight.use_only_black_furnace.tooltip": "Удаляет некоторые рецепты. К примеру: mynethersdelight:hoglin_loin_cooking, mynethersdelight:hoglin_sausage_cooking и т.д.",
+  "config.common.netheragriculture.overrides.configured_feature.crimson_forest_vegetation": "Растительность багрового леса",
+  "config.common.netheragriculture.overrides.configured_feature.crimson_forest_vegetation.tooltip": "Модифицирует конфигурацию генерации minecraft:crimson_forest_vegetation",
+  "config.common.netheragriculture.overrides.configured_feature.warped_forest_vegetation": "Растительность искажённого леса",
+  "config.common.netheragriculture.overrides.configured_feature.warped_forest_vegetation.tooltip": "Модифицирует конфигурацию генерации minecraft:warped_forest_vegetation",
+  "config.common.netheragriculture.overrides.configured_feature.crimson_nylium_bonemeal": "Костная мука на багровом нилии",
+  "config.common.netheragriculture.overrides.configured_feature.crimson_nylium_bonemeal.tooltip": "Модифицирует конфигурацию генерации minecraft:crimson_forest_vegetation_bonemeal",
+  "config.common.netheragriculture.overrides.configured_feature.warped_nylium_bonemeal": "Костная мука на искажённом нилии",
+  "config.common.netheragriculture.overrides.configured_feature.warped_nylium_bonemeal.tooltip": "Модифицирует конфигурацию генерации minecraft:warped_forest_vegetation_bonemeal",
 
   "config.server.netheragriculture.entity.burning_from_items": "Горение от предметов",
   "config.server.netheragriculture.entity.burning_from_blaze_flight": "Горение от полёта всполоха",

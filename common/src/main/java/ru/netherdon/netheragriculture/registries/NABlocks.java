@@ -188,7 +188,7 @@ public final class NABlocks
     );
 
     public static final Holder<FungusBlock> GLOWING_FUNGUS = REGISTER.register("glowing_fungus", () -> new GlowingFungusBlock(
-        NAConfiguredFeatureKeys.GLOWING_FUNGUS,
+        NAConfiguredFeatures.GLOWING_FUNGUS,
         BlockBehaviour.Properties.of()
             .mapColor(MapColor.COLOR_YELLOW)
             .instabreak()
