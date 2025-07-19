@@ -2,17 +2,25 @@ package ru.netherdon.netheragriculture.blocks;
 
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.BonemealableBlock;
 import net.minecraft.world.level.block.BushBlock;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.chunk.ChunkGenerator;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import ru.netherdon.netheragriculture.registries.NAConfiguredFeatureKeys;
 import ru.netherdon.netheragriculture.registries.NATags;
 
-public class NetherRootsBlock extends BushBlock
+public class NetherRootsBlock extends BushBlock implements BonemealableBlock
 {
     public static final MapCodec<NetherRootsBlock> CODEC = Block.simpleCodec(NetherRootsBlock::new);
 
@@ -42,5 +50,40 @@ public class NetherRootsBlock extends BushBlock
     protected MapCodec<? extends NetherRootsBlock> codec()
     {
         return CODEC;
+    }
+
+    @Override
+    public boolean isValidBonemealTarget(LevelReader levelReader, BlockPos blockPos, BlockState blockState)
+    {
+        BlockState stateBelow = levelReader.getBlockState(blockPos.below());
+        return stateBelow.is(NATags.Blocks.NETHERRACKS);
+    }
+
+    @Override
+    public boolean isBonemealSuccess(Level level, RandomSource randomSource, BlockPos blockPos, BlockState blockState)
+    {
+        return true;
+    }
+
+    @Override
+    public Type getType()
+    {
+        return Type.NEIGHBOR_SPREADER;
+    }
+
+    @Override
+    public BlockPos getParticlePos(BlockPos pos)
+    {
+        return pos;
+    }
+
+    @Override
+    public void performBonemeal(ServerLevel serverLevel, RandomSource randomSource, BlockPos blockPos, BlockState blockState)
+    {
+        ChunkGenerator chunkGenerator = serverLevel.getChunkSource().getGenerator();
+        var registry = serverLevel.registryAccess().registryOrThrow(Registries.CONFIGURED_FEATURE);
+
+        registry.getHolder(NAConfiguredFeatureKeys.NETHER_ROOTS_BONEMEAL)
+            .ifPresent((reference) -> reference.value().place(serverLevel, chunkGenerator, randomSource, blockPos));
     }
 }

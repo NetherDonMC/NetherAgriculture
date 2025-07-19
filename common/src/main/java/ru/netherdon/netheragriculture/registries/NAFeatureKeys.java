@@ -18,15 +18,8 @@ public final class NAFeatureKeys
     public static final ResourceKey<PlacedFeature> NETHER_ROOTS = placed("nether_roots");
     public static final ResourceKey<PlacedFeature> AZURE_MELON = placed("azure_melon");
 
-    public static final ResourceKey<ConfiguredFeature<?, ?>> GLOWING_FUNGUS = configured("glowing_fungus");
-
     private static ResourceKey<PlacedFeature> placed(String name)
     {
         return ResourceKey.create(Registries.PLACED_FEATURE, NetherAgriculture.location(name));
-    }
-
-    private static ResourceKey<ConfiguredFeature<?, ?>> configured(String name)
-    {
-        return ResourceKey.create(Registries.CONFIGURED_FEATURE, NetherAgriculture.location(name));
     }
 }
