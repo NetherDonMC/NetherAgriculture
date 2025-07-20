@@ -30,9 +30,10 @@ public class SmallBurningCrateBlock extends SlabBlock
     public void animateTick(BlockState blockState, Level level, BlockPos blockPos, RandomSource randomSource)
     {
         super.animateTick(blockState, level, blockPos, randomSource);
-        if (!blockState.getValue(WATERLOGGED))
+        boolean bottom = blockState.getValue(TYPE) == SlabType.BOTTOM;
+        if (!blockState.getValue(WATERLOGGED) || !bottom)
         {
-            BurningCrateBlock.spawnFlameParticle(level, blockPos, randomSource, blockState.getValue(TYPE) == SlabType.BOTTOM);
+            BurningCrateBlock.spawnFlameParticle(level, blockPos, randomSource, bottom);
         }
     }
 
