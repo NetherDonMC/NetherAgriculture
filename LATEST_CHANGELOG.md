@@ -1,15 +1,5 @@
 ### Common
-- Added a chance for the following items to generate in Nether Fortress chests:
-  - Blaze Fruit,
-  - Crimson Berry Seeds,
-  - Crimson Berry,
-  - Warped Berry Seeds,
-  - Warped Berry,
-  - Azure Melon Seeds,
-  - Azure Melon Slice,
-  - Lothun,
-  - Sinful Eyes,
-  - Blazing Blend (Very low chance).
-- Config structure has been redesigned.
-- 'Long Legs' effect now increases step height more.
-- The level of the 'Long Legs' effect granted by the Strider Treat has been reduced from 3 to 1.
+- Added a glowing wood.
+- Added a glowing fungus that generates in crimson and warped forests.
+- Nether roots can now generate when bone meal is used on existing nether roots ([#2](https://github.com/NetherDonMC/NetherAgriculture/issues/2)).
+- Crates with burning contents no longer emit particles while underwater.
