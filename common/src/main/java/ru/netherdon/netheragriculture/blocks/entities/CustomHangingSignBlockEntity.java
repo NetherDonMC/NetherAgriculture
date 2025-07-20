@@ -14,8 +14,14 @@ public class CustomHangingSignBlockEntity extends HangingSignBlockEntity
     }
 
     @Override
+    public boolean isValidBlockState(BlockState blockState)
+    {
+        return this.getType().isValid(blockState);
+    }
+
+    @Override
     public BlockEntityType<?> getType()
     {
-        return NABlockEntityTypes.HANGING_CUSTOM_SIGN.value();
+        return NABlockEntityTypes.CUSTOM_HANGING_SIGN.value();
     }
 }

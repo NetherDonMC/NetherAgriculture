@@ -74,6 +74,18 @@ public final class NABlockTypes
     public static final Holder<MapCodec<GlowingFungusBlock>> GLOWING_FUNGUS =
         REGISTER.register("glowing_fungus", () -> GlowingFungusBlock.CODEC);
 
+    public static final Holder<MapCodec<CustomStandingSignBlock>> CUSTOM_STANDING_SIGN =
+        REGISTER.register("custom_standing_sign", () -> CustomStandingSignBlock.CODEC);
+
+    public static final Holder<MapCodec<CustomWallSignBlock>> CUSTOM_WALL_SIGN =
+        REGISTER.register("custom_wall_sign", () -> CustomWallSignBlock.CODEC);
+
+    public static final Holder<MapCodec<CustomCeilingHangingSignBlock>> CUSTOM_CEILING_HANGING_SIGN =
+        REGISTER.register("custom_ceiling_hanging_sign", () -> CustomCeilingHangingSignBlock.CODEC);
+
+    public static final Holder<MapCodec<CustomWallHangingSignBlock>> CUSTOM_WALL_HANGING_SIGN =
+        REGISTER.register("custom_wall_hanging_sign", () -> CustomWallHangingSignBlock.CODEC);
+
 
 
     public static void initialize() {}

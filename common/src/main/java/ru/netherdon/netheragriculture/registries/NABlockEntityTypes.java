@@ -24,7 +24,7 @@ public final class NABlockEntityTypes
             ).build(null)
         );
 
-    public static final Holder<BlockEntityType<CustomHangingSignBlockEntity>> HANGING_CUSTOM_SIGN =
+    public static final Holder<BlockEntityType<CustomHangingSignBlockEntity>> CUSTOM_HANGING_SIGN =
         REGISTER.register("hanging_sign", () ->
             BlockEntityType.Builder.of(
                 CustomHangingSignBlockEntity::new,

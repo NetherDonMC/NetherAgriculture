@@ -34,6 +34,6 @@ public class NetherAgricultureClient
     public static void registerBlockEntityRenderers(IBlockEntityRendererRegister register)
     {
         register.register(NABlockEntityTypes.CUSTOM_SIGN.value(), SignRenderer::new);
-        register.register(NABlockEntityTypes.HANGING_CUSTOM_SIGN.value(), HangingSignRenderer::new);
+        register.register(NABlockEntityTypes.CUSTOM_HANGING_SIGN.value(), HangingSignRenderer::new);
     }
 }
