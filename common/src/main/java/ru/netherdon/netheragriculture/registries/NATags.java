@@ -3,6 +3,7 @@ package ru.netherdon.netheragriculture.registries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.level.block.Block;
 import ru.netherdon.netheragriculture.NetherAgriculture;

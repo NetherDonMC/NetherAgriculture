@@ -131,6 +131,7 @@ public final class NACreativeTabs
             output.accept(NAItems.CRIMSON_BERRY_JAM.value());
             output.accept(NAItems.WARPED_BERRY_JAM.value());
             output.accept(NAItems.BLAZING_BLEND.value());
+            output.accept(NAItems.GLOWING_SPORES_IN_A_BOTTLE.value());
 
             output.accept(NAItems.NETHER_BARBECUE_ON_A_STICK.value());
             output.accept(NAItems.NETHER_MUSHROOM_STEW.value());

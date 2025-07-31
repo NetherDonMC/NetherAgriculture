@@ -86,6 +86,9 @@ public final class NABlockTypes
     public static final Holder<MapCodec<CustomWallHangingSignBlock>> CUSTOM_WALL_HANGING_SIGN =
         REGISTER.register("custom_wall_hanging_sign", () -> CustomWallHangingSignBlock.CODEC);
 
+    public static final Holder<MapCodec<GlowingSporesBlock>> GLOWING_SPORES =
+        REGISTER.register("glowing_spores", () -> GlowingSporesBlock.CODEC);
+
 
 
     public static void initialize() {}

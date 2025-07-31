@@ -38,6 +38,7 @@
   "item.netheragriculture.blazing_gold_nugget": "Самородок пылающего золота",
   "item.netheragriculture.blazing_golden_lothun": "Пылающий золотой лотун",
   "item.netheragriculture.strider_treat": "Лакомство лавомерки",
+  "item.netheragriculture.glowing_spores_in_a_bottle": "Светящиеся споры в бутылке",
 
   "item.netheragriculture.strider_treat.description": "Если скормить лавомерке:",
 
@@ -90,6 +91,7 @@
   "block.netheragriculture.glowing_wall_sign": "Светящаяся настенная табличка",
   "block.netheragriculture.glowing_hanging_sign": "Светящаяся подвесная табличка",
   "block.netheragriculture.glowing_wall_hanging_sign": "Светящаяся настенная подвесная табличка",
+  "block.netheragriculture.glowing_spores": "Светящиеся споры",
   "block.netheragriculture.crimson_crate": "Багровый ящик",
   "block.netheragriculture.small_crimson_crate": "Малый багровый ящик",
   "block.netheragriculture.warped_crate": "Искажённый ящик",

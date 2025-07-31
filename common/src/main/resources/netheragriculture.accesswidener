@@ -13,3 +13,5 @@ mutable field net/minecraft/world/level/storage/loot/LootPool entries Ljava/util
 
 accessible field net/minecraft/world/level/levelgen/feature/stateproviders/WeightedStateProvider weightedList Lnet/minecraft/util/random/SimpleWeightedRandomList;
 mutable field net/minecraft/world/level/levelgen/feature/stateproviders/WeightedStateProvider weightedList Lnet/minecraft/util/random/SimpleWeightedRandomList;
+
+accessible method net/minecraft/client/particle/SuspendedParticle <init> (Lnet/minecraft/client/multiplayer/ClientLevel;Lnet/minecraft/client/particle/SpriteSet;DDDDDD)V

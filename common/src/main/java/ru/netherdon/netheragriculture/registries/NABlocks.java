@@ -347,6 +347,17 @@ public final class NABlocks
             .dropsLike(GLOWING_HANGING_SIGN.value())
     ));
 
+    public static final Holder<GlowingSporesBlock> GLOWING_SPORES = registerBlock("glowing_spores",
+        (properties) -> new GlowingSporesBlock(NAItemKeys.GLASS_BOTTLE, properties),
+        BlockBehaviour.Properties.of()
+            .instabreak()
+            .noCollission()
+            .lightLevel(maxLight())
+            .randomTicks()
+            .replaceable()
+            .pushReaction(PushReaction.DESTROY)
+    );
+
     public static final Holder<AzureMelonBlock> AZURE_MELON = registerBlock("azure_melon", AzureMelonBlock::new, NABlockProperties.AZURE_MELON);
     public static final Holder<AzureMelonCropBlock> AZURE_MELON_CROP = registerBlock("azure_melon_crop", AzureMelonCropBlock::new, NABlockProperties.AZURE_MELON);
     public static final Holder<WildAzureMelonBlock> WILD_AZURE_MELON = registerBlock("wild_azure_melon", WildAzureMelonBlock::new, NABlockProperties.WILD_AZURE_MELON);

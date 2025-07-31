@@ -38,6 +38,7 @@
   "item.netheragriculture.blazing_gold_nugget": "Blazing Gold Nugget",
   "item.netheragriculture.blazing_golden_lothun": "Blazing Golden Lothun",
   "item.netheragriculture.strider_treat": "Strider Treat",
+  "item.netheragriculture.glowing_spores_in_a_bottle": "Glowing Spores in a Bottle",
 
   "item.netheragriculture.strider_treat.description": "When fed to strider:",
 
@@ -90,6 +91,7 @@
   "block.netheragriculture.glowing_wall_sign": "Glowing Wall Sign",
   "block.netheragriculture.glowing_hanging_sign": "Glowing Hanging Sign",
   "block.netheragriculture.glowing_wall_hanging_sign": "Glowing Wall Hanging Sign",
+  "block.netheragriculture.glowing_spores": "Glowing Spores",
   "block.netheragriculture.crimson_crate": "Crimson Crate",
   "block.netheragriculture.small_crimson_crate": "Small Crimson Crate",
   "block.netheragriculture.warped_crate": "Warped Crate",

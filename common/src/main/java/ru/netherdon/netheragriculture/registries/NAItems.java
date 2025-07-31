@@ -90,6 +90,10 @@ public final class NAItems
     public static final Holder<StriderTreatItem> STRIDER_TREAT = REGISTER.register("strider_treat", () -> new StriderTreatItem(
         new Item.Properties().stacksTo(16)
     ));
+    public static final Holder<BlockItem> GLOWING_SPORES_IN_A_BOTTLE = registerItem("glowing_spores_in_a_bottle",
+        (properties) -> new GlowingSporesInBottleItem(NABlocks.GLOWING_SPORES.value(), Items.GLASS_BOTTLE, properties),
+        new Item.Properties()
+    );
 
     public static final Holder<BlockItem> CRIMSON_FARMLAND = registerSimpleBlockItem(NABlocks.CRIMSON_FARMLAND);
     public static final Holder<BlockItem> WARPED_FARMLAND = registerSimpleBlockItem(NABlocks.WARPED_FARMLAND);
