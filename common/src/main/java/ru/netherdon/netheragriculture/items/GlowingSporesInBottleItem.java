@@ -30,7 +30,7 @@ public class GlowingSporesInBottleItem extends BlockItem
             }
             else if (!player.getInventory().add(emptyStack))
             {
-                player.drop(emptyStack, true);
+                player.drop(emptyStack, false);
             }
         }
 
