@@ -72,6 +72,11 @@ public final class NAFoods
     public static final FoodProperties NETHER_MUSHROOM_STEW = new FoodProperties.Builder()
         .nutrition(6).saturationModifier(0.6f).usingConvertsTo(Items.BOWL).build();
 
+    public static final FoodProperties GLOWING_MUSHROOM_STEW = withEffect(new FoodProperties.Builder(),
+            () -> new MobEffectInstance(MobEffects.GLOWING, 100), 1f
+        )
+        .nutrition(6).saturationModifier(0.6f).usingConvertsTo(Items.BOWL).build();
+
     public static final FoodProperties NETHER_FRUIT_SALAD = withEffect(new FoodProperties.Builder(),
             () -> new MobEffectInstance(MobEffects.REGENERATION, 200), 1f
         )

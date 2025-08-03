@@ -56,6 +56,9 @@ public final class NAItems
     public static final Holder<Item> NETHER_MUSHROOM_STEW = REGISTER.register("nether_mushroom_stew", () -> new FoodItem(
         new Item.Properties().stacksTo(16).food(NAFoods.NETHER_MUSHROOM_STEW)
     ));
+    public static final Holder<Item> GLOWING_MUSHROOM_STEW = REGISTER.register("glowing_mushroom_stew", () -> new FoodItem(
+        new Item.Properties().stacksTo(16).food(NAFoods.GLOWING_MUSHROOM_STEW)
+    ));
     public static final Holder<Item> NETHER_FRUIT_SALAD = REGISTER.register("nether_fruit_salad", () -> new FoodItem(
         new Item.Properties().stacksTo(16).food(NAFoods.NETHER_FRUIT_SALAD)
     ));

@@ -4,6 +4,17 @@
     "#c:drinks/blazing_blend",
     "#c:drinks/crimson_berry_jam",
     "#c:drinks/warped_berry_jam",
-    "#c:foods/blazing_golden"
+    "#c:foods/blazing_golden",
+
+    "netheragriculture:nether_barbecue_on_a_stick",
+    "netheragriculture:nether_mushroom_stew",
+    "netheragriculture:glowing_mushroom_stew",
+    "netheragriculture:azure_melon_puree",
+    "netheragriculture:blaze_cream_soup",
+    "netheragriculture:nether_pork_roast",
+    "netheragriculture:strider_with_vegetables",
+    "netheragriculture:glazed_hoglin_meat",
+    "netheragriculture:azure_melon_jelly",
+    "netheragriculture:nether_berry_jelly"
   ]
 }

@@ -135,6 +135,7 @@ public final class NACreativeTabs
 
             output.accept(NAItems.NETHER_BARBECUE_ON_A_STICK.value());
             output.accept(NAItems.NETHER_MUSHROOM_STEW.value());
+            output.accept(NAItems.GLOWING_MUSHROOM_STEW.value());
             output.accept(NAItems.NETHER_FRUIT_SALAD.value());
             output.accept(NAItems.AZURE_MELON_PUREE.value());
             output.accept(NAItems.BLAZE_CREAM_SOUP.value());
