@@ -10,10 +10,10 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.Potion;
 import net.minecraft.world.item.alchemy.PotionContents;
-import org.apache.commons.compress.utils.Lists;
 import ru.netherdon.netheragriculture.NetherAgriculture;
 import ru.netherdon.netheragriculture.services.RegistryManager;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -156,10 +156,10 @@ public final class NACreativeTabs
     private static void acceptPotionStacks(CreativeModeTab.Output output, Holder<Potion>... potions)
     {
         Map<Item, List<ItemStack>> potionStacks = Maps.newLinkedHashMap();
-        potionStacks.put(Items.POTION, Lists.newArrayList());
-        potionStacks.put(Items.SPLASH_POTION, Lists.newArrayList());
-        potionStacks.put(Items.LINGERING_POTION, Lists.newArrayList());
-        potionStacks.put(Items.TIPPED_ARROW, Lists.newArrayList());
+        potionStacks.put(Items.POTION, new ArrayList<>());
+        potionStacks.put(Items.SPLASH_POTION, new ArrayList<>());
+        potionStacks.put(Items.LINGERING_POTION, new ArrayList<>());
+        potionStacks.put(Items.TIPPED_ARROW, new ArrayList<>());
 
         for (Holder<Potion> potion : potions)
         {
